@@ -321,7 +321,7 @@
     /*产品-删除*/
     function member_del(obj,id){
         layer.confirm('确认要删除吗？',function(index){
-            $.get("__ROOT__/admin/AdminDel",{admin_id:id},function (data) {
+            $.get("__ROOT__/courier/del",{id:id},function (data) {
                 if(data==1){
                     $(obj).parents("tr").remove();
                     layer.msg('已删除!',{icon:1,time:1000});

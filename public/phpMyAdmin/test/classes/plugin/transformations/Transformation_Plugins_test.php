@@ -957,7 +957,7 @@ class Transformation_Plugins_Test extends PHPUnit_Framework_TestCase
                 new Text_Plain_Preappend(),
                 array(
                     'My',
-                    array('php', 'Admin')
+                    array('php', 'admin')
                 ),
                 'phpMyAdmin'
             ),

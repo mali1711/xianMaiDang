@@ -44,7 +44,7 @@ class PMA_SeleniumLoginTest extends PMA_SeleniumBase
     public function testLoginWithWrongPassword()
     {
         $this->logOutIfLoggedIn();
-        $this->login("Admin", "Admin");
+        $this->login("admin", "admin");
         $this->waitForElement("byCssSelector", "div.error");
         $this->assertTrue($this->isUnsuccessLogin());
     }
