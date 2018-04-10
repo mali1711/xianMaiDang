@@ -18,13 +18,13 @@ class Admin extends Allow
     //
     public function getIndex()
     {
-        return $this->fetch("Admin/index");
+        return $this->fetch("admin/index");
     }
 
     //首页详情显示
     public function getHome()
     {
-        return $this->fetch("Admin/home");
+        return $this->fetch("admin/home");
     }
 
 
@@ -33,7 +33,7 @@ class Admin extends Allow
      * */
     public function getAdmin_Competence()
     {
-        return $this->fetch('Admin/admin_Competence');
+        return $this->fetch('admin/admin_Competence');
     }
 
 
@@ -43,7 +43,7 @@ class Admin extends Allow
     public function getAdministrator()
     {
         $list  = AdminModel::select();
-        return $this->fetch('Admin/administrator',['list'=>$list]);
+        return $this->fetch('admin/administrator',['list'=>$list]);
     }
 
 
@@ -124,7 +124,7 @@ class Admin extends Allow
      * */
     public function getAdmin_info()
     {
-        return $this->fetch('Admin/admin_info');
+        return $this->fetch('admin/admin_info');
     }
 }
 

@@ -12,7 +12,7 @@ use think\Route;
 use think\Config;
 
 /* 商城后台路由 */
-Route::controller("/admin","admin/Admin"); //管理员模块
+Route::controller("/admin","admin/admin"); //管理员模块
 Route::controller("/courier","admin/Courier"); //公司内部快递员
 Route::controller("/cates","admin/Cates"); //分类模块
 Route::controller("/login","admin/Login"); //登录

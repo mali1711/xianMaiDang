@@ -17,7 +17,7 @@ class Courier extends Controller
     public function getindex()
     {
         $list = CourierModel::all();
-        return $this->fetch('Admin/courier',['list'=>$list]);
+        return $this->fetch('admin/courier',['list'=>$list]);
     }
 
 
@@ -26,7 +26,7 @@ class Courier extends Controller
      * */
     public function getadd()
     {
-        return $this->fetch('Admin/courierlist');
+        return $this->fetch('admin/courierlist');
     }
 
     public function postadd()

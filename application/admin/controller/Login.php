@@ -25,7 +25,7 @@ class Login extends controller{
      * */
     public function getAdminIndex()
     {
-        return $this->fetch('Admin/login');
+        return $this->fetch('admin/login');
     }
 
     /*
