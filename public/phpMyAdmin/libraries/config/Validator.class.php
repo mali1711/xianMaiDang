@@ -506,7 +506,7 @@ class PMA_Validator
      * @param bool   $allow_neg    allow negative values
      * @param bool   $allow_zero   allow zero
      * @param int    $max_value    max allowed value
-     * @param string $error_string error message key:
+     * @param string $error_string error tow key:
      *                             $GLOBALS["strConfig$error_lang_key"]
      *
      * @return string  empty string if test is successful

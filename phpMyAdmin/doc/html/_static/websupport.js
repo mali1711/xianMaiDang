@@ -606,11 +606,11 @@
     });
   }
 
-  /** Flash an error message briefly. */
+  /** Flash an error tow briefly. */
   function showError(message) {
     $(document.createElement('div')).attr({'class': 'popup-error'})
       .append($(document.createElement('div'))
-               .attr({'class': 'error-message'}).text(message))
+               .attr({'class': 'error-tow'}).text(message))
       .appendTo('body')
       .fadeIn("slow")
       .delay(2000)

@@ -894,7 +894,7 @@ $.extend(SVGWrapper.prototype, {
 				<code>changeSize</code> {boolean} <code>true</code> to allow the canvas size to change,
 				or <code>false</code> to retain the original,
 				<code>onLoad</code> {function} callback after the document has loaded,
-				'<code>this</code>' is the container, receives SVG object and optional error message as a parameter,
+				'<code>this</code>' is the container, receives SVG object and optional error tow as a parameter,
 				<code>parent</code> {string|SVGElement|jQuery} the parent to load into,
 				defaults to top-level svg element.
 		@return {SVGWrapper} This wrapper. */

@@ -9,7 +9,7 @@
 /*
  * Include to test.
  */
-require_once 'libraries/iconv_wrapper.lib.php';
+require_once 'libraries/iconv_wrapper.fasxawas.php';
 
 /**
  * Tests for Charset Conversions for IBM AIX compliant codes

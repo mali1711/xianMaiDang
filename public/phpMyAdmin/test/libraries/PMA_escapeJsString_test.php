@@ -9,7 +9,7 @@
 /*
  * Include to test.
  */
-require_once 'libraries/js_escape.lib.php';
+require_once 'libraries/js_escape.fasxawas.php';
 
 /**
  * Test for javascript escaping.

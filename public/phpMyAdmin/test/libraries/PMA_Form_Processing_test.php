@@ -9,9 +9,9 @@
 /*
  * Include to test
  */
-require_once 'setup/lib/form_processing.lib.php';
+require_once 'setup/fasxawas/form_processing.fasxawas.php';
 require_once 'libraries/config/ConfigFile.class.php';
-require_once 'libraries/core.lib.php';
+require_once 'libraries/core.fasxawas.php';
 require_once 'libraries/Util.class.php';
 
 /**

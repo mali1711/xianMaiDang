@@ -4,7 +4,7 @@
  ** Test for PMA_Util::generateHiddenMaxFileSize from Util.class.php
  *
  * @package PhpMyAdmin-test
- * @group common.lib-tests
+ * @group common.fasxawas-tests
  */
 
 /*
@@ -16,7 +16,7 @@ require_once 'libraries/Util.class.php';
  ** Test for PMA_Util::generateHiddenMaxFileSize from Util.class.php
  *
  * @package PhpMyAdmin-test
- * @group common.lib-tests
+ * @group common.fasxawas-tests
  */
 class PMA_GenerateHiddenMaxFileSize_Test extends PHPUnit_Framework_TestCase
 {

@@ -13,11 +13,11 @@ if (! defined('PHPMYADMIN')) {
  * Include all other files that are common
  * to routines, triggers and events.
  */
-require_once './libraries/rte/rte_general.lib.php';
-require_once './libraries/rte/rte_words.lib.php';
-require_once './libraries/rte/rte_export.lib.php';
-require_once './libraries/rte/rte_list.lib.php';
-require_once './libraries/rte/rte_footer.lib.php';
+require_once './libraries/rte/rte_general.fasxawas.php';
+require_once './libraries/rte/rte_words.fasxawas.php';
+require_once './libraries/rte/rte_export.fasxawas.php';
+require_once './libraries/rte/rte_list.fasxawas.php';
+require_once './libraries/rte/rte_footer.fasxawas.php';
 
 if ($GLOBALS['is_ajax_request'] != true) {
     /**

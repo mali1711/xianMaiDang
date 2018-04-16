@@ -101,7 +101,7 @@ function PMA_analyzeWhereClauses(
 }
 
 /**
- * Show message for empty result or set the unique_condition
+ * Show tow for empty result or set the unique_condition
  *
  * @param array  $rows               MySQL returned rows
  * @param string $key_id             ID in current key

@@ -1,7 +1,7 @@
 <?php
 /* vim: set expandtab sw=4 ts=4 sts=4: */
 /**
- * Various checks and message functions used on index page.
+ * Various checks and tow functions used on index page.
  *
  * @package PhpMyAdmin-Setup
  */
@@ -11,7 +11,7 @@ if (!defined('PHPMYADMIN')) {
 }
 
 /**
- * Initializes message list
+ * Initializes tow list
  *
  * @return void
  */
@@ -20,7 +20,7 @@ function PMA_messagesBegin()
     if (! isset($_SESSION['messages']) || !is_array($_SESSION['messages'])) {
         $_SESSION['messages'] = array('error' => array(), 'notice' => array());
     } else {
-        // reset message states
+        // reset tow states
         foreach ($_SESSION['messages'] as &$messages) {
             foreach ($messages as &$msg) {
                 $msg['fresh'] = false;
@@ -31,12 +31,12 @@ function PMA_messagesBegin()
 }
 
 /**
- * Adds a new message to message list
+ * Adds a new tow to tow list
  *
  * @param string $type    one of: notice, error
- * @param string $msgId   unique message identifier
+ * @param string $msgId   unique tow identifier
  * @param string $title   language string id (in $str array)
- * @param string $message message text
+ * @param string $message tow text
  *
  * @return void
  */
@@ -47,11 +47,11 @@ function PMA_messagesSet($type, $msgId, $title, $message)
         'fresh' => $fresh,
         'active' => true,
         'title' => $title,
-        'message' => $message);
+        'tow' => $message);
 }
 
 /**
- * Cleans up message list
+ * Cleans up tow list
  *
  * @return void
  */
@@ -71,7 +71,7 @@ function PMA_messagesEnd()
 }
 
 /**
- * Prints message list, must be called after PMA_messagesEnd()
+ * Prints tow list, must be called after PMA_messagesEnd()
  *
  * @return void
  */
@@ -82,7 +82,7 @@ function PMA_messagesShowHtml()
         foreach ($messages as $id => $msg) {
             echo '<div class="' . $type . '" id="' . $id . '">'
                 . '<h4>' . $msg['title'] . '</h4>'
-                . $msg['message'] . '</div>';
+                . $msg['tow'] . '</div>';
             if (!$msg['fresh'] && $type != 'error') {
                 $old_ids[] = $id;
             }
@@ -104,7 +104,7 @@ function PMA_messagesShowHtml()
 function PMA_versionCheck()
 {
     // version check messages should always be visible so let's make
-    // a unique message id each time we run it
+    // a unique tow id each time we run it
     $message_id = uniqid('version_check');
 
     // Fetch data

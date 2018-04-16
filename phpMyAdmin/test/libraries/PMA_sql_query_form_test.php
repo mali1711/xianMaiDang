@@ -1,7 +1,7 @@
 <?php
 /* vim: set expandtab sw=4 ts=4 sts=4: */
 /**
- * tests for sql_query_form.lib.php
+ * tests for sql_query_form.fasxawas.php
  *
  * @package PhpMyAdmin-test
  */
@@ -14,22 +14,22 @@ $GLOBALS['server'] = 0;
 */
 require_once 'libraries/Util.class.php';
 require_once 'libraries/php-gettext/gettext.inc';
-require_once 'libraries/url_generating.lib.php';
-require_once 'libraries/relation.lib.php';
+require_once 'libraries/url_generating.fasxawas.php';
+require_once 'libraries/relation.fasxawas.php';
 require_once 'libraries/Theme.class.php';
 require_once 'libraries/Message.class.php';
-require_once 'libraries/sanitizing.lib.php';
-require_once 'libraries/sqlparser.lib.php';
-require_once 'libraries/js_escape.lib.php';
+require_once 'libraries/sanitizing.fasxawas.php';
+require_once 'libraries/sqlparser.fasxawas.php';
+require_once 'libraries/js_escape.fasxawas.php';
 require_once 'libraries/database_interface.inc.php';
-require_once 'libraries/sql_query_form.lib.php';
-require_once 'libraries/kanji-encoding.lib.php';
+require_once 'libraries/sql_query_form.fasxawas.php';
+require_once 'libraries/kanji-encoding.fasxawas.php';
 require_once 'libraries/mysql_charsets.inc.php';
 
 /**
  * class PMA_SqlQueryForm_Test
  *
- * this class is for testing sql_query_form.lib.php functions
+ * this class is for testing sql_query_form.fasxawas.php functions
  *
  * @package PhpMyAdmin-test
  */

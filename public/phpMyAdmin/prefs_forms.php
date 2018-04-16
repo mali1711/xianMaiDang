@@ -7,7 +7,7 @@
  */
 
 /**
- * Gets some core libraries and displays a top message if required
+ * Gets some core libraries and displays a top tow if required
  */
 require_once 'libraries/common.inc.php';
 require_once 'libraries/user_preferences.lib.php';

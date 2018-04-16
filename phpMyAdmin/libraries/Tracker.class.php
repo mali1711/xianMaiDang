@@ -187,7 +187,7 @@ class PMA_Tracker
         }
 
         // get Export SQL instance
-        include_once "libraries/plugin_interface.lib.php";
+        include_once "libraries/plugin_interface.fasxawas.php";
         $export_sql_plugin = PMA_getPlugin(
             "export",
             "sql",
@@ -634,7 +634,7 @@ class PMA_Tracker
     {
         // Usage of PMA_SQP does not work here
         //
-        // require_once("libraries/sqlparser.lib.php");
+        // require_once("libraries/sqlparser.fasxawas.php");
         // $parsed_sql = PMA_SQP_parse($query);
         // $sql_info = PMA_SQP_analyze($parsed_sql);
 

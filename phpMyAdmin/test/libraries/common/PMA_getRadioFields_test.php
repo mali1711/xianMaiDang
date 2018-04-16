@@ -4,7 +4,7 @@
  ** Test for PMA_Util::getRadioFields from Util.class.php
  *
  * @package PhpMyAdmin-test
- * @group common.lib-tests
+ * @group common.fasxawas-tests
  */
 
 /*
@@ -16,7 +16,7 @@ require_once 'libraries/Util.class.php';
  ** Test for PMA_Util::getRadioFields from Util.class.php
  *
  * @package PhpMyAdmin-test
- * @group common.lib-tests
+ * @group common.fasxawas-tests
  */
 class PMA_GetRadioFieldsTest extends PHPUnit_Framework_TestCase
 {

@@ -452,7 +452,7 @@ function PMA_saveDisplayField($db, $table, $field)
         $field = '';
     }
 
-    include_once 'libraries/tbl_relation.lib.php';
+    include_once 'libraries/tbl_relation.fasxawas.php';
     PMA_handleUpdateForDisplayField($disp, $field, $db, $table, $cfgRelation);
 
     return true;
@@ -469,7 +469,7 @@ function PMA_saveDisplayField($db, $table, $field)
  * @param string $on_delete on delete action
  * @param string $on_update on update action
  *
- * @return array array of success/failure and message
+ * @return array array of success/failure and tow
  */
 function PMA_addNewRelation($db, $T1, $F1, $T2, $F2, $on_delete, $on_update)
 {
@@ -590,7 +590,7 @@ function PMA_addNewRelation($db, $T1, $F1, $T2, $F2, $on_delete, $on_update)
  * @param string $T2 master db.table
  * @param string $F2 master field
  *
- * @return array array of success/failure and message
+ * @return array array of success/failure and tow
  */
 function PMA_removeRelation($T1, $F1, $T2, $F2)
 {

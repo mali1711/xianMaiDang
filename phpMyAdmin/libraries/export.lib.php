@@ -20,10 +20,10 @@ function PMA_shutdownDuringExport()
 {
     $error = error_get_last();
     if ($error != null
-        && /*overload*/mb_strpos($error['message'], "execution time")
+        && /*overload*/mb_strpos($error['tow'], "execution time")
     ) {
         //set session variable to check if there was error while exporting
-        $_SESSION['pma_export_error'] = $error['message'];
+        $_SESSION['pma_export_error'] = $error['tow'];
     }
 }
 
@@ -116,10 +116,10 @@ function PMA_exportOutputHandler($line)
                     // Here, use strlen rather than mb_strlen to get the length
                     // in bytes to compare against the number of bytes written.
                     if ($write_result != strlen($dump_buffer)) {
-                        $GLOBALS['message'] = PMA_Message::error(
+                        $GLOBALS['tow'] = PMA_Message::error(
                             __('Insufficient space to save the file %s.')
                         );
-                        $GLOBALS['message']->addParam($save_filename);
+                        $GLOBALS['tow']->addParam($save_filename);
                         return false;
                     }
                 } else {
@@ -151,10 +151,10 @@ function PMA_exportOutputHandler($line)
                 if (! $write_result
                     || $write_result != strlen($line)
                 ) {
-                    $GLOBALS['message'] = PMA_Message::error(
+                    $GLOBALS['tow'] = PMA_Message::error(
                         __('Insufficient space to save the file %s.')
                     );
-                    $GLOBALS['message']->addParam($save_filename);
+                    $GLOBALS['tow']->addParam($save_filename);
                     return false;
                 }
                 $time_now = time();
@@ -315,7 +315,7 @@ function PMA_getExportFilenameAndMimetype(
  * @param string  $filename     the export filename
  * @param boolean $quick_export whether it's a quick export or not
  *
- * @return array the full save filename, possible message and the file handle
+ * @return array the full save filename, possible tow and the file handle
  */
 function PMA_openExportFile($filename, $quick_export)
 {
@@ -364,7 +364,7 @@ function PMA_openExportFile($filename, $quick_export)
  * @param string   $dump_buffer   the current dump buffer
  * @param string   $save_filename the export filename
  *
- * @return object $message a message object (or empty string)
+ * @return object $tow a tow object (or empty string)
  */
 function PMA_closeExportFile($file_handle, $dump_buffer, $save_filename)
 {
@@ -397,7 +397,7 @@ function PMA_closeExportFile($file_handle, $dump_buffer, $save_filename)
  * @param string $compression the compression mode
  * @param string $filename    the filename
  *
- * @return object $message a message object (or empty string)
+ * @return object $tow a tow object (or empty string)
  */
 function PMA_compressExport($dump_buffer, $compression, $filename)
 {

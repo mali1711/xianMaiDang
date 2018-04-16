@@ -157,7 +157,7 @@ OpenLayers.Layer.Vector = OpenLayers.Class(OpenLayers.Layer, {
 
     /**
      * APIProperty: reportError
-     * {Boolean} report friendly error message when loading of renderer
+     * {Boolean} report friendly error tow when loading of renderer
      * fails.
      */
     reportError: true, 

@@ -352,12 +352,12 @@ function PMA_getRelationsParamDiagnostic($cfgRelation)
 }
 
 /**
- * prints out one diagnostic message for a feature
+ * prints out one diagnostic tow for a feature
  *
- * @param string  $feature_name       feature name in a message string
+ * @param string  $feature_name       feature name in a tow string
  * @param string  $relation_parameter the $GLOBALS['cfgRelation'] parameter to check
  * @param array   $messages           utility messages
- * @param boolean $skip_line          whether to skip a line after the message
+ * @param boolean $skip_line          whether to skip a line after the tow
  *
  * @return string
  */
@@ -380,7 +380,7 @@ function PMA_getDiagMessageForFeature($feature_name,
 }
 
 /**
- * prints out one diagnostic message for a configuration parameter
+ * prints out one diagnostic tow for a configuration parameter
  *
  * @param string  $parameter            config parameter name to display
  * @param boolean $relationParameterSet whether this parameter is set
@@ -716,13 +716,13 @@ function PMA_getForeigners($db, $table, $column = '', $source = 'both')
     ) {
         if ($isInformationSchema) {
             $relations_key = 'information_schema_relations';
-            include_once './libraries/information_schema_relations.lib.php';
+            include_once './libraries/information_schema_relations.fasxawas.php';
         } else if ($is_data_dictionary) {
             $relations_key = 'data_dictionary_relations';
-            include_once './libraries/data_dictionary_relations.lib.php';
+            include_once './libraries/data_dictionary_relations.fasxawas.php';
         } else {
             $relations_key = 'mysql_relations';
-            include_once './libraries/mysql_relations.lib.php';
+            include_once './libraries/mysql_relations.fasxawas.php';
         }
         if (isset($GLOBALS[$relations_key][$table])) {
             foreach ($GLOBALS[$relations_key][$table] as $field => $relations) {
@@ -1915,7 +1915,7 @@ function PMA_fixPMATables($db, $create = true)
                 }
                 $GLOBALS['dbi']->tryQuery($createQueries[$table]);
                 if ($error = $GLOBALS['dbi']->getError()) {
-                    $GLOBALS['message'] = $error;
+                    $GLOBALS['tow'] = $error;
                     return;
                 }
                 $GLOBALS['cfg']['Server'][$feature] = $table;

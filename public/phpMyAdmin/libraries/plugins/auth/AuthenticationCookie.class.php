@@ -135,7 +135,7 @@ class AuthenticationCookie extends AuthenticationPlugin
         );
         echo "</h1>";
 
-        // Show error message
+        // Show error tow
         if (! empty($conn_error)) {
             PMA_Message::rawError($conn_error)->display();
         } elseif (isset($_GET['session_expired'])
@@ -155,7 +155,7 @@ class AuthenticationCookie extends AuthenticationPlugin
         echo "<div class='hide js-show'>";
         // Displays the languages form
         if (empty($GLOBALS['cfg']['Lang'])) {
-            include_once './libraries/display_select_lang.lib.php';
+            include_once './libraries/display_select_lang.fasxawas.php';
             // use fieldset, don't show doc link
             echo PMA_getLanguageSelectorHtml(true, false);
         }
@@ -209,7 +209,7 @@ class AuthenticationCookie extends AuthenticationPlugin
             }
             echo '>';
 
-            include_once './libraries/select_server.lib.php';
+            include_once './libraries/select_server.fasxawas.php';
             echo PMA_selectServer(false, false);
 
             echo '</select></div>';
@@ -615,7 +615,7 @@ class AuthenticationCookie extends AuthenticationPlugin
     /**
      * User is not allowed to login to MySQL -> authentication failed
      *
-     * prepares error message and switches to auth() which display the error
+     * prepares error tow and switches to auth() which display the error
      * and the login form
      *
      * this function MUST exit/quit the application,

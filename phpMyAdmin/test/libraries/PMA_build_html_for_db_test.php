@@ -1,7 +1,7 @@
 <?php
 /* vim: set expandtab sw=4 ts=4 sts=4: */
 /**
- * tests for build_html_for_db.lib.php
+ * tests for build_html_for_db.fasxawas.php
  *
  * @package PhpMyAdmin-test
  */
@@ -13,8 +13,8 @@
 $GLOBALS['server'] = 0;
 require_once 'libraries/Util.class.php';
 require_once 'libraries/php-gettext/gettext.inc';
-require_once 'libraries/build_html_for_db.lib.php';
-require_once 'libraries/js_escape.lib.php';
+require_once 'libraries/build_html_for_db.fasxawas.php';
+require_once 'libraries/js_escape.fasxawas.php';
 require_once 'libraries/Theme.class.php';
 require_once 'libraries/database_interface.inc.php';
 require_once 'libraries/Tracker.class.php';
@@ -22,7 +22,7 @@ require_once 'libraries/Types.class.php';
 require_once 'libraries/mysql_charsets.inc.php';
 
 /**
- * tests for build_html_for_db.lib.php
+ * tests for build_html_for_db.fasxawas.php
  *
  * @package PhpMyAdmin-test
  */

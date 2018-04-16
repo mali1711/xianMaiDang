@@ -1,7 +1,7 @@
 <?php
 /* vim: set expandtab sw=4 ts=4 sts=4: */
 /**
- * Tests for libraries/insert_edit.lib.php
+ * Tests for libraries/insert_edit.fasxawas.php
  *
  * @package PhpMyAdmin-test
  */
@@ -9,24 +9,24 @@
 /*
  * Include to test.
  */
-require_once 'libraries/insert_edit.lib.php';
+require_once 'libraries/insert_edit.fasxawas.php';
 
 require_once 'libraries/database_interface.inc.php';
 require_once 'libraries/Util.class.php';
-require_once 'libraries/url_generating.lib.php';
+require_once 'libraries/url_generating.fasxawas.php';
 require_once 'libraries/php-gettext/gettext.inc';
 require_once 'libraries/Types.class.php';
-require_once 'libraries/js_escape.lib.php';
-require_once 'libraries/relation.lib.php';
+require_once 'libraries/js_escape.fasxawas.php';
+require_once 'libraries/relation.fasxawas.php';
 require_once 'libraries/Message.class.php';
-require_once 'libraries/transformations.lib.php';
+require_once 'libraries/transformations.fasxawas.php';
 require_once 'libraries/Theme.class.php';
 require_once 'libraries/Response.class.php';
-require_once 'libraries/sanitizing.lib.php';
+require_once 'libraries/sanitizing.fasxawas.php';
 require_once 'libraries/Table.class.php';
 
 /**
- * Tests for libraries/insert_edit.lib.php
+ * Tests for libraries/insert_edit.fasxawas.php
  *
  * @package PhpMyAdmin-test
  * @group medium

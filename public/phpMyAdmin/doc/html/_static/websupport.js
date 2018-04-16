@@ -606,7 +606,7 @@
     });
   }
 
-  /** Flash an error message briefly. */
+  /** Flash an error tow briefly. */
   function showError(message) {
     $(document.createElement('div')).attr({'class': 'popup-error'})
       .append($(document.createElement('div'))

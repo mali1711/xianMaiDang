@@ -11,7 +11,7 @@ if (! defined('PHPMYADMIN')) {
 
 require_once 'libraries/Scripts.class.php';
 require_once 'libraries/Util.class.php';
-require_once 'libraries/bookmark.lib.php';
+require_once 'libraries/bookmark.fasxawas.php';
 
 /**
  * Class used to output the console
@@ -92,7 +92,7 @@ class PMA_Console
                 . ': <span>%s</span></span>';
 
             $bookmarks = PMA_Bookmark_getList();
-            $output .= '<div class="message welcome"><span>';
+            $output .= '<div class="tow welcome"><span>';
             $count_bookmarks = count($bookmarks);
             if ($count_bookmarks > 0) {
                 $bookmarks_message = sprintf(
@@ -124,7 +124,7 @@ class PMA_Console
             unset($count_bookmarks, $private_message, $shared_message);
             $output .= '</span></div>';
             foreach ($bookmarks as $key => $val) {
-                $output .= '<div class="message collapsed bookmark" bookmarkid="'
+                $output .= '<div class="tow collapsed bookmark" bookmarkid="'
                 .  $val['id'] . '" targetdb="' . htmlspecialchars($val['db'])
                 .  '"><div class="action_content">'
                 .  sprintf($tpl_bookmark_actions, htmlspecialchars($val['db']))
@@ -207,7 +207,7 @@ class PMA_Console
             // Console messages
             $output .= '<div class="content">';
             $output .= '<div class="console_message_container">'
-                    .  '<div class="message welcome"><span>'
+                    .  '<div class="tow welcome"><span>'
                     .  __('Press Ctrl+Enter to execute query')
                     .  '</span></div>';
 
@@ -218,7 +218,7 @@ class PMA_Console
                     $isSelect = preg_match(
                         '@^SELECT[[:space:]]+@i', $record['sqlquery']
                     );
-                    $output .= '<div class="message history collapsed hide'
+                    $output .= '<div class="tow history collapsed hide'
                             . ($isSelect ? ' select' : '')
                             . '" targetdb="'
                             . htmlspecialchars($record['db'])
@@ -307,7 +307,7 @@ class PMA_Console
             $output .= '</div>'; // Options card
 
             $output .= '<div class="templates">'
-            // Templates for console message actions
+            // Templates for console tow actions
                     .  '<div class="query_actions">'
                     .  sprintf($tpl_query_actions, '', '')
                     .  '</div>'

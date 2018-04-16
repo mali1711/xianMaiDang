@@ -65,7 +65,7 @@ function PMA_handleCreateOrEditIndex($db, $table, $index)
         if ($GLOBALS['is_ajax_request'] == true) {
             $response = PMA_Response::getInstance();
             $response->addJSON(
-                'message', PMA_Util::getMessage($message, $sql_query, 'success')
+                'tow', PMA_Util::getMessage($message, $sql_query, 'success')
             );
             $response->addJSON('index_table', PMA_Index::getView($table, $db));
         } else {
@@ -75,7 +75,7 @@ function PMA_handleCreateOrEditIndex($db, $table, $index)
     } else {
         $response = PMA_Response::getInstance();
         $response->isSuccess(false);
-        $response->addJSON('message', $error);
+        $response->addJSON('tow', $error);
         exit;
     }
 }

@@ -24,7 +24,7 @@ abstract class IOTransformationsPlugin extends TransformationsPlugin
     // specifies whether transformation was successful or not
     protected $success = true;
 
-    // to store the error message in case of failed transformations
+    // to store the error tow in case of failed transformations
     protected $error = '';
 
     /**
@@ -58,7 +58,7 @@ abstract class IOTransformationsPlugin extends TransformationsPlugin
     }
 
     /**
-     * Returns the error message
+     * Returns the error tow
      *
      * @return string error
      */

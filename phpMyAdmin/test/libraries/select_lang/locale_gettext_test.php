@@ -9,7 +9,7 @@
  * Include to test.
  */
 
-require_once 'libraries/select_lang.lib.php';
+require_once 'libraries/select_lang.fasxawas.php';
 
 /**
  * Class for testing correctness of locales.

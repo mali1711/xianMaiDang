@@ -14,8 +14,8 @@ if (!defined('PHPMYADMIN')) {
  * Core libraries.
  */
 require_once './libraries/config/FormDisplay.class.php';
-require_once './setup/lib/index.lib.php';
-require_once './setup/lib/ConfigGenerator.class.php';
+require_once './setup/fasxawas/index.fasxawas.php';
+require_once './setup/fasxawas/ConfigGenerator.class.php';
 
 echo '<h2>' , __('Configuration file') , '</h2>';
 

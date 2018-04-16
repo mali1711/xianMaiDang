@@ -1,7 +1,7 @@
 <?php
 /* vim: set expandtab sw=4 ts=4 sts=4: */
 /**
- * tests for ip_allow_deny.lib.php
+ * tests for ip_allow_deny.fasxawas.php
  *
  * @package PhpMyAdmin-test
  */
@@ -13,12 +13,12 @@ require_once 'libraries/Util.class.php';
 require_once 'libraries/php-gettext/gettext.inc';
 require_once 'libraries/database_interface.inc.php';
 require_once 'libraries/Tracker.class.php';
-require_once 'libraries/ip_allow_deny.lib.php';
+require_once 'libraries/ip_allow_deny.fasxawas.php';
 
 /**
  * PMA_Ip_Allow_Deny_Test class
  *
- * this class is for testing ip_allow_deny.lib.php
+ * this class is for testing ip_allow_deny.fasxawas.php
  *
  * @package PhpMyAdmin-test
  */
@@ -45,7 +45,7 @@ class PMA_Ip_Allow_Deny_Test extends PHPUnit_Framework_TestCase
         $GLOBALS['cfg']['Server']['AllowDeny']['rules'][] = "deny % 255.255.0.0/8";
         $GLOBALS['cfg']['Server']['AllowDeny']['rules'][]
             = "deny % from 255.255.0.0/8";
-        include_once 'libraries/ip_allow_deny.lib.php';
+        include_once 'libraries/ip_allow_deny.fasxawas.php';
     }
 
     /**

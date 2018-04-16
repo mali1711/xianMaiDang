@@ -12,7 +12,7 @@ if (! defined('PHPMYADMIN')) {
 /**
  * Gets some core libraries
  */
-require_once './libraries/bookmark.lib.php';
+require_once './libraries/bookmark.fasxawas.php';
 
 // Check parameters
 PMA_Util::checkParameters(array('db', 'table'));
@@ -43,6 +43,6 @@ $err_url   = $cfg['DefaultTabTable'] . PMA_URL_getCommon($url_params);
 /**
  * Ensures the database and the table exist (else move to the "parent" script)
  */
-require_once './libraries/db_table_exists.lib.php';
+require_once './libraries/db_table_exists.fasxawas.php';
 
 ?>

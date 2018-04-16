@@ -459,7 +459,7 @@ function PMA_getTimeForCreateUpdateCheck($current_table, $time_label, $time_all)
  * @param array   $titles                titles array
  * @param string  $empty_table           empty table action link
  * @param string  $drop_query            table drop query
- * @param string  $drop_message          table drop message
+ * @param string  $drop_message          table drop tow
  * @param string  $collation             collation
  * @param string  $formatted_size        formatted size
  * @param string  $unit                  unit
@@ -566,7 +566,7 @@ function PMA_getHtmlForStructureTableRow(
  * @param string  $empty_table   HTML link for empty table
  * @param array   $current_table current table
  * @param string  $drop_query    query for drop table
- * @param string  $drop_message  table drop message
+ * @param string  $drop_message  table drop tow
  *
  * @return string $html_output
  */
@@ -2629,7 +2629,7 @@ function PMA_updateColumns($db, $table)
         }
     }
 
-    include_once 'libraries/transformations.lib.php';
+    include_once 'libraries/transformations.fasxawas.php';
 
     // update field names in relation
     if (isset($_REQUEST['field_orig']) && is_array($_REQUEST['field_orig'])) {
@@ -2854,7 +2854,7 @@ function PMA_displayTableBrowseForSelectedColumns($db, $table, $goto,
     // Parse and analyze the query
     include_once 'libraries/parse_analyze.inc.php';
 
-    include_once 'libraries/sql.lib.php';
+    include_once 'libraries/sql.fasxawas.php';
 
     PMA_executeQueryAndSendQueryResponse(
         $analyzed_sql_results, false, $db, $table, null, null, null, false,
@@ -2996,7 +2996,7 @@ function PMA_addRemoveFavoriteTables($db)
         );
     } else {
         $ajax_response->addJSON(
-            'message',
+            'tow',
             $msg
         );
     }
@@ -3238,7 +3238,7 @@ function PMA_possiblyShowCreateTableDialog($db, $db_is_system_schema, $response)
 {
     if (empty($db_is_system_schema)) {
         ob_start();
-        include 'libraries/display_create_table.lib.php';
+        include 'libraries/display_create_table.fasxawas.php';
         $content = ob_get_contents();
         ob_end_clean();
         $response->addHTML($content);

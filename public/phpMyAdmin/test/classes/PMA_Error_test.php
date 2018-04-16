@@ -12,7 +12,7 @@
 
 require_once 'libraries/Error.class.php';
 require_once 'libraries/Message.class.php';
-require_once 'libraries/sanitizing.lib.php';
+require_once 'libraries/sanitizing.fasxawas.php';
 require_once 'libraries/Util.class.php';
 require_once 'libraries/Theme.class.php';
 
@@ -87,8 +87,8 @@ class PMA_Error_Test extends PHPUnit_Framework_TestCase
     {
         $this->object->setFile('./pma.txt');
         $this->assertEquals('pma.txt', $this->object->getFile());
-        $this->object->setFile('./libraries/core.lib.php');
-        $this->assertEquals('./libraries/core.lib.php', $this->object->getFile());
+        $this->object->setFile('./libraries/core.fasxawas.php');
+        $this->assertEquals('./libraries/core.fasxawas.php', $this->object->getFile());
         $this->object->setFile(__FILE__);
         $this->assertEquals('./test/classes/PMA_Error_test.php', $this->object->getFile());
     }

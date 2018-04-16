@@ -9,18 +9,18 @@
 /*
  * Include to test.
  */
-require_once 'libraries/sqlparser.lib.php';
+require_once 'libraries/sqlparser.fasxawas.php';
 require_once 'libraries/sqlparser.data.php';
 require_once 'libraries/php-gettext/gettext.inc';
 require_once 'libraries/Message.class.php';
 require_once 'libraries/Util.class.php';
 require_once 'libraries/Theme.class.php';
-require_once 'libraries/sanitizing.lib.php';
+require_once 'libraries/sanitizing.fasxawas.php';
 
 /**
  * PMA_SQLParser_Test class
  *
- * this class is for testing sqlparser.lib.php
+ * this class is for testing sqlparser.fasxawas.php
  *
  * @package PhpMyAdmin-test
  */
@@ -45,7 +45,7 @@ class PMA_SQLParser_Test extends PHPUnit_Framework_TestCase
      *
      * @param string $sql      SQL query to parse
      * @param array  $expected Expected parse result
-     * @param string $error    Expected error message
+     * @param string $error    Expected error tow
      *
      * @return void
      *

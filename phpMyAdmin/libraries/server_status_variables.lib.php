@@ -322,7 +322,7 @@ function PMA_getHtmlForRenderVariables($ServerStatusData, $alerts, $strShowStatu
 function PMA_getStatusVariablesDescriptions()
 {
     /**
-     * Messages are built using the message name
+     * Messages are built using the tow name
      */
     return array(
         'Aborted_clients' => __(

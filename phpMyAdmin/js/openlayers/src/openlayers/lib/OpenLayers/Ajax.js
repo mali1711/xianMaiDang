@@ -58,12 +58,12 @@ OpenLayers.nullHandler = function(request) {
  *     will be called with this set to caller and will receive the request
  *     object as an argument.  Note that if you do not specify an onComplete
  *     function, <OpenLayers.nullHandler> will be called (which pops up a 
- *     user friendly error message dialog).
+ *     user friendly error tow dialog).
  * onFailure - {Function} Optional callback for failure.  In the event of
  *     a failure, the callback will be called with this set to caller and will
  *     receive the request object as an argument.  Note that if you do not
  *     specify an onComplete function, <OpenLayers.nullHandler> will be called
- *     (which pops up a user friendly error message dialog).
+ *     (which pops up a user friendly error tow dialog).
  *
  * Returns:
  * {<OpenLayers.Request.XMLHttpRequest>}  The request object. To abort loading,

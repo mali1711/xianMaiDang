@@ -7,18 +7,18 @@
  */
 require_once 'libraries/plugins/export/ExportSql.class.php';
 require_once 'libraries/DatabaseInterface.class.php';
-require_once 'libraries/export.lib.php';
+require_once 'libraries/export.fasxawas.php';
 require_once 'libraries/Util.class.php';
 require_once 'libraries/Theme.class.php';
 require_once 'libraries/Config.class.php';
 require_once 'libraries/php-gettext/gettext.inc';
 require_once 'libraries/config.default.php';
-require_once 'libraries/mysql_charsets.lib.php';
-require_once 'libraries/relation.lib.php';
-require_once 'libraries/transformations.lib.php';
+require_once 'libraries/mysql_charsets.fasxawas.php';
+require_once 'libraries/relation.fasxawas.php';
+require_once 'libraries/transformations.fasxawas.php';
 require_once 'libraries/Table.class.php';
-require_once 'libraries/sqlparser.lib.php';
-require_once 'libraries/charset_conversion.lib.php';
+require_once 'libraries/sqlparser.fasxawas.php';
+require_once 'libraries/charset_conversion.fasxawas.php';
 require_once 'export.php';
 /**
  * tests for ExportSql class

@@ -23,7 +23,7 @@ require_once './libraries/common.inc.php';
 // Close session early as we won't write anything there
 session_write_close();
 // But this one is needed for PMA_escapeJsString()
-require_once './libraries/js_escape.lib.php';
+require_once './libraries/js_escape.fasxawas.php';
 require_once './libraries/Util.class.php';
 
 require_once './libraries/OutputBuffering.class.php';

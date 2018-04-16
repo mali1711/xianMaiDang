@@ -236,4 +236,20 @@ return [
         'var_page'  => 'page',
         'list_rows' => 15,
     ],
+
+    //邮件发送设置
+    'mailarr'               =>[
+        'smtp'      =>'smtp.163.com',
+        'username'  =>'mali1711@163.com',
+        'password'  =>'abc123456789',
+        'formname'  =>'鲜卖当',
+    ],
+
+    // 云之讯短信发送配置
+    'sms'                   =>[
+        'accountsid'  =>'594c1c503e4539df437ba99c235eb0ec',
+        'token'       =>'eb78c6b89891c71f8769ce7909c39a25',
+        'appid'       =>'2c021c71e4a04741842f836df509b957',
+        'templateid'  =>'277877',
+    ]
 ];

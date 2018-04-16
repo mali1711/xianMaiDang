@@ -9,7 +9,7 @@
  * Include to test.
  */
 
-require_once 'libraries/zip.lib.php';
+require_once 'libraries/zip.fasxawas.php';
 
 /**
  * Tests for displaying results

@@ -1444,7 +1444,7 @@
     define('widgets/filednd',[
         'base',
         'uploader',
-        'lib/dnd',
+        'fasxawas/dnd',
         'widgets/widget'
     ], function( Base, Uploader, Dnd ) {
         var $ = Base.$;
@@ -1551,7 +1551,7 @@
     define('widgets/filepaste',[
         'base',
         'uploader',
-        'lib/filepaste',
+        'fasxawas/filepaste',
         'widgets/widget'
     ], function( Base, Uploader, FilePaste ) {
         var $ = Base.$;
@@ -1647,7 +1647,7 @@
      */
     define('lib/file',[
         'base',
-        'lib/blob'
+        'fasxawas/blob'
     ], function( Base, Blob ) {
     
         var uid = 1,
@@ -1683,7 +1683,7 @@
     define('lib/filepicker',[
         'base',
         'runtime/client',
-        'lib/file'
+        'fasxawas/file'
     ], function( Base, RuntimeClent, File ) {
     
         var $ = Base.$;
@@ -1815,7 +1815,7 @@
     define('widgets/filepicker',[
         'base',
         'uploader',
-        'lib/filepicker',
+        'fasxawas/filepicker',
         'widgets/widget'
     ], function( Base, Uploader, FilePicker ) {
         var $ = Base.$;
@@ -1973,7 +1973,7 @@
          * @class File
          * @constructor 构造函数
          * @grammar new File( source ) => File
-         * @param {Lib.File} source [lib.File](#Lib.File)实例, 此source对象是带有Runtime信息的。
+         * @param {Lib.File} source [fasxawas.File](#Lib.File)实例, 此source对象是带有Runtime信息的。
          */
         function WUFile( source ) {
     
@@ -2387,7 +2387,7 @@
         'uploader',
         'queue',
         'file',
-        'lib/file',
+        'fasxawas/file',
         'runtime/client',
         'widgets/widget'
     ], function( Base, Uploader, Queue, WUFile, File, RuntimeClient ) {
@@ -2879,7 +2879,7 @@
         'base',
         'uploader',
         'file',
-        'lib/transport',
+        'fasxawas/transport',
         'widgets/widget'
     ], function( Base, Uploader, WUFile, Transport ) {
     
@@ -4052,7 +4052,7 @@
      */
     define('runtime/html5/blob',[
         'runtime/html5/runtime',
-        'lib/blob'
+        'fasxawas/blob'
     ], function( Html5Runtime, Blob ) {
     
         return Html5Runtime.register( 'Blob', {
@@ -4072,7 +4072,7 @@
     define('runtime/html5/dnd',[
         'base',
         'runtime/html5/runtime',
-        'lib/file'
+        'fasxawas/file'
     ], function( Base, Html5Runtime, File ) {
     
         var $ = Base.$,
@@ -4281,7 +4281,7 @@
     define('runtime/html5/filepaste',[
         'base',
         'runtime/html5/runtime',
-        'lib/file'
+        'fasxawas/file'
     ], function( Base, Html5Runtime, File ) {
     
         return Html5Runtime.register( 'FilePaste', {
@@ -4976,7 +4976,7 @@
      */
     define('runtime/flash/blob',[
         'runtime/flash/runtime',
-        'lib/blob'
+        'fasxawas/blob'
     ], function( FlashRuntime, Blob ) {
     
         return FlashRuntime.register( 'Blob', {

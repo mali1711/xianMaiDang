@@ -9,7 +9,7 @@
  * Include to test.
  */
 
-require_once 'libraries/zip_extension.lib.php';
+require_once 'libraries/zip_extension.fasxawas.php';
 require_once 'libraries/php-gettext/gettext.inc';
 
 /**

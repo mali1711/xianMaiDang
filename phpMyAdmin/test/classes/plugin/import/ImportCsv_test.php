@@ -7,7 +7,7 @@
 
 /*
  * we must set $GLOBALS['server'] here
- * since 'check_user_privileges.lib.php' will use it globally
+ * since 'check_user_privileges.fasxawas.php' will use it globally
  */
 $GLOBALS['server'] = 0;
 
@@ -15,13 +15,13 @@ $GLOBALS['server'] = 0;
  * Include to test.
  */
 require_once 'libraries/Util.class.php';
-require_once 'libraries/url_generating.lib.php';
+require_once 'libraries/url_generating.fasxawas.php';
 require_once 'libraries/php-gettext/gettext.inc';
 require_once 'libraries/Table.class.php';
 require_once 'libraries/Tracker.class.php';
 require_once 'libraries/database_interface.inc.php';
-require_once 'libraries/import.lib.php';
-require_once 'libraries/sanitizing.lib.php';
+require_once 'libraries/import.fasxawas.php';
+require_once 'libraries/sanitizing.fasxawas.php';
 require_once 'libraries/Message.class.php';
 require_once 'libraries/Theme.class.php';
 require_once 'libraries/plugins/import/ImportCsv.class.php';

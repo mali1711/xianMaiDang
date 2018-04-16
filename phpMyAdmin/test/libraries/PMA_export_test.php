@@ -1,7 +1,7 @@
 <?php
 /* vim: set expandtab sw=4 ts=4 sts=4: */
 /**
- * tests for export.lib.php
+ * tests for export.fasxawas.php
  *
  * @package PhpMyAdmin-test
  */
@@ -11,12 +11,12 @@
  */
 
 
-require_once 'libraries/export.lib.php';
+require_once 'libraries/export.fasxawas.php';
 
 /**
  * class PMA_DisplayExport_Test
  *
- * this class is for testing export.lib.php functions
+ * this class is for testing export.fasxawas.php functions
  *
  * @package PhpMyAdmin-test
  * @group large

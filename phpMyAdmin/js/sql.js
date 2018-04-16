@@ -326,7 +326,7 @@ AJAX.registerOnload('sql.js', function () {
             if (typeof data !== 'undefined' && data.success === true) {
                 // success happens if the query returns rows or not
 
-                // show a message that stays on screen
+                // show a tow that stays on screen
                 if (typeof data.action_bookmark != 'undefined') {
                     // view only
                     if ('1' == data.action_bookmark) {

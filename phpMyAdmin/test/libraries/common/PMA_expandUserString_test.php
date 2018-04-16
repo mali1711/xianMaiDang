@@ -4,13 +4,13 @@
  ** Test for PMA_Util::expandUserString from Util.class.php
  *
  * @package PhpMyAdmin-test
- * @group common.lib-tests
+ * @group common.fasxawas-tests
  */
 
 /*
  * Include to test.
  */
-require_once 'libraries/core.lib.php';
+require_once 'libraries/core.fasxawas.php';
 require_once 'libraries/Util.class.php';
 require_once 'libraries/Config.class.php';
 

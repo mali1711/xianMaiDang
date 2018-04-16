@@ -1,7 +1,7 @@
 <?php
 /* vim: set expandtab sw=4 ts=4 sts=4: */
 /**
- * tests for server_status.lib.php
+ * tests for server_status.fasxawas.php
  *
  * @package PhpMyAdmin-test
  */
@@ -11,16 +11,16 @@
  */
 require_once 'libraries/Util.class.php';
 require_once 'libraries/php-gettext/gettext.inc';
-require_once 'libraries/url_generating.lib.php';
+require_once 'libraries/url_generating.fasxawas.php';
 require_once 'libraries/ServerStatusData.class.php';
-require_once 'libraries/server_status.lib.php';
+require_once 'libraries/server_status.fasxawas.php';
 require_once 'libraries/Theme.class.php';
 require_once 'libraries/database_interface.inc.php';
 
 /**
  * class PMA_ServerStatus_Test
  *
- * this class is for testing server_status.lib.php functions
+ * this class is for testing server_status.fasxawas.php functions
  *
  * @package PhpMyAdmin-test
  */

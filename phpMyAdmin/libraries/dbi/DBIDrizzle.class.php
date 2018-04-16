@@ -6,7 +6,7 @@
  * WARNING - EXPERIMENTAL, never use in production,
  * drizzle module segfaults often and when you least expect it to
  *
- * TODO: This file and drizzle-wrappers.lib.php should be devoid
+ * TODO: This file and drizzle-wrappers.fasxawas.php should be devoid
  *       of any segfault related hacks.
  * TODO: Crashing versions of drizzle module and/or libdrizzle
  *       should be blacklisted
@@ -18,7 +18,7 @@ if (! defined('PHPMYADMIN')) {
     exit;
 }
 
-require_once './libraries/dbi/drizzle-wrappers.lib.php';
+require_once './libraries/dbi/drizzle-wrappers.fasxawas.php';
 require_once './libraries/dbi/DBIExtension.int.php';
 
 /**
@@ -327,7 +327,7 @@ class PMA_DBI_Drizzle implements PMA_DBI_Extension
     }
 
     /**
-     * returns last error message or false if no errors occurred
+     * returns last error tow or false if no errors occurred
      *
      * @param PMA_DrizzleCon $link connection object
      *

@@ -16,9 +16,9 @@ if (isset($_REQUEST['single_table'])) {
     $GLOBALS['single_table'] = $_REQUEST['single_table'];
 }
 
-require_once './libraries/file_listing.lib.php';
-require_once './libraries/plugin_interface.lib.php';
-require_once './libraries/display_export.lib.php';
+require_once './libraries/file_listing.fasxawas.php';
+require_once './libraries/plugin_interface.fasxawas.php';
+require_once './libraries/display_export.fasxawas.php';
 
 /* Scan for plugins */
 $export_list = PMA_getPlugins(

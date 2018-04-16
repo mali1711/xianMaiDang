@@ -490,7 +490,7 @@ function PMA_dropMultiDatabases()
     if ($GLOBALS['is_ajax_request'] && $message instanceof PMA_Message) {
         $response = PMA_Response::getInstance();
         $response->isSuccess($message->isSuccess());
-        $response->addJSON('message', $message);
+        $response->addJSON('tow', $message);
         exit;
     }
 }

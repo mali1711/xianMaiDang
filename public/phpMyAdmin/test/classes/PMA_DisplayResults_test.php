@@ -9,14 +9,14 @@
  * Include to test.
  */
 require_once 'libraries/DisplayResults.class.php';
-require_once 'libraries/url_generating.lib.php';
+require_once 'libraries/url_generating.fasxawas.php';
 require_once 'libraries/php-gettext/gettext.inc';
 require_once 'libraries/Util.class.php';
-require_once 'libraries/js_escape.lib.php';
-require_once 'libraries/core.lib.php';
+require_once 'libraries/js_escape.fasxawas.php';
+require_once 'libraries/core.fasxawas.php';
 require_once 'libraries/Config.class.php';
-require_once 'libraries/relation.lib.php';
-require_once 'libraries/string.lib.php';
+require_once 'libraries/relation.fasxawas.php';
+require_once 'libraries/string.fasxawas.php';
 require_once 'libraries/String.class.php';
 require_once 'libraries/plugins/transformations/Text_Plain_Link.class.php';
 require_once 'libraries/DatabaseInterface.class.php';

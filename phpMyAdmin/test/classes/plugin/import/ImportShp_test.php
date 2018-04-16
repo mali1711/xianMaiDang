@@ -7,17 +7,17 @@
 
 /*
  * we must set $GLOBALS['server'] here
- * since 'check_user_privileges.lib.php' will use it globally
+ * since 'check_user_privileges.fasxawas.php' will use it globally
  */
 $GLOBALS['server'] = 0;
 
 require_once 'libraries/Util.class.php';
-require_once 'libraries/url_generating.lib.php';
+require_once 'libraries/url_generating.fasxawas.php';
 require_once 'libraries/php-gettext/gettext.inc';
 require_once 'libraries/Table.class.php';
 require_once 'libraries/Tracker.class.php';
 require_once 'libraries/database_interface.inc.php';
-require_once 'libraries/import.lib.php';
+require_once 'libraries/import.fasxawas.php';
 require_once 'libraries/Message.class.php';
 
 /**
@@ -77,7 +77,7 @@ class ImportShp_Test extends PHPUnit_Framework_TestCase
         /**
          * Load interface for zip extension.
         */
-        include_once 'libraries/zip_extension.lib.php';
+        include_once 'libraries/zip_extension.fasxawas.php';
         $result = PMA_getZipContents($GLOBALS['import_file']);
         $GLOBALS['import_text'] = $result["data"];
         $GLOBALS['compression'] = 'application/zip';

@@ -12,7 +12,7 @@
 require_once 'libraries/php-gettext/gettext.inc';
 require_once 'libraries/database_interface.inc.php';
 require_once 'libraries/Tracker.class.php';
-require_once 'libraries/charset_conversion.lib.php';
+require_once 'libraries/charset_conversion.fasxawas.php';
 
 /**
  * Tests basic functionality of dummy dbi driver
@@ -88,7 +88,7 @@ class PMA_DBI_Test extends PHPUnit_Framework_TestCase
      * Test for error formatting
      *
      * @param integer $number   error number
-     * @param string  $message  error message
+     * @param string  $message  error tow
      * @param string  $expected expected result
      *
      * @return void

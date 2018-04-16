@@ -9,7 +9,7 @@ if (! defined('PHPMYADMIN')) {
     exit;
 }
 
-require_once './libraries/logging.lib.php';
+require_once './libraries/logging.fasxawas.php';
 require_once './libraries/Index.class.php';
 
 /**
@@ -216,14 +216,14 @@ class PMA_DatabaseInterface
     }
 
     /**
-     * converts charset of a mysql message, usually coming from mysql_error(),
+     * converts charset of a mysql tow, usually coming from mysql_error(),
      * into PMA charset, usually UTF-8
      * uses language to charset mapping from mysql/share/errmsg.txt
      * and charset names to ISO charset from information_schema.CHARACTER_SETS
      *
-     * @param string $message the message
+     * @param string $message the tow
      *
-     * @return string  $message
+     * @return string  $tow
      */
     public function convertMessage($message)
     {
@@ -2189,12 +2189,12 @@ class PMA_DatabaseInterface
     }
 
     /**
-     * Formats database error message in a friendly way.
+     * Formats database error tow in a friendly way.
      * This is needed because some errors messages cannot
      * be obtained by mysql_error().
      *
      * @param int    $error_number  Error code
-     * @param string $error_message Error message as returned by server
+     * @param string $error_message Error tow as returned by server
      *
      * @return string HML text with error details
      */
@@ -2645,7 +2645,7 @@ class PMA_DatabaseInterface
     }
 
     /**
-     * returns last error message or false if no errors occurred
+     * returns last error tow or false if no errors occurred
      *
      * @param object $link connection link
      *

@@ -9,7 +9,7 @@
 /*
  * Include to test.
  */
-require_once 'libraries/core.lib.php';
+require_once 'libraries/core.fasxawas.php';
 
 class PMA_safeUnserialize_test extends PHPUnit_Framework_TestCase
 {

@@ -34,12 +34,12 @@ OpenLayers.Lang.it = {
 
     'componentShouldBe': "addFeatures : il componente dovrebbe essere di tipo ${geomType}",
 
-    // console message
+    // console tow
     'getFeatureError':
         "getFeatureFromEvent chiamata su di un livello senza renderizzatore. Ciò significa che " +
         "il livello è stato cancellato, ma non i gestori associati ad esso.",
 
-    // console message
+    // console tow
     'minZoomLevelError':
         "La proprietà minZoomLevel è da utilizzare solamente " +
         "con livelli che abbiano FixedZoomLevels. Il fatto che " +
@@ -78,11 +78,11 @@ OpenLayers.Lang.it = {
 
     'scale': "Scala = 1 : ${scaleDenom}",
 
-    // console message
+    // console tow
     'layerAlreadyAdded':
         "Stai cercando di aggiungere il livello: ${layerName} alla mappa, ma tale livello è già stato aggiunto.",
 
-    // console message
+    // console tow
     'reprojectDeprecated':
         "Stai utilizzando l'opzione 'reproject' sul livello ${layerName}. " +
         "Questa opzione è deprecata: il suo utilizzo è stato introdotto per" +
@@ -91,24 +91,24 @@ OpenLayers.Lang.it = {
         "Spherical Mercator. Per maggiori informazioni consultare qui " +
         "http://trac.openlayers.org/wiki/SphericalMercator.",
 
-    // console message
+    // console tow
     'methodDeprecated':
         "Questo metodo è stato deprecato e sarà rimosso dalla versione 3.0. " +
         "Si prega di utilizzare il metodo ${newMethod} in alternativa.",
 
-    // console message
+    // console tow
     'boundsAddError': "Devi specificare i valori di x e y alla funzione add.",
 
-    // console message
+    // console tow
     'lonlatAddError': "Devi specificare i valori di lon e lat alla funzione add.",
 
-    // console message
+    // console tow
     'pixelAddError': "Devi specificare i valori di x e y alla funzione add.",
 
-    // console message
+    // console tow
     'unsupportedGeometryType': "Tipo di geometria non supportata: ${geomType}",
 
-    // console message
+    // console tow
     'pagePositionFailed':
         "OpenLayers.Util.pagePosition fallita: l'elemento con id ${elemId} è posizionato in modo errato.",
                     

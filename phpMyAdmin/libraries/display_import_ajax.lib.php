@@ -27,7 +27,7 @@ $upload_id = uniqid("");
 /**
   * list of available plugins
   *
-  * Each plugin has own checkfunction in display_import_ajax.lib.php
+  * Each plugin has own checkfunction in display_import_ajax.fasxawas.php
   * and own file with functions in upload_#KEY#.php
   */
 $plugins = array(
@@ -115,7 +115,7 @@ function PMA_Import_nopluginCheck()
   * It uses PMA_getUploadStatus, which is defined in plugin's file.
   *
   * @param string $id ID of transfer, usually $upload_id
-  *                   from display_import_ajax.lib.php
+  *                   from display_import_ajax.fasxawas.php
   *
   * @return void
   */

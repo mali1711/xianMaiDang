@@ -10,7 +10,7 @@ if (! defined('PHPMYADMIN')) {
 }
 
 /**
- * returns HTML for error message
+ * returns HTML for error tow
  *
  * @return String HTML code
  */

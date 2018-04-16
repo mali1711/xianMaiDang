@@ -8995,7 +8995,7 @@ jQuery.extend({
 			requestHeadersNames = {},
 			// The jqXHR state
 			state = 0,
-			// Default abort message
+			// Default abort tow
 			strAbort = "canceled",
 			// Fake xhr
 			jqXHR = {

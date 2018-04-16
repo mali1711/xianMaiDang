@@ -7,12 +7,12 @@
  */
 
 require_once 'libraries/php-gettext/gettext.inc';
-require_once 'libraries/url_generating.lib.php';
+require_once 'libraries/url_generating.fasxawas.php';
 require_once 'libraries/Util.class.php';
 /*
  * Include to test.
  */
-require_once 'libraries/rte/rte_events.lib.php';
+require_once 'libraries/rte/rte_events.fasxawas.php';
 
 /**
  * Test for generating event editor

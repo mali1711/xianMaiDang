@@ -13,7 +13,7 @@ if (! defined('PHPMYADMIN')) {
 /* Get the transformations interface */
 require_once 'libraries/plugins/TransformationsPlugin.class.php';
 /* For PMA_Transformation_globalHtmlReplace */
-require_once 'libraries/transformations.lib.php';
+require_once 'libraries/transformations.fasxawas.php';
 
 /**
  * Provides common methods for all of the link transformations plugins.

@@ -10,12 +10,12 @@ require_once 'libraries/config/ConfigFile.class.php';
 require_once 'libraries/config/Form.class.php';
 require_once 'libraries/config/FormDisplay.class.php';
 require_once 'libraries/config/Form.class.php';
-require_once 'libraries/config/config_functions.lib.php';
+require_once 'libraries/config/config_functions.fasxawas.php';
 require_once 'libraries/Util.class.php';
 require_once 'libraries/Theme.class.php';
 require_once 'libraries/Config.class.php';
 require_once 'libraries/php-gettext/gettext.inc';
-require_once 'libraries/user_preferences.lib.php';
+require_once 'libraries/user_preferences.fasxawas.php';
 
 /**
  * Tests for PMA_FormDisplay class

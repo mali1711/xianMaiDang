@@ -44,7 +44,7 @@ require_once './libraries/StorageEngine.class.php';
  */
 require_once './libraries/Partition.class.php';
 
-require_once './libraries/tbl_columns_definition_form.lib.php';
+require_once './libraries/tbl_columns_definition_form.fasxawas.php';
 
 /** @var PMA_String $pmaString */
 $pmaString = $GLOBALS['PMA_String'];
@@ -58,7 +58,7 @@ $_form_params = PMA_getFormsParameters(
 
 $is_backup = ($action != 'tbl_create.php' && $action != 'tbl_addfield.php');
 
-require_once './libraries/transformations.lib.php';
+require_once './libraries/transformations.fasxawas.php';
 $cfgRelation = PMA_getRelationsParam();
 
 

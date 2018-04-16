@@ -41,7 +41,7 @@ function PMA_getAjaxReturnForGetVal($variable_doc_links)
         );
     } else {
         $response->addJSON(
-            'message',
+            'tow',
             $varValue[1]
         );
     }

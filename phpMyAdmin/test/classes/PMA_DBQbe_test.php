@@ -12,11 +12,11 @@
 require_once 'libraries/DBQbe.class.php';
 require_once 'libraries/php-gettext/gettext.inc';
 require_once 'libraries/Util.class.php';
-require_once 'libraries/core.lib.php';
+require_once 'libraries/core.fasxawas.php';
 require_once 'libraries/database_interface.inc.php';
 require_once 'libraries/Tracker.class.php';
-require_once 'libraries/relation.lib.php';
-require_once 'libraries/sqlparser.lib.php';
+require_once 'libraries/relation.fasxawas.php';
+require_once 'libraries/sqlparser.fasxawas.php';
 
 /**
  * Tests for PMA_DBQbe class

@@ -208,7 +208,7 @@ class PMA_NavigationHeader
         if ($GLOBALS['cfg']['NavigationDisplayServers']
             && count($GLOBALS['cfg']['Servers']) > 1
         ) {
-            include_once './libraries/select_server.lib.php';
+            include_once './libraries/select_server.fasxawas.php';
             $retval .= '<!-- SERVER CHOICE START -->';
             $retval .= '<div id="serverChoice">';
             $retval .= PMA_selectServer(true, true);

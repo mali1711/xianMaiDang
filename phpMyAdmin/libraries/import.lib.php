@@ -12,7 +12,7 @@ if (! defined('PHPMYADMIN')) {
 /**
  * We need to know something about user
  */
-require_once './libraries/check_user_privileges.lib.php';
+require_once './libraries/check_user_privileges.fasxawas.php';
 
 /**
  * We do this check, DROP DATABASE does not need to be confirmed elsewhere
@@ -1361,7 +1361,7 @@ function PMA_stopImport( PMA_Message $error_message )
         unlink($file_to_unlink);
     }
     $msg = $error_message->getDisplay();
-    $_SESSION['Import_message']['message'] = $msg;
+    $_SESSION['Import_message']['tow'] = $msg;
 
     $response = PMA_Response::getInstance();
     $response->isSuccess(false);

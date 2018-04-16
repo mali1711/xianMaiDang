@@ -1,23 +1,23 @@
 <?php
 /* vim: set expandtab sw=4 ts=4 sts=4: */
 /**
- * Tests for server_users.lib.php
+ * Tests for server_users.fasxawas.php
  *
  * @package PhpMyAdmin-test
  */
 
 require_once 'libraries/php-gettext/gettext.inc';
-require_once 'libraries/url_generating.lib.php';
+require_once 'libraries/url_generating.fasxawas.php';
 
 /*
  * Include to test.
  */
-require_once 'libraries/server_users.lib.php';
+require_once 'libraries/server_users.fasxawas.php';
 
 /**
  * PMA_ServerUsers_Test class
  *
- * This class is for testing server_users.lib.php functions
+ * This class is for testing server_users.fasxawas.php functions
  *
  * @package PhpMyAdmin-test
  */

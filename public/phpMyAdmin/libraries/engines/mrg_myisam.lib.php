@@ -12,7 +12,7 @@ if (! defined('PHPMYADMIN')) {
 /**
  *
  */
-require_once './libraries/engines/merge.lib.php';
+require_once './libraries/engines/merge.fasxawas.php';
 
 /**
  * The MERGE storage engine

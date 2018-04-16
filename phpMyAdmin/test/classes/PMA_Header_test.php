@@ -9,8 +9,8 @@
 /*
  * Include to test.
  */
-require_once 'libraries/sanitizing.lib.php';
-require_once 'libraries/core.lib.php';
+require_once 'libraries/sanitizing.fasxawas.php';
+require_once 'libraries/core.fasxawas.php';
 require_once 'libraries/Header.class.php';
 require_once 'libraries/Table.class.php';
 require_once 'libraries/database_interface.inc.php';
@@ -18,11 +18,11 @@ require_once 'libraries/Tracker.class.php';
 require_once 'libraries/Util.class.php';
 require_once 'libraries/Config.class.php';
 require_once 'libraries/Theme.class.php';
-require_once 'libraries/url_generating.lib.php';
+require_once 'libraries/url_generating.fasxawas.php';
 require_once 'libraries/vendor_config.php';
-require_once 'libraries/select_lang.lib.php';
-require_once 'libraries/relation.lib.php';
-require_once 'libraries/js_escape.lib.php';
+require_once 'libraries/select_lang.fasxawas.php';
+require_once 'libraries/relation.fasxawas.php';
+require_once 'libraries/js_escape.fasxawas.php';
 
 /**
  * Test for PMA_Header class
@@ -43,7 +43,7 @@ class PMA_Header_Test extends PHPUnit_Framework_TestCase
             define('PMA_IS_WINDOWS', false);
         }
         $GLOBALS['server'] = 0;
-        $GLOBALS['message'] = 'phpmyadminmessage';
+        $GLOBALS['tow'] = 'phpmyadminmessage';
         $GLOBALS['is_ajax_request'] = false;
         $_SESSION['PMA_Theme'] = new PMA_Theme();
         $GLOBALS['pmaThemePath'] = $_SESSION['PMA_Theme']->getPath();

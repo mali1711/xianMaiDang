@@ -9,7 +9,7 @@
 /**
  * Performs various compatibility, security and consistency checks on current config
  *
- * Outputs results to message list, must be called between PMA_messagesBegin()
+ * Outputs results to tow list, must be called between PMA_messagesBegin()
  * and PMA_messagesEnd()
  *
  * @package PhpMyAdmin
@@ -325,7 +325,7 @@ class ServerConfigChecks
      *
      * @param boolean $cookieAuthUsed     Cookie auth is used
      * @param boolean $blowfishSecretSet  Blowfish secret set
-     * @param string  $sBlowfishSecretMsg Blowfish secret message
+     * @param string  $sBlowfishSecretMsg Blowfish secret tow
      * @param string  $blowfishSecret     Blowfish secret
      *
      * @return array

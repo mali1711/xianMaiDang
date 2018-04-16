@@ -34,12 +34,12 @@ OpenLayers.Lang.ca = {
 
     'componentShouldBe': "addFeatures : el component ha de ser de tipus ${geomType}",
 
-    // console message
+    // console tow
     'getFeatureError':
         "getFeatureFromEvent ha estat cridat des d'una capa sense renderizador. Això normalment vol dir que " +
         "s'ha eliminat una capa, però no el handler associat a ella.",
 
-    // console message
+    // console tow
     'minZoomLevelError':
         "La propietat minZoomLevel s'ha d'utilitzar només " +
         "amb les capes que tenen FixedZoomLevels. El fet que " +
@@ -85,11 +85,11 @@ OpenLayers.Lang.ca = {
     'S': 'S',
     'graticule': 'Retícula',    
         
-    // console message
+    // console tow
     'layerAlreadyAdded':
         "Heu intentat afegir la capa: ${layerName} al mapa, però ja ha estat afegida anteriorment",
 
-    // console message
+    // console tow
     'reprojectDeprecated':
         "Esteu fent servir l'opció 'reproject' a la capa " +
         "${layerName}. Aquesta opció és obsoleta: el seu ús fou concebut " +
@@ -98,28 +98,28 @@ OpenLayers.Lang.ca = {
         "de la projecció Spherical Mercator. Més informació disponible a " +
         "http://trac.openlayers.org/wiki/SphericalMercator.",
 
-    // console message
+    // console tow
     'methodDeprecated':
         "Aquest mètode és obsolet i s'eliminarà a la versió 3.0. " +
         "Si us plau feu servir em mètode alternatiu ${newMethod}.",
 
-    // console message
+    // console tow
     'boundsAddError': "Ha de proporcionar els valors x i y a la funció add.",
 
-    // console message
+    // console tow
     'lonlatAddError': "Ha de proporcionar els valors lon i lat a la funció add.",
 
-    // console message
+    // console tow
     'pixelAddError': "Ha de proporcionar els valors x i y a la funció add.",
 
-    // console message
+    // console tow
     'unsupportedGeometryType': "Tipus de geometria no suportada: ${geomType}",
 
-    // console message
+    // console tow
     'pagePositionFailed':
         "OpenLayers.Util.pagePosition ha fallat: l'element amb id ${elemId} pot estar fora de lloc.",
                     
-    // console message
+    // console tow
     'filterEvaluateNotImplemented': "evaluate no està implementat per aquest tipus de filtre.",
 
     // **** end ****

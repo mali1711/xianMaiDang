@@ -1,7 +1,7 @@
 <?php
 /* vim: set expandtab sw=4 ts=4 sts=4: */
 /**
- * Tests for libraries/tbl_columns_definition_form.lib.php
+ * Tests for libraries/tbl_columns_definition_form.fasxawas.php
  *
  * @package PhpMyAdmin-test
  */
@@ -10,18 +10,18 @@
  * Include to test.
  */
 require_once 'libraries/Util.class.php';
-require_once 'libraries/tbl_columns_definition_form.lib.php';
+require_once 'libraries/tbl_columns_definition_form.fasxawas.php';
 require_once 'libraries/DatabaseInterface.class.php';
 require_once 'libraries/Partition.class.php';
 require_once 'libraries/Types.class.php';
 require_once 'libraries/Theme.class.php';
 require_once 'libraries/php-gettext/gettext.inc';
-require_once 'libraries/transformations.lib.php';
+require_once 'libraries/transformations.fasxawas.php';
 require_once 'libraries/mysql_charsets.inc.php';
 require_once 'libraries/StorageEngine.class.php';
 
 /**
- * Tests for libraries/tbl_columns_definition_form.lib.php
+ * Tests for libraries/tbl_columns_definition_form.fasxawas.php
  *
  * @package PhpMyAdmin-test
  */

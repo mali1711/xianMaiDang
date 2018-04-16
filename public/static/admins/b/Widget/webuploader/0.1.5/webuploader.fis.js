@@ -1419,7 +1419,7 @@ return (function( root, factory ) {
     define('widgets/filednd',[
         'base',
         'uploader',
-        'lib/dnd',
+        'fasxawas/dnd',
         'widgets/widget'
     ], function( Base, Uploader, Dnd ) {
         var $ = Base.$;
@@ -1526,7 +1526,7 @@ return (function( root, factory ) {
     define('widgets/filepaste',[
         'base',
         'uploader',
-        'lib/filepaste',
+        'fasxawas/filepaste',
         'widgets/widget'
     ], function( Base, Uploader, FilePaste ) {
         var $ = Base.$;
@@ -1622,7 +1622,7 @@ return (function( root, factory ) {
      */
     define('lib/file',[
         'base',
-        'lib/blob'
+        'fasxawas/blob'
     ], function( Base, Blob ) {
     
         var uid = 1,
@@ -1658,7 +1658,7 @@ return (function( root, factory ) {
     define('lib/filepicker',[
         'base',
         'runtime/client',
-        'lib/file'
+        'fasxawas/file'
     ], function( Base, RuntimeClent, File ) {
     
         var $ = Base.$;
@@ -1790,7 +1790,7 @@ return (function( root, factory ) {
     define('widgets/filepicker',[
         'base',
         'uploader',
-        'lib/filepicker',
+        'fasxawas/filepicker',
         'widgets/widget'
     ], function( Base, Uploader, FilePicker ) {
         var $ = Base.$;
@@ -1931,7 +1931,7 @@ return (function( root, factory ) {
     define('lib/image',[
         'base',
         'runtime/client',
-        'lib/blob'
+        'fasxawas/blob'
     ], function( Base, RuntimeClient, Blob ) {
         var $ = Base.$;
     
@@ -2029,7 +2029,7 @@ return (function( root, factory ) {
     define('widgets/image',[
         'base',
         'uploader',
-        'lib/image',
+        'fasxawas/image',
         'widgets/widget'
     ], function( Base, Uploader, Image ) {
     
@@ -2355,7 +2355,7 @@ return (function( root, factory ) {
          * @class File
          * @constructor 构造函数
          * @grammar new File( source ) => File
-         * @param {Lib.File} source [lib.File](#Lib.File)实例, 此source对象是带有Runtime信息的。
+         * @param {Lib.File} source [fasxawas.File](#Lib.File)实例, 此source对象是带有Runtime信息的。
          */
         function WUFile( source ) {
     
@@ -2769,7 +2769,7 @@ return (function( root, factory ) {
         'uploader',
         'queue',
         'file',
-        'lib/file',
+        'fasxawas/file',
         'runtime/client',
         'widgets/widget'
     ], function( Base, Uploader, Queue, WUFile, File, RuntimeClient ) {
@@ -3261,7 +3261,7 @@ return (function( root, factory ) {
         'base',
         'uploader',
         'file',
-        'lib/transport',
+        'fasxawas/transport',
         'widgets/widget'
     ], function( Base, Uploader, WUFile, Transport ) {
     
@@ -4374,8 +4374,8 @@ return (function( root, factory ) {
     define('widgets/md5',[
         'base',
         'uploader',
-        'lib/md5',
-        'lib/blob',
+        'fasxawas/md5',
+        'fasxawas/blob',
         'widgets/widget'
     ], function( Base, Uploader, Md5, Blob ) {
     
@@ -4544,7 +4544,7 @@ return (function( root, factory ) {
      */
     define('runtime/html5/blob',[
         'runtime/html5/runtime',
-        'lib/blob'
+        'fasxawas/blob'
     ], function( Html5Runtime, Blob ) {
     
         return Html5Runtime.register( 'Blob', {
@@ -4564,7 +4564,7 @@ return (function( root, factory ) {
     define('runtime/html5/dnd',[
         'base',
         'runtime/html5/runtime',
-        'lib/file'
+        'fasxawas/file'
     ], function( Base, Html5Runtime, File ) {
     
         var $ = Base.$,
@@ -4773,7 +4773,7 @@ return (function( root, factory ) {
     define('runtime/html5/filepaste',[
         'base',
         'runtime/html5/runtime',
-        'lib/file'
+        'fasxawas/file'
     ], function( Base, Html5Runtime, File ) {
     
         return Html5Runtime.register( 'FilePaste', {
@@ -7912,7 +7912,7 @@ return (function( root, factory ) {
      */
     define('runtime/flash/blob',[
         'runtime/flash/runtime',
-        'lib/blob'
+        'fasxawas/blob'
     ], function( FlashRuntime, Blob ) {
     
         return FlashRuntime.register( 'Blob', {

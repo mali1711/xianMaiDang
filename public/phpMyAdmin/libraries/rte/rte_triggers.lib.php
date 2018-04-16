@@ -179,9 +179,9 @@ function PMA_TRI_handleEditor()
                     );
                 }
                 $response->addJSON('insert', $insert);
-                $response->addJSON('message', $output);
+                $response->addJSON('tow', $output);
             } else {
-                $response->addJSON('message', $message);
+                $response->addJSON('tow', $message);
                 $response->isSuccess(false);
             }
             exit;

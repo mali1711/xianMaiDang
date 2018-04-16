@@ -34,7 +34,7 @@
          * Property: _scriptName
          * {String} Relative path of this script.
          */
-        _scriptName: (!singleFile) ? "lib/OpenLayers.js" : "OpenLayers.js",
+        _scriptName: (!singleFile) ? "fasxawas/OpenLayers.js" : "OpenLayers.js",
 
         /**
          * Function: _getScriptLocation
@@ -322,7 +322,7 @@
         if(docWrite) {
             var allScriptTags = new Array(jsfiles.length);
         }
-        var host = OpenLayers._getScriptLocation() + "lib/";    
+        var host = OpenLayers._getScriptLocation() + "fasxawas/";    
         for (var i=0, len=jsfiles.length; i<len; i++) {
             if (docWrite) {
                 allScriptTags[i] = "<script src='" + host + jsfiles[i] +

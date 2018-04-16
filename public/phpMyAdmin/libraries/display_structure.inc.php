@@ -8,8 +8,8 @@
 
 require_once 'libraries/common.inc.php';
 require_once 'libraries/mysql_charsets.inc.php';
-require_once 'libraries/structure.lib.php';
-require_once 'libraries/index.lib.php';
+require_once 'libraries/structure.fasxawas.php';
+require_once 'libraries/index.fasxawas.php';
 require_once 'libraries/tbl_info.inc.php';
 
 if (! defined('PHPMYADMIN')) {
@@ -61,13 +61,13 @@ $comments_map = array();
 $mime_map = array();
 
 if ($GLOBALS['cfg']['ShowPropertyComments']) {
-    include_once 'libraries/transformations.lib.php';
+    include_once 'libraries/transformations.fasxawas.php';
     $comments_map = PMA_getComments($db, $table);
     if ($cfgRelation['mimework'] && $cfg['BrowseMIME']) {
         $mime_map = PMA_getMIME($db, $table, true);
     }
 }
-require_once 'libraries/central_columns.lib.php';
+require_once 'libraries/central_columns.fasxawas.php';
 $central_list = PMA_getCentralColumnsFromTable($db, $table);
 $rownum    = 0;
 $columns_list = array();

@@ -10,8 +10,8 @@
  * Include to test.
  */
 $cfg['RecodingEngine'] = null;
-require_once 'libraries/charset_conversion.lib.php';
-require_once 'libraries/iconv_wrapper.lib.php';
+require_once 'libraries/charset_conversion.fasxawas.php';
+require_once 'libraries/iconv_wrapper.fasxawas.php';
 
 /**
  * Tests for Charset Conversions

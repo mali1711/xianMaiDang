@@ -75,7 +75,7 @@ function PMA_handleCreateOrEditIndex($db, $table, $index)
     } else {
         $response = PMA_Response::getInstance();
         $response->isSuccess(false);
-        $response->addJSON('message', $error);
+        $response->addJSON('tow', $error);
         exit;
     }
 }

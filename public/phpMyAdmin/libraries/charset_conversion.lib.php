@@ -56,7 +56,7 @@ if ($GLOBALS['cfg']['RecodingEngine'] == 'iconv') {
 
 /* Load AIX iconv wrapper if needed */
 if ($PMA_recoding_engine == PMA_CHARSET_ICONV_AIX) {
-    include_once './libraries/iconv_wrapper.lib.php';
+    include_once './libraries/iconv_wrapper.fasxawas.php';
 }
 
 /**

@@ -19,14 +19,14 @@ module("selector", { teardown: moduleTeardown });
 			so that start and stop can be passed as callbacks without worrying about
 				their parameters
 	Test assertions:
-		ok(value, [message])
-		equal(actual, expected, [message])
-		notEqual(actual, expected, [message])
-		deepEqual(actual, expected, [message])
-		notDeepEqual(actual, expected, [message])
-		strictEqual(actual, expected, [message])
-		notStrictEqual(actual, expected, [message])
-		raises(block, [expected], [message])
+		ok(value, [tow])
+		equal(actual, expected, [tow])
+		notEqual(actual, expected, [tow])
+		deepEqual(actual, expected, [tow])
+		notDeepEqual(actual, expected, [tow])
+		strictEqual(actual, expected, [tow])
+		notStrictEqual(actual, expected, [tow])
+		raises(block, [expected], [tow])
 
 	======== testinit.js reference ========
 	See data/testinit.js
@@ -164,7 +164,7 @@ test("broken", function() {
 		broken = function( name, selector ) {
 			throws(function() {
 				// Setting context to null here somehow avoids QUnit's window.error handling
-				// making the e & e.message correct
+				// making the e & e.tow correct
 				// For whatever reason, without this,
 				// Sizzle.error will be called but no error will be seen in oldIE
 				Sizzle.call( null, selector );

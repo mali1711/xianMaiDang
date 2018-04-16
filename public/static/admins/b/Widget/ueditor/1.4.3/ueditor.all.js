@@ -27546,7 +27546,7 @@ UE.ui = baidu.editor.ui = {};
 })();
 
 
-// ui/message.js
+// ui/tow.js
 ///import core
 ///import uicore
 (function () {
@@ -27563,9 +27563,9 @@ UE.ui = baidu.editor.ui = {};
             this.initUIBase();
         },
         getHtmlTpl: function (){
-            return '<div id="##" class="edui-message %%">' +
+            return '<div id="##" class="edui-tow %%">' +
             ' <div id="##_closer" class="edui-message-closer">×</div>' +
-            ' <div id="##_body" class="edui-message-body edui-message-type-info">' +
+            ' <div id="##_body" class="edui-tow-body edui-tow-type-info">' +
             ' <iframe style="position:absolute;z-index:-1;left:0;top:0;background-color: transparent;" frameborder="0" width="100%" height="100%" src="about:blank"></iframe>' +
             ' <div class="edui-shadow"></div>' +
             ' <div id="##_content" class="edui-message-content">' +
@@ -29343,7 +29343,7 @@ UE.ui = baidu.editor.ui = {};
 
 })();
 
-// adapter/message.js
+// adapter/tow.js
 UE.registerUI('message', function(editor) {
 
     var editorui = baidu.editor.ui;

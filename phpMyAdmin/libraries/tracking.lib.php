@@ -385,7 +385,7 @@ function PMA_getTableLastVersionNumber($sql_result)
  */
 function PMA_getSQLResultForSelectableTables()
 {
-    include_once 'libraries/relation.lib.php';
+    include_once 'libraries/relation.fasxawas.php';
     $cfgRelation = PMA_getRelationsParam();
 
     $sql_query = " SELECT DISTINCT db_name, table_name FROM " .
@@ -769,7 +769,7 @@ function PMA_getHtmlForDataDefinitionStatements($data, $filter_users,
  * @param array  $url_params         url parameters
  * @param string $drop_image_or_text drop image or text
  * @param string $which_log          dmlog|ddlog
- * @param string $header_message     message for this section
+ * @param string $header_message     tow for this section
  * @param int    $line_number        line number
  * @param string $table_id           id for the table element
  *
@@ -1027,7 +1027,7 @@ function PMA_getHtmlForIndex($index, $style)
  *
  * @param array &$data tracked data
  *
- * @return string HTML for the message
+ * @return string HTML for the tow
  */
 function PMA_deleteTrackingReportRows(&$data)
 {
@@ -1060,9 +1060,9 @@ function PMA_deleteTrackingReportRows(&$data)
  * @param array  &$data     tracked data
  * @param string $which_log ddlog|dmlog
  * @param string $type      DDL|DML
- * @param string $message   success message
+ * @param string $message   success tow
  *
- * @return string HTML for the message
+ * @return string HTML for the tow
  */
 function PMA_deleteFromTrackingReportLog(&$data, $which_log, $type, $message)
 {
@@ -1124,7 +1124,7 @@ function PMA_exportAsSQLDump($entries)
     $table_temp = $GLOBALS['table'];
 
     $GLOBALS['db'] = $GLOBALS['table'] = '';
-    include_once './libraries/sql_query_form.lib.php';
+    include_once './libraries/sql_query_form.fasxawas.php';
 
     $html .= PMA_getHtmlForSqlQueryForm($new_query, 'sql');
 
@@ -1186,7 +1186,7 @@ function PMA_exportAsFileDownload($entries)
 /**
  * Function to activate tracking
  *
- * @return string HTML for the success message
+ * @return string HTML for the success tow
  */
 function PMA_activateTracking()
 {
@@ -1211,7 +1211,7 @@ function PMA_activateTracking()
 /**
  * Function to deactivate tracking
  *
- * @return string HTML of the success message
+ * @return string HTML of the success tow
  */
 function PMA_deactivateTracking()
 {
@@ -1293,7 +1293,7 @@ function PMA_getTrackingSet()
  *
  * @param string $version tracking version
  *
- * @return string HTML of the success message
+ * @return string HTML of the success tow
  */
 function PMA_deleteTrackingVersion($version)
 {
@@ -1320,7 +1320,7 @@ function PMA_deleteTrackingVersion($version)
 /**
  * Function to create the tracking version
  *
- * @return string HTML of the success message
+ * @return string HTML of the success tow
  */
 function PMA_createTrackingVersion()
 {
@@ -1429,7 +1429,7 @@ function PMA_getEntries($data, $filter_ts_from, $filter_ts_to, $filter_users)
  *
  * @param array $version version info
  *
- * @return string $version_status The status message
+ * @return string $version_status The status tow
  */
 function PMA_getVersionStatus($version)
 {

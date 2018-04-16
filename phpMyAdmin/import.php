@@ -18,7 +18,7 @@ require_once 'libraries/common.inc.php';
 require_once 'libraries/sql.lib.php';
 require_once 'libraries/bookmark.lib.php';
 require_once 'libraries/Console.class.php';
-//require_once 'libraries/display_import_functions.lib.php';
+//require_once 'libraries/display_import_functions.fasxawas.php';
 
 if (isset($_REQUEST['show_as_php'])) {
     $GLOBALS['show_as_php'] = $_REQUEST['show_as_php'];
@@ -60,7 +60,7 @@ if (isset($_REQUEST['console_bookmark_add'])) {
             $response->addJSON('data', $bookmarkFields);
             $response->addJSON('isShared', $isShared);
         } else {
-            $response->addJSON('message', __('Failed'));
+            $response->addJSON('tow', __('Failed'));
         }
         die();
     } else {

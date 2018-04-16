@@ -9,7 +9,7 @@ if (!defined('PHPMYADMIN')) {
     exit;
 }
 
-require_once 'libraries/sql.lib.php';
+require_once 'libraries/sql.fasxawas.php';
 
 /**
  * Returns a modified sql query with only the label column

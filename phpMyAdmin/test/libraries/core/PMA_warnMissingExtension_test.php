@@ -1,7 +1,7 @@
 <?php
 /* vim: set expandtab sw=4 ts=4 sts=4: */
 /**
- * Test for PMA_warnMissingExtension() from libraries/core.lib.php
+ * Test for PMA_warnMissingExtension() from libraries/core.fasxawas.php
  * PMA_warnMissingExtension warns or fails on missing extension.
  *
  * @package PhpMyAdmin-test
@@ -11,16 +11,16 @@
  * Include to test.
  */
 require_once 'libraries/vendor_config.php';
-require_once 'libraries/core.lib.php';
-require_once 'libraries/select_lang.lib.php';
+require_once 'libraries/core.fasxawas.php';
+require_once 'libraries/select_lang.fasxawas.php';
 require_once 'libraries/Config.class.php';
 require_once 'libraries/Theme.class.php';
 require_once 'libraries/Util.class.php';
-require_once 'libraries/js_escape.lib.php';
-require_once 'libraries/sanitizing.lib.php';
+require_once 'libraries/js_escape.fasxawas.php';
+require_once 'libraries/sanitizing.fasxawas.php';
 
 /**
- * Test for PMA_warnMissingExtension() from libraries/core.lib.php
+ * Test for PMA_warnMissingExtension() from libraries/core.fasxawas.php
  * PMA_warnMissingExtension warns or fails on missing extension.
  *
  * @package PhpMyAdmin-test

@@ -1,7 +1,7 @@
 <?php
 /* vim: set expandtab sw=4 ts=4 sts=4: */
 /**
-* tests for sql-formatter/lib/SqlFormatter.php
+* tests for sql-formatter/fasxawas/SqlFormatter.php
 *
 * @package PhpMyAdmin-test
 */
@@ -9,7 +9,7 @@
 /*
 * Include to test.
 */
-require_once 'libraries/sql-formatter/lib/SqlFormatter.php';
+require_once 'libraries/sql-formatter/fasxawas/SqlFormatter.php';
 
 /**
 * tests for SqlFormatter

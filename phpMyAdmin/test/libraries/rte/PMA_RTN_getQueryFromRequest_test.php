@@ -16,7 +16,7 @@ require_once './libraries/Types.class.php';
 /*
  * Include to test.
  */
-require_once 'libraries/rte/rte_routines.lib.php';
+require_once 'libraries/rte/rte_routines.fasxawas.php';
 
 /**
  * Test for generating CREATE [PROCEDURE|FUNCTION] query from HTTP request

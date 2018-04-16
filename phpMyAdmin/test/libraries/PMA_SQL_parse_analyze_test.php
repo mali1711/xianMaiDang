@@ -10,12 +10,12 @@
  * Include to test.
  */
 require_once 'libraries/Util.class.php';
-require_once 'libraries/sqlparser.lib.php';
+require_once 'libraries/sqlparser.fasxawas.php';
 
 /**
  * PMA_SQLParserAnalyze_Test class
  *
- * this class is for testing sqlparser.lib.php
+ * this class is for testing sqlparser.fasxawas.php
  *
  * @package PhpMyAdmin-test
  */

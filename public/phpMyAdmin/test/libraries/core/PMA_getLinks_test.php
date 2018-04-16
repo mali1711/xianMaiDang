@@ -1,7 +1,7 @@
 <?php
 /* vim: set expandtab sw=4 ts=4 sts=4: */
 /**
- * Test for PMA_getPHPDocLink, PMA_linkURL  from libraries/core.lib.php
+ * Test for PMA_getPHPDocLink, PMA_linkURL  from libraries/core.fasxawas.php
  *
  * @package PhpMyAdmin-test
  */
@@ -9,12 +9,12 @@
 /*
  * Include to test.
  */
-require_once 'libraries/core.lib.php';
-require_once 'libraries/url_generating.lib.php';
+require_once 'libraries/core.fasxawas.php';
+require_once 'libraries/url_generating.fasxawas.php';
 require_once 'libraries/php-gettext/gettext.inc';
 
 /**
- * Test for PMA_getPHPDocLink, PMA_linkURL  from libraries/core.lib.php
+ * Test for PMA_getPHPDocLink, PMA_linkURL  from libraries/core.fasxawas.php
  *
  * @package PhpMyAdmin-test
  */

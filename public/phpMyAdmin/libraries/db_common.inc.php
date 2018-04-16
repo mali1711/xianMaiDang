@@ -12,7 +12,7 @@ if (! defined('PHPMYADMIN')) {
 /**
  * Gets some core libraries
  */
-require_once './libraries/bookmark.lib.php';
+require_once './libraries/bookmark.fasxawas.php';
 
 PMA_Util::checkParameters(array('db'));
 

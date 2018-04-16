@@ -4,7 +4,7 @@
  ** Test for PMA_Util::extractColumnSpec from Util.class.php
  *
  * @package PhpMyAdmin-test
- * @group common.lib-tests
+ * @group common.fasxawas-tests
  */
 
 /*

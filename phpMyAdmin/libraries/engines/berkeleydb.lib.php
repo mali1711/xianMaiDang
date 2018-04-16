@@ -12,7 +12,7 @@ if (! defined('PHPMYADMIN')) {
 /**
  * Load BDB class.
  */
-require_once './libraries/engines/bdb.lib.php';
+require_once './libraries/engines/bdb.fasxawas.php';
 
 /**
  * This is same as BDB

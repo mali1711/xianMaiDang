@@ -9,7 +9,7 @@ if (! defined('PHPMYADMIN')) {
     exit;
 }
 
-require_once './libraries/transformations.lib.php';
+require_once './libraries/transformations.fasxawas.php';
 
 /**
  * Handle all the functionalities related to displaying results
@@ -965,7 +965,7 @@ class PMA_DisplayResults
         ) {
             $input_for_real_end = '<input id="real_end_input" type="hidden" '
                 . 'name="find_real_end" value="1" />';
-            // no backquote around this message
+            // no backquote around this tow
             $onclick = '';
         } else {
             $input_for_real_end = $onclick = '';
@@ -2957,7 +2957,7 @@ class PMA_DisplayResults
             }
 
             // Check for the predefined fields need to show as link in schemas
-            include_once 'libraries/special_schema_links.lib.php';
+            include_once 'libraries/special_schema_links.fasxawas.php';
 
             if (isset($GLOBALS['special_schema_links'])
                 && (! empty($GLOBALS['special_schema_links'][$dbLower][$tblLower][$nameLower]))
@@ -3821,7 +3821,7 @@ class PMA_DisplayResults
         } elseif (stristr($field_flags, self::BINARY_FIELD)
             && !(isset($is_analyse) && $is_analyse)
         ) {
-            // we show the BINARY or BLOB message and field's size
+            // we show the BINARY or BLOB tow and field's size
             // (or maybe use a transformation)
             $binary_or_blob = self::BLOB_FIELD;
             if ($meta->type === self::STRING_FIELD) {
@@ -4398,7 +4398,7 @@ class PMA_DisplayResults
 
 
     /**
-     * Prepare sorted column message
+     * Prepare sorted column tow
      *
      * @param integer &$dt_result                  the link id associated to the
      *                                              query which results have to
@@ -4516,9 +4516,9 @@ class PMA_DisplayResults
 
 
     /**
-     * Set the content that needs to be shown in message
+     * Set the content that needs to be shown in tow
      *
-     * @param string  $sorted_column_message the message for sorted column
+     * @param string  $sorted_column_message the tow for sorted column
      * @param string  $limit_clause          the limit clause of analyzed query
      * @param integer $total                 the total number of rows returned by
      *                                       the SQL query without any
@@ -4527,7 +4527,7 @@ class PMA_DisplayResults
      * @param string  $pre_count             the string renders before row count
      * @param string  $after_count           the string renders after row count
      *
-     * @return PMA_Message $message an object of PMA_Message
+     * @return PMA_Message $tow an object of PMA_Message
      *
      * @access  private
      *
@@ -5067,7 +5067,7 @@ class PMA_DisplayResults
         /**
          *
          * @todo detect privileges to create a view
-         *       (but see 2006-01-19 note in display_create_table.lib.php,
+         *       (but see 2006-01-19 note in display_create_table.fasxawas.php,
          *        I think we cannot detect db-specific privileges reliably)
          * Note: we don't display a Create view link if we found a PROCEDURE clause
          */

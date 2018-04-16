@@ -64,8 +64,8 @@ OpenLayers.Layer.SphericalMercator = {
      *
      * Returns:
      *  {<OpenLayers.LonLat>} An OpenLayers.LonLat which is the passed-in view
-     *  port OpenLayers.Pixel, translated into lon/lat by map lib
-     *  If the map lib is not loaded or not centered, returns null
+     *  port OpenLayers.Pixel, translated into lon/lat by map fasxawas
+     *  If the map fasxawas is not loaded or not centered, returns null
      */
     getLonLatFromViewPortPx: function (viewPortPx) {
         return OpenLayers.Layer.prototype.getLonLatFromViewPortPx.apply(this, arguments);
@@ -80,8 +80,8 @@ OpenLayers.Layer.SphericalMercator = {
      *
      * Returns:
      * {<OpenLayers.Pixel>} An OpenLayers.Pixel which is the passed-in
-     * OpenLayers.LonLat, translated into view port pixels by map lib
-     * If map lib is not loaded or not centered, returns null
+     * OpenLayers.LonLat, translated into view port pixels by map fasxawas
+     * If map fasxawas is not loaded or not centered, returns null
      */
     getViewPortPxFromLonLat: function (lonlat) {
         return OpenLayers.Layer.prototype.getViewPortPxFromLonLat.apply(this, arguments);

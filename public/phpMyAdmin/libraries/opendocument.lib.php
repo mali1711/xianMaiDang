@@ -12,7 +12,7 @@ if (! defined('PHPMYADMIN')) {
 /**
  * Load ZIP handler.
  */
-require_once './libraries/zip.lib.php';
+require_once './libraries/zip.fasxawas.php';
 
 $GLOBALS['OpenDocumentNS']
     = 'xmlns:office="urn:oasis:names:tc:opendocument:xmlns:office:1.0" '

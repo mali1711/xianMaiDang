@@ -512,11 +512,11 @@ function PMA_getDataForSubmitMult($submit_mult, $db, $table, $selected, $action)
         $mult_btn   = __('Yes');
         break;
     case 'add_to_central_columns':
-        include_once 'libraries/central_columns.lib.php';
+        include_once 'libraries/central_columns.fasxawas.php';
         $centralColsError = PMA_syncUniqueColumns($selected, false);
         break;
     case 'remove_from_central_columns':
-        include_once 'libraries/central_columns.lib.php';
+        include_once 'libraries/central_columns.fasxawas.php';
         $centralColsError = PMA_deleteColumnsFromList($selected, false);
         break;
     case 'change':

@@ -12,7 +12,7 @@
 require_once 'libraries/Util.class.php';
 require_once 'libraries/PDF.class.php';
 require_once 'libraries/php-gettext/gettext.inc';
-require_once 'libraries/core.lib.php';
+require_once 'libraries/core.fasxawas.php';
 require_once 'libraries/Config.class.php';
 
 /**

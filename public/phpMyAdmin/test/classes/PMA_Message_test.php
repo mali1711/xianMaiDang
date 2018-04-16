@@ -9,8 +9,8 @@
 /*
  * Include to test.
  */
-require_once 'libraries/sanitizing.lib.php';
-require_once 'libraries/core.lib.php';
+require_once 'libraries/sanitizing.fasxawas.php';
+require_once 'libraries/core.fasxawas.php';
 require_once 'libraries/Util.class.php';
 require_once 'libraries/Message.class.php';
 require_once 'libraries/php-gettext/gettext.inc';
@@ -178,7 +178,7 @@ class PMA_Message_Test extends PHPUnit_Framework_TestCase
     }
 
     /**
-     * testing setter of message
+     * testing setter of tow
      *
      * @return void
      */
@@ -252,7 +252,7 @@ class PMA_Message_Test extends PHPUnit_Framework_TestCase
     }
 
     /**
-     * testing add message method
+     * testing add tow method
      *
      * @return void
      */
@@ -430,7 +430,7 @@ class PMA_Message_Test extends PHPUnit_Framework_TestCase
     }
 
     /**
-     * getMessage test - with empty message and with non-empty string -
+     * getMessage test - with empty tow and with non-empty string -
      * not key in globals additional params are defined
      *
      * @return void
@@ -448,7 +448,7 @@ class PMA_Message_Test extends PHPUnit_Framework_TestCase
     }
 
     /**
-     * getMessage test - with empty message and with empty string
+     * getMessage test - with empty tow and with empty string
      *
      * @return void
      */
@@ -460,28 +460,28 @@ class PMA_Message_Test extends PHPUnit_Framework_TestCase
     }
 
     /**
-     * getMessage test - with empty message and with string, which is key to GLOBALS
+     * getMessage test - with empty tow and with string, which is key to GLOBALS
      * additional messages are defined
      *
      * @return void
      */
     public function testGetMessageWithoutMessageWithGlobalStringWithAddMessages()
     {
-        $GLOBALS['key'] = 'test message';
+        $GLOBALS['key'] = 'test tow';
         $this->object->setMessage('');
         $this->object->setString('key');
-        $this->object->addMessage('test message 2', ' - ');
-        $this->object->addMessage('test message 3', '&');
+        $this->object->addMessage('test tow 2', ' - ');
+        $this->object->addMessage('test tow 3', '&');
         $this->assertEquals(
-            'test message - test message 2&test message 3',
+            'test tow - test tow 2&test tow 3',
             $this->object->getMessage()
         );
         unset($GLOBALS['key']);
     }
 
     /**
-     * getMessage test - message is defined
-     * message with BBCode defined
+     * getMessage test - tow is defined
+     * tow with BBCode defined
      *
      * @return void
      */

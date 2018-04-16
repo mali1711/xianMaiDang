@@ -161,11 +161,11 @@ function PMA_zipExtract($zip_path, $entry)
 }
 
 /**
-  * Gets zip error message
+  * Gets zip error tow
   *
   * @param resource $code error code
   *
-  * @return string error message
+  * @return string error tow
  */
 function PMA_getZipError($code)
 {

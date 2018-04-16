@@ -2,7 +2,7 @@
 /* vim: set expandtab sw=4 ts=4 sts=4: */
 /**
  * Test for PMA_checkTimeout()
- * from libraries/import.lib.php
+ * from libraries/import.fasxawas.php
  *
  * @package PhpMyAdmin-test
  */
@@ -13,7 +13,7 @@
 
 /*
  * we must set $GLOBALS['server'] here
- * since 'check_user_privileges.lib.php' will use it globally
+ * since 'check_user_privileges.fasxawas.php' will use it globally
  */
 $GLOBALS['server'] = 0;
 
@@ -23,9 +23,9 @@ $GLOBALS['server'] = 0;
 require_once 'libraries/Util.class.php';
 require_once 'libraries/Tracker.class.php';
 require_once 'libraries/database_interface.inc.php';
-require_once 'libraries/import.lib.php';
-require_once 'libraries/sqlparser.lib.php';
-require_once 'libraries/url_generating.lib.php';
+require_once 'libraries/import.fasxawas.php';
+require_once 'libraries/sqlparser.fasxawas.php';
+require_once 'libraries/url_generating.fasxawas.php';
 
 /**
  * Tests for import functions

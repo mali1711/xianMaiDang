@@ -1162,7 +1162,7 @@ function PMA_getListofMaintainActionLink($is_myisam_or_aria,
 /**
  * Get maintain action HTML link
  *
- * @param string $action_message action message
+ * @param string $action_message action tow
  * @param array  $params         url parameters array
  * @param array  $url_params     additional url parameters
  * @param string $link           contains name of page/anchor that is being linked
@@ -1639,7 +1639,7 @@ function PMA_moveOrCopyTable($db, $table)
 
     if ($GLOBALS['is_ajax_request'] == true) {
         $response = PMA_Response::getInstance();
-        $response->addJSON('message', $message);
+        $response->addJSON('tow', $message);
         if ($message->isSuccess()) {
             $response->addJSON('db', $GLOBALS['db']);
         } else {

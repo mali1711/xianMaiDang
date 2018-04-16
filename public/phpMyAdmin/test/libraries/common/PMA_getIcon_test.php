@@ -4,7 +4,7 @@
  ** Test for PMA_Util::getIcon() from Util.class.php
  *
  * @package PhpMyAdmin-test
- * @group common.lib-tests
+ * @group common.fasxawas-tests
  */
 
 /*
@@ -17,7 +17,7 @@ require_once 'libraries/Theme.class.php';
  ** Test for PMA_Util::getIcon() from Util.class.php
  *
  * @package PhpMyAdmin-test
- * @group common.lib-tests
+ * @group common.fasxawas-tests
  */
 class PMA_GetIcon_Test extends PHPUnit_Framework_TestCase
 {

@@ -17,8 +17,8 @@ if (! defined('PHPMYADMIN')) {
 /**
  *
  */
-require_once './libraries/file_listing.lib.php'; // used for file listing
-require_once './libraries/bookmark.lib.php'; // used for bookmarks
+require_once './libraries/file_listing.fasxawas.php'; // used for file listing
+require_once './libraries/bookmark.fasxawas.php'; // used for bookmarks
 
 /**
  * return HTML for the sql query boxes

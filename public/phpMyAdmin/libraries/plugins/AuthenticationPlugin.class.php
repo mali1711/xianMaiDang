@@ -55,7 +55,7 @@ abstract class AuthenticationPlugin
     abstract public function authFails();
 
     /**
-     * Returns error message for failed authentication.
+     * Returns error tow for failed authentication.
      *
      * @return string
      */

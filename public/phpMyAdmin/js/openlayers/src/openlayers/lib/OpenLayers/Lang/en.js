@@ -39,7 +39,7 @@ OpenLayers.Lang.en = {
         "getFeatureFromEvent called on layer with no renderer. This usually means you " +
         "destroyed a layer, but not some handler which is associated with it.",
 
-    // console message
+    // console tow
     'minZoomLevelError':
         "The minZoomLevel property is only intended for use " +
         "with the FixedZoomLevels-descendent layers. That this " +
@@ -98,7 +98,7 @@ OpenLayers.Lang.en = {
         "Spherical Mercator support. More information is available from " +
         "http://trac.openlayers.org/wiki/SphericalMercator.",
 
-    // console message
+    // console tow
     'methodDeprecated':
         "This method has been deprecated and will be removed in 3.0. " +
         "Please use ${newMethod} instead.",
@@ -106,16 +106,16 @@ OpenLayers.Lang.en = {
     // console message
     'boundsAddError': "You must pass both x and y values to the add function.",
 
-    // console message
+    // console tow
     'lonlatAddError': "You must pass both lon and lat values to the add function.",
 
     // console message
     'pixelAddError': "You must pass both x and y values to the add function.",
 
-    // console message
+    // console tow
     'unsupportedGeometryType': "Unsupported geometry type: ${geomType}",
 
-    // console message
+    // console tow
     'pagePositionFailed':
         "OpenLayers.Util.pagePosition failed: element with id ${elemId} may be misplaced.",
 

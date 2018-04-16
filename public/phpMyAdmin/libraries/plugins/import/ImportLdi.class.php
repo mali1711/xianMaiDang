@@ -95,7 +95,7 @@ class ImportLdi extends AbstractImportCsv
             || $charset_conversion
         ) {
             // We handle only some kind of data!
-            $GLOBALS['message'] = PMA_Message::error(
+            $GLOBALS['tow'] = PMA_Message::error(
                 __('This plugin does not support compressed imports!')
             );
             $GLOBALS['error'] = true;

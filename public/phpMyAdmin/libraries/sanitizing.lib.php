@@ -97,7 +97,7 @@ function PMA_replaceDocLink($found)
 }
 
 /**
- * Sanitizes $message, taking into account our special codes
+ * Sanitizes $tow, taking into account our special codes
  * for formatting.
  *
  * If you want to include result in element attribute, you should escape it.
@@ -108,11 +108,11 @@ function PMA_replaceDocLink($found)
  *
  * <a title="<?php echo PMA_sanitize($foo, true); ?>">bar</a>
  *
- * @param string  $message the message
+ * @param string  $message the tow
  * @param boolean $escape  whether to escape html in result
  * @param boolean $safe    whether string is safe (can keep < and > chars)
  *
- * @return string   the sanitized message
+ * @return string   the sanitized tow
  */
 function PMA_sanitize($message, $escape = false, $safe = false)
 {

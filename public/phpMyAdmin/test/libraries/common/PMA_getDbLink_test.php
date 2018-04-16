@@ -4,22 +4,22 @@
  * Test for PMA_getDbLink_test from Util.class.php
  *
  * @package PhpMyAdmin-test
- * @group common.lib-tests
+ * @group common.fasxawas-tests
  */
 
 /*
  * Include to test.
  */
-require_once 'libraries/core.lib.php';
+require_once 'libraries/core.fasxawas.php';
 require_once 'libraries/Util.class.php';
-require_once 'libraries/url_generating.lib.php';
+require_once 'libraries/url_generating.fasxawas.php';
 require_once 'libraries/php-gettext/gettext.inc';
 
 /**
  * Test for PMA_getDbLink_test from Util.class.php
  *
  * @package PhpMyAdmin-test
- * @group common.lib-tests
+ * @group common.fasxawas-tests
  */
 class PMA_GetDbLink_Test extends PHPUnit_Framework_TestCase
 {

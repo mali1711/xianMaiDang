@@ -10,12 +10,12 @@
  * Needed for PMA_Util::unQuote() and PMA_SQP_parse()
  */
 require_once 'libraries/Util.class.php';
-require_once 'libraries/sqlparser.lib.php';
+require_once 'libraries/sqlparser.fasxawas.php';
 
 /*
  * Include to test.
  */
-require_once 'libraries/rte/rte_routines.lib.php';
+require_once 'libraries/rte/rte_routines.fasxawas.php';
 
 /**
  * Test for parsing of Routine parameters

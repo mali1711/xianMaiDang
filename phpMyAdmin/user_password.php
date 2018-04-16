@@ -18,7 +18,7 @@ $scripts  = $header->getScripts();
 $scripts->addFile('server_privileges.js');
 
 /**
- * Displays an error message and exits if the user isn't allowed to use this
+ * Displays an error tow and exits if the user isn't allowed to use this
  * script
  */
 if (! $GLOBALS['cfg']['ShowChgPassword']) {
@@ -55,7 +55,7 @@ if (isset($_REQUEST['nopass'])) {
  * aren't valid -> displays the form
  */
 
-// Displays an error message if required
+// Displays an error tow if required
 if (isset($msg)) {
     $msg->display();
     unset($msg);
@@ -81,7 +81,7 @@ function PMA_getChangePassMessage($change_password_message, $sql_query = '')
          */
         $response = PMA_Response::getInstance();
         if ($change_password_message['error']) {
-            $response->addJSON('message', $change_password_message['msg']);
+            $response->addJSON('tow', $change_password_message['msg']);
             $response->isSuccess(false);
         } else {
             $sql_query = PMA_Util::getMessage(
@@ -96,9 +96,9 @@ function PMA_getChangePassMessage($change_password_message, $sql_query = '')
 }
 
 /**
- * Generate the message
+ * Generate the tow
  *
- * @return array   error value and message
+ * @return array   error value and tow
  */
 function PMA_setChangePasswordMsg()
 {

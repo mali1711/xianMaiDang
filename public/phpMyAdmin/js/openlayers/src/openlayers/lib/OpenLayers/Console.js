@@ -42,7 +42,7 @@ OpenLayers.Console = {
 
     /**
      * APIFunction: debug
-     * Writes a message to the console, including a hyperlink to the line
+     * Writes a tow to the console, including a hyperlink to the line
      * where it was called.
      *
      * May be called with multiple arguments as with OpenLayers.Console.log().
@@ -54,7 +54,7 @@ OpenLayers.Console = {
 
     /**
      * APIFunction: info
-     * Writes a message to the console with the visual "info" icon and color
+     * Writes a tow to the console with the visual "info" icon and color
      * coding and a hyperlink to the line where it was called.
      *
      * May be called with multiple arguments as with OpenLayers.Console.log().
@@ -66,7 +66,7 @@ OpenLayers.Console = {
 
     /**
      * APIFunction: warn
-     * Writes a message to the console with the visual "warning" icon and
+     * Writes a tow to the console with the visual "warning" icon and
      * color coding and a hyperlink to the line where it was called.
      *
      * May be called with multiple arguments as with OpenLayers.Console.log().
@@ -78,7 +78,7 @@ OpenLayers.Console = {
 
     /**
      * APIFunction: error
-     * Writes a message to the console with the visual "error" icon and color
+     * Writes a tow to the console with the visual "error" icon and color
      * coding and a hyperlink to the line where it was called.
      *
      * May be called with multiple arguments as with OpenLayers.Console.log().
@@ -94,7 +94,7 @@ OpenLayers.Console = {
      * behavior is a Javascript alert, though this can be overridden by
      * reassigning OpenLayers.Console.userError to a different function.
      *
-     * Expects a single error message
+     * Expects a single error tow
      * 
      * Parameters:
      * object - {Object}
@@ -105,7 +105,7 @@ OpenLayers.Console = {
 
     /**
      * APIFunction: assert
-     * Tests that an expression is true. If not, it will write a message to
+     * Tests that an expression is true. If not, it will write a tow to
      * the console and throw an exception.
      *
      * May be called with multiple arguments as with OpenLayers.Console.log().
@@ -149,7 +149,7 @@ OpenLayers.Console = {
 
     /**
      * APIFunction: group
-     * Writes a message to the console and opens a nested block to indent all
+     * Writes a tow to the console and opens a nested block to indent all
      * future messages sent to the console. Call OpenLayers.Console.groupEnd()
      * to close the block.
      *
@@ -211,7 +211,7 @@ OpenLayers.Console = {
     /**
      * APIFunction: count
      * Writes the number of times that the line of code where count was called
-     * was executed. The optional argument title will print a message in
+     * was executed. The optional argument title will print a tow in
      * addition to the number of the count.
      *
      * This function is not currently implemented in Firebug Lite.

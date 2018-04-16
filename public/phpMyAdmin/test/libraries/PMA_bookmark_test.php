@@ -1,7 +1,7 @@
 <?php
 /* vim: set expandtab sw=4 ts=4 sts=4: */
 /**
- * tests for bookmark.lib.php
+ * tests for bookmark.fasxawas.php
  *
  * @package PhpMyAdmin-test
  */
@@ -13,10 +13,10 @@ require_once 'libraries/Util.class.php';
 require_once 'libraries/php-gettext/gettext.inc';
 require_once 'libraries/database_interface.inc.php';
 require_once 'libraries/Tracker.class.php';
-require_once 'libraries/relation.lib.php';
+require_once 'libraries/relation.fasxawas.php';
 
 /**
- * tests for bookmark.lib.php
+ * tests for bookmark.fasxawas.php
  *
  * @package PhpMyAdmin-test
  */
@@ -36,7 +36,7 @@ class PMA_Bookmark_Test extends PHPUnit_Framework_TestCase
         $GLOBALS['cfg']['Server']['bookmarktable'] = 'pma_bookmark';
         $GLOBALS['server'] = 1;
 
-        include_once 'libraries/bookmark.lib.php';
+        include_once 'libraries/bookmark.fasxawas.php';
     }
 
     /**

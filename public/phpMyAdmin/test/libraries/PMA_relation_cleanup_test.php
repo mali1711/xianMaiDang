@@ -1,7 +1,7 @@
 <?php
 /* vim: set expandtab sw=4 ts=4 sts=4: */
 /**
- * tests for relation_cleanup.lib.php
+ * tests for relation_cleanup.fasxawas.php
  *
  * @package PhpMyAdmin-test
  */
@@ -14,13 +14,13 @@ require_once 'libraries/Theme.class.php';
 require_once 'libraries/php-gettext/gettext.inc';
 require_once 'libraries/database_interface.inc.php';
 require_once 'libraries/Tracker.class.php';
-require_once 'libraries/relation.lib.php';
-require_once 'libraries/relation_cleanup.lib.php';
+require_once 'libraries/relation.fasxawas.php';
+require_once 'libraries/relation_cleanup.fasxawas.php';
 
 /**
  * PMA_Relation_Cleanup_Test class
  *
- * this class is for testing relation_cleanup.lib.php functions
+ * this class is for testing relation_cleanup.fasxawas.php functions
  *
  * @package PhpMyAdmin-test
  */

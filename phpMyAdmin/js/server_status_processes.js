@@ -61,10 +61,10 @@ var processList = {
                 .removeClass('odd').addClass('even');
                 $('#tableprocesslist > tbody > tr').filter(':odd')
                 .removeClass('even').addClass('odd');
-                // Show process killed message
+                // Show process killed tow
                 PMA_ajaxShowMessage(data.message, false);
             } else {
-                // Show process error message
+                // Show process error tow
                 PMA_ajaxShowMessage(data.error, false);
             }
         });

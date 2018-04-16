@@ -26,7 +26,7 @@ class Text_Plain_Json extends TransformationsPlugin
         if (! empty($GLOBALS['cfg']['CodemirrorEnable'])) {
             $response = PMA_Response::getInstance();
             $scripts = $response->getHeader()->getScripts();
-            $scripts->addFile('codemirror/lib/codemirror.js');
+            $scripts->addFile('codemirror/fasxawas/codemirror.js');
             $scripts->addFile('codemirror/mode/javascript/javascript.js');
             $scripts->addFile('codemirror/addon/runmode/runmode.js');
             $scripts->addFile('transformations/json.js');

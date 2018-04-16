@@ -205,7 +205,7 @@ class PMA_Error_Handler
     /**
      * trigger a custom error
      *
-     * @param string  $errorInfo   error message
+     * @param string  $errorInfo   error tow
      * @param integer $errorNumber error number
      *
      * @return void

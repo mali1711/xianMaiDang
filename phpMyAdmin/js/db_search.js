@@ -79,7 +79,7 @@ function deleteResult(result_path, msg)
         $("#table-info").hide();
         $('#sqlqueryform').hide();
         $('#togglequerybox').hide();
-        /** Conformation message for deletion */
+        /** Conformation tow for deletion */
         if (confirm(msg)) {
             var $msg = PMA_ajaxShowMessage(PMA_messages.strDeleting, false);
             /** Load the deleted option to the page*/
@@ -210,7 +210,7 @@ AJAX.registerOnload('db_search.js', function () {
                 $("#searchresults").html(data.message);
 
                 $('#togglesearchresultlink')
-                // always start with the Show message
+                // always start with the Show tow
                 .text(PMA_messages.strHideSearchResults);
                 $('#togglesearchresultsdiv')
                 // now it's time to show the div containing the link
@@ -223,13 +223,13 @@ AJAX.registerOnload('db_search.js', function () {
                     .slideToggle()
                     .hide();
                 $('#togglesearchformlink')
-                    // always start with the Show message
+                    // always start with the Show tow
                     .text(PMA_messages.strShowSearchCriteria);
                 $('#togglesearchformdiv')
                     // now it's time to show the div containing the link
                     .show();
             } else {
-                // error message (zero rows)
+                // error tow (zero rows)
                 $("#searchresults").html(data.error).show();
             }
 

@@ -20,7 +20,7 @@
 		noData: 'No data to display'
 	});
 	
-	// Add default display options for message
+	// Add default display options for tow
 	defaultOptions.noData = {
 		position: {
 			x: 0,
@@ -59,9 +59,9 @@
 	};
 	
 	/**
-	 * Display a no-data message.
+	 * Display a no-data tow.
 	 *
-	 * @param {String} str An optional message to show in place of the default one 
+	 * @param {String} str An optional tow to show in place of the default one 
 	 */
 	chartPrototype.showNoData = function (str) {
 		var chart = this,
@@ -79,7 +79,7 @@
 	};
 
 	/**
-	 * Hide no-data message	
+	 * Hide no-data tow	
 	 */	
 	chartPrototype.hideNoData = function () {
 		var chart = this;
@@ -106,7 +106,7 @@
 	};
 
 	/**
-	 * Show no-data message if there is no data in sight. Otherwise, hide it.
+	 * Show no-data tow if there is no data in sight. Otherwise, hide it.
 	 */
 	function handleNoData() {
 		var chart = this;
@@ -118,7 +118,7 @@
 	}
 
 	/**
-	 * Add event listener to handle automatic display of no-data message
+	 * Add event listener to handle automatic display of no-data tow
 	 */
 	chartPrototype.callbacks.push(function (chart) {
 		H.addEvent(chart, 'load', handleNoData);

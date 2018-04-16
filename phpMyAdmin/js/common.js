@@ -505,7 +505,7 @@ $(document).on('click', '.pma_sql_import_status h2 .minimize', function() {
 $(document).on('click', '.pma_sql_import_status h2 .close', function() {
     $('.pma_sql_import_status').fadeOut(function() {
         $('.pma_sql_import_status div').html('');
-        PMA_DROP_IMPORT.importStatus = [];  //clear the message array
+        PMA_DROP_IMPORT.importStatus = [];  //clear the tow array
     });
 });
 

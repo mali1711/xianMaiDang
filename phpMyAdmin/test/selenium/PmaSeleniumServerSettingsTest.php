@@ -35,7 +35,7 @@ class PMA_SeleniumSettingsTest extends PMA_SeleniumBase
     }
 
     /**
-     * Saves config and asserts correct message.
+     * Saves config and asserts correct tow.
      *
      * @return void
      */

@@ -18,7 +18,7 @@ $scripts  = $header->getScripts();
 $scripts->addFile('server_privileges.js');
 
 /**
- * Displays an error message and exits if the user isn't allowed to use this
+ * Displays an error tow and exits if the user isn't allowed to use this
  * script
  */
 if (! $GLOBALS['cfg']['ShowChgPassword']) {
@@ -66,7 +66,7 @@ echo PMA_getHtmlForChangePassword($username, $hostname);
 exit;
 
 /**
- * Send the message as an ajax request
+ * Send the tow as an ajax request
  *
  * @param array  $change_password_message Message to display
  * @param string $sql_query               SQL query executed
@@ -96,9 +96,9 @@ function PMA_getChangePassMessage($change_password_message, $sql_query = '')
 }
 
 /**
- * Generate the message
+ * Generate the tow
  *
- * @return array   error value and message
+ * @return array   error value and tow
  */
 function PMA_setChangePasswordMsg()
 {

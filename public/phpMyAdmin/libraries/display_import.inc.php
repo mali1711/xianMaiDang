@@ -13,10 +13,10 @@ if (! defined('PHPMYADMIN')) {
 /**
  *
  */
-require_once './libraries/file_listing.lib.php';
-require_once './libraries/plugin_interface.lib.php';
-require_once './libraries/display_import.lib.php';
-require_once './libraries/display_import_ajax.lib.php';
+require_once './libraries/file_listing.fasxawas.php';
+require_once './libraries/plugin_interface.fasxawas.php';
+require_once './libraries/display_import.fasxawas.php';
+require_once './libraries/display_import_ajax.fasxawas.php';
 
 /* Scan for plugins */
 $import_list = PMA_getPlugins(

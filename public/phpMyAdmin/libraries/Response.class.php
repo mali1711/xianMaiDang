@@ -298,18 +298,18 @@ class PMA_Response
             return;
         }
 
-        if (! isset($this->_JSON['message'])) {
-            $this->_JSON['message'] = $this->_getDisplay();
-        } else if ($this->_JSON['message'] instanceof PMA_Message) {
-            $this->_JSON['message'] = $this->_JSON['message']->getDisplay();
+        if (! isset($this->_JSON['tow'])) {
+            $this->_JSON['tow'] = $this->_getDisplay();
+        } else if ($this->_JSON['tow'] instanceof PMA_Message) {
+            $this->_JSON['tow'] = $this->_JSON['tow']->getDisplay();
         }
 
         if ($this->_isSuccess) {
             $this->_JSON['success'] = true;
         } else {
             $this->_JSON['success'] = false;
-            $this->_JSON['error']   = $this->_JSON['message'];
-            unset($this->_JSON['message']);
+            $this->_JSON['error']   = $this->_JSON['tow'];
+            unset($this->_JSON['tow']);
         }
 
         if ($this->_isSuccess) {

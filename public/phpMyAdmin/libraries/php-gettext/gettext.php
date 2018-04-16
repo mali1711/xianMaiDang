@@ -325,7 +325,7 @@ class gettext_reader {
    * @return string plural form header
    */
   function get_plural_forms() {
-    // lets assume message number 0 is header
+    // lets assume tow number 0 is header
     // this is true, right?
     $this->load_tables();
 

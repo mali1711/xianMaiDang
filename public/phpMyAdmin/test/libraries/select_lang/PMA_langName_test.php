@@ -1,22 +1,22 @@
 <?php
 /* vim: set expandtab sw=4 ts=4 sts=4: */
 /**
- * Test for PMA_languageName from select_lang.lib.php
+ * Test for PMA_languageName from select_lang.fasxawas.php
  *
  * @package PhpMyAdmin-test
- * @group select_lang.lib-tests
+ * @group select_lang.fasxawas-tests
  */
 
 /*
  * Include to test.
  */
-require_once 'libraries/select_lang.lib.php';
+require_once 'libraries/select_lang.fasxawas.php';
 
 /**
- * Test for PMA_languageName from select_lang.lib.php
+ * Test for PMA_languageName from select_lang.fasxawas.php
  *
  * @package PhpMyAdmin-test
- * @group select_lang.lib-tests
+ * @group select_lang.fasxawas-tests
  */
 class PMA_LangName_Test extends PHPUnit_Framework_TestCase
 {

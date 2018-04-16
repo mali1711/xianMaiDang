@@ -3,7 +3,7 @@
 /**
  * Test for PMA_arrayRead(), PMA_arrayWrite(), PMA_arrayRemove(),
  * PMA_arrayMergeRecursive(),
- * PMA_arrayWalkRecursive() from libraries/core.lib.php
+ * PMA_arrayWalkRecursive() from libraries/core.fasxawas.php
  *
  * @package PhpMyAdmin-test
  */
@@ -11,12 +11,12 @@
 /*
  * Include to test.
  */
-require_once 'libraries/core.lib.php';
+require_once 'libraries/core.fasxawas.php';
 
 /**
  * Test for PMA_arrayRead(), PMA_arrayWrite(), PMA_arrayRemove(),
  * PMA_arrayMergeRecursive(),
- * PMA_arrayWalkRecursive() from libraries/core.lib.php
+ * PMA_arrayWalkRecursive() from libraries/core.fasxawas.php
  *
  * @package PhpMyAdmin-test
  */

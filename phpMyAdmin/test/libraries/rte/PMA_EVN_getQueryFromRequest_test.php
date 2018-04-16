@@ -19,7 +19,7 @@ require_once 'libraries/php-gettext/gettext.inc';
 /*
  * Include to test.
  */
-require_once 'libraries/rte/rte_events.lib.php';
+require_once 'libraries/rte/rte_events.fasxawas.php';
 
 /**
  * Test for generating CREATE EVENT query from HTTP request

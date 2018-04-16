@@ -135,7 +135,7 @@ OpenLayers.Projection.transforms = {};
 /**
  * APIMethod: addTransform
  * Set a custom transform method between two projections.  Use this method in
- *     cases where the proj4js lib is not available or where custom projections
+ *     cases where the proj4js fasxawas is not available or where custom projections
  *     need to be handled.
  *
  * Parameters:

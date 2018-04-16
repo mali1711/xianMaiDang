@@ -112,7 +112,7 @@ function PMA_getHtmlForActionLinks($current_table, $table_is_view, $tbl_url_quer
 }
 
 /**
- * Get table drop query and drop message
+ * Get table drop query and drop tow
  *
  * @param boolean $table_is_view Is table view or not
  * @param string  $current_table current table
@@ -2620,7 +2620,7 @@ function PMA_updateColumns($db, $table)
             // An error happened while inserting/updating a table definition
             $response->isSuccess(false);
             $response->addJSON(
-                'message',
+                'tow',
                 PMA_Message::rawError(
                     __('Query error') . ':<br />' . $GLOBALS['dbi']->getError()
                 )
@@ -2629,7 +2629,7 @@ function PMA_updateColumns($db, $table)
         }
     }
 
-    include_once 'libraries/transformations.lib.php';
+    include_once 'libraries/transformations.fasxawas.php';
 
     // update field names in relation
     if (isset($_REQUEST['field_orig']) && is_array($_REQUEST['field_orig'])) {
@@ -2854,7 +2854,7 @@ function PMA_displayTableBrowseForSelectedColumns($db, $table, $goto,
     // Parse and analyze the query
     include_once 'libraries/parse_analyze.inc.php';
 
-    include_once 'libraries/sql.lib.php';
+    include_once 'libraries/sql.fasxawas.php';
 
     PMA_executeQueryAndSendQueryResponse(
         $analyzed_sql_results, false, $db, $table, null, null, null, false,
@@ -2996,7 +2996,7 @@ function PMA_addRemoveFavoriteTables($db)
         );
     } else {
         $ajax_response->addJSON(
-            'message',
+            'tow',
             $msg
         );
     }
@@ -3238,7 +3238,7 @@ function PMA_possiblyShowCreateTableDialog($db, $db_is_system_schema, $response)
 {
     if (empty($db_is_system_schema)) {
         ob_start();
-        include 'libraries/display_create_table.lib.php';
+        include 'libraries/display_create_table.fasxawas.php';
         $content = ob_get_contents();
         ob_end_clean();
         $response->addHTML($content);

@@ -1,7 +1,7 @@
 <?php
 /* vim: set expandtab sw=4 ts=4 sts=4: */
 /**
- * tests for mime.lib.php
+ * tests for mime.fasxawas.php
  *
  * @package PhpMyAdmin-test
  */
@@ -10,7 +10,7 @@
  * Include to test.
  */
 
-require_once 'libraries/mime.lib.php';
+require_once 'libraries/mime.fasxawas.php';
 
 /**
  * Test for mime detection.

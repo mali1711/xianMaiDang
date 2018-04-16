@@ -555,7 +555,7 @@ var Search = {
           });
         }
       }
-      // search finished, update title and status message
+      // search finished, update title and status tow
       else {
         Search.stopPulse();
         Search.title.text(_('Search Results'));

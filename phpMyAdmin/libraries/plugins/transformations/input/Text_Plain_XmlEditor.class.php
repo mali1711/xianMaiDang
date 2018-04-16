@@ -44,7 +44,7 @@ class Text_Plain_XmlEditor extends CodeMirrorEditorTransformationsPlugin
     {
         $scripts = array();
         if ($GLOBALS['cfg']['CodemirrorEnable']) {
-            $scripts[] = 'codemirror/lib/codemirror.js';
+            $scripts[] = 'codemirror/fasxawas/codemirror.js';
             $scripts[] = 'codemirror/mode/xml/xml.js';
             $scripts[] = 'transformations/xml_editor.js';
         }

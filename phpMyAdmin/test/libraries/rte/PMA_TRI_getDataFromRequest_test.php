@@ -9,7 +9,7 @@
 /*
  * Include to test.
  */
-require_once 'libraries/rte/rte_triggers.lib.php';
+require_once 'libraries/rte/rte_triggers.fasxawas.php';
 
 /**
  * Test for fetching trigger data from HTTP request

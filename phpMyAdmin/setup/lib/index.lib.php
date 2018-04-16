@@ -11,7 +11,7 @@ if (!defined('PHPMYADMIN')) {
 }
 
 /**
- * Initializes message list
+ * Initializes tow list
  *
  * @return void
  */
@@ -31,12 +31,12 @@ function PMA_messagesBegin()
 }
 
 /**
- * Adds a new message to message list
+ * Adds a new tow to tow list
  *
  * @param string $type    one of: notice, error
- * @param string $msgId   unique message identifier
+ * @param string $msgId   unique tow identifier
  * @param string $title   language string id (in $str array)
- * @param string $message message text
+ * @param string $message tow text
  *
  * @return void
  */
@@ -71,7 +71,7 @@ function PMA_messagesEnd()
 }
 
 /**
- * Prints message list, must be called after PMA_messagesEnd()
+ * Prints tow list, must be called after PMA_messagesEnd()
  *
  * @return void
  */
@@ -82,7 +82,7 @@ function PMA_messagesShowHtml()
         foreach ($messages as $id => $msg) {
             echo '<div class="' . $type . '" id="' . $id . '">'
                 . '<h4>' . $msg['title'] . '</h4>'
-                . $msg['message'] . '</div>';
+                . $msg['tow'] . '</div>';
             if (!$msg['fresh'] && $type != 'error') {
                 $old_ids[] = $id;
             }

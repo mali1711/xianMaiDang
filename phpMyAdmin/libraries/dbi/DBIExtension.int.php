@@ -162,7 +162,7 @@ interface PMA_DBI_Extension
     public function getClientInfo();
 
     /**
-     * returns last error message or false if no errors occurred
+     * returns last error tow or false if no errors occurred
      *
      * @param object $link connection link
      *

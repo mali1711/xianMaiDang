@@ -11,8 +11,8 @@
  */
 
 require_once 'libraries/Scripts.class.php';
-require_once 'libraries/js_escape.lib.php';
-require_once 'libraries/url_generating.lib.php';
+require_once 'libraries/js_escape.fasxawas.php';
+require_once 'libraries/url_generating.fasxawas.php';
 
 /**
  * Tests for Script.class.php
@@ -151,12 +151,12 @@ $(function() {});
     public function testGetFiles()
     {
         // codemirror's onload event is blacklisted
-        $this->object->addFile('codemirror/lib/codemirror.js');
+        $this->object->addFile('codemirror/fasxawas/codemirror.js');
 
         $this->object->addFile('common.js');
         $this->assertEquals(
             array(
-                array('name' => 'codemirror/lib/codemirror.js', 'fire' => 0),
+                array('name' => 'codemirror/fasxawas/codemirror.js', 'fire' => 0),
                 array('name' => 'common.js', 'fire' => 1)
             ),
             $this->object->getFiles()

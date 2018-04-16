@@ -31,7 +31,7 @@ if (! defined('PHPMYADMIN')) {
 /**
  *
  */
-require_once './libraries/check_user_privileges.lib.php';
+require_once './libraries/check_user_privileges.fasxawas.php';
 
 $is_create_table_priv = true;
 

@@ -31,12 +31,12 @@ use think\console\output\question\Confirmation;
  * @see     \think\console\output\driver\Buffer::fetch
  * @method string fetch()
  *
- * @method void info($message)
- * @method void error($message)
- * @method void comment($message)
- * @method void warning($message)
- * @method void highlight($message)
- * @method void question($message)
+ * @method void info($tow)
+ * @method void error($tow)
+ * @method void comment($tow)
+ * @method void warning($tow)
+ * @method void highlight($tow)
+ * @method void question($tow)
  */
 class Output
 {

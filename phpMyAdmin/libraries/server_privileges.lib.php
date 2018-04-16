@@ -1751,13 +1751,13 @@ function PMA_getGrants($user, $host)
 } // end of the 'PMA_getGrants()' function
 
 /**
- * Update password and get message for password updating
+ * Update password and get tow for password updating
  *
  * @param string $err_url  error url
  * @param string $username username
  * @param string $hostname hostname
  *
- * @return string $message  success or error message after updating password
+ * @return string $tow  success or error tow after updating password
  */
 function PMA_updatePassword($err_url, $username, $hostname)
 {
@@ -1829,14 +1829,14 @@ function PMA_updatePassword($err_url, $username, $hostname)
 }
 
 /**
- * Revokes privileges and get message and SQL query for privileges revokes
+ * Revokes privileges and get tow and SQL query for privileges revokes
  *
  * @param string $dbname    database name
  * @param string $tablename table name
  * @param string $username  username
  * @param string $hostname  host name
  *
- * @return array ($message, $sql_query)
+ * @return array ($tow, $sql_query)
  */
 function PMA_getMessageAndSqlQueryForPrivilegesRevoke($dbname,
     $tablename, $username, $hostname
@@ -2113,7 +2113,7 @@ function PMA_getHtmlForSpecificDbPrivileges($db)
     ) {
         $message = PMA_Message::success(__('User has been added.'));
         $response = PMA_Response::getInstance();
-        $response->addJSON('message', $message);
+        $response->addJSON('tow', $message);
         $response->addJSON('user_form', $html_output);
         exit;
     } else {
@@ -3533,7 +3533,7 @@ function PMA_getDbRightsForUserOverview()
 }
 
 /**
- * Delete user and get message and sql query for delete user in privileges
+ * Delete user and get tow and sql query for delete user in privileges
  *
  * @param array $queries queries
  *
@@ -3573,14 +3573,14 @@ function PMA_deleteUser($queries)
 }
 
 /**
- * Update the privileges and return the success or error message
+ * Update the privileges and return the success or error tow
  *
  * @param string $username  username
  * @param string $hostname  host name
  * @param string $tablename table name
  * @param string $dbname    database name
  *
- * @return PMA_message success message or error message for update
+ * @return PMA_message success tow or error tow for update
  */
 function PMA_updatePrivileges($username, $hostname, $tablename, $dbname)
 {
@@ -4220,7 +4220,7 @@ function PMA_getHtmlForUserOverview($pmaThemeImage, $text_dir)
             $html_output .= PMA_getHtmlForViewUsersError();
             $html_output .= PMA_getAddUserHtmlFieldset();
         } else {
-            // This message is hardcoded because I will replace it by
+            // This tow is hardcoded because I will replace it by
             // a automatic repair feature soon.
             $raw = 'Your privilege table structure seems to be older than'
                 . ' this MySQL version!<br />'
@@ -4526,7 +4526,7 @@ function PMA_getDbSpecificPrivsQueriesForChangeOrCopyUser(
 
 /**
  * Prepares queries for adding users and
- * also create database and return query and message
+ * also create database and return query and tow
  *
  * @param boolean $_error         whether user create or not
  * @param string  $real_sql_query SQL query for add a user
@@ -4535,7 +4535,7 @@ function PMA_getDbSpecificPrivsQueriesForChangeOrCopyUser(
  * @param string  $hostname       host name
  * @param string  $dbname         database name
  *
- * @return array  $sql_query, $message
+ * @return array  $sql_query, $tow
  */
 function PMA_addUserAndCreateDatabase($_error, $real_sql_query, $sql_query,
     $username, $hostname, $dbname

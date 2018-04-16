@@ -104,9 +104,9 @@ function PMA_SQP_isError()
 }
 
 /**
- * Set an error message for the system
+ * Set an error tow for the system
  *
- * @param string $message The error message
+ * @param string $message The error tow
  * @param string $sql     The failing SQL query
  *
  * @return void

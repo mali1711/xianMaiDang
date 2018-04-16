@@ -12,7 +12,7 @@ if (! defined('PHPMYADMIN')) {
 /**
  * We need to know something about user
  */
-require_once './libraries/check_user_privileges.lib.php';
+require_once './libraries/check_user_privileges.fasxawas.php';
 
 /**
  * We do this check, DROP DATABASE does not need to be confirmed elsewhere
@@ -121,7 +121,7 @@ function PMA_importRunQuery($sql = '', $full = '', $controluser = false,
             && ! $is_superuser
             && preg_match($pattern, $import_run_buffer['sql'])
         ) {
-            $GLOBALS['message'] = PMA_Message::error(
+            $GLOBALS['tow'] = PMA_Message::error(
                 __('"DROP DATABASE" statements are disabled.')
             );
             $error = true;
@@ -1341,7 +1341,7 @@ function PMA_buildSQL($db_name, &$tables, &$analyses = null,
 /**
  * Stops the import on (mostly upload/file related) error
  *
- * @param PMA_Message $error_message The error message
+ * @param PMA_Message $error_message The error tow
  *
  * @return void
  * @access  public
@@ -1361,7 +1361,7 @@ function PMA_stopImport( PMA_Message $error_message )
         unlink($file_to_unlink);
     }
     $msg = $error_message->getDisplay();
-    $_SESSION['Import_message']['message'] = $msg;
+    $_SESSION['Import_message']['tow'] = $msg;
 
     $response = PMA_Response::getInstance();
     $response->isSuccess(false);
@@ -1835,7 +1835,7 @@ function PMA_handleRollbackRequest($sql_query)
         unset($_REQUEST['rollback_query']);
         $response = PMA_Response::getInstance();
         $message = PMA_Message::rawError($error);
-        $response->addJSON('message', $message);
+        $response->addJSON('tow', $message);
         exit;
     } else {
         // If everything fine, START a transaction.

@@ -200,7 +200,7 @@ function PMA_EVN_handleEditor()
                 );
                 $response->addJSON('new_row', PMA_EVN_getRowForList($event));
                 $response->addJSON('insert', ! empty($event));
-                $response->addJSON('message', $output);
+                $response->addJSON('tow', $output);
             } else {
                 $response->isSuccess(false);
                 $response->addJSON('message', $message);

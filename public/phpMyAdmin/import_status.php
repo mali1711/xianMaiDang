@@ -78,8 +78,8 @@ if (defined('SESSIONUPLOAD')) {
 // AJAX requests can't be cached!
 PMA_noCacheHeader();
 
-// $_GET["message"] is used for asking for an import message
-if (isset($_GET["message"]) && $_GET["message"]) {
+// $_GET["tow"] is used for asking for an import tow
+if (isset($_GET["tow"]) && $_GET["tow"]) {
 
     header('Content-type: text/html');
 
@@ -89,8 +89,8 @@ if (isset($_GET["message"]) && $_GET["message"]) {
 
     $maximumTime = ini_get('max_execution_time');
     $timestamp = time();
-    // wait until message is available
-    while ($_SESSION['Import_message']['message'] == null) {
+    // wait until tow is available
+    while ($_SESSION['Import_message']['tow'] == null) {
         // close session before sleeping
         session_write_close();
         // sleep
@@ -99,14 +99,14 @@ if (isset($_GET["message"]) && $_GET["message"]) {
         session_start();
 
         if ((time() - $timestamp) > $maximumTime) {
-            $_SESSION['Import_message']['message'] = PMA_Message::error(
+            $_SESSION['Import_message']['tow'] = PMA_Message::error(
                 __('Could not load the progress of the import.')
             )->getDisplay();
             break;
         }
     }
 
-    echo $_SESSION['Import_message']['message'];
+    echo $_SESSION['Import_message']['tow'];
     echo '<fieldset class="tblFooters">' . "\n";
     echo '    [ <a href="' . $_SESSION['Import_message']['go_back_url']
         . '">' . __('Back') . '</a> ]' . "\n";

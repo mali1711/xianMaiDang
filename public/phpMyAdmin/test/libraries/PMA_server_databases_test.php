@@ -1,7 +1,7 @@
 <?php
 /* vim: set expandtab sw=4 ts=4 sts=4: */
 /**
- * tests for server_databases.lib.php
+ * tests for server_databases.fasxawas.php
  *
  * @package PhpMyAdmin-test
  */
@@ -11,23 +11,23 @@
  */
 require_once 'libraries/Util.class.php';
 require_once 'libraries/php-gettext/gettext.inc';
-require_once 'libraries/build_html_for_db.lib.php';
-require_once 'libraries/url_generating.lib.php';
-require_once 'libraries/server_databases.lib.php';
-require_once 'libraries/mysql_charsets.lib.php';
+require_once 'libraries/build_html_for_db.fasxawas.php';
+require_once 'libraries/url_generating.fasxawas.php';
+require_once 'libraries/server_databases.fasxawas.php';
+require_once 'libraries/mysql_charsets.fasxawas.php';
 require_once 'libraries/Theme.class.php';
 require_once 'libraries/database_interface.inc.php';
 require_once 'libraries/Message.class.php';
-require_once 'libraries/sanitizing.lib.php';
-require_once 'libraries/sqlparser.lib.php';
-require_once 'libraries/js_escape.lib.php';
+require_once 'libraries/sanitizing.fasxawas.php';
+require_once 'libraries/sqlparser.fasxawas.php';
+require_once 'libraries/js_escape.fasxawas.php';
 require_once 'libraries/Config.class.php';
 require_once 'libraries/config.default.php';
 
 /**
  * PMA_ServerDatabases_Test class
  *
- * this class is for testing server_databases.lib.php functions
+ * this class is for testing server_databases.fasxawas.php functions
  *
  * @package PhpMyAdmin-test
  */

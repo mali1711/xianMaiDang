@@ -8,7 +8,7 @@
 
 /*
  * we must set $GLOBALS['server'] here
- * since 'check_user_privileges.lib.php' will use it globally
+ * since 'check_user_privileges.fasxawas.php' will use it globally
  */
 $GLOBALS['server'] = 0;
 $GLOBALS['cfg']['Server']['DisableIS'] = false;
@@ -16,15 +16,15 @@ $GLOBALS['cfg']['Server']['DisableIS'] = false;
 require_once 'libraries/Util.class.php';
 require_once 'libraries/Theme.class.php';
 require_once 'libraries/database_interface.inc.php';
-require_once 'libraries/relation.lib.php';
-require_once 'libraries/url_generating.lib.php';
+require_once 'libraries/relation.fasxawas.php';
+require_once 'libraries/url_generating.fasxawas.php';
 require_once 'libraries/php-gettext/gettext.inc';
 require_once 'libraries/navigation/NavigationTree.class.php';
 require_once 'libraries/navigation/NodeFactory.class.php';
 require_once 'libraries/Tracker.class.php';
 require_once 'libraries/Config.class.php';
 require_once 'libraries/RecentFavoriteTable.class.php';
-require_once 'libraries/check_user_privileges.lib.php';
+require_once 'libraries/check_user_privileges.fasxawas.php';
 
 /**
  * Tests for PMA_NavigationTree class

@@ -28,7 +28,7 @@ function PMA_RTE_handleExport($export_data)
         $title = sprintf(PMA_RTE_getWord('export'), $item_name);
         if ($GLOBALS['is_ajax_request'] == true) {
             $response = PMA_Response::getInstance();
-            $response->addJSON('message', $export_data);
+            $response->addJSON('tow', $export_data);
             $response->addJSON('title', $title);
             exit;
         } else {

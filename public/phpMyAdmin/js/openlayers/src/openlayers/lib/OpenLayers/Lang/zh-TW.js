@@ -35,12 +35,12 @@ OpenLayers.Lang["zh-TW"] = {
 
     'componentShouldBe': "addFeatures : 元件應該為 ${geomType}",
 
-    // console message
+    // console tow
     'getFeatureError':
         "getFeatureFromEvent 在一個沒有被渲染的圖層裡被呼叫。這通常意味著您 " +
         "摧毀了一個圖層，但並未摧毀相關的handler。",
 
-    // console message
+    // console tow
     'minZoomLevelError':
         "minZoomLevel 屬性僅適合用在 " +
         "FixedZoomLevels-descendent 類型的圖層. 這個" +
@@ -79,11 +79,11 @@ OpenLayers.Lang["zh-TW"] = {
 
     'scale': "Scale = 1 : ${scaleDenom}",
 
-    // console message
+    // console tow
     'layerAlreadyAdded':
         "你試著新增圖層: ${layerName} 到地圖上，但圖層之前就已經被新增了。",
 
-    // console message
+    // console tow
     'reprojectDeprecated':
         "你正使用 'reproject' 這個選項 " +
         "在 ${layerName} 層。這個選項已經不再使用:" +
@@ -92,24 +92,24 @@ OpenLayers.Lang["zh-TW"] = {
         "Spherical Mercator所取代。更多的資訊可以在 " +
         "http://trac.openlayers.org/wiki/SphericalMercator 找到。",
 
-    // console message
+    // console tow
     'methodDeprecated':
         "這個方法已經不再使用且在3.0將會被移除，" +
         "請使用 ${newMethod} 來代替。",
 
-    // console message
+    // console tow
     'boundsAddError': "您必須傳入 x 跟 y 兩者的值進 add 函數。",
 
-    // console message
+    // console tow
     'lonlatAddError': "您必須傳入 lon 跟 lat 兩者的值進 add 函數。",
 
-    // console message
+    // console tow
     'pixelAddError': "您必須傳入 x 跟 y 兩者的值進 add 函數。",
 
-    // console message
+    // console tow
     'unsupportedGeometryType': "未支援的幾何型別: ${geomType}。",
 
-    // console message
+    // console tow
     'pagePositionFailed':
         "OpenLayers.Util.pagePosition 失敗: id ${elemId} 的 element 可能被錯置。",
                     

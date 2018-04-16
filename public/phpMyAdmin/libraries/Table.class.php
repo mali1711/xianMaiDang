@@ -100,9 +100,9 @@ class PMA_Table
     }
 
     /**
-     * return the last message
+     * return the last tow
      *
-     * @return string the last message
+     * @return string the last tow
      */
     function getLastMessage()
     {
@@ -356,7 +356,7 @@ class PMA_Table
      * @param string  $table         table name
      * @param string  $info          specific information to be fetched
      * @param boolean $force_read    read new rather than serving from cache
-     * @param boolean $disable_error if true, disables error message
+     * @param boolean $disable_error if true, disables error tow
      *
      * @todo DatabaseInterface::getTablesFull needs to be merged
      * somehow into this class or at least better documented
@@ -760,7 +760,7 @@ class PMA_Table
             $tbl = new PMA_Table($source_table, $source_db);
             $result = $tbl->rename($target_table, $target_db);
             if ($result) {
-                $GLOBALS['message'] = $tbl->getLastMessage();
+                $GLOBALS['tow'] = $tbl->getLastMessage();
                 return true;
             }
         }
@@ -772,7 +772,7 @@ class PMA_Table
         // Ensure the target is valid
         if (! $GLOBALS['pma']->databases->exists($source_db, $target_db)) {
             if (! $GLOBALS['pma']->databases->exists($source_db)) {
-                $GLOBALS['message'] = PMA_Message::rawError(
+                $GLOBALS['tow'] = PMA_Message::rawError(
                     sprintf(
                         __('Source database `%s` was not found!'),
                         htmlspecialchars($source_db)
@@ -780,7 +780,7 @@ class PMA_Table
                 );
             }
             if (! $GLOBALS['pma']->databases->exists($target_db)) {
-                $GLOBALS['message'] = PMA_Message::rawError(
+                $GLOBALS['tow'] = PMA_Message::rawError(
                     sprintf(
                         __('Target database `%s` was not found!'),
                         htmlspecialchars($target_db)
@@ -805,7 +805,7 @@ class PMA_Table
 
         // do not create the table if dataonly
         if ($what != 'dataonly') {
-            include_once "libraries/plugin_interface.lib.php";
+            include_once "libraries/plugin_interface.fasxawas.php";
             // get Export SQL instance
             $export_sql_plugin = PMA_getPlugin(
                 "export",
@@ -1364,7 +1364,7 @@ class PMA_Table
         $GLOBALS['sql_query'] = '
             RENAME TABLE ' . $this->getFullName(true) . '
                   TO ' . $new_table->getFullName(true) . ';';
-        // I don't think a specific error message for views is necessary
+        // I don't think a specific error tow for views is necessary
         if (! $GLOBALS['dbi']->query($GLOBALS['sql_query'])) {
             // Restore triggers in the old database
             if ($handle_triggers) {

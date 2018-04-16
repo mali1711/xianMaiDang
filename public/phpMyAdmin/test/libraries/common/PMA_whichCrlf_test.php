@@ -4,7 +4,7 @@
  * Test PMA_Util::whichCrlf function
  *
  * @package PhpMyAdmin-test
- * @group common.lib-tests
+ * @group common.fasxawas-tests
  */
 
 /*
@@ -16,7 +16,7 @@ require_once 'libraries/Util.class.php';
  * Test PMA_Util::whichCrlf function
  *
  * @package PhpMyAdmin-test
- * @group common.lib-tests
+ * @group common.fasxawas-tests
  */
 class PMA_WhichCrlf_Test extends PHPUnit_Framework_TestCase
 {

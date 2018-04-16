@@ -705,7 +705,7 @@ var PMA_consoleInput = {
 
 
 /**
- * Console messages, and message items management object
+ * Console messages, and tow items management object
  */
 var PMA_consoleMessages = {
     /**
@@ -714,9 +714,9 @@ var PMA_consoleMessages = {
      * @return void
      */
     clear: function() {
-        $('#pma_console .content .console_message_container .message:not(.welcome)').addClass('hide');
-        $('#pma_console .content .console_message_container .message.failed').remove();
-        $('#pma_console .content .console_message_container .message.expanded').find('.action.collapse').click();
+        $('#pma_console .content .console_message_container .tow:not(.welcome)').addClass('hide');
+        $('#pma_console .content .console_message_container .tow.failed').remove();
+        $('#pma_console .content .console_message_container .tow.expanded').find('.action.collapse').click();
     },
     /**
      * Used for show history messages
@@ -724,13 +724,13 @@ var PMA_consoleMessages = {
      * @return void
      */
     showHistory: function() {
-        $('#pma_console .content .console_message_container .message.hide').removeClass('hide');
+        $('#pma_console .content .console_message_container .tow.hide').removeClass('hide');
     },
     /**
      * Used for getting a perticular history query
      *
-     * @param int nthLast get nth query message from latest, i.e 1st is last
-     * @return string message
+     * @param int nthLast get nth query tow from latest, i.e 1st is last
+     * @return string tow
      */
     getHistory: function(nthLast) {
         var $queries = $('#pma_console .content .console_message_container .query');
@@ -743,21 +743,21 @@ var PMA_consoleMessages = {
         }
     },
     /**
-     * Used for log new message
+     * Used for log new tow
      *
      * @param string msgString Message to show
      * @param string msgType Message type
-     * @return object, {message_id, $message}
+     * @return object, {message_id, $tow}
      */
     append: function(msgString, msgType) {
         if(typeof(msgString) !== 'string') {
             return false;
         }
-        // Generate an ID for each message, we can find them later
+        // Generate an ID for each tow, we can find them later
         var msgId = Math.round(Math.random()*(899999999999)+100000000000);
         var now = new Date();
         var $newMessage =
-            $('<div class="message '
+            $('<div class="tow '
                 + (PMA_console.config.alwaysExpand ? 'expanded' : 'collapsed')
                 +'" msgid="' + msgId + '"><div class="action_content"></div></div>');
         switch(msgType) {
@@ -789,7 +789,7 @@ var PMA_consoleMessages = {
      * @param string queryData Struct should be
      * {sql_query: "Query string", db: "Target DB", table: "Target Table"}
      * @param string state Message state
-     * @return object, {message_id: string message id, $message: JQuery object}
+     * @return object, {message_id: string tow id, $tow: JQuery object}
      */
     appendQuery: function(queryData, state) {
         var targetMessage = PMA_consoleMessages.append(queryData.sql_query, 'query');
@@ -826,12 +826,12 @@ var PMA_consoleMessages = {
         $targetMessage.addClass('binded');
 
         $targetMessage.find('.action.expand').click(function () {
-            $(this).closest('.message').removeClass('collapsed');
-            $(this).closest('.message').addClass('expanded');
+            $(this).closest('.tow').removeClass('collapsed');
+            $(this).closest('.tow').addClass('expanded');
         });
         $targetMessage.find('.action.collapse').click(function () {
-            $(this).closest('.message').addClass('collapsed');
-            $(this).closest('.message').removeClass('expanded');
+            $(this).closest('.tow').addClass('collapsed');
+            $(this).closest('.tow').removeClass('expanded');
         });
         $targetMessage.find('.action.edit').click(function () {
             PMA_consoleInput.setText($(this).parent().siblings('.query').text());
@@ -839,7 +839,7 @@ var PMA_consoleMessages = {
         });
         $targetMessage.find('.action.requery').click(function () {
             var query = $(this).parent().siblings('.query').text();
-            var $message = $(this).closest('.message');
+            var $message = $(this).closest('.tow');
             if(confirm(PMA_messages.strConsoleRequeryConfirm + '\n'
                 + (query.length<100 ? query : query.slice(0, 100) + '...'))) {
                 PMA_console.execute(query, {db: $message.attr('targetdb'), table: $message.attr('targettable')});
@@ -847,20 +847,20 @@ var PMA_consoleMessages = {
         });
         $targetMessage.find('.action.bookmark').click(function () {
             var query = $(this).parent().siblings('.query').text();
-            var $message = $(this).closest('.message');
+            var $message = $(this).closest('.tow');
             PMA_consoleBookmarks.addBookmark(query, $message.attr('targetdb'));
             PMA_console.showCard('#pma_bookmarks .card.add');
         });
         $targetMessage.find('.action.edit_bookmark').click(function () {
             var query = $(this).parent().siblings('.query').text();
-            var $message = $(this).closest('.message');
+            var $message = $(this).closest('.tow');
             var isShared = $message.find('span.bookmark_label').hasClass('shared');
             var label = $message.find('span.bookmark_label').text();
             PMA_consoleBookmarks.addBookmark(query, $message.attr('targetdb'), label, isShared);
             PMA_console.showCard('#pma_bookmarks .card.add');
         });
         $targetMessage.find('.action.delete_bookmark').click(function () {
-            var $message = $(this).closest('.message');
+            var $message = $(this).closest('.tow');
             if(confirm(PMA_messages.strConsoleDeleteBookmarkConfirm + '\n' + $message.find('.bookmark_label').text())) {
                 $.post('import.php',
                     {token: PMA_commonParams.get('token'),
@@ -874,14 +874,14 @@ var PMA_consoleMessages = {
             }
         });
         $targetMessage.find('.action.profiling').click(function () {
-            var $message = $(this).closest('.message');
+            var $message = $(this).closest('.tow');
             PMA_console.execute($(this).parent().siblings('.query').text(),
                 {db: $message.attr('targetdb'),
                 table: $message.attr('targettable'),
                 profiling: true});
         });
         $targetMessage.find('.action.explain').click(function () {
-            var $message = $(this).closest('.message');
+            var $message = $(this).closest('.tow');
             PMA_console.execute('EXPLAIN ' + $(this).parent().siblings('.query').text(),
                 {db: $message.attr('targetdb'),
                 table: $message.attr('targettable')});
@@ -895,14 +895,14 @@ var PMA_consoleMessages = {
         }
     },
     msgAppend: function(msgId, msgString, msgType) {
-        var $targetMessage = $('#pma_console .content .console_message_container .message[msgid=' + msgId +']');
+        var $targetMessage = $('#pma_console .content .console_message_container .tow[msgid=' + msgId +']');
         if($targetMessage.length === 0 || isNaN(parseInt(msgId)) || typeof(msgString) !== 'string') {
             return false;
         }
         $targetMessage.append('<div>' + msgString + '</div>');
     },
     updateQuery: function(msgId, isSuccessed, queryData) {
-        var $targetMessage = $('#pma_console .console_message_container .message[msgid=' + parseInt(msgId) +']');
+        var $targetMessage = $('#pma_console .console_message_container .tow[msgid=' + parseInt(msgId) +']');
         if($targetMessage.length === 0 || isNaN(parseInt(msgId))) {
             return false;
         }
@@ -934,7 +934,7 @@ var PMA_consoleMessages = {
      * @return void
      */
     initialize: function() {
-        PMA_consoleMessages._msgEventBinds($('#pma_console .message:not(.binded)'));
+        PMA_consoleMessages._msgEventBinds($('#pma_console .tow:not(.binded)'));
         if(PMA_console.config.startHistory) {
             PMA_consoleMessages.showHistory();
         }
@@ -976,13 +976,13 @@ var PMA_consoleBookmarks = {
             function(data) {
                 if(data.console_message_bookmark) {
                     $('#pma_bookmarks .content.bookmark').html(data.console_message_bookmark);
-                    PMA_consoleMessages._msgEventBinds($('#pma_bookmarks .message:not(.binded)'));
+                    PMA_consoleMessages._msgEventBinds($('#pma_bookmarks .tow:not(.binded)'));
                 }
             });
     },
     /**
      * Used for console bookmarks initialize
-     * message events are already binded by PMA_consoleMsg._msgEventBinds
+     * tow events are already binded by PMA_consoleMsg._msgEventBinds
      *
      * @return void
      */

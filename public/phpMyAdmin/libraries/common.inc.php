@@ -82,12 +82,12 @@ if (version_compare(phpversion(), '5.4', 'lt')) {
 /**
  * core functions
  */
-require './libraries/core.lib.php';
+require './libraries/core.fasxawas.php';
 
 /**
  * Input sanitizing
  */
-require './libraries/sanitizing.lib.php';
+require './libraries/sanitizing.fasxawas.php';
 
 /**
  * Warning about mbstring.
@@ -112,9 +112,9 @@ require './libraries/Theme_Manager.class.php';
 require './libraries/Config.class.php';
 
 /**
- * the relation lib, tracker needs it
+ * the relation fasxawas, tracker needs it
  */
-require './libraries/relation.lib.php';
+require './libraries/relation.fasxawas.php';
 
 /**
  * the PMA_Tracker class
@@ -140,12 +140,12 @@ if (! defined('PMA_MINIMUM_COMMON') || defined('PMA_SETUP')) {
     /**
      * JavaScript escaping.
      */
-    include_once './libraries/js_escape.lib.php';
+    include_once './libraries/js_escape.fasxawas.php';
 
     /**
      * Include URL/hidden inputs generating.
      */
-    include_once './libraries/url_generating.lib.php';
+    include_once './libraries/url_generating.fasxawas.php';
 
     /**
      * Used to generate the page
@@ -333,7 +333,7 @@ if (isset($_COOKIE)
 if ($GLOBALS['PMA_Config']->get('ForceSSL')
     && ! $GLOBALS['PMA_Config']->detectHttps()
 ) {
-    require './libraries/select_lang.lib.php';
+    require './libraries/select_lang.fasxawas.php';
     // grab SSL URL
     $url = $GLOBALS['PMA_Config']->getSSLUri();
     // Actually redirect
@@ -508,7 +508,7 @@ if ($token_mismatch) {
     /**
      * Require cleanup functions
      */
-    include './libraries/cleanup.lib.php';
+    include './libraries/cleanup.fasxawas.php';
     /**
      * Do actual cleanup
      */
@@ -560,7 +560,7 @@ if (PMA_isValid($_REQUEST['sql_query'])) {
 /**
  * lang detection is done here
  */
-require './libraries/select_lang.lib.php';
+require './libraries/select_lang.fasxawas.php';
 
 // Defines the cell alignment values depending on text direction
 if ($GLOBALS['text_dir'] == 'ltr') {
@@ -737,7 +737,7 @@ if (! defined('PMA_MINIMUM_COMMON')) {
     /**
      * Character set conversion.
      */
-    include_once './libraries/charset_conversion.lib.php';
+    include_once './libraries/charset_conversion.fasxawas.php';
 
     /**
      * Lookup server by name
@@ -798,7 +798,7 @@ if (! defined('PMA_MINIMUM_COMMON')) {
     if (function_exists('mb_convert_encoding')
         && $lang == 'ja'
     ) {
-        include_once './libraries/kanji-encoding.lib.php';
+        include_once './libraries/kanji-encoding.fasxawas.php';
     } // end if
 
     /**
@@ -822,7 +822,7 @@ if (! defined('PMA_MINIMUM_COMMON')) {
          */
         include_once './libraries/database_interface.inc.php';
 
-        include_once './libraries/logging.lib.php';
+        include_once './libraries/logging.fasxawas.php';
 
         // get LoginCookieValidity from preferences cache
         // no generic solution for loading preferences from cache as some settings
@@ -883,7 +883,7 @@ if (! defined('PMA_MINIMUM_COMMON')) {
             /**
              * ip based access library
              */
-            include_once './libraries/ip_allow_deny.lib.php';
+            include_once './libraries/ip_allow_deny.fasxawas.php';
 
             $allowDeny_forbidden         = false; // default
             if ($cfg['Server']['AllowDeny']['order'] == 'allow,deny') {
@@ -1044,7 +1044,7 @@ if (! defined('PMA_MINIMUM_COMMON')) {
         /**
          * SQL Parser code
          */
-        include_once './libraries/sqlparser.lib.php';
+        include_once './libraries/sqlparser.fasxawas.php';
 
         /**
          * the PMA_List_Database class

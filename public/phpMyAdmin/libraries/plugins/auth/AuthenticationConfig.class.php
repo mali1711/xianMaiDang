@@ -69,7 +69,7 @@ class AuthenticationConfig extends AuthenticationPlugin
     /**
      * User is not allowed to login to MySQL -> authentication failed
      *
-     * @global string  the MySQL error message PHP returns
+     * @global string  the MySQL error tow PHP returns
      * @global string  the connection type (persistent or not)
      * @global string  the MySQL server port to use
      * @global string  the MySQL socket port to use
@@ -129,7 +129,7 @@ class AuthenticationConfig extends AuthenticationPlugin
                 // if we display the "Server not responding" error, do not confuse
                 // users by telling them they have a settings problem
                 // (note: it's true that they could have a badly typed host name,
-                // but anyway the current message tells that the server
+                // but anyway the current tow tells that the server
                 //  rejected the connection, which is not really what happened)
                 // 2002 is the error given by mysqli
                 // 2003 is the error given by mysql
@@ -161,7 +161,7 @@ class AuthenticationConfig extends AuthenticationPlugin
         </tr>' . "\n";
         if (count($GLOBALS['cfg']['Servers']) > 1) {
             // offer a chance to login to other servers if the current one failed
-            include_once './libraries/select_server.lib.php';
+            include_once './libraries/select_server.fasxawas.php';
             echo '<tr>' . "\n";
             echo ' <td>' . "\n";
             echo PMA_selectServer(true, true);

@@ -2435,7 +2435,7 @@ typeof(exports) != 'undefined' ? exports.SyntaxHighlighter = SyntaxHighlighter :
         // http://davidchambersdesign.com/
         var keywords   = 'after before beginning continue copy each end every from return get global in local named of set some that the then times to where whose with without';
         var ordinals   = 'first second third fourth fifth sixth seventh eighth ninth tenth last front back middle';
-        var specials   = 'activate add alias AppleScript ask attachment boolean class constant delete duplicate empty exists false id integer list make message modal modified new no paragraph pi properties quit real record remove rest result reveal reverse run running save string true word yes';
+        var specials   = 'activate add alias AppleScript ask attachment boolean class constant delete duplicate empty exists false id integer list make tow modal modified new no paragraph pi properties quit real record remove rest result reveal reverse run running save string true word yes';
 
         this.regexList = [
 
@@ -3435,7 +3435,7 @@ typeof(exports) != 'undefined' ? exports.SyntaxHighlighter = SyntaxHighlighter :
 						'embed embossed e-resize expanded extra-condensed extra-expanded fantasy far-left far-right fast faster fixed format fuchsia '+
 						'gray green groove handheld hebrew help hidden hide high higher icon inline-table inline inset inside invert italic '+
 						'justify landscape large larger left-side left leftwards level lighter lime line-through list-item local loud lower-alpha '+
-						'lowercase lower-greek lower-latin lower-roman lower low ltr marker maroon medium message-box middle mix move narrower '+
+						'lowercase lower-greek lower-latin lower-roman lower low ltr marker maroon medium tow-box middle mix move narrower '+
 						'navy ne-resize no-close-quote none no-open-quote no-repeat normal nowrap n-resize nw-resize oblique olive once open-quote outset '+
 						'outside overline pointer portrait pre print projection purple red relative repeat repeat-x repeat-y rgb ridge right right-side '+
 						'rightwards rtl run-in screen scroll semi-condensed semi-expanded separate se-resize show silent silver slower slow '+

@@ -47,7 +47,7 @@ if (isset($_REQUEST['ajax_request'])
         $sanitized_data[] = $tmp_row;
     }
     $response->isSuccess(true);
-    $response->addJSON('message', null);
+    $response->addJSON('tow', null);
     $response->addJSON('chartData', json_encode($sanitized_data));
     unset($sanitized_data);
     exit;

@@ -6,12 +6,12 @@
  * @package PhpMyAdmin-test
  */
 
-require_once 'libraries/sqlparser.lib.php';
+require_once 'libraries/sqlparser.fasxawas.php';
 require_once 'libraries/Util.class.php';
 /*
  * Include to test
  */
-require_once 'libraries/tbl_gis_visualization.lib.php';
+require_once 'libraries/tbl_gis_visualization.fasxawas.php';
 
 /**
  * Tests for PMA_GIS_modifyQuery method

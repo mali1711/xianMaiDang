@@ -1,7 +1,7 @@
 <?php
 /* vim: set expandtab sw=4 ts=4 sts=4: */
 /**
- * tests for server_privileges.lib.php
+ * tests for server_privileges.fasxawas.php
  *
  * @package PhpMyAdmin-test
  */
@@ -11,22 +11,22 @@
  */
 require_once 'libraries/Util.class.php';
 require_once 'libraries/php-gettext/gettext.inc';
-require_once 'libraries/url_generating.lib.php';
+require_once 'libraries/url_generating.fasxawas.php';
 require_once 'libraries/Theme.class.php';
 require_once 'libraries/database_interface.inc.php';
 require_once 'libraries/Message.class.php';
-require_once 'libraries/sanitizing.lib.php';
-require_once 'libraries/sqlparser.lib.php';
-require_once 'libraries/js_escape.lib.php';
+require_once 'libraries/sanitizing.fasxawas.php';
+require_once 'libraries/sqlparser.fasxawas.php';
+require_once 'libraries/js_escape.fasxawas.php';
 require_once 'libraries/Message.class.php';
 require_once 'libraries/Response.class.php';
-require_once 'libraries/relation.lib.php';
-require_once 'libraries/server_privileges.lib.php';
+require_once 'libraries/relation.fasxawas.php';
+require_once 'libraries/server_privileges.fasxawas.php';
 
 /**
  * PMA_ServerPrivileges_Test class
  *
- * this class is for testing server_privileges.lib.php functions
+ * this class is for testing server_privileges.fasxawas.php functions
  *
  * @package PhpMyAdmin-test
  */
@@ -973,7 +973,7 @@ class PMA_ServerPrivileges_Test extends PHPUnit_Framework_TestCase
             $sql_query
         );
 
-        //validate 6: $message
+        //validate 6: $tow
         $this->assertEquals(
             "You have added a new user.",
             $message->getMessage()

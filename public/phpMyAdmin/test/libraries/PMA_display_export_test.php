@@ -1,7 +1,7 @@
 <?php
 /* vim: set expandtab sw=4 ts=4 sts=4: */
 /**
- * tests for display_export.lib.php
+ * tests for display_export.fasxawas.php
  *
  * @package PhpMyAdmin-test
  */
@@ -13,23 +13,23 @@ require_once 'libraries/Util.class.php';
 require_once 'libraries/Table.class.php';
 require_once 'libraries/Advisor.class.php';
 require_once 'libraries/php-gettext/gettext.inc';
-require_once 'libraries/url_generating.lib.php';
+require_once 'libraries/url_generating.fasxawas.php';
 require_once 'libraries/ServerStatusData.class.php';
-require_once 'libraries/display_export.lib.php';
+require_once 'libraries/display_export.fasxawas.php';
 require_once 'libraries/Theme.class.php';
 require_once 'libraries/database_interface.inc.php';
-require_once 'libraries/charset_conversion.lib.php';
+require_once 'libraries/charset_conversion.fasxawas.php';
 require_once 'libraries/Message.class.php';
-require_once 'libraries/plugin_interface.lib.php';
-require_once 'libraries/sanitizing.lib.php';
-require_once 'libraries/sqlparser.lib.php';
-require_once 'libraries/js_escape.lib.php';
-require_once 'libraries/relation.lib.php';
+require_once 'libraries/plugin_interface.fasxawas.php';
+require_once 'libraries/sanitizing.fasxawas.php';
+require_once 'libraries/sqlparser.fasxawas.php';
+require_once 'libraries/js_escape.fasxawas.php';
+require_once 'libraries/relation.fasxawas.php';
 
 /**
  * class PMA_DisplayExport_Test
  *
- * this class is for testing display_export.lib.php functions
+ * this class is for testing display_export.fasxawas.php functions
  *
  * @package PhpMyAdmin-test
  * @group large

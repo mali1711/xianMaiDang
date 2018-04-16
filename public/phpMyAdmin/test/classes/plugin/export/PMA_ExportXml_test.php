@@ -9,7 +9,7 @@ $GLOBALS['db'] = 'db';
 require_once 'libraries/plugins/export/ExportXml.class.php';
 require_once 'libraries/DatabaseInterface.class.php';
 require_once 'libraries/Util.class.php';
-require_once 'libraries/export.lib.php';
+require_once 'libraries/export.fasxawas.php';
 require_once 'libraries/Theme.class.php';
 require_once 'libraries/Table.class.php';
 require_once 'libraries/Config.class.php';

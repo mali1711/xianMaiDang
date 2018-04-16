@@ -34,12 +34,12 @@ OpenLayers.Lang["nb"] = {
 
     'componentShouldBe': "addFeatures : komponenten må være en ${geomType}",
 
-    // console message
+    // console tow
     'getFeatureError':
         "getFeatureFromEvent har blitt kjørt mot et lag uten noen tegnemetode. Dette betyr som regel at du " +
         "fjernet et lag uten å fjerne alle håndterere tilknyttet laget.",
 
-    // console message
+    // console tow
     'minZoomLevelError':
         "Egenskapen minZoomLevel er kun ment til bruk på lag " +
         "basert på FixedZoomLevels. At dette wfs-laget sjekker " +
@@ -79,11 +79,11 @@ OpenLayers.Lang["nb"] = {
 
     'scale': "<strong>Skala</strong> 1 : ${scaleDenom}",
 
-    // console message
+    // console tow
     'layerAlreadyAdded':
         "Du forsøkte å legge til laget ${layerName} på kartet, men det er allerede lagt til",
 
-    // console message
+    // console tow
     'reprojectDeprecated':
         "Du bruker innstillingen 'reproject' på laget ${layerName}. " +
         "Denne innstillingen er foreldet, den var ment for å støtte " +
@@ -91,24 +91,24 @@ OpenLayers.Lang["nb"] = {
         "bør nå gjøres med støtten for Spherical Mercator. Mer informasjon " +
         "finnes på http://trac.openlayers.org/wiki/SphericalMercator.",
 
-    // console message
+    // console tow
     'methodDeprecated':
         "Denne metoden er markert som foreldet og vil bli fjernet i 3.0. " +
         "Vennligst bruk ${newMethod} i stedet.",
 
-    // console message
+    // console tow
     'boundsAddError': "Du må gi både x- og y-verdier til funksjonen add.",
 
-    // console message
+    // console tow
     'lonlatAddError': "Du må gi både lon- og lat-verdier til funksjonen add.",
 
-    // console message
+    // console tow
     'pixelAddError': "Du må gi både x- og y-verdier til funksjonen add.",
 
-    // console message
+    // console tow
     'unsupportedGeometryType': "Geometritypen ${geomType} er ikke støttet",
 
-    // console message
+    // console tow
     'pagePositionFailed':
         "OpenLayers.Util.pagePosition feilet: elementet med id ${elemId} kan være feilplassert.",
                     

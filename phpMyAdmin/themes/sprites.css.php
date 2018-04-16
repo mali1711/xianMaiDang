@@ -13,7 +13,7 @@ if (! defined('PMA_MINIMUM_COMMON')) {
 
 $bg = $_SESSION['PMA_Theme']->getImgPath() . 'sprites.png';
 /* Check if there is a valid data file for sprites */
-if (is_readable($_SESSION['PMA_Theme']->getPath() . '/sprites.lib.php')) {
+if (is_readable($_SESSION['PMA_Theme']->getPath() . '/sprites.fasxawas.php')) {
 
     ?>
     /* Icon sprites */
@@ -29,7 +29,7 @@ if (is_readable($_SESSION['PMA_Theme']->getPath() . '/sprites.lib.php')) {
     }
     <?php
 
-    include_once $_SESSION['PMA_Theme']->getPath() . '/sprites.lib.php';
+    include_once $_SESSION['PMA_Theme']->getPath() . '/sprites.fasxawas.php';
     $sprites = array();
     if (function_exists('PMA_sprites')) {
         $sprites = PMA_sprites();

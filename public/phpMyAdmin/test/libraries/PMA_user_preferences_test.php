@@ -9,15 +9,15 @@
 /*
  * Include to test
  */
-require_once 'libraries/user_preferences.lib.php';
+require_once 'libraries/user_preferences.fasxawas.php';
 require_once 'libraries/DatabaseInterface.class.php';
 require_once 'libraries/config/ConfigFile.class.php';
-require_once 'libraries/core.lib.php';
+require_once 'libraries/core.fasxawas.php';
 require_once 'libraries/Util.class.php';
 require_once 'libraries/php-gettext/gettext.inc';
-require_once 'libraries/relation.lib.php';
-require_once 'libraries/url_generating.lib.php';
-require_once 'libraries/sanitizing.lib.php';
+require_once 'libraries/relation.fasxawas.php';
+require_once 'libraries/url_generating.fasxawas.php';
+require_once 'libraries/sanitizing.fasxawas.php';
 require_once 'libraries/Message.class.php';
 
 /**

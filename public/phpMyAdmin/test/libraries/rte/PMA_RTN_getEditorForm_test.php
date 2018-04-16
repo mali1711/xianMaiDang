@@ -9,7 +9,7 @@
 $GLOBALS['server'] = 0;
 require_once 'libraries/Util.class.php';
 require_once 'libraries/php-gettext/gettext.inc';
-require_once 'libraries/url_generating.lib.php';
+require_once 'libraries/url_generating.fasxawas.php';
 require_once './libraries/Types.class.php';
 require_once 'libraries/Theme.class.php';
 require_once 'libraries/database_interface.inc.php';
@@ -18,7 +18,7 @@ require_once 'libraries/mysql_charsets.inc.php';
 /*
  * Include to test.
  */
-require_once 'libraries/rte/rte_routines.lib.php';
+require_once 'libraries/rte/rte_routines.fasxawas.php';
 
 /**
  * Test for generating routine editor

@@ -12,7 +12,7 @@ if (! defined('PHPMYADMIN')) {
 /**
  *
  */
-require_once './libraries/check_user_privileges.lib.php';
+require_once './libraries/check_user_privileges.fasxawas.php';
 
 if ($is_create_db_priv) {
     // The user is allowed to create a db
@@ -58,5 +58,5 @@ if ($is_create_db_priv) {
             array('hspace' => 2, 'border' => 0, 'align' => 'middle')
         )
         . '' . __('No Privileges') . '</span>';
-} // end create db form or message
+} // end create db form or tow
 ?>

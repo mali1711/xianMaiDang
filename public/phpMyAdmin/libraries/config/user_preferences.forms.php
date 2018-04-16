@@ -56,7 +56,7 @@ $forms['Features']['Warnings'] = array(
     'LoginCookieValidityDisableWarning',
     'ReservedWordDisableWarning');
 // settings from this form are treated specially,
-// see prefs_forms.php and user_preferences.lib.php
+// see prefs_forms.php and user_preferences.fasxawas.php
 $forms['Features']['Developer'] = array(
     'DBG/sql');
 $forms['Sql_queries']['Sql_queries'] = array(

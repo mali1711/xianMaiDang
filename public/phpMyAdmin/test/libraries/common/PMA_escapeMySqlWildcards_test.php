@@ -4,7 +4,7 @@
  * Test for MySQL Wildcards escaping/unescaping
  *
  * @package PhpMyAdmin-test
- * @group common.lib-tests
+ * @group common.fasxawas-tests
  */
 
 /*
@@ -16,7 +16,7 @@ require_once 'libraries/Util.class.php';
  * Test for MySQL Wildcards escaping/unescaping
  *
  * @package PhpMyAdmin-test
- * @group common.lib-tests
+ * @group common.fasxawas-tests
  */
 class PMA_EscapeMySqlWildcardsTest extends PHPUnit_Framework_TestCase
 {

@@ -4,7 +4,7 @@
  * Test for quoting, slashing/backslashing
  *
  * @package PhpMyAdmin-test
- * @group common.lib-tests
+ * @group common.fasxawas-tests
  */
 
 /*
@@ -17,7 +17,7 @@ require_once 'libraries/sqlparser.data.php';
  * Test for quoting, slashing/backslashing
  *
  * @package PhpMyAdmin-test
- * @group common.lib-tests
+ * @group common.fasxawas-tests
  */
 class PMA_QuotingSlashing_Test extends PHPUnit_Framework_TestCase
 {

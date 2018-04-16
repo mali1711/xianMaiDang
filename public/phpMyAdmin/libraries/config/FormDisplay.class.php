@@ -18,7 +18,7 @@
  */
 require_once './libraries/config/FormDisplay.tpl.php';
 require_once './libraries/config/Validator.class.php';
-require_once './libraries/js_escape.lib.php';
+require_once './libraries/js_escape.fasxawas.php';
 
 /**
  * Form management class, displays and processes forms

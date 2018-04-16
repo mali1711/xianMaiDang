@@ -11,9 +11,9 @@
 
 require_once 'libraries/Footer.class.php';
 require_once 'libraries/Response.class.php';
-require_once 'libraries/js_escape.lib.php';
-require_once 'libraries/core.lib.php';
-require_once 'libraries/url_generating.lib.php';
+require_once 'libraries/js_escape.fasxawas.php';
+require_once 'libraries/core.fasxawas.php';
+require_once 'libraries/url_generating.fasxawas.php';
 require_once 'libraries/php-gettext/gettext.inc';
 require_once 'libraries/Util.class.php';
 require_once 'libraries/Config.class.php';
@@ -21,7 +21,7 @@ require_once 'libraries/Theme.class.php';
 require_once 'libraries/Table.class.php';
 require_once 'libraries/Error_Handler.class.php';
 require_once 'libraries/vendor_config.php';
-require_once 'libraries/relation.lib.php';
+require_once 'libraries/relation.fasxawas.php';
 
 /**
  * Tests for Footer class

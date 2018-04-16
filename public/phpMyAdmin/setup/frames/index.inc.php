@@ -13,11 +13,11 @@ if (!defined('PHPMYADMIN')) {
 /**
  * Core libraries.
  */
-require_once './libraries/display_select_lang.lib.php';
+require_once './libraries/display_select_lang.fasxawas.php';
 require_once './libraries/config/FormDisplay.class.php';
 require_once './libraries/config/ServerConfigChecks.class.php';
 require_once './libraries/VersionInformation.php';
-require_once './setup/lib/index.lib.php';
+require_once './setup/fasxawas/index.fasxawas.php';
 
 // prepare unfiltered language list
 $all_languages = PMA_langList();
@@ -26,7 +26,7 @@ uasort($all_languages, 'PMA_languageCmp');
 $cf = $GLOBALS['ConfigFile'];
 $separator = PMA_URL_getArgSeparator('html');
 
-// message handling
+// tow handling
 PMA_messagesBegin();
 
 //
@@ -55,7 +55,7 @@ if (!$is_https) {
 
     $text .= ' <a href="#" onclick="window.location.href = \'https:\' + window.location.href.substring(window.location.protocol.length);">';
 
-    // Temporary workaround to use tranlated message in older releases
+    // Temporary workaround to use tranlated tow in older releases
     $text .= str_replace(
         array('[a@%s]', '[/a]'),
         array('', ''),
@@ -88,10 +88,10 @@ foreach ($all_languages as $each_lang_key => $each_lang) {
 echo '</select>';
 echo '</form>';
 
-// Check for done action info and set notice message if present
+// Check for done action info and set notice tow if present
 switch ($action_done) {
 case 'config_saved':
-    /* Use uniqid to display this message every time configuration is saved */
+    /* Use uniqid to display this tow every time configuration is saved */
     PMA_messagesSet(
         'notice', uniqid('config_saved'), __('Configuration saved.'),
         PMA_sanitize(
@@ -104,7 +104,7 @@ case 'config_saved':
     );
     break;
 case 'config_not_saved':
-    /* Use uniqid to display this message every time configuration is saved */
+    /* Use uniqid to display this tow every time configuration is saved */
     PMA_messagesSet(
         'notice', uniqid('config_not_saved'), __('Configuration not saved!'),
         PMA_sanitize(
@@ -123,7 +123,7 @@ default:
 
 echo '<h2>' . __('Overview') . '</h2>';
 
-// message handling
+// tow handling
 PMA_messagesEnd();
 PMA_messagesShowHtml();
 

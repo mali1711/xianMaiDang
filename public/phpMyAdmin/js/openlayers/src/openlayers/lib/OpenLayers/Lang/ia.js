@@ -46,7 +46,7 @@ OpenLayers.Lang["ia"] = OpenLayers.Util.applyDefaults({
 
     'googleWarning': "Le strato Google non poteva esser cargate correctemente.\x3cbr\x3e\x3cbr\x3ePro disfacer te de iste message, selige un nove BaseLayer in le selector de strato in alto a dextra.\x3cbr\x3e\x3cbr\x3eMulto probabilemente, isto es proque le script del libreria de Google Maps non esseva includite o non contine le clave API correcte pro tu sito.\x3cbr\x3e\x3cbr\x3eDisveloppatores: Pro adjuta de corriger isto, \x3ca href=\'http://trac.openlayers.org/wiki/Google\' target=\'_blank\'\x3eclicca hic\x3c/a",
 
-    'getLayerWarning': "Le strato ${layerType} non poteva esser cargate correctemente.\x3cbr\x3e\x3cbr\x3ePro disfacer te de iste message, selige un nove BaseLayer in le selector de strato in alto a dextra.\x3cbr\x3e\x3cbr\x3eMulto probabilemente, isto es proque le script del libreria de ${layerLib} non esseva correctemente includite.\x3cbr\x3e\x3cbr\x3eDisveloppatores: Pro adjuta de corriger isto, \x3ca href=\'http://trac.openlayers.org/wiki/${layerLib}\' target=\'_blank\'\x3eclicca hic\x3c/a\x3e",
+    'getLayerWarning': "Le strato ${layerType} non poteva esser cargate correctemente.\x3cbr\x3e\x3cbr\x3ePro disfacer te de iste tow, selige un nove BaseLayer in le selector de strato in alto a dextra.\x3cbr\x3e\x3cbr\x3eMulto probabilemente, isto es proque le script del libreria de ${layerLib} non esseva correctemente includite.\x3cbr\x3e\x3cbr\x3eDisveloppatores: Pro adjuta de corriger isto, \x3ca href=\'http://trac.openlayers.org/wiki/${layerLib}\' target=\'_blank\'\x3eclicca hic\x3c/a\x3e",
 
     'scale': "Scala = 1 : ${scaleDenom}",
 

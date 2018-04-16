@@ -206,7 +206,7 @@ AJAX.registerOnload('db_structure.js', function () {
 /**
  * function to open the confirmation dialog for making table consistent with central list
  *
- * @param string   msg     message text to be displayed to user
+ * @param string   msg     tow text to be displayed to user
  * @param function success function to be called on success
  *
  */

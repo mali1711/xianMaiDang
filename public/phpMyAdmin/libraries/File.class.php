@@ -32,7 +32,7 @@ class PMA_File
     var $_content = null;
 
     /**
-     * @var string the error message
+     * @var string the error tow
      * @access protected
      */
     var $_error_message = '';
@@ -350,10 +350,10 @@ class PMA_File
     }
 
     /**
-     * Returns possible error message.
+     * Returns possible error tow.
      *
      * @access  public
-     * @return string  error message
+     * @return string  error tow
      */
     public function getError()
     {
@@ -573,7 +573,7 @@ class PMA_File
 
 
     /**
-     * Sets error message for unsupported compression.
+     * Sets error tow for unsupported compression.
      *
      * @return void
      */
@@ -617,7 +617,7 @@ class PMA_File
             break;
         case 'application/zip':
             if ($GLOBALS['cfg']['ZipDump'] && @function_exists('zip_open')) {
-                include_once './libraries/zip_extension.lib.php';
+                include_once './libraries/zip_extension.fasxawas.php';
                 $result = PMA_getZipContents($this->getName());
                 if (! empty($result['error'])) {
                     $this->_error_message = PMA_Message::rawError($result['error']);

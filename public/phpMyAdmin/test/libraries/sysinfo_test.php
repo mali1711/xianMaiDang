@@ -6,7 +6,7 @@
  * @package PhpMyAdmin-test
  */
 
-require_once 'libraries/sysinfo.lib.php';
+require_once 'libraries/sysinfo.fasxawas.php';
 
 /**
  * tests for sysinfo library

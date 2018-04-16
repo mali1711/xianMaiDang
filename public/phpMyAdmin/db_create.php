@@ -53,7 +53,7 @@ if (! $result) {
     if ($GLOBALS['is_ajax_request'] == true) {
         $response = PMA_Response::getInstance();
         $response->isSuccess(false);
-        $response->addJSON('message', $message);
+        $response->addJSON('tow', $message);
     } else {
         include_once 'index.php';
     }
@@ -121,7 +121,7 @@ if (! $result) {
         $new_db_string .= '</tr>';
 
         $response = PMA_Response::getInstance();
-        $response->addJSON('message', $message);
+        $response->addJSON('tow', $message);
         $response->addJSON('new_db_string', $new_db_string);
         $response->addJSON(
             'sql_query',

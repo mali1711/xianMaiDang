@@ -400,7 +400,7 @@ $(document).on('submit', "#tblchartform", function (event) {
     if (!checkSqlQuery($form[0])) {
         return false;
     }
-    // remove any div containing a previous error message
+    // remove any div containing a previous error tow
     $('.error').remove();
     var $msgbox = PMA_ajaxShowMessage();
     PMA_prepareForAjaxRequest($form);

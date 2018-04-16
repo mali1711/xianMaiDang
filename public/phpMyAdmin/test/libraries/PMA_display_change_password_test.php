@@ -1,7 +1,7 @@
 <?php
 /* vim: set expandtab sw=4 ts=4 sts=4: */
 /**
- * tests for display_change_password.lib.php
+ * tests for display_change_password.fasxawas.php
  *
  * @package PhpMyAdmin-test
  */
@@ -11,19 +11,19 @@
  */
 require_once 'libraries/Util.class.php';
 require_once 'libraries/php-gettext/gettext.inc';
-require_once 'libraries/url_generating.lib.php';
-require_once 'libraries/display_change_password.lib.php';
+require_once 'libraries/url_generating.fasxawas.php';
+require_once 'libraries/display_change_password.fasxawas.php';
 require_once 'libraries/Theme.class.php';
 require_once 'libraries/database_interface.inc.php';
-require_once 'libraries/sanitizing.lib.php';
-require_once 'libraries/js_escape.lib.php';
+require_once 'libraries/sanitizing.fasxawas.php';
+require_once 'libraries/js_escape.fasxawas.php';
 require_once 'libraries/Config.class.php';
 require_once 'libraries/config.default.php';
 
 /**
  * class PMA_DisplayChangePassword_Test
  *
- * this class is for testing display_change_password.lib.php functions
+ * this class is for testing display_change_password.fasxawas.php functions
  *
  * @package PhpMyAdmin-test
  */

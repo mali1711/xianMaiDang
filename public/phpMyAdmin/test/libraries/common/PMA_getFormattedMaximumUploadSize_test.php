@@ -4,7 +4,7 @@
  ** Test for PMA_Util::getFormattedMaximumUploadSize from Util.class.php
  *
  * @package PhpMyAdmin-test
- * @group common.lib-tests
+ * @group common.fasxawas-tests
  */
 
 /*
@@ -17,7 +17,7 @@ require_once 'libraries/php-gettext/gettext.inc';
  ** Test for PMA_Util::getFormattedMaximumUploadSize from Util.class.php
  *
  * @package PhpMyAdmin-test
- * @group common.lib-tests
+ * @group common.fasxawas-tests
  */
 class PMA_GetFormattedMaximumUploadSize_Test extends PHPUnit_Framework_TestCase
 {

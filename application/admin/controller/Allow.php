@@ -10,6 +10,8 @@ namespace app\admin\controller;
 use think\Controller;
 use think\Db;
 use think\Session;
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
 class Allow extends Controller
 {
     //初始化方法
@@ -26,49 +28,85 @@ class Allow extends Controller
         $controller=strtolower($request->controller());
         $action=$request->action();
         $nodelist=Session::get('nodeList');
-        if(empty($nodelist[$controller]) || !in_array($action,$nodelist[$controller])){
+/*        if(empty($nodelist[$controller]) || !in_array($action,$nodelist[$controller])){
             echo '<script>alert("您没有权限，请联系管理员")</script>';
             die;
-        }
+        }*/
 
     }
 
-}
-/*
-<?php
-namespace app\admin\controller;
-//导入Controller
-use think\Controller;
-use think\Db;
-use think\Session;
-class Allow extends Controller
-{
-    //初始化方法
-    public function _initialize()
+    /*
+     * 角色列表
+     * */
+    public function getroleList()
     {
-        //检测session
-        if(!Session::get('islogin')){
-            $this->error("请先登录后台","/adminlogin/login");
-        }
-        $request=request();
-        // (4)对比
-        //获取当前用户访问的控制器和方法(名字)
-        //控制器
-        $controller=strtolower($request->controller());
-        //方法
-        $action=$request->action();
 
-        // echo $controller.":".$action;
-        //获取session信息
-        $nodelist=Session::get('nodelist');
+        $list = Db::table('role')->select();
+        return $this->fetch('admin/Competence',['list'=>$list]);
+    }
 
-        //判断
-        if(empty($nodelist[$controller]) || !in_array($action,$nodelist[$controller])){
-            $this->error("抱歉您没有该权限,请联系超级管理员","/admin/index");
-        }
-
+    /*
+     * 添加角色
+     * */
+    public function getrole()
+    {
 
     }
 
+    public function postrole()
+    {
+
+    }
+
+
+    /*
+     * 删除角色
+     * */
+    public function getdelRole()
+    {
+
+    }
+
+    /*
+     * 修改角色权限
+     * */
+    public function getupdateRole()
+    {
+
+    }
+
+    public function postupdateRole()
+    {
+
+    }
+
+    /*
+     * 权限列表
+     * */
+    public function getlist()
+    {
+
+    }
+
+    
+
+    /*
+     * 测试第三方类
+     * TODO OK
+     * */
+    public function gettextsms()
+    {
+        $res = sendsms('332123','18396861513');
+    }
+
+
+    /*
+     * 测试邮箱发送
+     * TODO KO
+     * */
+    public function gettextemail()
+    {
+//       $res = sendmail('626480208@qq.com','验证码','你好');
+
+    }
 }
-*/

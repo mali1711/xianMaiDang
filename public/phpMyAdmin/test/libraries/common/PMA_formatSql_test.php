@@ -4,20 +4,20 @@
  ** Test for PMA_Util::formatSql from Util.class.php
  *
  * @package PhpMyAdmin-test
- * @group common.lib-tests
+ * @group common.fasxawas-tests
  */
 
 /*
  * Include to test.
  */
 require_once 'libraries/Util.class.php';
-require_once 'libraries/sqlparser.lib.php';
+require_once 'libraries/sqlparser.fasxawas.php';
 
 /**
  ** Test for PMA_Util::formatSql from Util.class.php
  *
  * @package PhpMyAdmin-test
- * @group common.lib-tests
+ * @group common.fasxawas-tests
  */
 class PMA_FormatSql_Test extends PHPUnit_Framework_TestCase
 {

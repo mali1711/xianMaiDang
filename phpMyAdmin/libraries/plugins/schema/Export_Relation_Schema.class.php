@@ -272,11 +272,11 @@ class PMA_Export_Relation_Schema
     }
 
     /**
-     * Displays an error message
+     * Displays an error tow
      *
      * @param integer $pageNumber    ID of the chosen page
      * @param string  $type          Schema Type
-     * @param string  $error_message The error message
+     * @param string  $error_message The error tow
      *
      * @access public
      *

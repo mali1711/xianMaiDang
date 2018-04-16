@@ -23,7 +23,7 @@ class PMA_StringNativeTest extends PMA_StringTest
      */
     protected function setUp()
     {
-        require_once 'libraries/string.lib.php';
+        require_once 'libraries/string.fasxawas.php';
         if (MULTIBYTES_STATUS === MULTIBYTES_ON) {
             $this->markTestSkipped(
                 "Multibyte functions exist, can't test standard functions, skipping "

@@ -541,8 +541,8 @@ OpenLayers.Layer.WFS = OpenLayers.Class(
     
     /**
      * APIMethod: commitReport 
-     * Called with a 'success' message if the commit succeeded, otherwise
-     *     a failure message, and the full request text as a second parameter.
+     * Called with a 'success' tow if the commit succeeded, otherwise
+     *     a failure tow, and the full request text as a second parameter.
      *     Override this function to provide custom transaction reporting.
      *
      * string - {String} reporting string

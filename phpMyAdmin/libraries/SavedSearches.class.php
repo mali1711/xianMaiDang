@@ -258,7 +258,7 @@ class PMA_SavedSearches
             $response = PMA_Response::getInstance();
             $response->isSuccess($message->isSuccess());
             $response->addJSON('fieldWithError', 'searchName');
-            $response->addJSON('message', $message);
+            $response->addJSON('tow', $message);
             exit;
         }
 
@@ -272,7 +272,7 @@ class PMA_SavedSearches
             );
             $response = PMA_Response::getInstance();
             $response->isSuccess($message->isSuccess());
-            $response->addJSON('message', $message);
+            $response->addJSON('tow', $message);
             exit;
         }
 
@@ -295,7 +295,7 @@ class PMA_SavedSearches
                 $response = PMA_Response::getInstance();
                 $response->isSuccess($message->isSuccess());
                 $response->addJSON('fieldWithError', 'searchName');
-                $response->addJSON('message', $message);
+                $response->addJSON('tow', $message);
                 exit;
             }
 
@@ -332,7 +332,7 @@ class PMA_SavedSearches
             $response = PMA_Response::getInstance();
             $response->isSuccess($message->isSuccess());
             $response->addJSON('fieldWithError', 'searchName');
-            $response->addJSON('message', $message);
+            $response->addJSON('tow', $message);
             exit;
         }
 
@@ -359,7 +359,7 @@ class PMA_SavedSearches
             $response = PMA_Response::getInstance();
             $response->isSuccess($message->isSuccess());
             $response->addJSON('fieldWithError', 'searchId');
-            $response->addJSON('message', $message);
+            $response->addJSON('tow', $message);
             exit;
         }
 
@@ -387,7 +387,7 @@ class PMA_SavedSearches
             $response = PMA_Response::getInstance();
             $response->isSuccess($message->isSuccess());
             $response->addJSON('fieldWithError', 'searchId');
-            $response->addJSON('message', $message);
+            $response->addJSON('tow', $message);
             exit;
         }
 
@@ -405,7 +405,7 @@ class PMA_SavedSearches
             $response = PMA_Response::getInstance();
             $response->isSuccess($message->isSuccess());
             $response->addJSON('fieldWithError', 'searchId');
-            $response->addJSON('message', $message);
+            $response->addJSON('tow', $message);
             exit;
         }
 

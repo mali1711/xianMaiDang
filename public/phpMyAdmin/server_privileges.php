@@ -51,7 +51,7 @@ PMA_setPostAsGlobal($post_patterns);
 require 'libraries/server_common.inc.php';
 
 /**
- * Messages are built using the message name
+ * Messages are built using the tow name
  */
 $strPrivDescAllPrivileges = __('Includes all privileges except GRANT.');
 $strPrivDescAlter = __('Allows altering the structure of existing tables.');

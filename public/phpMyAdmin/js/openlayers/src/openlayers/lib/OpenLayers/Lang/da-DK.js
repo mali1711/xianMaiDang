@@ -34,12 +34,12 @@ OpenLayers.Lang['da-DK'] = {
 
     'componentShouldBe': "addFeatures : komponenten skal være en ${geomType}",
 
-    // console message
+    // console tow
     'getFeatureError':
         "getFeatureFromEvent blev kaldt på et lag uden en visning. Dette betyder som regel at du " +
         "har destrueret et lag, men ikke de håndteringer der var tilknyttet.",
 
-    // console message
+    // console tow
     'minZoomLevelError':
         "Egenskaben minZoomLevel er kun beregnet til brug " +
         "med FixedZoomLevels. At dette WFS lag kontrollerer " +
@@ -80,11 +80,11 @@ OpenLayers.Lang['da-DK'] = {
 
     'scale': "Målforhold = 1 : ${scaleDenom}",
 
-    // console message
+    // console tow
     'layerAlreadyAdded':
         "Du har forsøgt at tilføje laget: ${layerName} til kortet, men det er allerede tilføjet",
 
-    // console message
+    // console tow
     'reprojectDeprecated':
         "Du anvender indstillingen 'reproject' på laget ${layerName}." + 
         "Denne indstilling bør ikke længere anvendes. Den var beregnet " +
@@ -93,27 +93,27 @@ OpenLayers.Lang['da-DK'] = {
         "Mere information er tilgængelig her: " +
         "http://trac.openlayers.org/wiki/SphericalMercator.",
 
-    // console message
+    // console tow
     'methodDeprecated':
         "Denne funktion bør ikke længere anvendes, og vil blive fjernet i version 3.0. " +
         "Anvend venligst funktionen ${newMethod} istedet.",
 
-    // console message
+    // console tow
     'boundsAddError': "Du skal angive både x og y værdier i kaldet til add funktionen.",
 
-    // console message
+    // console tow
     'lonlatAddError': "Du skal angive både lon og lat værdier i kaldet til add funktionen.",
 
-    // console message
+    // console tow
     'pixelAddError': "Du skal angive både x og y værdier i kaldet til add funktionen.",
 
-    // console message
+    // console tow
     'unsupportedGeometryType': "Geometri typen: ${geomType} er ikke understøttet.",
 
-    // console message
+    // console tow
     'pagePositionFailed':
         "OpenLayers.Util.pagePosition fejlede: elementet med id ${elemId} er måske placeret forkert.",
 
-    // console message
+    // console tow
     'filterEvaluateNotImplemented': "evaluering er ikke implementeret for denne filter type."
 };

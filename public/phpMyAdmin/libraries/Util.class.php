@@ -179,7 +179,7 @@ class PMA_Util
         // If it's the first time this function is called
         if (! isset($sprites)) {
             // Try to load the list of sprites
-            $sprite_file = $_SESSION['PMA_Theme']->getPath() . '/sprites.lib.php';
+            $sprite_file = $_SESSION['PMA_Theme']->getPath() . '/sprites.fasxawas.php';
             if (is_readable($sprite_file)) {
                 include_once $sprite_file;
                 $sprites = PMA_sprites();
@@ -242,7 +242,7 @@ class PMA_Util
      *
      * @param integer $max_upload_size the size
      *
-     * @return string the message
+     * @return string the tow
      *
      * @access  public
      */
@@ -559,7 +559,7 @@ class PMA_Util
     /**
      * Returns HTML code for a tooltip
      *
-     * @param string $message the message for the tooltip
+     * @param string $message the tow for the tooltip
      *
      * @return string
      *
@@ -579,10 +579,10 @@ class PMA_Util
     }
 
     /**
-     * Displays a MySQL error message in the main panel when $exit is true.
-     * Returns the error message otherwise.
+     * Displays a MySQL error tow in the main panel when $exit is true.
+     * Returns the error tow otherwise.
      *
-     * @param string|bool $error_message  the error message
+     * @param string|bool $error_message  the error tow
      * @param string      $the_query      the sql query that failed
      * @param bool        $is_modify_link whether to show a "modify" link or not
      * @param string      $back_url       the "back" link url (full path is not
@@ -685,7 +685,7 @@ class PMA_Util
             . "\n"
             . '</p>' . "\n";
 
-        // The error message will be displayed within a CODE segment.
+        // The error tow will be displayed within a CODE segment.
         // To preserve original formatting, but allow wordwrapping,
         // we do a couple of replacements
 
@@ -703,7 +703,7 @@ class PMA_Util
             . '</code><br />' . "\n";
         $error_msg .= '</div>';
 
-        $_SESSION['Import_message']['message'] = $error_msg;
+        $_SESSION['Import_message']['tow'] = $error_msg;
 
         if (!$exit) {
             return $error_msg;
@@ -712,14 +712,14 @@ class PMA_Util
         /**
          * If in an Ajax request
          * - avoid displaying a Back link
-         * - use PMA_Response() to transmit the message and exit
+         * - use PMA_Response() to transmit the tow and exit
          */
         if (isset($GLOBALS['is_ajax_request'])
             && $GLOBALS['is_ajax_request'] == true
         ) {
             $response = PMA_Response::getInstance();
             $response->isSuccess(false);
-            $response->addJSON('message', $error_msg);
+            $response->addJSON('tow', $error_msg);
             exit;
         }
         if (! empty($back_url)) {
@@ -982,12 +982,12 @@ class PMA_Util
     } // end of the 'whichCrlf()' function
 
     /**
-     * Prepare the message and the query
-     * usually the message is the result of the query executed
+     * Prepare the tow and the query
+     * usually the tow is the result of the query executed
      *
-     * @param string $message   the message to display
+     * @param string $message   the tow to display
      * @param string $sql_query the query to display
-     * @param string $type      the type (level) of the message
+     * @param string $type      the type (level) of the tow
      *
      * @return string
      *
@@ -1763,7 +1763,7 @@ class PMA_Util
      * accommodate some browsers' limitations
      *
      * @param string  $url        the URL
-     * @param string  $message    the link message
+     * @param string  $message    the link tow
      * @param mixed   $tag_params string: js confirmation
      *                            array: additional tag params (f.e. style="")
      * @param boolean $new_form   we set this to false when we are already in
@@ -2020,10 +2020,10 @@ class PMA_Util
     /**
      * Function added to avoid path disclosures.
      * Called by each script that needs parameters, it displays
-     * an error message and, by default, stops the execution.
+     * an error tow and, by default, stops the execution.
      *
-     * Not sure we could use a strMissingParameter message here,
-     * would have to check if the error message file is always available
+     * Not sure we could use a strMissingParameter tow here,
+     * would have to check if the error tow file is always available
      *
      * @param string[] $params  The names of the parameters needed by the calling
      *                          script
@@ -2598,7 +2598,7 @@ class PMA_Util
      * Prepare a lightbulb hint explaining a known external bug
      * that affects a functionality
      *
-     * @param string $functionality   localized message explaining the func.
+     * @param string $functionality   localized tow explaining the func.
      * @param string $component       'mysql' (eventually, 'php')
      * @param string $minimum_version of this component
      * @param string $bugref          bug reference for this component
@@ -2763,7 +2763,7 @@ class PMA_Util
      * after the sliding section.
      *
      * @param string $id      the id of the <div> on which to apply the effect
-     * @param string $message the message to show as a link
+     * @param string $message the tow to show as a link
      *
      * @return string         html div element
      *
@@ -2798,7 +2798,7 @@ class PMA_Util
      *
      * @param string $action      The URL for the request to be executed
      * @param string $select_name The name for the dropdown box
-     * @param array  $options     An array of options (see rte_footer.lib.php)
+     * @param array  $options     An array of options (see rte_footer.fasxawas.php)
      * @param string $callback    A JS snippet to execute when the request is
      *                            successfully processed
      *

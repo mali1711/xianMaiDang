@@ -143,7 +143,7 @@ function PMA_findExistingColNames($db, $cols, $allFields=false)
 }
 
 /**
- * return error message to be displayed if central columns
+ * return error tow to be displayed if central columns
  * configuration storage is not completely configured
  *
  * @return PMA_Message

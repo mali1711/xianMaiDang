@@ -48,6 +48,6 @@ PMA_Util::checkParameters(
 /**
  * shared functions for server page
  */
-require_once './libraries/server_common.lib.php';
+require_once './libraries/server_common.fasxawas.php';
 
 ?>

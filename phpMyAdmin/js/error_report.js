@@ -40,7 +40,7 @@ var ErrorReport = {
                 });
                 $.post("error_report.php", post_data, function (data) {
                     if (data.success === false) {
-                        //in the case of an error, show the error message returned.
+                        //in the case of an error, show the error tow returned.
                         PMA_ajaxShowMessage(data.error, false);
                     } else {
                         PMA_ajaxShowMessage(data.message, false);
@@ -77,7 +77,7 @@ var ErrorReport = {
             $.post("error_report.php", post_data, function (data) {
                 $dialog.dialog('close');
                 if (data.success === false) {
-                    //in the case of an error, show the error message returned.
+                    //in the case of an error, show the error tow returned.
                     PMA_ajaxShowMessage(data.error, false);
                 } else {
                     PMA_ajaxShowMessage(data.message, 3000);
@@ -91,7 +91,7 @@ var ErrorReport = {
 
         $.post("error_report.php", report_data, function (data) {
             if (data.success === false) {
-                //in the case of an error, show the error message returned.
+                //in the case of an error, show the error tow returned.
                 PMA_ajaxShowMessage(data.error, false);
             } else {
                 // Show dialog if the request was successful
@@ -161,7 +161,7 @@ var ErrorReport = {
         });
     },
     /**
-     * Extracts Exception name from message if it exists
+     * Extracts Exception name from tow if it exists
      *
      * @return String
      */

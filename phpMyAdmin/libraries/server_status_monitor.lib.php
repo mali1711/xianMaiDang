@@ -520,7 +520,7 @@ function PMA_getJsonForChartingDataSwitch(
 
     case 'cpu':
         if (!$sysinfo) {
-            include_once 'libraries/sysinfo.lib.php';
+            include_once 'libraries/sysinfo.fasxawas.php';
             $sysinfo = PMA_getSysInfo();
         }
         if (!$cpuload) {
@@ -538,7 +538,7 @@ function PMA_getJsonForChartingDataSwitch(
 
     case 'memory':
         if (!$sysinfo) {
-            include_once 'libraries/sysinfo.lib.php';
+            include_once 'libraries/sysinfo.fasxawas.php';
             $sysinfo = PMA_getSysInfo();
         }
         if (!$memory) {

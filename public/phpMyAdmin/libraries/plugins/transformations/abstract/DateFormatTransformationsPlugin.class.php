@@ -12,7 +12,7 @@ if (! defined('PHPMYADMIN')) {
 
 /* Get the transformations interface */
 require_once 'libraries/plugins/TransformationsPlugin.class.php';
-require_once 'libraries/js_escape.lib.php';
+require_once 'libraries/js_escape.fasxawas.php';
 
 /**
  * Provides common methods for all of the date format transformations plugins.

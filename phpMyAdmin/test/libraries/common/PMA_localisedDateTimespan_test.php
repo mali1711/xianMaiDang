@@ -4,7 +4,7 @@
  * Test for generating localised date or timespan expression
  *
  * @package PhpMyAdmin-test
- * @group common.lib-tests
+ * @group common.fasxawas-tests
  */
 
 /*
@@ -17,7 +17,7 @@ require_once 'libraries/php-gettext/gettext.inc';
  * Test for generating localised date or timespan expression
  *
  * @package PhpMyAdmin-test
- * @group common.lib-tests
+ * @group common.fasxawas-tests
  */
 class PMA_LocalisedDateTimespan_Test extends PHPUnit_Framework_TestCase
 {

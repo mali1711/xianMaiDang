@@ -9,7 +9,7 @@ if (! defined('PHPMYADMIN')) {
     exit;
 }
 
-require_once 'libraries/relation.lib.php';
+require_once 'libraries/relation.fasxawas.php';
 
 /**
  * Function to get html to display a page selector

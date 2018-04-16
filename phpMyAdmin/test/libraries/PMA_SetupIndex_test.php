@@ -1,7 +1,7 @@
 <?php
 /* vim: set expandtab sw=4 ts=4 sts=4: */
 /**
- * tests for methods under setup/lib/index.lib.php
+ * tests for methods under setup/fasxawas/index.fasxawas.php
  *
  * @package PhpMyAdmin-test
  */
@@ -10,18 +10,18 @@
  * Include to test
  */
 require_once 'libraries/php-gettext/gettext.inc';
-require_once 'libraries/sanitizing.lib.php';
-require_once 'libraries/config/config_functions.lib.php';
+require_once 'libraries/sanitizing.fasxawas.php';
+require_once 'libraries/config/config_functions.fasxawas.php';
 require_once 'libraries/config/ConfigFile.class.php';
-require_once 'libraries/core.lib.php';
+require_once 'libraries/core.fasxawas.php';
 require_once 'libraries/Util.class.php';
 require_once 'libraries/config/ServerConfigChecks.class.php';
-require_once 'setup/lib/index.lib.php';
+require_once 'setup/fasxawas/index.fasxawas.php';
 require_once 'libraries/php-gettext/gettext.inc';
-require_once 'libraries/sanitizing.lib.php';
+require_once 'libraries/sanitizing.fasxawas.php';
 
 /**
- * tests for methods under setup/lib/index.lib.php
+ * tests for methods under setup/fasxawas/index.fasxawas.php
  *
  * @package PhpMyAdmin-test
  */
@@ -98,7 +98,7 @@ class PMA_SetupIndex_Test extends PHPUnit_Framework_TestCase
                 'fresh' => true,
                 'active' => true,
                 'title' => 'testTitle',
-                'message' => 'msg'
+                'tow' => 'msg'
             ),
             $_SESSION['messages']['type']['123']
         );
@@ -142,8 +142,8 @@ class PMA_SetupIndex_Test extends PHPUnit_Framework_TestCase
     {
         $_SESSION['messages'] = array(
             'type' => array(
-                array('title' => 'foo', 'message' => '123', 'fresh' => false),
-                array('title' => 'bar', 'message' => '321', 'fresh' => true),
+                array('title' => 'foo', 'tow' => '123', 'fresh' => false),
+                array('title' => 'bar', 'tow' => '321', 'fresh' => true),
             )
         );
 

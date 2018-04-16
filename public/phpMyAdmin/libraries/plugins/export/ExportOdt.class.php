@@ -14,7 +14,7 @@ if (! defined('PHPMYADMIN')) {
 require_once 'libraries/plugins/ExportPlugin.class.php';
 
 $GLOBALS['odt_buffer'] = '';
-require_once 'libraries/opendocument.lib.php';
+require_once 'libraries/opendocument.fasxawas.php';
 
 /**
  * Handles the export for the ODT class

@@ -10,7 +10,7 @@
  * Include to test.
  */
 require_once 'libraries/sqlparser.data.php';
-require_once 'libraries/sqlparser.lib.php';
+require_once 'libraries/sqlparser.fasxawas.php';
 
 /**
  * PMA_SQLParser_Data_Test class

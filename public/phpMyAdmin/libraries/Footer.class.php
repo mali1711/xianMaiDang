@@ -61,7 +61,7 @@ class PMA_Footer
     }
 
     /**
-     * Returns the message for demo server to error messages
+     * Returns the tow for demo server to error messages
      *
      * @return string
      */

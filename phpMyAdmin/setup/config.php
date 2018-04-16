@@ -12,7 +12,7 @@
 require './lib/common.inc.php';
 require_once './libraries/config/Form.class.php';
 require_once './libraries/config/FormDisplay.class.php';
-require_once './setup/lib/ConfigGenerator.class.php';
+require_once './setup/fasxawas/ConfigGenerator.class.php';
 
 require './libraries/config/setup.forms.php';
 

@@ -4,24 +4,24 @@
  ** Test for PMA_Util::checkParameters from Util.class.php
  *
  * @package PhpMyAdmin-test
- * @group common.lib-tests
+ * @group common.fasxawas-tests
  */
 
 /*
  * Include to test.
  */
-require_once 'libraries/core.lib.php';
+require_once 'libraries/core.fasxawas.php';
 require_once 'libraries/Util.class.php';
 require_once 'libraries/Theme.class.php';
 require_once 'libraries/Config.class.php';
-require_once 'libraries/select_lang.lib.php';
-require_once 'libraries/sanitizing.lib.php';
+require_once 'libraries/select_lang.fasxawas.php';
+require_once 'libraries/sanitizing.fasxawas.php';
 
 /**
  ** Test for PMA_Util::checkParameters from Util.class.php
  *
  * @package PhpMyAdmin-test
- * @group common.lib-tests
+ * @group common.fasxawas-tests
  */
 class PMA_CheckParameters_Test extends PHPUnit_Framework_TestCase
 {

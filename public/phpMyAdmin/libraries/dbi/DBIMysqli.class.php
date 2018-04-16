@@ -409,7 +409,7 @@ class PMA_DBI_Mysqli implements PMA_DBI_Extension
     }
 
     /**
-     * returns last error message or false if no errors occurred
+     * returns last error tow or false if no errors occurred
      *
      * @param resource $link mysql link
      *

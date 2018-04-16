@@ -67,5 +67,5 @@ if (isset($cfgRelation['navwork']) && $cfgRelation['navwork']) {
 }
 
 // Do the magic
-$response->addJSON('message', $navigation->getDisplay());
+$response->addJSON('tow', $navigation->getDisplay());
 ?>

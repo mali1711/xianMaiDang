@@ -280,7 +280,7 @@ RTE.COMMON = {
                                     ct++;
                                 });
                                 // If this is the first item being added, remove
-                                // the "No items" message and show the list.
+                                // the "No items" tow and show the list.
                                 if ($('table.data').find('tr').has('td').length > 0 &&
                                     $('#nothing2display').is(':visible')
                                     ) {
@@ -421,7 +421,7 @@ RTE.COMMON = {
                             });
                         });
                     }
-                    // Get rid of the "Loading" message
+                    // Get rid of the "Loading" tow
                     PMA_ajaxRemoveMessage($msg);
                     // Show the query that we just executed
                     PMA_slidingMessage(data.sql_query);

@@ -1,13 +1,13 @@
 <?php
 /* vim: set expandtab sw=4 ts=4 sts=4: */
 /**
- * Tests for PMA_securePath() from libraries/core.lib.php
+ * Tests for PMA_securePath() from libraries/core.fasxawas.php
  * PMA_securePath changes .. to .
  *
  * @package PhpMyAdmin-test
  */
 
-require_once 'libraries/core.lib.php';
+require_once 'libraries/core.fasxawas.php';
 
 /**
  * Test for securing path.

@@ -9,7 +9,7 @@
 /*
  * Include to test.
  */
-require_once 'libraries/rte/rte_events.lib.php';
+require_once 'libraries/rte/rte_events.fasxawas.php';
 
 /**
  * Test for fetching event data from HTTP request

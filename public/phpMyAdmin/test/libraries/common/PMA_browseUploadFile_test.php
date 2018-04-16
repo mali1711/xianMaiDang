@@ -1,10 +1,10 @@
 <?php
 /* vim: set expandtab sw=4 ts=4 sts=4: */
 /**
- * Test for PMA_Util::getBrowseUploadFileBlock from common.lib
+ * Test for PMA_Util::getBrowseUploadFileBlock from common.fasxawas
  *
  * @package PhpMyAdmin-test
- * @group common.lib-tests
+ * @group common.fasxawas-tests
  */
 
 /*
@@ -14,10 +14,10 @@ require_once 'libraries/Util.class.php';
 require_once 'libraries/php-gettext/gettext.inc';
 
 /**
- * Test for PMA_Util::getBrowseUploadFileBlock from common.lib
+ * Test for PMA_Util::getBrowseUploadFileBlock from common.fasxawas
  *
  * @package PhpMyAdmin-test
- * @group common.lib-tests
+ * @group common.fasxawas-tests
  */
 class PMA_GetBrowseUploadFileBlock_Test extends PHPUnit_Framework_TestCase
 {

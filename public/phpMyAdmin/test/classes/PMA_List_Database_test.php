@@ -13,7 +13,7 @@ $GLOBALS['cfg']['Server']['DisableIS'] = false;
  */
 require_once 'libraries/Util.class.php';
 require_once 'libraries/List_Database.class.php';
-require_once 'libraries/relation.lib.php';
+require_once 'libraries/relation.fasxawas.php';
 
 /**
  * tests for PMA_List_Database class

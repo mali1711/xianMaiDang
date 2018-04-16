@@ -10,7 +10,7 @@
  */
 
 require_once 'libraries/StorageEngine.class.php';
-require_once 'libraries/engines/binlog.lib.php';
+require_once 'libraries/engines/binlog.fasxawas.php';
 require_once 'libraries/database_interface.inc.php';
 require_once 'libraries/Tracker.class.php';
 

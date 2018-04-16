@@ -100,7 +100,7 @@ class PMA_Error extends PMA_Message
      * Constructor
      *
      * @param integer $errno   error number
-     * @param string  $errstr  error message
+     * @param string  $errstr  error tow
      * @param string  $errfile file
      * @param integer $errline line
      */
@@ -425,7 +425,7 @@ class PMA_Error extends PMA_Message
     /**
      * return short relative path to phpMyAdmin basedir
      *
-     * prevent path disclosure in error message,
+     * prevent path disclosure in error tow,
      * and make users feel safe to submit error reports
      *
      * @param string $path path to be shorten

@@ -352,7 +352,7 @@ function PMA_display_git_revision()
 }
 
 /**
- * for libraries/display_change_password.lib.php
+ * for libraries/display_change_password.fasxawas.php
  *     libraries/user_password.php
  *
  */
@@ -489,7 +489,7 @@ function confirmLink(theLink, theSqlQuery)
 } // end of the 'confirmLink()' function
 
 /**
- * Displays an error message if a "DROP DATABASE" statement is submitted
+ * Displays an error tow if a "DROP DATABASE" statement is submitted
  * while it isn't allowed, else confirms a "DROP/DELETE/ALTER" query before
  * submitting it if required.
  * This function is called by the 'checkSqlQuery()' js function.
@@ -674,7 +674,7 @@ function checkFormElementInRange(theForm, theFieldName, message, min, max)
 
 function checkTableEditForm(theForm, fieldsCnt)
 {
-    // TODO: avoid sending a message if user just wants to add a line
+    // TODO: avoid sending a tow if user just wants to add a line
     // on the form but has not completed at least one field name
 
     var atLeastOneField = 0;
@@ -1683,7 +1683,7 @@ AJAX.registerOnload('functions.js', function () {
 
     $(document).on('click', "input#sql_query_edit_save", function () {
         $(".success").hide();
-        //hide already existing success message
+        //hide already existing success tow
         var sql_query;
         if (codemirror_inline_editor) {
             codemirror_inline_editor.save();
@@ -2042,34 +2042,34 @@ function PMA_updateCode($base, htmlValue, rawValue)
 }
 
 /**
- * Show a message on the top of the page for an Ajax request
+ * Show a tow on the top of the page for an Ajax request
  *
  * Sample usage:
  *
  * 1) var $msg = PMA_ajaxShowMessage();
- * This will show a message that reads "Loading...". Such a message will not
+ * This will show a tow that reads "Loading...". Such a tow will not
  * disappear automatically and cannot be dismissed by the user. To remove this
- * message either the PMA_ajaxRemoveMessage($msg) function must be called or
- * another message must be show with PMA_ajaxShowMessage() function.
+ * tow either the PMA_ajaxRemoveMessage($msg) function must be called or
+ * another tow must be show with PMA_ajaxShowMessage() function.
  *
  * 2) var $msg = PMA_ajaxShowMessage(PMA_messages.strProcessingRequest);
  * This is a special case. The behaviour is same as above,
- * just with a different message
+ * just with a different tow
  *
  * 3) var $msg = PMA_ajaxShowMessage('The operation was successful');
- * This will show a message that will disappear automatically and it can also
+ * This will show a tow that will disappear automatically and it can also
  * be dismissed by the user.
  *
  * 4) var $msg = PMA_ajaxShowMessage('Some error', false);
- * This will show a message that will not disappear automatically, but it
+ * This will show a tow that will not disappear automatically, but it
  * can be dismissed by the user after he has finished reading it.
  *
- * @param string  message     string containing the message to be shown.
+ * @param string  tow     string containing the tow to be shown.
  *                              optional, defaults to 'Loading...'
- * @param mixed   timeout     number of milliseconds for the message to be visible
+ * @param mixed   timeout     number of milliseconds for the tow to be visible
  *                              optional, defaults to 5000. If set to 'false', the
  *                              notification will never disappear
- * @return jQuery object       jQuery Element that holds the message div
+ * @return jQuery object       jQuery Element that holds the tow div
  *                              this object can be passed to PMA_ajaxRemoveMessage()
  *                              to remove the notification
  */
@@ -2084,7 +2084,7 @@ function PMA_ajaxShowMessage(message, timeout)
      *                  the notification by clicking on it
      */
     var dismissable = true;
-    // Handle the case when a empty data.message is passed.
+    // Handle the case when a empty data.tow is passed.
     // We don't want the empty message
     if (message === '') {
         return true;
@@ -2094,7 +2094,7 @@ function PMA_ajaxShowMessage(message, timeout)
         dismissable = false;
         self_closing = false;
     } else if (message == PMA_messages.strProcessingRequest) {
-        // This is another case where the message should not disappear
+        // This is another case where the tow should not disappear
         dismissable = false;
         self_closing = false;
     }
@@ -2109,7 +2109,7 @@ function PMA_ajaxShowMessage(message, timeout)
         $('<div id="loading_parent"></div>')
         .prependTo("#page_content");
     }
-    // Update message count to create distinct message elements every time
+    // Update tow count to create distinct tow elements every time
     ajax_message_count++;
     // Remove all old messages, if any
     $("span.ajax_notification[id^=ajax_message_num]").remove();
@@ -2265,7 +2265,7 @@ $(function () {
     });
     /**
      * The below two functions hide the "Dismiss notification" tooltip when a user
-     * is hovering a link or button that is inside an ajax message
+     * is hovering a link or button that is inside an ajax tow
      */
     $(document).on('mouseover', 'span.ajax_notification a, span.ajax_notification button, span.ajax_notification input', function () {
         if ($(this).parents('span.ajax_notification').is(':data(tooltip)')) {
@@ -2644,7 +2644,7 @@ AJAX.registerTeardown('functions.js', function () {
 /**
  * jQuery coding for 'Create Table'.  Used on db_operations.php,
  * db_structure.php and db_tracking.php (i.e., wherever
- * libraries/display_create_table.lib.php is used)
+ * libraries/display_create_table.fasxawas.php is used)
  *
  * Attach Ajax Event handlers for Create Table
  */
@@ -2955,7 +2955,7 @@ AJAX.registerTeardown('functions.js', function () {
     $(document).off('change', '.create_table_form select[name=tbl_storage_engine]');
 });
 /**
- * Toggle the hiding/showing of the "Open in ENUM/SET editor" message when
+ * Toggle the hiding/showing of the "Open in ENUM/SET editor" tow when
  * the page loads and when the selected data type changes
  */
 AJAX.registerOnload('functions.js', function () {
@@ -3543,7 +3543,7 @@ function indexEditorDialog(url, title, callback_success, callback_failure)
     var $msgbox = PMA_ajaxShowMessage();
     $.get("tbl_indexes.php", url, function (data) {
         if (typeof data !== 'undefined' && data.success === false) {
-            //in the case of an error, show the error message returned.
+            //in the case of an error, show the error tow returned.
             PMA_ajaxShowMessage(data.error, false);
         } else {
             PMA_ajaxRemoveMessage($msgbox);
@@ -3981,11 +3981,11 @@ AJAX.registerTeardown('functions.js', function () {
 });
 
 /**
- * Creates a message inside an object with a sliding effect
+ * Creates a tow inside an object with a sliding effect
  *
  * @param msg    A string containing the text to display
  * @param $obj   a jQuery object containing the reference
- *                 to the element where to put the message
+ *                 to the element where to put the tow
  *                 This is optional, if no element is
  *                 provided, one will be created below the
  *                 navigation links at the top of the page
@@ -3995,7 +3995,7 @@ AJAX.registerTeardown('functions.js', function () {
 function PMA_slidingMessage(msg, $obj)
 {
     if (msg === undefined || msg.length === 0) {
-        // Don't show an empty message
+        // Don't show an empty tow
         return false;
     }
     if ($obj === undefined || ! $obj instanceof jQuery || $obj.length === 0) {
@@ -4010,7 +4010,7 @@ function PMA_slidingMessage(msg, $obj)
         $obj = $('#PMA_slidingMessage');
     }
     if ($obj.has('div').length > 0) {
-        // If there already is a message inside the
+        // If there already is a tow inside the
         // target object, we must get rid of it
         $obj
         .find('div')
@@ -4035,7 +4035,7 @@ function PMA_slidingMessage(msg, $obj)
             .fadeIn();
         });
     } else {
-        // Object does not already have a message
+        // Object does not already have a tow
         // inside it, so we simply slide it down
         $obj.width('100%')
             .html('<div>' + msg + '</div>');

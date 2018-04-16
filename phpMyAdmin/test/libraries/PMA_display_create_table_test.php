@@ -1,7 +1,7 @@
 <?php
 /* vim: set expandtab sw=4 ts=4 sts=4: */
 /**
- * tests for display_create_table.lib.php
+ * tests for display_create_table.fasxawas.php
  *
  * @package PhpMyAdmin-test
  */
@@ -12,18 +12,18 @@ $GLOBALS['server'] = 0;
  */
 require_once 'libraries/Util.class.php';
 require_once 'libraries/php-gettext/gettext.inc';
-require_once 'libraries/url_generating.lib.php';
+require_once 'libraries/url_generating.fasxawas.php';
 require_once 'libraries/Tracker.class.php';
 require_once 'libraries/database_interface.inc.php';
-require_once 'libraries/display_create_table.lib.php';
+require_once 'libraries/display_create_table.fasxawas.php';
 require_once 'libraries/Theme.class.php';
-require_once 'libraries/sanitizing.lib.php';
-require_once 'libraries/js_escape.lib.php';
+require_once 'libraries/sanitizing.fasxawas.php';
+require_once 'libraries/js_escape.fasxawas.php';
 
 /**
  * class PMA_DisplayCreateTable_Test
  *
- * this class is for testing display_create_table.lib.php functions
+ * this class is for testing display_create_table.fasxawas.php functions
  *
  * @package PhpMyAdmin-test
  */

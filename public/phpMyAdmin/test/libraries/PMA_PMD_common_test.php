@@ -37,7 +37,7 @@ class PMA_PMD_CommonTest extends PHPUnit_Framework_TestCase
             )
         );
 
-        include_once 'libraries/relation.lib.php';
+        include_once 'libraries/relation.fasxawas.php';
         include_once 'libraries/pmd_common.php';
     }
 

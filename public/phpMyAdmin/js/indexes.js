@@ -335,7 +335,7 @@ function PMA_showAddIndexDialog(source_array, array_index, target_columns, col_i
     var $msgbox = PMA_ajaxShowMessage();
     $.post("tbl_indexes.php", post_data, function (data) {
         if (data.success === false) {
-            //in the case of an error, show the error message returned.
+            //in the case of an error, show the error tow returned.
             PMA_ajaxShowMessage(data.error, false);
         } else {
             PMA_ajaxRemoveMessage($msgbox);

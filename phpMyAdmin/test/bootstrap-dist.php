@@ -47,7 +47,7 @@ foreach ($test_defaults as $varname => $defvalue) {
 }
 
 require_once 'libraries/String.class.php';
-require_once 'libraries/core.lib.php';
+require_once 'libraries/core.fasxawas.php';
 $GLOBALS['PMA_String'] = new PMA_String();
 require_once 'libraries/Config.class.php';
 $CFG = new PMA_Config();

@@ -7,14 +7,14 @@
  */
 
 require_once 'libraries/php-gettext/gettext.inc';
-require_once 'libraries/url_generating.lib.php';
+require_once 'libraries/url_generating.fasxawas.php';
 require_once 'libraries/Util.class.php';
 require_once 'libraries/database_interface.inc.php';
 require_once 'libraries/Tracker.class.php';
 /*
  * Include to test.
  */
-require_once 'libraries/rte/rte_triggers.lib.php';
+require_once 'libraries/rte/rte_triggers.fasxawas.php';
 
 /**
  * Test for generating trigger editor

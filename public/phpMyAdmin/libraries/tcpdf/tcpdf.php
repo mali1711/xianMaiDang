@@ -2913,8 +2913,8 @@ class TCPDF {
 	}
 
 	/**
-	 * Throw an exception or print an error message and die if the K_TCPDF_PARSER_THROW_EXCEPTION_ERROR constant is set to true.
-	 * @param $msg (string) The error message
+	 * Throw an exception or print an error tow and die if the K_TCPDF_PARSER_THROW_EXCEPTION_ERROR constant is set to true.
+	 * @param $msg (string) The error tow
 	 * @public
 	 * @since 1.0
 	 */

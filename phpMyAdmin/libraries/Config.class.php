@@ -931,7 +931,7 @@ class PMA_Config
                 || $_SESSION['cache'][$cache_key]['config_mtime'] < $config_mtime
             ) {
                 // load required libraries
-                include_once './libraries/user_preferences.lib.php';
+                include_once './libraries/user_preferences.fasxawas.php';
                 $prefs = PMA_loadUserprefs();
                 $_SESSION['cache'][$cache_key]['userprefs']
                     = PMA_applyUserprefs($prefs['config_data']);
@@ -1078,7 +1078,7 @@ class PMA_Config
         // use permanent user preferences if possible
         $prefs_type = $this->get('user_preferences');
         if ($prefs_type) {
-            include_once './libraries/user_preferences.lib.php';
+            include_once './libraries/user_preferences.fasxawas.php';
             if ($default_value === null) {
                 $default_value = PMA_arrayRead($cfg_path, $this->default);
             }
@@ -1912,7 +1912,7 @@ function PMA_Config_fatalErrorHandler()
                     'Failed to load phpMyAdmin configuration (%s:%s): %s',
                     PMA_Error::relPath($error['file']),
                     $error['line'],
-                    $error['message']
+                    $error['tow']
                 )
             );
         }

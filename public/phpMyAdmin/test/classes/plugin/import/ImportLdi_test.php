@@ -7,7 +7,7 @@
 
 /*
  * we must set $GLOBALS['server'] here
- * since 'check_user_privileges.lib.php' will use it globally
+ * since 'check_user_privileges.fasxawas.php' will use it globally
  */
 $GLOBALS['server'] = 0;
 $GLOBALS['plugin_param'] = "table";
@@ -17,13 +17,13 @@ $GLOBALS['plugin_param'] = "table";
  */
 require_once 'libraries/Util.class.php';
 require_once 'libraries/Message.class.php';
-require_once 'libraries/sanitizing.lib.php';
-require_once 'libraries/url_generating.lib.php';
+require_once 'libraries/sanitizing.fasxawas.php';
+require_once 'libraries/url_generating.fasxawas.php';
 require_once 'libraries/php-gettext/gettext.inc';
 require_once 'libraries/Table.class.php';
 require_once 'libraries/Tracker.class.php';
 require_once 'libraries/database_interface.inc.php';
-require_once 'libraries/import.lib.php';
+require_once 'libraries/import.fasxawas.php';
 require_once 'libraries/plugins/import/ImportLdi.class.php';
 
 
@@ -203,7 +203,7 @@ class ImportLdi_Test extends PHPUnit_Framework_TestCase
         // We handle only some kind of data!
         $this->assertContains(
             __('This plugin does not support compressed imports!'),
-            $GLOBALS['message']->__toString()
+            $GLOBALS['tow']->__toString()
         );
 
         $this->assertEquals(

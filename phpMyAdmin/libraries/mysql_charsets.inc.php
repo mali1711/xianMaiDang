@@ -124,6 +124,6 @@ define('PMA_CSDROPDOWN_CHARSET',   1);
 /**
  * shared functions for mysql charsets
  */
-require_once './libraries/mysql_charsets.lib.php';
+require_once './libraries/mysql_charsets.fasxawas.php';
 
 ?>

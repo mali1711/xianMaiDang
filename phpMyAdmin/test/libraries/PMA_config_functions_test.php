@@ -9,8 +9,8 @@
 /*
  * Include to test.
  */
-require_once 'libraries/config/config_functions.lib.php';
-require_once 'libraries/sanitizing.lib.php';
+require_once 'libraries/config/config_functions.fasxawas.php';
+require_once 'libraries/sanitizing.fasxawas.php';
 
 /**
  * Tests for Config Functions

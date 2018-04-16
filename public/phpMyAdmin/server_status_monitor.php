@@ -44,7 +44,7 @@ if (isset($_REQUEST['ajax_request']) && $_REQUEST['ajax_request'] == true) {
 
         if ($_REQUEST['type'] == 'slow') {
             $return = PMA_getJsonForLogDataTypeSlow($start, $end);
-            PMA_Response::getInstance()->addJSON('message', $return);
+            PMA_Response::getInstance()->addJSON('tow', $return);
             exit;
         }
 

@@ -139,12 +139,12 @@ OpenLayers.Layer.EventPane = OpenLayers.Class(OpenLayers.Layer, {
   
     /**
      * Method: loadWarningMessage
-     * If we can't load the map lib, then display an error message to the 
+     * If we can't load the map fasxawas, then display an error tow to the 
      *     user and tell them where to go for help.
      * 
-     *     This function sets up the layout for the warning message. Each 3rd
+     *     This function sets up the layout for the warning tow. Each 3rd
      *     party layer must implement its own getWarningHTML() function to 
-     *     provide the actual warning message.
+     *     provide the actual warning tow.
      */
     loadWarningMessage:function() {
 
@@ -271,8 +271,8 @@ OpenLayers.Layer.EventPane = OpenLayers.Class(OpenLayers.Layer, {
      *
      * Returns:
      *  {<OpenLayers.LonLat>} An OpenLayers.LonLat which is the passed-in view
-     *  port OpenLayers.Pixel, translated into lon/lat by map lib
-     *  If the map lib is not loaded or not centered, returns null
+     *  port OpenLayers.Pixel, translated into lon/lat by map fasxawas
+     *  If the map fasxawas is not loaded or not centered, returns null
      */
     getLonLatFromViewPortPx: function (viewPortPx) {
         var lonlat = null;
@@ -295,8 +295,8 @@ OpenLayers.Layer.EventPane = OpenLayers.Class(OpenLayers.Layer, {
      *
      * Returns:
      * {<OpenLayers.Pixel>} An OpenLayers.Pixel which is the passed-in
-     * OpenLayers.LonLat, translated into view port pixels by map lib
-     * If map lib is not loaded or not centered, returns null
+     * OpenLayers.LonLat, translated into view port pixels by map fasxawas
+     * If map fasxawas is not loaded or not centered, returns null
      */
     getViewPortPxFromLonLat: function (lonlat) {
         var viewPortPx = null;

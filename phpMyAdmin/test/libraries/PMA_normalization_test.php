@@ -1,7 +1,7 @@
 <?php
 /* vim: set expandtab sw=4 ts=4 sts=4: */
 /**
- * tests for normalization.lib.php
+ * tests for normalization.fasxawas.php
  *
  * @package PhpMyAdmin-test
  */
@@ -14,18 +14,18 @@ require_once 'libraries/Util.class.php';
 require_once 'libraries/php-gettext/gettext.inc';
 require_once 'libraries/database_interface.inc.php';
 require_once 'libraries/Tracker.class.php';
-require_once 'libraries/relation.lib.php';
+require_once 'libraries/relation.fasxawas.php';
 require_once 'libraries/Message.class.php';
-require_once 'libraries/url_generating.lib.php';
+require_once 'libraries/url_generating.fasxawas.php';
 require_once 'libraries/Theme.class.php';
-require_once 'libraries/tbl_columns_definition_form.lib.php';
+require_once 'libraries/tbl_columns_definition_form.fasxawas.php';
 require_once 'libraries/Types.class.php';
 require_once 'libraries/mysql_charsets.inc.php';
-require_once 'libraries/normalization.lib.php';
+require_once 'libraries/normalization.fasxawas.php';
 require_once 'libraries/Index.class.php';
 
 /**
- * tests for normalization.lib.php
+ * tests for normalization.fasxawas.php
  *
  * @package PhpMyAdmin-test
  */
@@ -432,9 +432,9 @@ class PMA_Normalization_Test extends PHPUnit_Framework_TestCase
         );
         $this->assertInternalType('array', $result);
         $this->assertArrayHasKey('queryError', $result);
-        $this->assertArrayHasKey('message', $result);
+        $this->assertArrayHasKey('tow', $result);
         $this->assertInstanceOf(
-            'PMA_Message', $result['message']
+            'PMA_Message', $result['tow']
         );
     }
 

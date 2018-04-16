@@ -1,10 +1,10 @@
 <?php
 /* vim: set expandtab sw=4 ts=4 sts=4: */
 /**
- ** Test for PMA_Util::getMessage from common.lib
+ ** Test for PMA_Util::getMessage from common.fasxawas
  *
  * @package PhpMyAdmin-test
- * @group common.lib-tests
+ * @group common.fasxawas-tests
  */
 
 const PMA_IS_WINDOWS = false;
@@ -14,13 +14,13 @@ const PMA_IS_WINDOWS = false;
  */
 require_once 'libraries/Util.class.php';
 require_once 'libraries/Table.class.php';
-require_once 'libraries/js_escape.lib.php';
+require_once 'libraries/js_escape.fasxawas.php';
 
 /**
- ** Test for PMA_Util::getMessage from common.lib
+ ** Test for PMA_Util::getMessage from common.fasxawas
  *
  * @package PhpMyAdmin-test
- * @group common.lib-tests
+ * @group common.fasxawas-tests
  */
 class PMA_ShowMessage_Test extends PHPUnit_Framework_TestCase
 {

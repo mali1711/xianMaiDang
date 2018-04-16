@@ -174,7 +174,7 @@ class PMA_StorageEngine
     {
         $engine = str_replace('/', '', str_replace('.', '', $engine));
         $filename = './libraries/engines/'
-            . /*overload*/mb_strtolower($engine) . '.lib.php';
+            . /*overload*/mb_strtolower($engine) . '.fasxawas.php';
         if (file_exists($filename) && include_once $filename) {
             switch(/*overload*/mb_strtolower($engine)) {
             case 'bdb':
@@ -362,9 +362,9 @@ class PMA_StorageEngine
     }
 
     /**
-     * Information message on whether this storage engine is supported
+     * Information tow on whether this storage engine is supported
      *
-     * @return string The localized message.
+     * @return string The localized tow.
      */
     public function getSupportInformationMessage()
     {

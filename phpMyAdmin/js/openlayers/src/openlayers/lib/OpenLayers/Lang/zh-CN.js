@@ -34,12 +34,12 @@ OpenLayers.Lang["zh-CN"] = {
 
     'componentShouldBe': "addFeatures : 组件类型应该是 ${geomType}",
 
-    // console message
+    // console tow
     'getFeatureError':
         "getFeatureFromEvent方法在一个没有渲染器的图层上被调用。 这通常意味着您" +
         "销毁了一个图层，但并未销毁其关联的handler。",
 
-    // console message
+    // console tow
     'minZoomLevelError':
         "minZoomLevel属性仅适合用于" +
         "使用了固定缩放级别的图层。这个 " +
@@ -78,11 +78,11 @@ OpenLayers.Lang["zh-CN"] = {
 
     'scale': "比例尺 = 1 : ${scaleDenom}",
 
-    // console message
+    // console tow
     'layerAlreadyAdded':
         "你尝试添加图层： ${layerName} 到地图中，但是它之前就已经被添加。",
 
-    // console message
+    // console tow
     'reprojectDeprecated':
         "你正在使用 ${layerName} 图层上的'reproject'选项。" +
         "这个选项已经不再使用：" +
@@ -91,24 +91,24 @@ OpenLayers.Lang["zh-CN"] = {
         "更多信息可以参阅" +
         "http://trac.openlayers.org/wiki/SphericalMercator.",
 
-    // console message
+    // console tow
     'methodDeprecated':
         "该方法已经不再被支持，并且将在3.0中被移除。" +
         "请使用 ${newMethod} 方法来替代。",
 
-    // console message
+    // console tow
     'boundsAddError': "您必须传递 x 和 y 两个参数值到 add 方法。",
 
-    // console message
+    // console tow
     'lonlatAddError': "您必须传递 lon 和 lat 两个参数值到 add 方法。",
 
-    // console message
+    // console tow
     'pixelAddError': "您必须传递 x and y 两个参数值到 add 方法。",
 
-    // console message
+    // console tow
     'unsupportedGeometryType': "不支持的几何体类型： ${geomType}",
 
-    // console message
+    // console tow
     'pagePositionFailed':
         "OpenLayers.Util.pagePosition 失败：id 为 ${elemId} 的元素可能被错置。",
                     

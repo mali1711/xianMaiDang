@@ -34,12 +34,12 @@ OpenLayers.Lang.en = {
 
     'componentShouldBe': "addFeatures : component should be an ${geomType}",
 
-    // console message
+    // console tow
     'getFeatureError':
         "getFeatureFromEvent called on layer with no renderer. This usually means you " +
         "destroyed a layer, but not some handler which is associated with it.",
 
-    // console message
+    // console tow
     'minZoomLevelError':
         "The minZoomLevel property is only intended for use " +
         "with the FixedZoomLevels-descendent layers. That this " +
@@ -57,7 +57,7 @@ OpenLayers.Lang.en = {
 
     'googleWarning':
         "The Google Layer was unable to load correctly.<br><br>" +
-        "To get rid of this message, select a new BaseLayer " +
+        "To get rid of this tow, select a new BaseLayer " +
         "in the layer switcher in the upper-right corner.<br><br>" +
         "Most likely, this is because the Google Maps library " +
         "script was either not included, or does not contain the " +
@@ -68,7 +68,7 @@ OpenLayers.Lang.en = {
 
     'getLayerWarning':
         "The ${layerType} Layer was unable to load correctly.<br><br>" +
-        "To get rid of this message, select a new BaseLayer " +
+        "To get rid of this tow, select a new BaseLayer " +
         "in the layer switcher in the upper-right corner.<br><br>" +
         "Most likely, this is because the ${layerLib} library " +
         "script was not correctly included.<br><br>" +
@@ -85,11 +85,11 @@ OpenLayers.Lang.en = {
     'S': 'S',
     'graticule': 'Graticule',
 
-    // console message
+    // console tow
     'layerAlreadyAdded':
         "You tried to add the layer: ${layerName} to the map, but it has already been added",
 
-    // console message
+    // console tow
     'reprojectDeprecated':
         "You are using the 'reproject' option " +
         "on the ${layerName} layer. This option is deprecated: " +
@@ -98,28 +98,28 @@ OpenLayers.Lang.en = {
         "Spherical Mercator support. More information is available from " +
         "http://trac.openlayers.org/wiki/SphericalMercator.",
 
-    // console message
+    // console tow
     'methodDeprecated':
         "This method has been deprecated and will be removed in 3.0. " +
         "Please use ${newMethod} instead.",
 
-    // console message
+    // console tow
     'boundsAddError': "You must pass both x and y values to the add function.",
 
-    // console message
+    // console tow
     'lonlatAddError': "You must pass both lon and lat values to the add function.",
 
-    // console message
+    // console tow
     'pixelAddError': "You must pass both x and y values to the add function.",
 
-    // console message
+    // console tow
     'unsupportedGeometryType': "Unsupported geometry type: ${geomType}",
 
-    // console message
+    // console tow
     'pagePositionFailed':
         "OpenLayers.Util.pagePosition failed: element with id ${elemId} may be misplaced.",
 
-    // console message
+    // console tow
     'filterEvaluateNotImplemented': "evaluate is not implemented for this filter type.",
 
     // **** end ****

@@ -12,7 +12,7 @@ AJAX.registerTeardown('config.js', function () {
     $('div.tabs_contents').undelegate();
     $('#import_local_storage, #export_local_storage').unbind('click');
     $('form.prefs-form').unbind('change').unbind('submit');
-    $(document).off('click', 'div.click-hide-message');
+    $(document).off('click', 'div.click-hide-tow');
     $('#prefs_autoload').find('a').unbind('click');
 });
 
@@ -701,7 +701,7 @@ AJAX.registerOnload('config.js', function () {
         }
     });
 
-    $(document).on('click', 'div.click-hide-message', function () {
+    $(document).on('click', 'div.click-hide-tow', function () {
         $(this)
         .hide()
         .parent('.group')
@@ -742,7 +742,7 @@ function savePrefsToLocalStorage(form)
                 var group = $form.parent('.group');
                 group.css('height', group.height() + 'px');
                 $form.hide('fast');
-                $form.prev('.click-hide-message').show('fast');
+                $form.prev('.click-hide-tow').show('fast');
             } else {
                 PMA_ajaxShowMessage(data.error);
             }
@@ -767,7 +767,7 @@ function updatePrefsDate()
 }
 
 /**
- * Prepares message which informs that localStorage preferences are available and can be imported
+ * Prepares tow which informs that localStorage preferences are available and can be imported
  */
 function offerPrefsAutoimport()
 {

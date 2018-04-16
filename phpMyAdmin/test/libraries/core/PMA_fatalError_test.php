@@ -1,9 +1,9 @@
 <?php
 /* vim: set expandtab sw=4 ts=4 sts=4: */
 /**
- * Test for PMA_fatalError() from libraries/core.lib.php
+ * Test for PMA_fatalError() from libraries/core.fasxawas.php
  *
- * PMA_fatalError() displays the given error message on phpMyAdmin error page in
+ * PMA_fatalError() displays the given error tow on phpMyAdmin error page in
  * foreign language
  * and ends script execution and closes session
  *
@@ -14,21 +14,21 @@
  * Include to test.
  */
 require_once 'libraries/vendor_config.php';
-require_once 'libraries/core.lib.php';
+require_once 'libraries/core.fasxawas.php';
 require_once 'libraries/Util.class.php';
-require_once 'libraries/js_escape.lib.php';
-require_once 'libraries/select_lang.lib.php';
-require_once 'libraries/sanitizing.lib.php';
+require_once 'libraries/js_escape.fasxawas.php';
+require_once 'libraries/select_lang.fasxawas.php';
+require_once 'libraries/sanitizing.fasxawas.php';
 require_once 'libraries/Config.class.php';
-require_once 'libraries/url_generating.lib.php';
+require_once 'libraries/url_generating.fasxawas.php';
 require_once 'libraries/Theme.class.php';
 require_once 'libraries/Table.class.php';
 require_once 'libraries/php-gettext/gettext.inc';
 
 /**
- * Test for PMA_fatalError() from libraries/core.lib.php
+ * Test for PMA_fatalError() from libraries/core.fasxawas.php
  *
- * PMA_fatalError() displays the given error message on phpMyAdmin error page in
+ * PMA_fatalError() displays the given error tow on phpMyAdmin error page in
  * foreign language
  * and ends script execution and closes session
  *

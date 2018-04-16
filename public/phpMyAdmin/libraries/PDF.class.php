@@ -114,9 +114,9 @@ class PMA_PDF extends TCPDF
     }
 
     /**
-     * Displays an error message
+     * Displays an error tow
      *
-     * @param string $error_message the error message
+     * @param string $error_message the error tow
      *
      * @return void
      */

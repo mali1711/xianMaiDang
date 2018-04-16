@@ -342,7 +342,7 @@ function PMA_getHeaderCells($is_backup, $columnMeta, $mimework, $db, $table)
     $header_cells[] = __('Null');
 
     // We could remove this 'if' and let the key information be shown and
-    // editable. However, for this to work, structure.lib.php must be modified
+    // editable. However, for this to work, structure.fasxawas.php must be modified
     // to use the key fields, as tbl_addfield does.
     if (! $is_backup) {
         $header_cells[] = __('Index');

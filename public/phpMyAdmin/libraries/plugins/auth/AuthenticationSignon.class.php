@@ -130,7 +130,7 @@ class AuthenticationSignon extends AuthenticationPlugin
                 session_start();
             }
 
-            /* Clear error message */
+            /* Clear error tow */
             unset($_SESSION['PMA_single_signon_error_message']);
 
             /* Grab credentials if they exist */
@@ -259,7 +259,7 @@ class AuthenticationSignon extends AuthenticationPlugin
                 session_start();
             }
 
-            /* Set error message */
+            /* Set error tow */
             $_SESSION['PMA_single_signon_error_message'] = $this->getErrorMessage();
         }
         $this->auth();

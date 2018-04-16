@@ -1,7 +1,7 @@
 <?php
 /* vim: set expandtab sw=4 ts=4 sts=4: */
 /**
- * tests for relation.lib.php
+ * tests for relation.fasxawas.php
  *
  * @package PhpMyAdmin-test
  */
@@ -14,10 +14,10 @@ require_once 'libraries/Theme.class.php';
 require_once 'libraries/php-gettext/gettext.inc';
 require_once 'libraries/database_interface.inc.php';
 require_once 'libraries/Tracker.class.php';
-require_once 'libraries/relation.lib.php';
+require_once 'libraries/relation.fasxawas.php';
 
 /**
- * Tests for libraries/relation.lib.php
+ * Tests for libraries/relation.fasxawas.php
  *
  * @package PhpMyAdmin-test
  * @group medium
@@ -44,7 +44,7 @@ class PMA_Relation_Test extends PHPUnit_Framework_TestCase
         $GLOBALS['pmaThemeImage'] = 'theme/';
         $GLOBALS['cfg']['ServerDefault'] = 0;
 
-        include_once 'libraries/relation.lib.php';
+        include_once 'libraries/relation.fasxawas.php';
     }
 
     /**

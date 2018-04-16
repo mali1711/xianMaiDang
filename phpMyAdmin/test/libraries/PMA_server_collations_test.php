@@ -1,7 +1,7 @@
 <?php
 /* vim: set expandtab sw=4 ts=4 sts=4: */
 /**
- * tests for server_collations.lib.php
+ * tests for server_collations.fasxawas.php
  *
  * @package PhpMyAdmin-test
  */
@@ -31,21 +31,21 @@ $_SESSION['PMA_Theme'] = PMA_Theme::load('./themes/pmahomme');
 
 require_once 'libraries/Util.class.php';
 require_once 'libraries/php-gettext/gettext.inc';
-require_once 'libraries/url_generating.lib.php';
+require_once 'libraries/url_generating.fasxawas.php';
 require_once 'libraries/Tracker.class.php';
 require_once 'libraries/Message.class.php';
-require_once 'libraries/sanitizing.lib.php';
-require_once 'libraries/sqlparser.lib.php';
-require_once 'libraries/js_escape.lib.php';
+require_once 'libraries/sanitizing.fasxawas.php';
+require_once 'libraries/sqlparser.fasxawas.php';
+require_once 'libraries/js_escape.fasxawas.php';
 require_once 'libraries/database_interface.inc.php';
 require_once 'libraries/server_common.inc.php';
 require_once 'libraries/mysql_charsets.inc.php';
-require_once 'libraries/server_collations.lib.php';
+require_once 'libraries/server_collations.fasxawas.php';
 
 /**
  * PMA_ServerBinlog_Test class
  *
- * this class is for testing server_collations.lib.php functions
+ * this class is for testing server_collations.fasxawas.php functions
  *
  * @package PhpMyAdmin-test
  */

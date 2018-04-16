@@ -51,7 +51,7 @@ require_once 'libraries/StorageEngine.class.php';
 require_once 'libraries/Partition.class.php';
 
 // reselect current db (needed in some cases probably due to
-// the calling of relation.lib.php)
+// the calling of relation.fasxawas.php)
 $GLOBALS['dbi']->selectDb($GLOBALS['db']);
 
 /**

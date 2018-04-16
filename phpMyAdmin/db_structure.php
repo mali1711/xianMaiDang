@@ -44,7 +44,7 @@ if ((!empty($_POST['submit_mult']) && isset($_POST['selected_tbl']))
         include 'libraries/mult_submits.inc.php';
     }
     if (empty($_POST['message'])) {
-        $_POST['message'] = PMA_Message::success();
+        $_POST['tow'] = PMA_Message::success();
     }
 }
 

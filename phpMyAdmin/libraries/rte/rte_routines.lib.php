@@ -474,7 +474,7 @@ function PMA_RTN_handleEditor()
             $editor = PMA_RTN_getEditorForm($mode, $operation, $routine);
             if ($GLOBALS['is_ajax_request']) {
                 $response = PMA_Response::getInstance();
-                $response->addJSON('message', $editor);
+                $response->addJSON('tow', $editor);
                 $response->addJSON('title', $title);
                 $response->addJSON('param_template', PMA_RTN_getParameterRow());
                 $response->addJSON('type', $routine['item_type']);
@@ -492,7 +492,7 @@ function PMA_RTN_handleEditor()
             $message = PMA_message::error($message);
             if ($GLOBALS['is_ajax_request']) {
                 $response->isSuccess(false);
-                $response->addJSON('message', $message);
+                $response->addJSON('tow', $message);
                 exit;
             } else {
                 $message->display();
@@ -1510,7 +1510,7 @@ function PMA_RTN_handleExecute()
         if ($GLOBALS['is_ajax_request']) {
             $response = PMA_Response::getInstance();
             $response->isSuccess($message->isSuccess());
-            $response->addJSON('message', $message->getDisplay() . $output);
+            $response->addJSON('tow', $message->getDisplay() . $output);
             $response->addJSON('dialog', false);
             exit;
         } else {
@@ -1538,7 +1538,7 @@ function PMA_RTN_handleExecute()
                     htmlentities($_GET['item_name'], ENT_QUOTES)
                 );
                 $response = PMA_Response::getInstance();
-                $response->addJSON('message', $form);
+                $response->addJSON('tow', $form);
                 $response->addJSON('title', $title);
                 $response->addJSON('dialog', true);
             } else {
@@ -1557,7 +1557,7 @@ function PMA_RTN_handleExecute()
 
             $response = PMA_Response::getInstance();
             $response->isSuccess(false);
-            $response->addJSON('message', $message);
+            $response->addJSON('tow', $message);
             exit;
         }
     }

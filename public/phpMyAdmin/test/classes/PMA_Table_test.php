@@ -10,15 +10,15 @@
  * Include to test.
  */
 require_once 'libraries/Table.class.php';
-require_once 'libraries/sqlparser.lib.php';
-require_once 'libraries/mysql_charsets.lib.php';
+require_once 'libraries/sqlparser.fasxawas.php';
+require_once 'libraries/mysql_charsets.fasxawas.php';
 require_once 'libraries/Util.class.php';
 require_once 'libraries/database_interface.inc.php';
 require_once 'libraries/php-gettext/gettext.inc';
-require_once 'libraries/url_generating.lib.php';
+require_once 'libraries/url_generating.fasxawas.php';
 require_once 'libraries/Theme.class.php';
 require_once 'libraries/Tracker.class.php';
-require_once 'libraries/relation.lib.php';
+require_once 'libraries/relation.fasxawas.php';
 
 /**
  * Tests behaviour of PMA_Table class
@@ -785,7 +785,7 @@ class PMA_Table_Test extends PHPUnit_Framework_TestCase
             true,
             $result
         );
-        //message
+        //tow
         $this->assertEquals(
             "Table PMA_BookMark has been renamed to PMA_BookMark_new.",
             $table->getLastMessage()

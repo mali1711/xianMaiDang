@@ -23,11 +23,11 @@ if (@function_exists('mb_strlen')) {
         define('MULTIBYTES_STATUS', MULTIBYTES_ON);
     }
 
-    include_once 'libraries/stringMb.lib.php';
+    include_once 'libraries/stringMb.fasxawas.php';
 } else {
     if (!defined('MULTIBYTES_STATUS')) {
         define('MULTIBYTES_STATUS', MULTIBYTES_OFF);
     }
 
-    include_once 'libraries/stringNative.lib.php';
+    include_once 'libraries/stringNative.fasxawas.php';
 }

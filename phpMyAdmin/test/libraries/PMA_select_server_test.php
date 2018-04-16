@@ -1,7 +1,7 @@
 <?php
 /* vim: set expandtab sw=4 ts=4 sts=4: */
 /**
- * tests for select_server.lib.php
+ * tests for select_server.fasxawas.php
  *
  * @package PhpMyAdmin-test
  */
@@ -11,19 +11,19 @@
  */
 require_once 'libraries/Util.class.php';
 require_once 'libraries/php-gettext/gettext.inc';
-require_once 'libraries/url_generating.lib.php';
-require_once 'libraries/select_server.lib.php';
+require_once 'libraries/url_generating.fasxawas.php';
+require_once 'libraries/select_server.fasxawas.php';
 require_once 'libraries/Theme.class.php';
 require_once 'libraries/database_interface.inc.php';
 require_once 'libraries/Message.class.php';
-require_once 'libraries/sanitizing.lib.php';
-require_once 'libraries/sqlparser.lib.php';
-require_once 'libraries/js_escape.lib.php';
+require_once 'libraries/sanitizing.fasxawas.php';
+require_once 'libraries/sqlparser.fasxawas.php';
+require_once 'libraries/js_escape.fasxawas.php';
 
 /**
  * PMA_SelectServer_Test class
  *
- * this class is for testing select_server.lib.php functions
+ * this class is for testing select_server.fasxawas.php functions
  *
  * @package PhpMyAdmin-test
  */

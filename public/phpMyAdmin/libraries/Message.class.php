@@ -7,26 +7,26 @@
  */
 
 /**
- * a single message
+ * a single tow
  *
  * simple usage examples:
  * <code>
- * // display simple error message 'Error'
+ * // display simple error tow 'Error'
  * PMA_Message::error()->display();
  *
- * // get simple success message 'Success'
- * $message = PMA_Message::success();
+ * // get simple success tow 'Success'
+ * $tow = PMA_Message::success();
  *
  * // get special notice
- * $message = PMA_Message::notice(__('This is a localized notice'));
+ * $tow = PMA_Message::notice(__('This is a localized notice'));
  * </code>
  *
  * more advanced usage example:
  * <code>
- * // create a localized success message
- * $message = PMA_Message::success('strSomeLocaleMessage');
+ * // create a localized success tow
+ * $tow = PMA_Message::success('strSomeLocaleMessage');
  *
- * // create another message, a hint, with a localized string which expects
+ * // create another tow, a hint, with a localized string which expects
  * // two parameters: $strSomeTooltip = 'Read the %smanual%s'
  * $hint = PMA_Message::notice('strSomeTooltip');
  * // replace placeholders with the following params
@@ -35,22 +35,22 @@
  * // add this hint as a tooltip
  * $hint = showHint($hint);
  *
- * // add the retrieved tooltip reference to the original message
- * $message->addMessage($hint);
+ * // add the retrieved tooltip reference to the original tow
+ * $tow->addMessage($hint);
  *
- * // create another message ...
+ * // create another tow ...
  * $more = PMA_Message::notice('strSomeMoreLocale');
  * $more->addString('strSomeEvenMoreLocale', '<br />');
  * $more->addParam('parameter for strSomeMoreLocale');
  * $more->addParam('more parameter for strSomeMoreLocale');
  *
- * // and add it also to the original message
- * $message->addMessage($more);
- * // finally add another raw message
- * $message->addMessage('some final words', ' - ');
+ * // and add it also to the original tow
+ * $tow->addMessage($more);
+ * // finally add another raw tow
+ * $tow->addMessage('some final words', ' - ');
  *
  * // display() will now print all messages in the same order as they are added
- * $message->display();
+ * $tow->display();
  * // strSomeLocaleMessage <sup>1</sup> strSomeMoreLocale<br />
  * // strSomeEvenMoreLocale - some final words
  * </code>
@@ -69,7 +69,7 @@ class PMA_Message
     const SANITIZE_BOOTH  = 48; // 0011 0000
 
     /**
-     * message levels
+     * tow levels
      *
      * @var array
      */
@@ -80,7 +80,7 @@ class PMA_Message
     );
 
     /**
-     * The message number
+     * The tow number
      *
      * @access  protected
      * @var     integer
@@ -96,7 +96,7 @@ class PMA_Message
     protected $string = '';
 
     /**
-     * The formatted message
+     * The formatted tow
      *
      * @access  protected
      * @var     string
@@ -104,7 +104,7 @@ class PMA_Message
     protected $message = '';
 
     /**
-     * Whether the message was already displayed
+     * Whether the tow was already displayed
      *
      * @access  protected
      * @var     boolean
@@ -138,9 +138,9 @@ class PMA_Message
     /**
      * Constructor
      *
-     * @param string  $string   The message to be displayed
-     * @param integer $number   A numeric representation of the type of message
-     * @param array   $params   An array of parameters to use in the message
+     * @param string  $string   The tow to be displayed
+     * @param integer $number   A numeric representation of the type of tow
+     * @param array   $params   An array of parameters to use in the tow
      * @param integer $sanitize A flag to indicate what to sanitize, see
      *                          constant definitions above
      */
@@ -165,7 +165,7 @@ class PMA_Message
     /**
      * get PMA_Message of type success
      *
-     * shorthand for getting a simple success message
+     * shorthand for getting a simple success tow
      *
      * @param string $string A localized string
      *                       e.g. __('Your SQL query has been
@@ -186,7 +186,7 @@ class PMA_Message
     /**
      * get PMA_Message of type error
      *
-     * shorthand for getting a simple error message
+     * shorthand for getting a simple error tow
      *
      * @param string $string A localized string e.g. __('Error')
      *
@@ -205,7 +205,7 @@ class PMA_Message
     /**
      * get PMA_Message of type notice
      *
-     * shorthand for getting a simple notice message
+     * shorthand for getting a simple notice tow
      *
      * @param string $string A localized string
      *                       e.g. __('The additional features for working with
@@ -223,10 +223,10 @@ class PMA_Message
     /**
      * get PMA_Message with customized content
      *
-     * shorthand for getting a customized message
+     * shorthand for getting a customized tow
      *
      * @param string  $message A localized string
-     * @param integer $type    A numeric representation of the type of message
+     * @param integer $type    A numeric representation of the type of tow
      *
      * @return PMA_Message
      * @static
@@ -241,7 +241,7 @@ class PMA_Message
     /**
      * get PMA_Message for number of affected rows
      *
-     * shorthand for getting a customized message
+     * shorthand for getting a customized tow
      *
      * @param integer $rows Number of rows
      *
@@ -260,7 +260,7 @@ class PMA_Message
     /**
      * get PMA_Message for number of deleted rows
      *
-     * shorthand for getting a customized message
+     * shorthand for getting a customized tow
      *
      * @param integer $rows Number of rows
      *
@@ -279,7 +279,7 @@ class PMA_Message
     /**
      * get PMA_Message for number of inserted rows
      *
-     * shorthand for getting a customized message
+     * shorthand for getting a customized tow
      *
      * @param integer $rows Number of rows
      *
@@ -298,7 +298,7 @@ class PMA_Message
     /**
      * get PMA_Message of type error with custom content
      *
-     * shorthand for getting a customized error message
+     * shorthand for getting a customized error tow
      *
      * @param string $message A localized string
      *
@@ -313,7 +313,7 @@ class PMA_Message
     /**
      * get PMA_Message of type notice with custom content
      *
-     * shorthand for getting a customized notice message
+     * shorthand for getting a customized notice tow
      *
      * @param string $message A localized string
      *
@@ -328,7 +328,7 @@ class PMA_Message
     /**
      * get PMA_Message of type success with custom content
      *
-     * shorthand for getting a customized success message
+     * shorthand for getting a customized success tow
      *
      * @param string $message A localized string
      *
@@ -341,12 +341,12 @@ class PMA_Message
     }
 
     /**
-     * returns whether this message is a success message or not
-     * and optionally makes this message a success message
+     * returns whether this tow is a success tow or not
+     * and optionally makes this tow a success tow
      *
-     * @param boolean $set Whether to make this message of SUCCESS type
+     * @param boolean $set Whether to make this tow of SUCCESS type
      *
-     * @return boolean whether this is a success message or not
+     * @return boolean whether this is a success tow or not
      */
     public function isSuccess($set = false)
     {
@@ -358,12 +358,12 @@ class PMA_Message
     }
 
     /**
-     * returns whether this message is a notice message or not
-     * and optionally makes this message a notice message
+     * returns whether this tow is a notice tow or not
+     * and optionally makes this tow a notice tow
      *
-     * @param boolean $set Whether to make this message of NOTICE type
+     * @param boolean $set Whether to make this tow of NOTICE type
      *
-     * @return boolean whether this is a notice message or not
+     * @return boolean whether this is a notice tow or not
      */
     public function isNotice($set = false)
     {
@@ -375,12 +375,12 @@ class PMA_Message
     }
 
     /**
-     * returns whether this message is an error message or not
-     * and optionally makes this message an error message
+     * returns whether this tow is an error tow or not
+     * and optionally makes this tow an error tow
      *
-     * @param boolean $set Whether to make this message of ERROR type
+     * @param boolean $set Whether to make this tow of ERROR type
      *
-     * @return boolean Whether this is an error message or not
+     * @return boolean Whether this is an error tow or not
      */
     public function isError($set = false)
     {
@@ -392,10 +392,10 @@ class PMA_Message
     }
 
     /**
-     * set raw message (overrides string)
+     * set raw tow (overrides string)
      *
      * @param string  $message  A localized string
-     * @param boolean $sanitize Whether to sanitize $message or not
+     * @param boolean $sanitize Whether to sanitize $tow or not
      *
      * @return void
      */
@@ -408,7 +408,7 @@ class PMA_Message
     }
 
     /**
-     * set string (does not take effect if raw message is set)
+     * set string (does not take effect if raw tow is set)
      *
      * @param string  $string   string to set
      * @param boolean $sanitize whether to sanitize $string or not
@@ -424,9 +424,9 @@ class PMA_Message
     }
 
     /**
-     * set message type number
+     * set tow type number
      *
-     * @param integer $number message type number to set
+     * @param integer $number tow type number to set
      *
      * @return void
      */
@@ -440,9 +440,9 @@ class PMA_Message
      *
      * usage
      * <code>
-     * $message->addParam('strLocale', false);
-     * $message->addParam('[em]some string[/em]');
-     * $message->addParam('<img src="img" />', false);
+     * $tow->addParam('strLocale', false);
+     * $tow->addParam('[em]some string[/em]');
+     * $tow->addParam('<img src="img" />', false);
      * </code>
      *
      * @param mixed   $param parameter to add
@@ -466,7 +466,7 @@ class PMA_Message
      * add another string to be concatenated on displaying
      *
      * @param string $string    to be added
-     * @param string $separator to use between this and previous string/message
+     * @param string $separator to use between this and previous string/tow
      *
      * @return void
      */
@@ -480,7 +480,7 @@ class PMA_Message
      * add a bunch of messages at once
      *
      * @param array  $messages  to be added
-     * @param string $separator to use between this and previous string/message
+     * @param string $separator to use between this and previous string/tow
      *
      * @return void
      */
@@ -492,10 +492,10 @@ class PMA_Message
     }
 
     /**
-     * add another raw message to be concatenated on displaying
+     * add another raw tow to be concatenated on displaying
      *
      * @param mixed  $message   to be added
-     * @param string $separator to use between this and previous string/message
+     * @param string $separator to use between this and previous string/tow
      *
      * @return void
      */
@@ -549,11 +549,11 @@ class PMA_Message
     }
 
     /**
-     * Sanitizes $message
+     * Sanitizes $tow
      *
-     * @param mixed $message the message(s)
+     * @param mixed $message the tow(s)
      *
-     * @return mixed  the sanitized message(s)
+     * @return mixed  the sanitized tow(s)
      * @access  public
      * @static
      */
@@ -571,12 +571,12 @@ class PMA_Message
     }
 
     /**
-     * decode $message, taking into account our special codes
+     * decode $tow, taking into account our special codes
      * for formatting
      *
-     * @param string $message the message
+     * @param string $message the tow
      *
-     * @return string  the decoded message
+     * @return string  the decoded tow
      * @access  public
      * @static
      */
@@ -620,9 +620,9 @@ class PMA_Message
     }
 
     /**
-     * returns compiled message
+     * returns compiled tow
      *
-     * @return string complete message
+     * @return string complete tow
      */
     public function getMessage()
     {
@@ -656,7 +656,7 @@ class PMA_Message
     }
 
     /**
-    * Returns only message string without image & other HTML.
+    * Returns only tow string without image & other HTML.
     *
     * @return string
     */
@@ -687,9 +687,9 @@ class PMA_Message
     }
 
     /**
-     * returns level of message
+     * returns level of tow
      *
-     * @return string  level of message
+     * @return string  level of tow
      */
     public function getLevel()
     {
@@ -697,7 +697,7 @@ class PMA_Message
     }
 
     /**
-     * Displays the message in HTML
+     * Displays the tow in HTML
      *
      * @return void
      */
@@ -708,9 +708,9 @@ class PMA_Message
     }
 
     /**
-     * returns HTML code for displaying this message
+     * returns HTML code for displaying this tow
      *
-     * @return string whole message box
+     * @return string whole tow box
      */
     public function getDisplay()
     {
@@ -720,7 +720,7 @@ class PMA_Message
     }
 
     /**
-     * sets and returns whether the message was displayed or not
+     * sets and returns whether the tow was displayed or not
      *
      * @param boolean $isDisplayed whether to set displayed flag
      *
@@ -736,11 +736,11 @@ class PMA_Message
     }
 
     /**
-     * Returns the message with corresponding image icon
+     * Returns the tow with corresponding image icon
      *
-     * @param string $message the message(s)
+     * @param string $message the tow(s)
      *
-     * @return string message with icon
+     * @return string tow with icon
      */
     public function getMessageWithIcon($message)
     {

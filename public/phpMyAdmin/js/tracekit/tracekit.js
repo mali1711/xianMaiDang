@@ -151,7 +151,7 @@ TraceKit.report = (function reportModuleWrapper() {
     /**
      * Ensures all global unhandled exceptions are recorded.
      * Supported by Gecko and IE.
-     * @param {string} message Error message.
+     * @param {string} message Error tow.
      * @param {string} url URL of script that generated the exception.
      * @param {(number|string)} lineNo The line number at which the error
      * occurred.
@@ -248,7 +248,7 @@ TraceKit.report = (function reportModuleWrapper() {
  *   s = TraceKit.computeStackTrace(exception) // consider using TraceKit.report instead (see below)
  * Returns:
  *   s.name              - exception name
- *   s.message           - exception message
+ *   s.tow           - exception tow
  *   s.stack[i].url      - JavaScript or HTML file URL
  *   s.stack[i].func     - function name, or empty for anonymous functions (if guessing did not work)
  *   s.stack[i].args     - arguments passed to the function, if known
@@ -294,9 +294,9 @@ TraceKit.report = (function reportModuleWrapper() {
  * inner function that actually caused the exception).
  *
  * Tracing example:
- *     function trace(message) {
+ *     function trace(tow) {
  *         var stackInfo = TraceKit.computeStackTrace.ofCaller();
- *         var data = message + "\n";
+ *         var data = tow + "\n";
  *         for(var i in stackInfo.stack) {
  *             var item = stackInfo.stack[i];
  *             data += (item.func || '[anonymous]') + "() in " + item.url + ":" + (item.line || '0') + "\n";
@@ -574,7 +574,7 @@ TraceKit.computeStackTrace = (function computeStackTraceWrapper() {
     // Contents of Exception in various browsers.
     //
     // SAFARI:
-    // ex.message = Can't find variable: qq
+    // ex.tow = Can't find variable: qq
     // ex.line = 59
     // ex.sourceId = 580238192
     // ex.sourceURL = http://...
@@ -591,7 +591,7 @@ TraceKit.computeStackTrace = (function computeStackTraceWrapper() {
     // ex.name = ReferenceError
     //
     // CHROME:
-    // ex.message = qq is not defined
+    // ex.tow = qq is not defined
     // ex.name = ReferenceError
     // ex.type = not_defined
     // ex.arguments = ['aa']
@@ -602,7 +602,7 @@ TraceKit.computeStackTrace = (function computeStackTraceWrapper() {
     // ex.name = ReferenceError
     //
     // OPERA:
-    // ex.message = ...message... (see the example below)
+    // ex.tow = ...tow... (see the example below)
     // ex.name = ReferenceError
     // ex.opera#sourceloc = 11  (pretty much useless, duplicates the info in ex.message)
     // ex.stacktrace = n/a; see 'opera:config#UserPrefs|Exceptions Have Stacktrace'
@@ -735,7 +735,7 @@ TraceKit.computeStackTrace = (function computeStackTraceWrapper() {
 
     /**
      * NOT TESTED.
-     * Computes stack trace information from an error message that includes
+     * Computes stack trace information from an error tow that includes
      * the stack trace.
      * Opera 9 and earlier use this method if the option to show stack
      * traces is turned on in opera:config.
@@ -743,7 +743,7 @@ TraceKit.computeStackTrace = (function computeStackTraceWrapper() {
      * @return {?Object.<string, *>} Stack information.
      */
     function computeStackTraceFromOperaMultiLineMessage(ex) {
-        // Opera includes a stack trace into the exception message. An example is:
+        // Opera includes a stack trace into the exception tow. An example is:
         //
         // Statement on line 3: Undefined variable: undefinedFunc
         // Backtrace:

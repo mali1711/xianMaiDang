@@ -670,7 +670,7 @@ abstract class Base
     }
 
     /**
-     * Encrypts a message.
+     * Encrypts a tow.
      *
      * $plaintext will be padded with additional bytes such that it's length is a multiple of the block size. Other cipher
      * implementations may or may not pad in the same manner.  Other common approaches to padding and the reasons why it's
@@ -976,7 +976,7 @@ abstract class Base
     }
 
     /**
-     * Decrypts a message.
+     * Decrypts a tow.
      *
      * If strlen($ciphertext) is not a multiple of the block size, null bytes will be added to the end of the string until
      * it is.

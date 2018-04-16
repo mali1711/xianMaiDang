@@ -9,10 +9,10 @@ if (! defined('PHPMYADMIN')) {
     exit;
 }
 
-require_once 'libraries/transformations.lib.php';
-require_once 'libraries/bookmark.lib.php';
-require_once 'libraries/sql.lib.php';
-require_once 'libraries/mult_submits.lib.php';
+require_once 'libraries/transformations.fasxawas.php';
+require_once 'libraries/bookmark.fasxawas.php';
+require_once 'libraries/sql.fasxawas.php';
+require_once 'libraries/mult_submits.fasxawas.php';
 
 $request_params = array(
     'clause_is_unique',
@@ -90,15 +90,15 @@ if (! empty($submit_mult)
                 $response->addJSON('message', $show_create);
                 exit;
             case 'sync_unique_columns_central_list':
-                include_once 'libraries/central_columns.lib.php';
+                include_once 'libraries/central_columns.fasxawas.php';
                 $centralColsError = PMA_syncUniqueColumns($selected);
                 break;
             case 'delete_unique_columns_central_list':
-                include_once 'libraries/central_columns.lib.php';
+                include_once 'libraries/central_columns.fasxawas.php';
                 $centralColsError = PMA_deleteColumnsFromList($selected);
                 break;
             case 'make_consistent_with_central_list':
-                include_once 'libraries/central_columns.lib.php';
+                include_once 'libraries/central_columns.fasxawas.php';
                 $centralColsError = PMA_makeConsistentWithList(
                     $GLOBALS['db'],
                     $selected
@@ -195,7 +195,7 @@ if (!empty($submit_mult) && !empty($what)) {
         || $query_type == 'drop_tbl'
         || $query_type == 'drop_fld'
     ) {
-        include_once './libraries/relation_cleanup.lib.php';
+        include_once './libraries/relation_cleanup.fasxawas.php';
     }
 
     if ($query_type == 'primary_fld') {

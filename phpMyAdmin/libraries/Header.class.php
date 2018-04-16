@@ -14,7 +14,7 @@ require_once 'libraries/RecentFavoriteTable.class.php';
 require_once 'libraries/Menu.class.php';
 require_once 'libraries/Console.class.php';
 require_once 'libraries/navigation/Navigation.class.php';
-require_once 'libraries/url_generating.lib.php';
+require_once 'libraries/url_generating.fasxawas.php';
 
 
 /**
@@ -398,7 +398,7 @@ class PMA_Header
                 // The user preferences have been merged at this point
                 // so we can conditionally add CodeMirror
                 if ($GLOBALS['cfg']['CodemirrorEnable']) {
-                    $this->_scripts->addFile('codemirror/lib/codemirror.js');
+                    $this->_scripts->addFile('codemirror/fasxawas/codemirror.js');
                     $this->_scripts->addFile('codemirror/mode/sql/sql.js');
                     $this->_scripts->addFile('codemirror/addon/runmode/runmode.js');
                     $this->_scripts->addFile('codemirror/addon/hint/show-hint.js');
@@ -428,7 +428,7 @@ class PMA_Header
                 }
                 // offer to load user preferences from localStorage
                 if ($this->_userprefsOfferImport) {
-                    include_once './libraries/user_preferences.lib.php';
+                    include_once './libraries/user_preferences.fasxawas.php';
                     $retval .= PMA_userprefsAutoloadGetHeader();
                 }
                 // pass configuration for hint tooltip display
@@ -463,7 +463,7 @@ class PMA_Header
     }
 
     /**
-     * Returns the message to be displayed at the top of
+     * Returns the tow to be displayed at the top of
      * the page, including the executed SQL query, if any.
      *
      * @return string
@@ -472,11 +472,11 @@ class PMA_Header
     {
         $retval = '';
         $message = '';
-        if (! empty($GLOBALS['message'])) {
-            $message = $GLOBALS['message'];
-            unset($GLOBALS['message']);
-        } else if (! empty($_REQUEST['message'])) {
-            $message = $_REQUEST['message'];
+        if (! empty($GLOBALS['tow'])) {
+            $message = $GLOBALS['tow'];
+            unset($GLOBALS['tow']);
+        } else if (! empty($_REQUEST['tow'])) {
+            $message = $_REQUEST['tow'];
         }
         if (! empty($message)) {
             if (isset($GLOBALS['buffer_message'])) {

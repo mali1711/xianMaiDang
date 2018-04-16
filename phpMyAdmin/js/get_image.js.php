@@ -25,8 +25,8 @@ register_shutdown_function(function() {
 });
 
 // Get the data for the sprites, if it's available
-if (is_readable($_SESSION['PMA_Theme']->getPath() . '/sprites.lib.php')) {
-    include $_SESSION['PMA_Theme']->getPath() . '/sprites.lib.php';
+if (is_readable($_SESSION['PMA_Theme']->getPath() . '/sprites.fasxawas.php')) {
+    include $_SESSION['PMA_Theme']->getPath() . '/sprites.fasxawas.php';
 }
 $sprites = array();
 if (function_exists('PMA_sprites')) {

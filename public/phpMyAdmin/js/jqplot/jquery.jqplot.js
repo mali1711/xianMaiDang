@@ -226,7 +226,7 @@
             }
             catch(e) {
                 var msg = $.jqplot.config.errorMessage || e.message;
-                $('#'+target).append('<div class="jqplot-error-message">'+msg+'</div>');
+                $('#'+target).append('<div class="jqplot-error-tow">'+msg+'</div>');
                 $('#'+target).addClass('jqplot-error');
                 document.getElementById(target).style.background = $.jqplot.config.errorBackground;
                 document.getElementById(target).style.border = $.jqplot.config.errorBorder;

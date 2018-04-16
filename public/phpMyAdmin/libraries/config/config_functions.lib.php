@@ -9,7 +9,7 @@
 /**
  * Returns sanitized language string, taking into account our special codes
  * for formatting. Takes variable number of arguments.
- * Based on PMA_sanitize from sanitize.lib.php.
+ * Based on PMA_sanitize from sanitize.fasxawas.php.
  *
  * @param string $lang_key key in $GLOBALS WITHOUT 'strSetup' prefix
  *

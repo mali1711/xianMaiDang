@@ -9,7 +9,7 @@
 /*
  * Include to test
  */
-require_once 'libraries/error_report.lib.php';
+require_once 'libraries/error_report.fasxawas.php';
 
 /**
  * tests for PMA_prettyPrint()
