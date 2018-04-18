@@ -1,0 +1,19 @@
+[master 37b26e9] '商品模块---
+ 22 files changed, 539 insertions(+), 101 deletions(-)
+ create mode 100644 application/index/model/Products.php
+ create mode 100644 application/index/view/index/XiangQ_Y.html
+ create mode 100644 application/index/view/index/wangid_ShangP_LieB.html
+ create mode 100644 public/uploads/products/20180417/1ca56d62cc8831099c7851d55f4e9fa0.png
+ create mode 100644 public/uploads/products/20180417/1f53d4dd6f10ec7312fce564a1076b84.png
+ create mode 100644 public/uploads/products/20180417/1fa305989652aae11130a052be28637c.jpg
+ create mode 100644 public/uploads/products/20180417/345b0849632b929d166efbb9002c962b.jpg
+ create mode 100644 public/uploads/products/20180417/3d6492a3cea4539676eb918d865e7481.jpg
+ create mode 100644 public/uploads/products/20180417/81034d5e7d11e779e0cd9294eb326470.jpg
+ create mode 100644 public/uploads/products/20180417/90fd8b6e2cf66207e87460d202e7a808.jpg
+ create mode 100644 public/uploads/products/20180417/9851c11dcaaf8077e8d2a7abe63071d6.jpg
+ create mode 100644 public/uploads/products/20180417/9d8280348d1c6c4cc07a6fd9b97a9e5d.png
+ create mode 100644 public/uploads/products/20180417/cd0b9dfb73091254ca0b2c987caa94dc.jpg
+ create mode 100644 public/uploads/products/20180417/dc1280c03fdf4b727e32dd312252fe17.png
+ create mode 100644 public/uploads/products/20180417/e3db8c6862e324638de1a2c14b7d380a.jpg
+ create mode 100644 public/uploads/products/20180417/e5bc6faf0f2a4dd539c31d953c0b626f.png
+ create mode 100644 public/uploads/products/20180417/feb6561348d567a8c7f518ffee4d3f60.jpg
