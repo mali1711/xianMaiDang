@@ -61,8 +61,13 @@ class Products extends controller
             $info['code'] = 0;
             $info['info'] = '文件上传失败';
         }else{
-            $products = new ProductsModel;
-            $products->data($data)->save();
+            $products = new ProductsModel();
+            $res = $products->data($data)->save();
+            if($res){
+                $this->success('商品添加成功');
+            }else{
+                $this->error('商品添加失败，请核实信息');
+            }
         }
 
     }

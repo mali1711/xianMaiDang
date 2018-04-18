@@ -1,0 +1,236 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta content="WangID通城" http-equiv="keywords">
+<meta name="description" content="WangID通城">
+<meta name="viewport" content="width=device-width,user-scalable=no, initial-scale=1">
+<title>WangID通城</title>
+<link rel="stylesheet" href="/static/index/css/index.css" type="text/css">
+<link rel="stylesheet" href="/static/index/css/zy.css" type="text/css">
+<link rel="stylesheet" href="/static/index/css/swiper.min.css" type="text/css">
+<script type="text/javascript" src="/static/index/js/swiper.min.js"></script>
+<script type="text/javascript" src="/static/index/js/jquery-1.4.4.min.js"></script> 
+</head>
+<body> 
+<!--页面内容
+<div id="yemnr">--> 
+<!--头部--> 
+<div class="toub_beij toub_beij_zy">
+	<div class="zhongj_k zhongj_k_z">
+		<div class="jiu_feo">
+			<div class="logo_k logo_k_fanh"><a href="#"><img class="fanh_ann" src="/static/index/images/web/fanh.png"></a></div>
+			<div class="zhongjain_daoh">
+				<ul>
+					<li class="xiangq"><a href="XiangQ_Y.html">商品</a></li>
+					<!--<li><a href="XiangQ_Y_2.html">详情</a></li>-->
+					<li><a href="XiangQ_Y_3.html">评价</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="dengl">
+			<div class="caid_img" id="zhu_caid"><img src="/static/index/images/web/cd_1.png"></div>
+			<ul class="zhu_daoh" id="daoh_lb">
+				<em></em>
+				<li><a href="index.html">首页</a></li>
+				<li><a href="wangid_ShangP_FenL.html">商品分类</a></li>
+				<li><a href="#">扫一扫</a></li>
+				<li><a href="wanagid_GouWuChe.html">购物车</a></li>
+				<li class="wu"><a href="#">我的通城</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+	//滑动头部透明（针对首页头部用）
+	window.onscroll=function(){
+
+	var autoheight=document.body.scrollTop||document.documentElement.scrollTop;
+	if(autoheight>10){
+		$(".toub_beij").css("position" ,"fixed")
+		}else{
+			$(".toub_beij").css("position" ,"relative")
+		}
+	}
+</script>
+<!--内容-->  
+<!--banner-->
+<div class="swiper_container_suz1">
+    <div class="swiper-wrapper">
+		<div class="swiper-slide"> <img src="\uploads\products\{$data.products_pic}"> </div>
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+    <!-- Add Arrows --> 
+</div> 
+
+<!-- Initialize Swiper -->
+<script>
+var swiper = new Swiper('.swiper_container_suz1', {
+    nextButton: '.swiper-button-next',
+    prevButton: '.swiper-button-prev',
+    pagination: '.swiper-pagination',
+    paginationType: 'fraction',
+    autoplay : 2000,
+});
+</script>
+<!--商品名称-->
+<div class="xiangq_shangp_m">
+	<p class="px24">{$data.products_title}</p>
+	<div class="xq_jiaq"><p>￥<em>{$data.products_newprice}</em></p><span>原价：<i>￥{$data.products_ordprice}</i></span></div>
+</div>
+<!--商品参数选择-->
+<!--<div class="cans_xuanz" id="dianjisj">
+	<p>已选：<em class="px22">5000/I5-7200/4G/1T/2G</em class="px22"><em>1个</em><i></i></p> 
+</div>-->
+<!--弹出选择-->
+<aside class="wup_xuanz" id="xianq_tanc">
+	<div class="bg" id="ds"></div>
+	<div class="wup_kuan" id="tanchu_d">
+		<div class="youk_1">
+			<div class="shang_sp">
+				<h1><img src="/static/index/images/web/shangp_xiangq_img.jpg"></h1>
+				<p class="px24"><em class="px26">￥5600.00</em><br>有货</p>
+				<span class="close_standard" id="chacha"></span>
+			</div>
+			<div class="banb" id="banb">
+				<ul>
+					<h1>版本</h1>
+					<li class="no">潮5000/I5-7200/4G/1T/2G</li>
+					<li>潮5000/I7-7500/4G/1T</li>
+					<li>I7-7500/4G/500G/2G</li>
+				</ul>
+			</div>
+			<div class="goum_sl">
+				<p class="px22">数量<em>限购20件</em></p>
+				<div class="counter_box">
+					<i class="jian">-</i>
+					<input type="text" value="1">
+					<i class="jia">+</i>
+				</div>
+			</div>
+			<div class="goum">
+				<a href="#">加入购物车</a>
+				<a class="houm" href="#">立即购买</a>
+			</div>
+		</div>
+	</div>
+</aside>
+<!--店铺-->  
+<div class="xiangq_dp_k">
+
+	<div class="pf_a">
+		<p>商品描述<em>4.15</em></p>
+		<p class="z">发货速度<em>4.15</em></p>
+		<p class="you">服务质量<em>4.15</em></p>
+	</div>
+
+</div>
+
+<div class="cainixhk">
+	<h1>猜您喜欢</h1>
+	<ul>
+		<li><a href="#"><h1><img src="/static/index/images/web/001.jpg"></h1><p class="px26">￥5250.00 </p><p>御泥坊  清洁净清洁净肤片装片装...</p></a></li>
+		<li><a href="#"><h1><img src="/static/index/images/web/002.jpg"></h1><p class="px26">￥5250.00 </p><p>御泥坊  清洁净清洁净肤片装片装...</p></a></li>
+		<li><a href="#"><h1><img src="/static/index/images/web/003.jpg"></h1><p class="px26">￥5250.00 </p><p>御泥坊  清洁净清洁净肤片装片装...</p></a></li>
+		<li><a href="#"><h1><img src="/static/index/images/web/001.jpg"></h1><p class="px26">￥5250.00 </p><p>御泥坊  清洁净清洁净肤片装片装...</p></a></li>
+		<li><a href="#"><h1><img src="/static/index/images/web/002.jpg"></h1><p class="px26">￥5250.00 </p><p>御泥坊  清洁净清洁净肤片装片装...</p></a></li>
+		<li><a href="#"><h1><img src="/static/index/images/web/003.jpg"></h1><p class="px26">￥5250.00 </p><p>御泥坊  清洁净清洁净肤片装片装...</p></a></li>
+	</ul>
+</div> 
+<!--底部导航-->
+<!---->
+<div class="dib_daoh_b">
+	<div class="gouwuc_">
+		<div class="zuo">
+			<div class="mis"><a href="#"><h1><img src="/static/index/images/web/ms01.png"></h1><p>密使</p></a></div>
+			<div class="mis"><a href="#" id="dianji_img"><h1><img src="/static/index/images/web/ms03.png" id="img_tih"></h1><p>收藏</p></a></div>
+			<div class="mis"><a href="wanagid_GouWuChe.html"><h1><img src="/static/index/images/web/ms02.png"></h1><p>购物车</p></a></div>
+		</div>
+		<div class="you">
+			<div class="goum">
+				<a href="#">加入购物车</a>
+				<a class="houm" href="#">立即购买</a>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+
+<!--大框div
+</div>-->
+<!--搜索页面-->
+ 
+
+</body>
+</html>
+
+<script type="text/javascript">
+	window.onload=function(){ 
+		var TheMenu=document.getElementById('zhu_caid');
+		var LieBiao=document.getElementById('daoh_lb'); 
+		var Html=document.getElementsByTagName("html")[0];//0 第一个数组
+		TheMenu.onclick=function(event)
+		{
+			if (LieBiao.style.display=='block')
+			{
+				LieBiao.style.display='none';
+			}
+			else {
+				LieBiao.style.display='block';
+			}  
+			event.stopPropagation();//阻止冒泡事件
+		} 
+		Html.onclick=function(){
+			LieBiao.style.display='none';
+		}
+
+		var DianJ=document.getElementById('dianjisj');
+		var XiangQTC=document.getElementById('xianq_tanc');
+		var TanC=document.getElementById('tanchu_d');
+		var YiChuL=document.getElementById('ds');
+		var Ca=document.getElementById('chacha');
+		DianJ.onclick=function()
+		{
+			TanC.className+=' slide_in';
+			XiangQTC.style.display='block';
+			YiChuL.style.opacity='0.4';
+		}
+		YiChuL.onclick=function()
+		{
+			TanC.classList.remove("slide_in");
+			XiangQTC.style.display='none';
+		}
+		Ca.onclick=function()
+		{
+			TanC.classList.remove("slide_in");
+			XiangQTC.style.display='none';
+		}
+
+		var BanB=document.getElementById('banb');
+		var BabBLi=BanB.getElementsByTagName('li');
+		for( var i=0;i<BabBLi.length;i++)//循环每个li的
+		{
+			BabBLi[i].onclick=function()
+			{
+				for( var i=0;i<BabBLi.length;i++)//循环去掉li的样式
+				{
+					BabBLi[i].className=''; 
+				}
+				
+				this.className='no';//自身添加className='no'
+			}
+		}
+		var DianJ=document.getElementById('dianji_img');
+		var ImgTiHuan=document.getElementById('img_tih');
+			DianJ.onclick=function()
+			{
+				ImgTiHuan.src='images/web/ms03-1.png'; 
+				alert("收藏成功");
+			}
+
+	};
+
+ 
+ 
+</script>

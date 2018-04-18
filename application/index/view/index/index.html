@@ -146,7 +146,7 @@
 		</script>
 
 		<!--第一层-->
-		<div class="louc_m louc_beij1">
+		<!--<div class="louc_m louc_beij1">
 			<div class="mingc">
 				<em class="hua1"></em>
 				<p>办公家具</p>
@@ -155,133 +155,98 @@
 			</div>
 		</div>
 		<div class="yic_beij">
-			<div class="yic_sahng_b">
-				<div class="zuo">
+		<div class="yic_sahng_b">
+			<div class="zuo">
+				<a href="#">
+					<p>卧室家具</p>
+					<span>爆款低至五折</span>
+					<div class="zuo_tu_k"><img src="/static/index/images/web/yic_c.jpg"></div>
+				</a>
+			</div>
+			<div class="you">
+				<div class="you_shang">
 					<a href="#">
-						<p>卧室家具</p>
-						<span>爆款低至五折</span>
-						<div class="zuo_tu_k"><img src="/static/index/images/web/yic_c.jpg"></div>
+						<div class="wez">
+							<p class="px24">灯饰照明</p>
+							<span class="px22 color_h">发现品质生活</span>
+						</div>
+						<div class="uou_tu1_k"><img src="/static/index/images/web/yic_d.jpg"></div>
 					</a>
 				</div>
-				<div class="you">
-					<div class="you_shang">
+				<div class="youx">
+					<div class="youx_bq">
 						<a href="#">
 							<div class="wez">
-								<p class="px24">灯饰照明</p>
-								<span class="px22 color_h">发现品质生活</span>
+								<p class="px24">办公文化</p>
+								<span class="px22 color_h">办公设计精选</span>
 							</div>
-							<div class="uou_tu1_k"><img src="/static/index/images/web/yic_d.jpg"></div>
+							<div class="youx_tu1_k"><img src="/static/index/images/web/yic_bih.jpg"></div>
 						</a>
 					</div>
-					<div class="youx">
-						<div class="youx_bq">
-							<a href="#">
-								<div class="wez">
-									<p class="px24">办公文化</p>
-									<span class="px22 color_h">办公设计精选</span>
-								</div>
-								<div class="youx_tu1_k"><img src="/static/index/images/web/yic_bih.jpg"></div>
-							</a>
-						</div>
-						<div class="youx_bq youx_wubk">
-							<a href="#">
-								<div class="wez">
-									<p class="px24 wuj_color">五金工具</p>
-									<span class="px22 color_h">必买尖货儿</span>
-								</div>
-								<div class="youx_tu1_k"><img src="/static/index/images/web/yic_wuj.jpg"></div>
-							</a>
-						</div>
+					<div class="youx_bq youx_wubk">
+						<a href="#">
+							<div class="wez">
+								<p class="px24 wuj_color">五金工具</p>
+								<span class="px22 color_h">必买尖货儿</span>
+							</div>
+							<div class="youx_tu1_k"><img src="/static/index/images/web/yic_wuj.jpg"></div>
+						</a>
 					</div>
-				</div>
-			</div>
-			<div class="yic_xia_b">
-				<div class="zuo">
-					<a href="#">
-						<div class="wez">
-							<p class="px24 wuj_color">烘烤 电脑版镜面外观</p>
-							<span class="px26">￥349.00</span>
-						</div>
-						<div class="youc_xia_tu_k"><img src="/static/index/images/web/yic_weibl.jpg"></div>
-					</a>
-				</div>
-				<div class="zuo you_wux">
-					<a href="#">
-						<div class="wez">
-							<p class="px24 wuj_color">烘烤 电脑版镜面外观</p>
-							<span class="px26">￥349.00</span>
-						</div>
-						<div class="youc_xia_tu_k"><img src="/static/index/images/web/yic_s.jpg"></div>
-					</a>
 				</div>
 			</div>
 		</div>
+		<div class="yic_xia_b">
+			<div class="zuo">
+				<a href="#">
+					<div class="wez">
+						<p class="px24 wuj_color">烘烤 电脑版镜面外观</p>
+						<span class="px26">￥349.00</span>
+					</div>
+					<div class="youc_xia_tu_k"><img src="/static/index/images/web/yic_weibl.jpg"></div>
+				</a>
+			</div>
+			<div class="zuo you_wux">
+				<a href="#">
+					<div class="wez">
+						<p class="px24 wuj_color">烘烤 电脑版镜面外观</p>
+						<span class="px26">￥349.00</span>
+					</div>
+					<div class="youc_xia_tu_k"><img src="/static/index/images/web/yic_s.jpg"></div>
+				</a>
+			</div>
+		</div>
+	</div>-->
 
 		<!--第二层-->
+		{volist name="list" id="vo"}
 		<div class="louc_m louc_beij2">
 			<div class="mingc">
 				<em class="hua2"></em>
-				<p>手机数码</p>
+				<p>{$vo.cates_name}</p>
 				<span>Mobile phone digital</span>
-				<a href="#">更多+</a>
+				<a href="/goods/goodslist?id={$vo.cates_id}">更多+</a>
 			</div>
 		</div>
 		<div class="lianc_beij">
 			<div class="lianc_shang">
+				{volist name='vo.goods' id='vos'}
 				<div class="zuo">
 					<a href="#">
 						<div class="wez">
-							<p class="px24 wuj_color">热门手机</p>
-							<span class="px22 color_h">1元购手机</span>
-						</div>
-						<div class="tu_k"><img src="/static/index/images/web/erc_shouj.jpg"></div>
-					</a>
-				</div>
-				<div class="you">
-					<a href="#">
-						<div class="wez">
-							<p class="px24 wuj_color">智能数码</p>
-							<span class="px22 color_h">大品牌</span>
-							<div class="lvsz px22">品质推荐  ></div>
-						</div>
-						<div class="tu_k"><img src="/static/index/images/web/erc_diann.jpg"></div>
-					</a>
-				</div>
-			</div>
-			<div class="lianc_shang">
-				<div class="zuo">
-					<a href="#">
-						<div class="wez">
-							<p class="px24 wuj_color color_1">游戏组装</p>
+							<p class="px24 wuj_color color_1">{$vos.products_pic_title}</p>
 							<span class="px22 color_h">精品推荐</span>
 						</div>
-						<div class="tu_k"><img src="/static/index/images/web/erc_dian2.jpg"></div>
+						<!--<div class="tu_k"><img src="/uploads/products/"></div>-->
+						<div style="margin-bottom: 25px;" class="tu_k"><img src="\uploads\products\{$vos.products_pic}"></div>
 					</a>
 				</div>
-				<div class="zuo">
-					<a href="#">
-						<div class="wez">
-							<p class="px24 wuj_color color_2">硬件存储</p>
-							<span class="px22 color_h">精品推荐</span>
-						</div>
-						<div class="tu_k"><img src="/static/index/images/web/erc_nc.jpg"></div>
-					</a>
-				</div>
-				<div class="zuo zuo_wu">
-					<a href="#">
-						<div class="wez">
-							<p class="px24 wuj_color color_3">摄影产品</p>
-							<span class="px22 color_h">看的见的岁月</span>
-						</div>
-						<div class="tu_k"><img src="/static/index/images/web/erc_xiangj.jpg"></div>
-					</a>
-				</div>
+				{/volist}
 			</div>
 		</div>
-
+		{/volist}
 
 		<!--第三层-->
-		<div class="louc_m louc_beij3">
+<!--		<div class="louc_m louc_beij3">
 			<div class="mingc">
 				<em class="hua3"></em>
 				<p>服饰鞋帽</p>
@@ -340,9 +305,9 @@
 					</a>
 				</div>
 			</div>
-		</div>
+		</div>-->
 
-		<!--第四层-->
+<!--		&lt;!&ndash;第四层&ndash;&gt;
 		<div class="louc_m louc_beij4">
 			<div class="mingc">
 				<em class="hua4"></em>
@@ -402,7 +367,7 @@
 					</a>
 				</div>
 			</div>
-		</div>
+		</div>-->
 		<!--广告-->
 		<div class="swiper_container_3 ">
 			<div class="swiper-wrapper">

@@ -3,6 +3,7 @@
 namespace app\index\controller;
 
 use app\admin\model\CatesModel;
+use app\index\model\Products;
 use think\Controller;
 use think\Request;
 
@@ -38,5 +39,28 @@ class Goods extends Controller{
         $cates = new CatesModel();
         $list = $cates->all(['cates_pid'=>$id]);
         return json_encode($list);
+    }
+
+    /*
+     * 商品列表
+     * */
+    public function getgoodslist()
+    {
+        $request = request();
+        $id = $request->get('id');
+        $pro = new Products();
+        $list = $pro->all(['cates_id'=>$id]);
+        return $this->fetch('index/wangid_ShangP_LieB',['list'=>$list]);
+    }
+
+    /*
+     * 商品详情展示页
+     * */
+    public function getdetails()
+    {
+        $request = request();
+        $id = $request->get('id');
+        $data = Products::get($id);
+        return $this->fetch('index/XiangQ_Y',['data'=>$data]);
     }
 }
