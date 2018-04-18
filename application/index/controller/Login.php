@@ -27,6 +27,17 @@ class Login extends Controller
 
     public function postloginIphone()
     {
+        $request = request();
+        $where = $request->post();
+        $where['password'] = md5($where['password']);
+        $users = new UsersModel();
+        $res = $users->get($where);
+        if($res){
+            session::set('islogin',$res);
+            $this->success('登录成功','/');
+        }else{
+            $this->error('账号或者密码错误');
+        }
 
     }
 

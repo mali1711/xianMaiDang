@@ -23,3 +23,5 @@ Route::controller("/allow","admin/Allow"); //权限管理
 /* 商城前台路由 */
 Route::controller("/indexlogin","index/Login"); //前台登录注册
 Route::controller("/goods","index/goods"); //前台登录注册
+Route::controller("/cart","index/Shopcart"); //购物车
+Route::controller("/order","index/Order"); //购物车

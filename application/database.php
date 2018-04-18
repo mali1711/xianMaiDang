@@ -13,8 +13,8 @@ return [
     // 数据库类型
     'type'            => 'mysql',
     // 服务器地址
-    'hostname'        => '123.207.22.164',
-//    'hostname'        => 'localhost',
+//    'hostname'        => '123.207.22.164',
+    'hostname'        => 'localhost',
     // 数据库名
     'database'        => 'xianmaidang',
     // 用户名
