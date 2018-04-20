@@ -1,0 +1,255 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta content="WangID通城" http-equiv="keywords">
+<meta name="description" content="WangID通城">
+<meta name="viewport" content="width=device-width,user-scalable=no, initial-scale=1">
+<title>WangID通城</title>
+<link rel="stylesheet" href="/static/index/css/index.css" type="text/css">
+<link rel="stylesheet" href="/static/index/css/zy.css" type="text/css">
+<link rel="stylesheet" href="/static/index/css/swiper.min.css" type="text/css">
+<script type="text/javascript" src="/static/index/js/swiper.min.js"></script>
+<script type="text/javascript" src="/static/index/js/jquery-1.4.4.min.js"></script>  
+</head>
+<body> 
+<!--页面内容
+<div id="yemnr">--> 
+<!--头部--> 
+<div class="toub_beij toub_beij_zy">
+	<div class="zhongj_k zhongj_k_z">
+		<div class="jiu_feo">
+			<div class="logo_k logo_k_fanh"><a href="#"><img class="fanh_ann" src="/static/index/images//web/fanh.png"></a></div>
+			<div class="zhongjain_daoh">
+				<ul>
+					<li><a class="zyyge">购物车</a></li>  
+				</ul>
+			</div>
+		</div>
+		<div class="dengl">
+			<div class="caid_img" id="zhu_caid"><img src="/static/index/images//web/cd_1.png"></div>
+			<ul class="zhu_daoh" id="daoh_lb">
+				<em></em>
+				<li><a href="index.html">首页</a></li>
+				<li><a href="wangid_ShangP_FenL.html">商品分类</a></li>
+				<li><a href="#">扫一扫</a></li>
+				<li><a href="wanagid_GouWuChe.html">购物车</a></li>
+				<li class="wu"><a href="#">我的通城</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+	//滑动头部透明（针对首页头部用）
+	window.onscroll=function(){
+
+	var autoheight=document.body.scrollTop||document.documentElement.scrollTop;
+	if(autoheight>10){
+		$(".toub_beij").css("position" ,"fixed")
+		}else{
+			$(".toub_beij").css("position" ,"relative")
+		}
+	}
+</script>
+<!--内容--> 
+<!--<div class="weidl_dl">
+	<p>立即登录，同步电脑和手机购物车中的商品 <a href="wanagid_DengLu.html">登录</a></p>
+</div>-->
+ <div class="gouwuc_kk">
+ 	<ul>
+ 		<li>
+ 			<div class="dianpmc_gw"><i class="i i-i"></i><a href="#"><p class="px24">鼎力电脑专营旗舰店</p><em></em></a></div>
+ 			<div class="diannao_shanp">
+ 				<i class="i1 i1-i"></i>
+ 				<a href="XiangQ_Y.html"><h1><img src="/static/index/images//web/001.jpg"></h1></a>
+ 				<div class="you">
+ 					<a href="XiangQ_Y.html"><p class="px24 bt">联想（Lenovo）IdeaPad 710S-13 13.3英寸超极本电脑(i3/....</p></a>
+ 					<p class="xh">i3/4G内存/128固态/金色</p>
+ 					<div class="youjfy">
+						<div class="goum_sl">
+							<p class="px26 jiaq">￥6588.00</p>
+							<div class="counter_box">
+								<i class="jian">-</i>
+								<input type="text" value="1">
+								<i class="jia">+</i>
+							</div>
+						</div>
+ 					</div>
+					<div class="bianj">
+						<a href="#"><p><i></i>移入收藏</p></a>
+						<a href="#" class="ayou"><p><i class="sc"></i>删除</p></a>
+					</div>
+ 				</div>
+ 			</div>
+ 			<div class="diannao_shanp">
+ 				<i class="i1"></i>
+ 				<a href="XiangQ_Y.html"><h1><img src="/static/index/images//web/002.jpg"></h1></a>
+ 				<div class="you">
+ 					<a href="XiangQ_Y.html"><p class="px24 bt">联想（Lenovo）IdeaPad 710S-13 13.3英寸超极本电脑(i3/....</p></a>
+ 					<p class="xh">i3/4G内存/128固态/金色</p>
+ 					<div class="youjfy">
+						<div class="goum_sl">
+							<p class="px26 jiaq">￥6588.00</p>
+							<div class="counter_box">
+								<i class="jian">-</i>
+								<input type="text" value="1">
+								<i class="jia">+</i>
+							</div>
+						</div>
+ 					</div>
+					<div class="bianj">
+						<a href="#"><p><i></i>移入收藏</p></a>
+						<a href="#" class="ayou"><p><i class="sc"></i>删除</p></a>
+					</div>
+ 				</div>
+ 			</div>
+ 		</li>
+ 		<li>
+ 			<div class="dianpmc_gw"><i class="i"></i><a href="#"><p class="px24">鼎力电脑专营旗舰店</p><em></em></a></div>
+ 			{volist name="list" id='vo'}
+			 <div class="diannao_shanp">
+ 				<i class="i1"></i>
+ 				<a href="XiangQ_Y.html"><h1><img src="/static/index/images//web/003.jpg"></h1></a>
+ 				<div class="you">
+ 					<a href="XiangQ_Y.html"><p class="px24 bt">{$vo.product_name}</p></a>
+ 					<p class="xh">i3/4G内存/128固态/金色</p>
+ 					<div class="youjfy">
+						<div class="goum_sl">
+							<p class="px26 jiaq">{$vo.goods_price}</p>
+							<div class="counter_box">
+								<i class="jian" val="{$vo.cart_item_id}" val="{$vo.cart_item_id}">-</i>
+								<input type="text" value="{$vo.goods_number}">
+								<i class="jia" val="{$vo.cart_item_id}">+</i>
+							</div>
+						</div>
+ 					</div>
+					<div class="bianj">
+						<a href="#"><p><i></i>移入收藏</p></a>
+						<a href="javascript:;" class="ayou delOne" val="{$vo.cart_item_id}"><p><i class="sc"></i>删除</p></a>
+					</div>
+ 				</div>
+ 			 </div>
+			{/volist}
+ 		</li>
+ 	</ul>
+ </div>
+<!--底部导航-->
+<script>
+	$(function () {
+		$('.jian').click(function () {
+			//获取点击的购物项的id
+			var id = $(this).attr('val');
+			var num = $(this).next().val();
+			var goodsNum = $('.goodsNum').html();
+			var obj = $(this);
+			$.ajax({
+				type:'get',
+				url:'removeItem',
+				data:{'id':id},
+				success:function (data) {
+					if(data==1){
+						obj.next().val(num-1);
+					}else if(data==2){
+						alert('商品已经剩一个了');
+					}else{
+
+						alert('商品删除失败');
+					}
+				}
+
+			})
+
+		})
+
+		$('.jia').click(function () {
+			//获取点击的购物项的id
+			var id = $(this).attr('val');
+			var num = $(this).prev().val();
+			var goodsNum = $('.goodsNum').html();
+			var obj = $(this);
+			$.ajax({
+				type:'get',
+				url:'addItemnum',
+				data:{'id':id},
+				success:function (data) {
+					if(data==1){
+						num= parseInt(num);
+						obj.prev().val(num+1);
+						$('.goodsNum').html(goodsNum+1)
+					}else{
+						alert('商品添加失败');
+					}
+				}
+
+			})
+
+		})
+
+		$('.delOne').click(function () {
+			//获取点击的购物项的id
+			var id = $(this).attr('val');
+			var num = $(this).prev().val();
+			var obj = $(this);
+			$.ajax({
+				type:'get',
+				url:'delitem',
+				data:{'id':id},
+				success:function (data) {
+					if(data==1){
+						obj.parent().parent().parent().remove();
+					}else{
+						alert('删除失败');
+					}
+				}
+
+			})
+		})
+	})
+</script>
+<!---->
+<div class="dib_daoh_b">
+	<div class="gouwuc_ gouwuc_yem">
+		<div class="zuo">
+			<i class="i1"><p>全选</p></i> 
+		</div>
+		<div class="zhong"><p>总计：<em>￥6588.00</em></p></div>
+		<div class="you">
+			<div class="goum">
+				<a href="wanagid_JieSuan.html">去结算（<en class="goodsNum">{$num}</en>）</a>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+
+<!--大框div
+</div>-->
+<!--搜索页面--> 
+</body>
+</html>
+
+<script type="text/javascript">
+	window.onload=function(){ 
+		var TheMenu=document.getElementById('zhu_caid');
+		var LieBiao=document.getElementById('daoh_lb'); 
+		var Html=document.getElementsByTagName("html")[0];//0 第一个数组
+		TheMenu.onclick=function(event)
+		{
+			if (LieBiao.style.display=='block')
+			{
+				LieBiao.style.display='none';
+			}
+			else {
+				LieBiao.style.display='block';
+			}  
+			event.stopPropagation();//阻止冒泡事件
+		} 
+		Html.onclick=function(){
+			LieBiao.style.display='none';
+		}
+
+		// 
+		 
+ };
+ 
+</script>

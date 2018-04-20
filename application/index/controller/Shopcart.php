@@ -82,25 +82,32 @@ class Shopcart extends Controller{
         $request = request();
         $where['cart_item_id'] = $request->get('id');
         if($catrItem->get($where)->goods_number==1){
-           $res = $catrItem->destroy($where);
-            if($res){
-                return 2;//删除商品
-            }else{
-                return 0;//商品删除失败
-            }
-        }else{
-            return $catrItem->where($where)->setDec('goods_number',1);
+            return 2;
         }
+        return $catrItem->where($where)->setDec('goods_number',1);
+    }
+
+    /*
+    * 根据商品id增加购物车商品数量，
+    * */
+    public function getaddItemnum()
+    {
+        $catrItem = new Cart_item();
+        $request = request();
+        $where['cart_item_id'] = $request->get('id');
+        return $catrItem->where($where)->setInc('goods_number',1);
     }
 
 
     /*
      * 根据购物项id删除购物车个别商品
      * */
-    public function delitem()
+    public function getdelitem()
     {
+        $id = request()->get('id');
         $cartItem = new Cart_item();
-        $cartItem->destroy(['cart_id'=>$this->cart_id]);
+        return $cartItem->destroy(['cart_item_id'=>$id]);
+   
     }
 
     /*
@@ -108,9 +115,8 @@ class Shopcart extends Controller{
      * */
     public function getcleartItem()
     {
-        $id = request()->get('id');
         $cartItem = new Cart_item();
-        return $cartItem->destroy(['cart_item_id'=>$id]);
+        return $cartItem->destroy(['cart_id'=>$this->cart_id]);
     }
 
     /*
@@ -128,19 +134,36 @@ class Shopcart extends Controller{
     public function getcheckGoods()
     {
         $cartItem = new Cart_item();
-        dump($this->cart_id);
         $list = $cartItem->all(['cart_id'=>$this->cart_id]);
-        echo $cartItem->getLastSql();
-        dump($list);
+        $num = $this->getitemCount();
+        return $this->fetch('index/wanagid_GouWuChe',['list'=>$list,'num'=>$num]);
     }
 
     /*
      * 统计购物车数据，提交到订单中
      * 根据购物车中商品项和商品总价生成订单初始数据
      * */
-    public function getproduceOrder ()
+    public function getproduceOrder()
     {
-        
+        $cart_item = new cart_item();
+        $list = json_decode(json_encode($cart_item->all(['cart_id'=>$this->cart_id])));
+        $orderDetail = array();
+        $order['money'] = '';
+        foreach ($list as $key=>$value){
+            $order['money'] += $value->goods_price;
+            foreach ($value as $k=>$v){
+                $orderDetail[$key][$k] = $v;
+            }
+        }
+
+        dump($orderDetail);
+        dump($order);
+    // 创建订单号
+    // 商品总金额
+    // 收货人信息
+    // 收货地址id
+    // 状态
+
     }
 
 }
