@@ -4,6 +4,7 @@ namespace app\index\controller;
 
 use app\index\model\Cart;
 use app\index\model\Cart_item;
+use app\index\model\Products;
 use think\Controller;
 use think\Request;
 use think\Session;
@@ -143,27 +144,22 @@ class Shopcart extends Controller{
      * 统计购物车数据，提交到订单中
      * 根据购物车中商品项和商品总价生成订单初始数据
      * */
-    public function getproduceOrder()
+    public function getSettlement()
     {
         $cart_item = new cart_item();
         $list = json_decode(json_encode($cart_item->all(['cart_id'=>$this->cart_id])));
         $orderDetail = array();
-        $order['money'] = '';
+        $orders['total'] = '';//订单总金额
         foreach ($list as $key=>$value){
-            $order['money'] += $value->goods_price;
+            $orders['total'] += $value->goods_price;
             foreach ($value as $k=>$v){
                 $orderDetail[$key][$k] = $v;
             }
+            $orderDetail[$key]['goodspic'] = Products::get($value->product_id)->products_pic;
         }
-
-        dump($orderDetail);
-        dump($order);
-    // 创建订单号
-    // 商品总金额
-    // 收货人信息
-    // 收货地址id
-    // 状态
-
+        
+    return $this->fetch('index/wanagid_JieSuan',['list'=>$orderDetail,'order'=>$orders]);
     }
+
 
 }
