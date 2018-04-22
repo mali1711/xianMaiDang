@@ -3,6 +3,9 @@
 namespace app\index\controller;
 
 use app\index\model\Address;
+use app\index\model\Orders;
+use app\index\model\Orders_detail;
+use think\Config;
 use think\Controller;
 use think\Request;
 use think\Session;
@@ -10,13 +13,54 @@ use think\Session;
 
 class Order extends Controller{
 
-    
+    static $orders_id = '';
+    /*
+     * 接受提交的订单
+     * */
+    public function postsuborder()
+    {
+        //初始化订单信息，将购物的基本信息放入订单中
+
+        $shopCar = new Shopcart();
+        $orderdata = $shopCar->orderinfo();
+        $data['desc'] = request()->post('desc');//注释
+        $data['users_id'] = Session::get('islogin')->users_id;//用户id
+        $data['orders_total'] = $orderdata['orders']['total'];//总价
+        $data['iphone'] = request()->post('iphone');//手机好
+        $data['users_name'] = request()->post('users_name');//收件人
+        $data['address'] = request()->post('address');//收货地址
+        $data['orders_addtime'] = time();//添加时间
+        $orders = new Orders();
+        $orders->allowField(true)->save($data);
+        $id = $orders->orders_id;
+        $res = $this->addordetail($orderdata['orderDetail'],$id);
+        if($res){
+            $shopCar->getcleartItem();//清空购物车
+            echo '去支付';
+//            return $this->fetch('index/pay');todo
+        }else{
+            return $this->error('订单提交失败');
+        }
+        //将订单中的商品详情放入订单详情中
+    }
+
+    public function addordetail($orderdata,$id)
+    {
+        foreach ($orderdata as $key=>$value){
+            $orderdata[$key]['orders_id'] = $id;
+        }
+
+        $orderDeta = new Orders_detail();
+        return $orderDeta->allowField(true)->saveAll($orderdata);
+    }
+
     /*
      * 通过用户id和订单状态来查看订单列表
      * */
     public function MyorderList()
     {
-           }
+        
+    }
     
     
     /*
@@ -53,8 +97,7 @@ class Order extends Controller{
      * */
     public function getselect()
     {
-//        $id = request()->get('id')=19;
-        $id=19;
+        $id = request()->get('id');
         $wher['address_id'] = $id;
         $where['users_id'] = Session::get('islogin')->users_id;
         $address = new Address();
@@ -84,10 +127,6 @@ class Order extends Controller{
         }
     }
 
-    public function gettext()
-    {
-
-    }
 
     /*
      * 通过订单id查看订单详情
@@ -108,9 +147,17 @@ class Order extends Controller{
     /*
      * 删除收货地址
      * */
-    public function getaddress()
+    public function getdelress()
     {
-
+        $address = new Address();
+        $request = request();
+        $id = $request->param('id');
+        $res = $address->destroy($id);
+        if($res){
+            $this->success('删除成功');
+        }else{
+            $this->error('删除失败');
+        }
     }
 
     /*
@@ -123,7 +170,8 @@ class Order extends Controller{
 
     public function getdemo()
     {
-      return $this->fetch('index/demo');  
+        $list = Config::get('admin');
+        dump($list);
     }
 
 }

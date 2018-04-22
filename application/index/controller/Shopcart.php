@@ -2,6 +2,7 @@
 
 namespace app\index\controller;
 
+use app\index\model\Address;
 use app\index\model\Cart;
 use app\index\model\Cart_item;
 use app\index\model\Products;
@@ -146,10 +147,31 @@ class Shopcart extends Controller{
      * */
     public function getSettlement()
     {
+        $data = $this->orderinfo();
+        return $this->fetch('index/wanagid_JieSuan',['list'=>$data['orderDetail'],'order'=>$data['orders']]);
+    }
+
+    /*
+     * 获取被选择的地址
+     * */
+    public function address()
+    {
+        $where['users_id'] = Session::get('islogin')->users_id;
+        $where['address_select'] = 1;
+        $addre = new Address();
+        $data = $addre->get($where);
+        return $data;
+
+    }
+
+
+    public function orderinfo()
+    {
         $cart_item = new cart_item();
         $list = json_decode(json_encode($cart_item->all(['cart_id'=>$this->cart_id])));
         $orderDetail = array();
         $orders['total'] = '';//订单总金额
+        $orders['address'] = $this->address();
         foreach ($list as $key=>$value){
             $orders['total'] += $value->goods_price;
             foreach ($value as $k=>$v){
@@ -157,9 +179,9 @@ class Shopcart extends Controller{
             }
             $orderDetail[$key]['goodspic'] = Products::get($value->product_id)->products_pic;
         }
-        
-    return $this->fetch('index/wanagid_JieSuan',['list'=>$orderDetail,'order'=>$orders]);
+        $data['orderDetail'] = $orderDetail;
+        $data['orders'] = $orders;
+        return $data;
     }
-
 
 }

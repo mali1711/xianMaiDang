@@ -12,7 +12,8 @@
 <script type="text/javascript" src="/static/index/js/swiper.min.js"></script>
 <script type="text/javascript" src="/static/index/js/jquery-1.4.4.min.js"></script>
 </head>
-<body> 
+<body>
+<form action="/order/suborder" method="post">
 <!--页面内容
 <div id="yemnr">--> 
 <!--头部--> 
@@ -22,7 +23,7 @@
 			<div class="logo_k logo_k_fanh"><a href="#"><img class="fanh_ann" src="/static/index/images/web/fanh.png"></a></div>
 			<div class="zhongjain_daoh">
 				<ul>
-					<li><a class="zyyge">确认订单</a></li>
+					<li><a class="zyyge">确认订单|</a><a href="/order/selectaddress" style="color: red" class="zyyge">|选择地址</a></li>
 				</ul>
 			</div>
 		</div>
@@ -43,9 +44,12 @@
 <!--内容-->
 <div class="jie_diz">
 	<a href="/order/selectaddress">
-		<p>潘中全 182*****710</p>
-		<p class="p">贵州贵阳市云岩区城区下合群路达亨大厦1606 <i></i></p>
+		<p>{$order.address.users_name}  {$order.address.iphone}</p>
+		<p class="p">{$order.address.address_province}{$order.address.address_city} {$order.address.address_county} {$order.address.address_desc}<i></i></p>
 	</a>
+	<input type="text" name="address" value="{$order.address.address_province}{$order.address.address_city} {$order.address.address_county} {$order.address.address_desc}" />
+	<input type="text" name="iphone" value="{$order.address.iphone}" />
+	<input type="text" name="users_name" value="{$order.address.users_name}" />
 </div>
 <div class="caix"></div>
 <div class="gouwuc_kk gouwuc_kk_jies">
@@ -56,7 +60,7 @@
  				<a href="XiangQ_Y.html"><h1><img src="\uploads\products\{$vo.goodspic}"></h1></a>
  				<div class="you">
  					<a href="XiangQ_Y.html"><p class="px24 bt">{$vo.product_name}</p></a>
- 					<p class="xh">i3/4G内存/128固态/金色</p>
+ 					<!--<p class="xh">i3/4G内存/128固态/金色</p>-->
  					<div class="youjfy">
 						<div class="goum_sl">
 							<p class="px26 jiaq">￥{$vo.goods_price}</p>
@@ -68,10 +72,10 @@
  		</li>
  	</ul>
 </div>
-<div class="peis_xz">
+<!--<div class="peis_xz">
 	<div class="kuaid"><a href="PeiShon_XuanZe.html"><p>配送方式</p><span>申通快递<i></i></span></a></div>
 	<div class="kuaid"><a href="#"><p>发票信息</p><span>电子发票明细<i></i></span></a></div>
-</div>
+</div>-->
 <div class="zhifu_fangs">
 	<h1>支付方式</h1>
 	<ul id="oul">
@@ -81,7 +85,7 @@
 </div>
 <div class="gei_shangj_ly">
 	<h1>给商家留言：</h1>
-	<input type="text" name="" placeholder="请您留言">
+	<input type="text" name="desc" placeholder="请您留言">
 </div>
 <div class="jies_qian">
 	<div class="shangpjis">
@@ -94,7 +98,6 @@
 </div>
 
 
-
 <!--底部导航-->
 <!---->
 <div class="dib_daoh_b">
@@ -102,14 +105,15 @@
 		<div class="zhong"><p>总计：<em>￥{$order.total}</em></p></div>
 		<div class="you">
 			<div class="goum">
-				<a href="wanagid_JieSuan.html">提交订单</a>  
+				<a href="javascript:"><button type="submit" width="100%" style="background:none; ">提交订单</button></a>
 			</div>
 		</div>
 	</div>
 </div>
 <!--大框div
 </div>-->
-<!--搜索页面--> 
+<!--搜索页面-->
+</form>
 </body>
 </html>
 

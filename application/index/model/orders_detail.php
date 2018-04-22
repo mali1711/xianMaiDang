@@ -4,7 +4,9 @@ namespace app\index\model;
 
 use think\Model;
 
-class orders_detail extends Model
+class Orders_detail extends Model
 {
     //
+    protected $table = 'orders_detail';
+    protected $pk = 'orders_detail_id';
 }
