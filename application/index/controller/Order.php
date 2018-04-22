@@ -11,9 +11,12 @@ use think\Request;
 use think\Session;
 
 
-class Order extends Controller{
+class Order extends Controller
+{
+
 
     static $orders_id = '';
+
     /*
      * 接受提交的订单
      * */
@@ -33,20 +36,20 @@ class Order extends Controller{
         $orders = new Orders();
         $orders->allowField(true)->save($data);
         $id = $orders->orders_id;
-        $res = $this->addordetail($orderdata['orderDetail'],$id);
-        if($res){
+        $res = $this->addordetail($orderdata['orderDetail'], $id);
+        if ($res) {
             $shopCar->getcleartItem();//清空购物车
             echo '去支付';
 //            return $this->fetch('index/pay');todo
-        }else{
+        } else {
             return $this->error('订单提交失败');
         }
         //将订单中的商品详情放入订单详情中
     }
 
-    public function addordetail($orderdata,$id)
+    public function addordetail($orderdata, $id)
     {
-        foreach ($orderdata as $key=>$value){
+        foreach ($orderdata as $key => $value) {
             $orderdata[$key]['orders_id'] = $id;
         }
 
@@ -59,25 +62,25 @@ class Order extends Controller{
      * */
     public function MyorderList()
     {
-        
+
     }
-    
-    
+
+
     /*
      * 删除订单
      * */
     public function getdel()
     {
-        
+
     }
-    
-    
+
+
     /*
      * 修改订单状态
      * */
     public function getStatus()
     {
-        
+
     }
 
 
@@ -88,8 +91,8 @@ class Order extends Controller{
     {
         $id = Session::get('islogin')->users_id;
         $address = new Address();
-        $list = $address->all(['users_id'=>$id]);
-        return $this->fetch('index/ShouHuoDiZhi',['list'=>$list]);
+        $list = $address->all(['users_id' => $id]);
+        return $this->fetch('index/ShouHuoDiZhi', ['list' => $list]);
     }
 
     /*
@@ -101,8 +104,8 @@ class Order extends Controller{
         $wher['address_id'] = $id;
         $where['users_id'] = Session::get('islogin')->users_id;
         $address = new Address();
-        $address->where($where)->update(['address_select'=>0]);
-        $res = $address->where($wher)->update(['address_select'=>1]);
+        $address->where($where)->update(['address_select' => 0]);
+        $res = $address->where($wher)->update(['address_select' => 1]);
         return $res;
     }
 
@@ -113,16 +116,17 @@ class Order extends Controller{
     {
         return $this->fetch('index/ShouHuoDiZhi_ZX');
     }
+
     public function postaddaddress()
     {
         $data = request()->param();
         $data['users_id'] = Session::get('islogin')->users_id;
         $address = new Address();
         $res = $address->allowField(true)->data($data)->save();
-        if($res){
+        if ($res) {
             echo "<script>alert('收货地址添加成功')</script>";
             return $this->getselectaddress('index/ShouHuoDiZhi');
-        }else{
+        } else {
             $this->error('收货地址新增失败');
         }
     }
@@ -146,6 +150,7 @@ class Order extends Controller{
 
     /*
      * 删除收货地址
+     * 
      * */
     public function getdelress()
     {
@@ -153,9 +158,9 @@ class Order extends Controller{
         $request = request();
         $id = $request->param('id');
         $res = $address->destroy($id);
-        if($res){
+        if ($res) {
             $this->success('删除成功');
-        }else{
+        } else {
             $this->error('删除失败');
         }
     }

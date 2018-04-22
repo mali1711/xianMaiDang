@@ -32,10 +32,10 @@ class Login extends Controller
         $where['password'] = md5($where['password']);
         $users = new UsersModel();
         $res = $users->get($where);
-        if($res){
-            session::set('islogin',$res);
-            $this->success('登录成功','/');
-        }else{
+        if ($res) {
+            session::set('islogin', $res);
+            $this->success('登录成功', '/');
+        } else {
             $this->error('账号或者密码错误');
         }
 
@@ -43,14 +43,14 @@ class Login extends Controller
 
     public function postmsgsend()
     {
-        $code = rand(100000,999999);
+        $code = rand(100000, 999999);
         $request = request();
         $iphone = $request->post('iphone');
-        $res = sendsms($code,$iphone);
-        if($res==true){
-            session::set('code',$code);
+        $res = sendsms($code, $iphone);
+        if ($res == true) {
+            session::set('code', $code);
             return 1;
-        }else{
+        } else {
             return '网络延迟，就稍后再试';
         }
     }
@@ -62,7 +62,7 @@ class Login extends Controller
     {
         return $this->fetch('index/wangid_ZhuCe');
     }
-    
+
     /*
      *
      * */
@@ -71,31 +71,31 @@ class Login extends Controller
         $request = request();
         $data = $request->post();
         $code = session::get('code');
-        if($data['code']!=$code){
+        if ($data['code'] != $code) {
             $this->error('手机验证码错误');
-        }else{
+        } else {
             $user = new UsersModel();
             $data['addtime'] = time();
             $data['status'] = 1;
             $res = $user->allowField(true)
                 ->validate(
                     [
-                        'username'=>'min:5|unique:users',
-                        'iphone'=>'unique:users',
-                        'password'=>'confirm:agin_password'
+                        'username' => 'min:5|unique:users',
+                        'iphone' => 'unique:users',
+                        'password' => 'confirm:agin_password'
                     ],
                     [
-                        'username.unique'=>'用户名重复',
-                        'username.min'=>'用户名大于5个字符',
-                        'iphone.unique'=> '手机已经注册',
-                        'password.confirm'=>'两次密码不一致'
+                        'username.unique' => '用户名重复',
+                        'username.min' => '用户名大于5个字符',
+                        'iphone.unique' => '手机已经注册',
+                        'password.confirm' => '两次密码不一致'
 
                     ]
                 )
                 ->save($data);
-            if($res){
-                $this->success('注册成功','/index');
-            }else{
+            if ($res) {
+                $this->success('注册成功', '/index');
+            } else {
                 $this->error($user->getError());
             }
         }

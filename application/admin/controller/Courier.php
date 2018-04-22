@@ -21,9 +21,10 @@ class Courier extends Controller
     }
 
 
-    /*
-     * 添加快递员
-     * */
+    /**
+     * 图片上传
+     * @return mixed
+     */
     public function getadd()
     {
         return $this->fetch('admin/courierlist');
@@ -45,9 +46,39 @@ class Courier extends Controller
         }
     }
 
-    /*
+
+    /**
+     * 修改管理员
+     * @param id：GET 快递员id
+     */
+    public function getupdateinfo()
+    {
+
+    }
+
+    /**
+     * 执行修改
+     * @param array $array :POST 被提交的快递员的信息
+     */
+    public function postupdateinfo()
+    {
+
+    }
+
+    /**
+     * 修改快递员状态
+     * @param int $id:GET
+     */
+    public function getstatus()
+    {
+
+    }
+
+    /**
      * 删除快递员
-     * */
+     * @param int $id:GET
+     * @return bool
+     */
     public function getdel()
     {
         $request = request();
@@ -60,34 +91,26 @@ class Courier extends Controller
         }
     }
 
-    /*
-     * 禁用或者开启快递员
-     * */
-    public function arop()
-    {
-
-    }
-
-    /*
-     * 修改管理员
-     * */
-    public function getedit()
-    {
-
-    }
-
-    public function postedit()
-    {
-
-    }
-
-    /*
-     * 管理员详情
-     * */
+    /**
+     * 查看快递员详情
+     * @param int $id:GET 查看快递员详情
+     * @return object
+     */
     public function getDetail()
     {
         $resquest = request();
         $id = $resquest->get('id');
         $info = CourierModel::get($id);
+        return $info;
+    }
+
+    /**
+     * 上传头像
+     * @param $file:文件上传
+     * @return string 图片名
+     */
+    public function upFile($file)
+    {
+
     }
 }

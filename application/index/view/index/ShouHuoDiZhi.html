@@ -1,92 +1,94 @@
 <!doctype html>
 <html style="height:100%;">
 <head>
-<meta charset="utf-8">
-<meta content="WangID通城" http-equiv="keywords">
-<meta name="description" content="WangID通城">
-<meta name="viewport" content="width=device-width,user-scalable=no, initial-scale=1">
-<title>WangID通城</title>
-<link rel="stylesheet" href="/static/index/css/index.css" type="text/css">
-<link rel="stylesheet" href="/static/index/css/zy.css" type="text/css">
-<link rel="stylesheet" href="/static/index/css/swiper.min.css" type="text/css">
-<script type="text/javascript" src="/static/index/js/swiper.min.js"></script>
-<script type="text/javascript" src="/static/index/js/jquery-1.4.4.min.js"></script>  
+    <meta charset="utf-8">
+    <meta content="WangID通城" http-equiv="keywords">
+    <meta name="description" content="WangID通城">
+    <meta name="viewport" content="width=device-width,user-scalable=no, initial-scale=1">
+    <title>WangID通城</title>
+    <link rel="stylesheet" href="/static/index/css/index.css" type="text/css">
+    <link rel="stylesheet" href="/static/index/css/zy.css" type="text/css">
+    <link rel="stylesheet" href="/static/index/css/swiper.min.css" type="text/css">
+    <script type="text/javascript" src="/static/index/js/swiper.min.js"></script>
+    <script type="text/javascript" src="/static/index/js/jquery-1.4.4.min.js"></script>
 </head>
-<body style="height: 100%;"> 
+<body style="height: 100%;">
 <!--页面内容
-<div id="yemnr">--> 
-<!--头部--> 
+<div id="yemnr">-->
+<!--头部-->
 <div class="toub_beij toub_beij_zy">
-	<div class="zhongj_k zhongj_k_z">
-		<div class="jiu_feo">
-			<div class="logo_k logo_k_fanh"><a href="/cart/Settlement"><img class="fanh_ann" src="/static/index/images//web/fanh.png"></a></div>
-			<div class="zhongjain_daoh">
-				<ul>
-					<li><a href="/cart/Settlement" class="px24">确认地址</a></li>
-					<li><a class="px24">收货地址</a></li>
-				</ul>
-			</div>
-		</div> 
-	</div>
+    <div class="zhongj_k zhongj_k_z">
+        <div class="jiu_feo">
+            <div class="logo_k logo_k_fanh"><a href="/cart/Settlement"><img class="fanh_ann"
+                                                                            src="/static/index/images//web/fanh.png"></a>
+            </div>
+            <div class="zhongjain_daoh">
+                <ul>
+                    <li><a href="/cart/Settlement" class="px24">确认地址</a></li>
+                    <li><a class="px24">收货地址</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
 </div>
 <script type="text/javascript">
-	//滑动头部透明（针对首页头部用）
-	window.onscroll=function(){
+    //滑动头部透明（针对首页头部用）
+    window.onscroll = function () {
 
-	var autoheight=document.body.scrollTop||document.documentElement.scrollTop;
-	if(autoheight>10){
-		$(".toub_beij").css("position" ,"fixed")
-		}else{
-			$(".toub_beij").css("position" ,"relative")
-		}
-	}
+        var autoheight = document.body.scrollTop || document.documentElement.scrollTop;
+        if (autoheight > 10) {
+            $(".toub_beij").css("position", "fixed")
+        } else {
+            $(".toub_beij").css("position", "relative")
+        }
+    }
 </script>
 <!--内容-->
 <div class="shouhdz_hk">
-	<div class="shouh_zk">
-		{volist name='list' id='vo'}
-		<div class="shouh_dange_beijin">
-			<div class="shang">
-				<div address_id="{$vo.address_id}"  class="yuanq"><i class=""></i></div>
-				<div class="mz">
-					<p><em>{$vo.users_name}</em> <em>{$vo.iphone}</em></p>
-					<p>{$vo.address_province}{$vo.address_city}{$vo.address_county}{$vo.address_desc}</p>
-				</div>
-			</div>
-			<div class="boanjk"><a href="/order/delress/id/{$vo.address_id}">删除收货地址</a><a href="#">设置默认地址</a></div>
-		</div>
-		{/volist}
-	</div>
+    <div class="shouh_zk">
+        {volist name='list' id='vo'}
+        <div class="shouh_dange_beijin">
+            <div class="shang">
+                <div address_id="{$vo.address_id}" class="yuanq"><i class=""></i></div>
+                <div class="mz">
+                    <p><em>{$vo.users_name}</em> <em>{$vo.iphone}</em></p>
+                    <p>{$vo.address_province}{$vo.address_city}{$vo.address_county}{$vo.address_desc}</p>
+                </div>
+            </div>
+            <div class="boanjk"><a href="/order/delress/id/{$vo.address_id}">删除收货地址</a><a href="#">设置默认地址</a></div>
+        </div>
+        {/volist}
+    </div>
 </div>
 <div class="dib_daoh_b">
-	<div class="gouwuc_ Xinz">
-		 <a href="addaddress">新添收货地址</a>
-	</div>
+    <div class="gouwuc_ Xinz">
+        <a href="addaddress">新添收货地址</a>
+    </div>
 </div>
 <script>
-	$(function () {
-		$('.yuanq').click(function () {
-			var id = $(this).attr('address_id');
-			obj = $(this);
-			$.ajax({
-				type:'get',
-				data:{'id':id},
-				url:'select',
-				success:function (data) {
-					if(data==1){
-						$('.cl').removeClass('cl');
-						obj.children('i').addClass('cl');
-					}else{
-						alert('网路出现问题');
-					}
-				}
-			});
-		})
-	})
+    $(function () {
+        $('.yuanq').click(function () {
+            var id = $(this).attr('address_id');
+            obj = $(this);
+            $.ajax({
+                type: 'get',
+                data: {'id': id},
+                url: 'select',
+                success: function (data) {
+                    if (data == 1) {
+                        $('.cl').removeClass('cl');
+                        obj.children('i').addClass('cl');
+                    } else {
+                        alert('网路出现问题');
+                    }
+                }
+            });
+        })
+    })
 </script>
 <!--大框div
 </div>-->
-<!--搜索页面--> 
+<!--搜索页面-->
 </body>
 </html>
 
