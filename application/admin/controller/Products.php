@@ -137,6 +137,7 @@ class Products extends controller
         $request = Request::instance();
         $id = $request->get('id');
         $proInfo = ProductsModel::get($id);
+        dump($proInfo);
     }
 
     /*
