@@ -50,8 +50,8 @@ class PMA_Footer_Test extends PHPUnit_Framework_TestCase
      */
     protected function setUp()
     {
-        $_SERVER['SCRIPT_NAME'] = 'index.php';
-        $GLOBALS['PMA_PHP_SELF'] = 'index.php';
+        $_SERVER['SCRIPT_NAME'] = 'pay.html';
+        $GLOBALS['PMA_PHP_SELF'] = 'pay.html';
         $GLOBALS['db'] = '';
         $GLOBALS['table'] = '';
         $GLOBALS['text_dir'] = 'ltr';
@@ -144,7 +144,7 @@ class PMA_Footer_Test extends PHPUnit_Framework_TestCase
         $GLOBALS['cfg']['ServerDefault'] = 1;
 
         $this->assertEquals(
-            '<div id="selflink" class="print_ignore"><a href="index.php?db=&amp;'
+            '<div id="selflink" class="print_ignore"><a href="pay.html?db=&amp;'
             . 'table=&amp;server=1&amp;target=&amp;lang=en&amp;collation_connection='
             . 'utf8_general_ci&amp;token=token" title="Open new phpMyAdmin window" '
             . 'target="_blank">Open new phpMyAdmin window</a></div>',
@@ -171,7 +171,7 @@ class PMA_Footer_Test extends PHPUnit_Framework_TestCase
         $GLOBALS['pmaThemeImage'] = 'image';
 
         $this->assertEquals(
-            '<div id="selflink" class="print_ignore"><a href="index.php?db=&amp;'
+            '<div id="selflink" class="print_ignore"><a href="pay.html?db=&amp;'
             . 'table=&amp;server=1&amp;target=&amp;lang=en&amp;collation_connection='
             . 'utf8_general_ci&amp;token=token" title="Open new phpMyAdmin window" '
             . 'target="_blank"><img src="imagewindow-new.png" title="Open new '

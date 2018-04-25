@@ -139,7 +139,7 @@ echo '</legend>';
 // Display server list
 //
 PMA_displayFormTop(
-    'index.php', 'get',
+    'pay.html', 'get',
     array(
         'page' => 'servers',
         'mode' => 'add'

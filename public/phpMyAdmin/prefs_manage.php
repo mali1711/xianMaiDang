@@ -275,7 +275,7 @@ echo '</div>'
     . __('Go') . '" />'
     . '</form>'
     . '</div>';
-if (file_exists('setup/index.php')) {
+if (file_exists('setup/pay.html')) {
             // show only if setup script is available, allows to disable this message
             // by simply removing setup directory
             ?>
@@ -287,7 +287,7 @@ if (file_exists('setup/index.php')) {
                     __(
                         'You can set more settings by modifying config.inc.php, eg. '
                         . 'by using %sSetup script%s.'
-                    ), '<a href="setup/index.php" target="_blank">', '</a>'
+                    ), '<a href="setup/pay.html" target="_blank">', '</a>'
                 ) . PMA_Util::showDocu('setup', 'setup-script');
                 ?>
             </div>

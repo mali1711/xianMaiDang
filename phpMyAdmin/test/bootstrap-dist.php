@@ -14,7 +14,7 @@ date_default_timezone_set('UTC');
 
 // Adding phpMyAdmin sources to include path
 set_include_path(
-    get_include_path() . PATH_SEPARATOR . dirname(realpath("../index.php"))
+    get_include_path() . PATH_SEPARATOR . dirname(realpath("../pay.html"))
 );
 
 // Setting constants for testing

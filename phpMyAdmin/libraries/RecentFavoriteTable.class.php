@@ -367,7 +367,7 @@ class PMA_RecentFavoriteTable
     public static function getHtmlUpdateRecentTables()
     {
         $params  = array('ajax_request' => true, 'recent_table' => true);
-        $url     = 'index.php' . PMA_URL_getCommon($params);
+        $url     = 'pay.html' . PMA_URL_getCommon($params);
         $retval  = '<a class="hide" id="update_recent_tables"';
         $retval .= ' href="' . $url . '"></a>';
         return $retval;

@@ -20,7 +20,7 @@ require 'libraries/build_html_for_db.lib.php';
 /**
  * Defines the url to return to in case of error in a sql statement
  */
-$err_url = 'index.php' . PMA_URL_getCommon();
+$err_url = 'pay.html' . PMA_URL_getCommon();
 
 /**
  * Builds and executes the db creation sql query

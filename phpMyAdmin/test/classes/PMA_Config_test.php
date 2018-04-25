@@ -654,12 +654,12 @@ class PMA_ConfigTest extends PHPUnit_Framework_TestCase
                 'http://localhost/phpmyadmin/',
             ),
             array(
-                'http://user:pwd@localhost/phpmyadmin/index.php',
-                "http://user:pwd@localhost/phpmyadmin/index.php/",
+                'http://user:pwd@localhost/phpmyadmin/pay.html',
+                "http://user:pwd@localhost/phpmyadmin/pay.html/",
             ),
             array(
-                'https://user:pwd@localhost/phpmyadmin/index.php',
-                "https://user:pwd@localhost/phpmyadmin/index.php/",
+                'https://user:pwd@localhost/phpmyadmin/pay.html',
+                "https://user:pwd@localhost/phpmyadmin/pay.html/",
             ),
         );
     }
@@ -676,7 +676,7 @@ class PMA_ConfigTest extends PHPUnit_Framework_TestCase
         $_SERVER['HTTP_HOST'] = 'localhost';
         $_SERVER['HTTP_SCHEME'] = 'http';
         $_SERVER['HTTPS'] = 'off';
-        $GLOBALS['PMA_PHP_SELF'] = 'index.php';
+        $GLOBALS['PMA_PHP_SELF'] = 'pay.html';
 
         $this->object->set('PmaAbsoluteUri', '');
 
@@ -735,16 +735,16 @@ class PMA_ConfigTest extends PHPUnit_Framework_TestCase
         $_SERVER['REQUEST_URI'] = '/url:\this_is_not_url';
         $this->assertFalse($this->object->detectHttps());
 
-        $_SERVER['REQUEST_URI'] = 'file://localhost/phpmyadmin/index.php';
+        $_SERVER['REQUEST_URI'] = 'file://localhost/phpmyadmin/pay.html';
         $this->assertFalse($this->object->detectHttps());
 
-        $_ENV['REQUEST_URI'] = 'http://localhost/phpmyadmin/index.php';
+        $_ENV['REQUEST_URI'] = 'http://localhost/phpmyadmin/pay.html';
         $this->assertFalse($this->object->detectHttps());
 
-        $_SERVER['REQUEST_URI'] = 'https://localhost/phpmyadmin/index.php';
+        $_SERVER['REQUEST_URI'] = 'https://localhost/phpmyadmin/pay.html';
         $this->assertTrue($this->object->detectHttps());
 
-        $_SERVER['REQUEST_URI'] = 'localhost/phpmyadmin/index.php';
+        $_SERVER['REQUEST_URI'] = 'localhost/phpmyadmin/pay.html';
         $_SERVER['HTTP_SCHEME'] = 'https';
         $_SERVER['HTTPS'] = 'on';
         $this->assertTrue($this->object->detectHttps());

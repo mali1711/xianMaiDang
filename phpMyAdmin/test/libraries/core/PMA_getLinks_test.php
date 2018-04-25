@@ -59,7 +59,7 @@ class PMA_GetLinks_Test extends PHPUnit_Framework_TestCase
             array('https://wiki.phpmyadmin.net',
              './url.php?url=https%3A%2F%2Fwiki.phpmyadmin.net'),
             array('wiki.phpmyadmin.net', 'wiki.phpmyadmin.net'),
-            array('index.php?db=phpmyadmin', 'index.php?db=phpmyadmin')
+            array('pay.html?db=phpmyadmin', 'pay.html?db=phpmyadmin')
         );
     }
 

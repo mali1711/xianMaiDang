@@ -96,7 +96,7 @@ class PMA_NavigationHeader
             $parsed = parse_url($logo_link);
             /* Allow only links with http/https */
             if (! isset($parsed['scheme']) || ! in_array(strtolower($parsed['scheme']), array('http', 'https'))) {
-                $logo_link = 'index.php';
+                $logo_link = 'pay.html';
             }
             $retval .= '    <a href="' . $logo_link;
             switch ($GLOBALS['cfg']['NavigationLogoLinkWindow']) {
@@ -141,7 +141,7 @@ class PMA_NavigationHeader
         $retval  = '<!-- LINKS START -->';
         $retval .= '<div id="navipanellinks">';
         $retval .= PMA_Util::getNavigationLink(
-            'index.php' . PMA_URL_getCommon(),
+            'pay.html' . PMA_URL_getCommon(),
             $showText,
             __('Home'),
             $showIcon,
@@ -151,7 +151,7 @@ class PMA_NavigationHeader
         if ($GLOBALS['server'] != 0) {
             // Logout for advanced authentication
             if ($GLOBALS['cfg']['Server']['auth_type'] != 'config') {
-                $link  = 'index.php' . $GLOBALS['url_query'];
+                $link  = 'pay.html' . $GLOBALS['url_query'];
                 $link .= '&amp;old_usr=' . urlencode($GLOBALS['PHP_AUTH_USER']);
                 $retval .= PMA_Util::getNavigationLink(
                     $link,

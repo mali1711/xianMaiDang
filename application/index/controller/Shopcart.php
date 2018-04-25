@@ -20,10 +20,10 @@ class Shopcart extends Controller
     public function _initialize()
     {
         //购物车id
-        $this->cart_id = $this->__getCartID();
         if (!Session::has('islogin')) {
             return $this->error('请先登录', '/indexlogin/loginIphone');
         }
+        $this->cart_id = $this->__getCartID();
     }
 
     /*

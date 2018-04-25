@@ -26,7 +26,7 @@ class PMA_CheckPageValidity_Test extends PHPUnit_Framework_TestCase
         'db_search.php',
         'export.php',
         'import.php',
-        'index.php',
+        'pay.html',
         'pdf_pages.php',
         'pdf_schema.php',
         'server_binlog.php',
@@ -65,8 +65,8 @@ class PMA_CheckPageValidity_Test extends PHPUnit_Framework_TestCase
             array(null, null, false),
             array('export.php', $this->goto_whitelist, true),
             array('shell.php', $this->goto_whitelist, false),
-            array('index.php?sql.php&test=true', $this->goto_whitelist, true),
-            array('index.php%3Fsql.php%26test%3Dtrue', $this->goto_whitelist, true),
+            array('pay.html?sql.php&test=true', $this->goto_whitelist, true),
+            array('pay.html%3Fsql.php%26test%3Dtrue', $this->goto_whitelist, true),
         );
     }
 }

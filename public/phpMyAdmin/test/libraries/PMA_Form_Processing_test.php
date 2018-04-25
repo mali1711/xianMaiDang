@@ -83,7 +83,7 @@ class PMA_From_Processing_Test extends PHPUnit_Framework_TestCase
         );
 
         $this->assertContains(
-            '<a class="btn" href="index.php?lang=en&amp;token=token">',
+            '<a class="btn" href="pay.html?lang=en&amp;token=token">',
             $result
         );
 
@@ -111,7 +111,7 @@ class PMA_From_Processing_Test extends PHPUnit_Framework_TestCase
         PMA_Process_formset($formDisplay);
 
         $this->assertEquals(
-            array('HTTP/1.1 303 See Other', 'Location: index.php'),
+            array('HTTP/1.1 303 See Other', 'Location: pay.html'),
             $GLOBALS['header']
         );
 

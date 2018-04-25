@@ -1143,7 +1143,7 @@ class PMA_DisplayResults_Test extends PHPUnit_Framework_TestCase
                     'table_name' => 'CHARACTER_SETS'
                 ),
                 'column_name',
-                'index.php?sql_query=SELECT+%60CHARACTER_SET_NAME%60+FROM+%60info'
+                'pay.html?sql_query=SELECT+%60CHARACTER_SET_NAME%60+FROM+%60info'
                 . 'rmation_schema%60.%60CHARACTER_SETS%60&amp;db=information_schema'
                 . '&amp;test_name=value&amp;server=0&amp;lang=en'
                 . '&amp;collation_connection=utf-8'
@@ -1204,7 +1204,7 @@ class PMA_DisplayResults_Test extends PHPUnit_Framework_TestCase
                                 'param_info' => array('test_name', 'value')
                             )
                         ),
-                        'default_page' => 'index.php'
+                        'default_page' => 'pay.html'
                     )
                 )
             )

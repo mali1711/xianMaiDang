@@ -27,7 +27,7 @@ $GLOBALS['url_query'] = PMA_URL_getCommon(array('db' => $db));
 /**
  * Defines the urls to return to in case of error in a sql statement
  */
-$err_url = 'index.php' . $GLOBALS['url_query'];
+$err_url = 'pay.html' . $GLOBALS['url_query'];
 
 /**
  * @global boolean Checks for superuser privileges

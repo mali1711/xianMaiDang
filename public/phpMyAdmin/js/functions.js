@@ -329,7 +329,7 @@ function PMA_current_version(data)
 }
 
 /**
- * Loads Git revision data from ajax for index.php
+ * Loads Git revision data from ajax for pay.html
  */
 function PMA_display_git_revision()
 {
@@ -2853,7 +2853,7 @@ AJAX.registerTeardown('functions.js', function () {
     $(document).off('click', '#change_password_anchor.ajax');
 });
 /**
- * Attach Ajax event handlers for 'Change Password' on index.php
+ * Attach Ajax event handlers for 'Change Password' on pay.html
  */
 AJAX.registerOnload('functions.js', function () {
 

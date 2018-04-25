@@ -229,7 +229,7 @@ class PMA_AuthenticationCookie_Test extends PHPUnit_Framework_TestCase
         );
 
         $this->assertContains(
-            '<form method="post" action="index.php" name="login_form" ' .
+            '<form method="post" action="pay.html" name="login_form" ' .
             'class="disableAjax login hide js-show">',
             $result
         );
@@ -333,7 +333,7 @@ class PMA_AuthenticationCookie_Test extends PHPUnit_Framework_TestCase
         );
 
         $this->assertContains(
-            '<form method="post" action="index.php" name="login_form" ' .
+            '<form method="post" action="pay.html" name="login_form" ' .
             'autocomplete="off" class="disableAjax login hide js-show">',
             $result
         );
@@ -809,7 +809,7 @@ class PMA_AuthenticationCookie_Test extends PHPUnit_Framework_TestCase
         // target can be "phpunit" or "ide-phpunit.php",
         // depending on testing environment
         $this->assertStringStartsWith(
-            'Location: http://phpmyadmin.net/index.php?',
+            'Location: http://phpmyadmin.net/pay.html?',
             $GLOBALS['header'][0]
         );
         $this->assertContains(

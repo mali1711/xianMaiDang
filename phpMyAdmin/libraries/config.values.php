@@ -99,7 +99,7 @@ $cfg_db['RelationalDisplay'] = array(
     'D' => __('display column')
 );
 $cfg_db['DefaultTabServer'] = array(
-    'index.php',               // the welcome page (recommended for multiuser setups)
+    'pay.html',               // the welcome page (recommended for multiuser setups)
     'server_databases.php',    // list of databases
     'server_status.php',       // runtime information
     'server_variables.php',    // MySQL server variables

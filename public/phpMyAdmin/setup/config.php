@@ -31,7 +31,7 @@ if (PMA_ifSetOr($_POST['submit_clear'], '')) {
     $GLOBALS['ConfigFile']->resetConfigData();
     // drop post data
     header('HTTP/1.1 303 See Other');
-    header('Location: index.php');
+    header('Location: pay.html');
     exit;
 } elseif (PMA_ifSetOr($_POST['submit_download'], '')) {
     //
@@ -45,7 +45,7 @@ if (PMA_ifSetOr($_POST['submit_clear'], '')) {
     // Show generated config file in a <textarea>
     //
     header('HTTP/1.1 303 See Other');
-    header('Location: index.php' . PMA_URL_getCommon() . '&page=config');
+    header('Location: pay.html' . PMA_URL_getCommon() . '&page=config');
     exit;
 }
 ?>

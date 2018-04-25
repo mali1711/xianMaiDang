@@ -43,7 +43,7 @@ class PMA_InsertEditTest extends PHPUnit_Framework_TestCase
         $GLOBALS['server'] = 1;
         $_SESSION['PMA_Theme'] = PMA_Theme::load('./themes/pmahomme');
         $GLOBALS['pmaThemeImage'] = 'theme/';
-        $GLOBALS['PMA_PHP_SELF'] = 'index.php';
+        $GLOBALS['PMA_PHP_SELF'] = 'pay.html';
         $GLOBALS['cfg']['ServerDefault'] = 1;
         $GLOBALS['available_languages']= array(
             "en" => array("English", "US-ENGLISH")
@@ -75,7 +75,7 @@ class PMA_InsertEditTest extends PHPUnit_Framework_TestCase
         $where_clause = array('foo' => 'bar ', '1' => ' test');
         $_REQUEST['clause_is_unique'] = false;
         $_REQUEST['sql_query'] = 'SELECT a';
-        $GLOBALS['goto'] = 'index.php';
+        $GLOBALS['goto'] = 'pay.html';
 
         $result = PMA_getFormParametersForInsertForm(
             'dbname', 'tablename', array(), $where_clause, 'localhost'
@@ -85,7 +85,7 @@ class PMA_InsertEditTest extends PHPUnit_Framework_TestCase
             array(
                 'db'        => 'dbname',
                 'table'     => 'tablename',
-                'goto'      => 'index.php',
+                'goto'      => 'pay.html',
                 'err_url'   => 'localhost',
                 'sql_query' => 'SELECT a',
                 'where_clause[foo]' => 'bar',
@@ -1411,7 +1411,7 @@ class PMA_InsertEditTest extends PHPUnit_Framework_TestCase
         $where_clause_array = array("a<b");
         $GLOBALS['cfg']['InsertRows'] = 1;
         $GLOBALS['cfg']['ServerDefault'] = 1;
-        $GLOBALS['goto'] = "index.php";
+        $GLOBALS['goto'] = "pay.html";
         $_REQUEST['where_clause'] = true;
         $_REQUEST['sql_query'] = "SELECT 1";
 
@@ -1436,7 +1436,7 @@ class PMA_InsertEditTest extends PHPUnit_Framework_TestCase
         );
 
         $this->assertContains(
-            '<input type="hidden" name="goto" value="index.php" />',
+            '<input type="hidden" name="goto" value="pay.html" />',
             $result
         );
 

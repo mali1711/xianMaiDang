@@ -72,7 +72,7 @@ function PMA_generateHeader303()
 {
     // drop post data
     header('HTTP/1.1 303 See Other');
-    header('Location: index.php');
+    header('Location: pay.html');
 
     if (!defined('TESTSUITE')) {
         exit;

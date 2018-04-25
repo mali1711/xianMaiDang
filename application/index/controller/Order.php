@@ -7,6 +7,7 @@ use app\index\model\Orders;
 use app\index\model\Orders_detail;
 use think\Config;
 use think\Controller;
+use think\Loader;
 use think\Request;
 use think\Session;
 
@@ -175,8 +176,14 @@ class Order extends Controller
 
     public function getdemo()
     {
-        $list = Config::get('admin');
-        dump($list);
+       return $this->fetch('index/index1');
+    }
+
+    public function postdemo1()
+    {
+        Loader::import('Org.Pay.alipayapi');
+        $pay = new \alipayapi($_POST);
+        var_dump($pay);
     }
 
 }

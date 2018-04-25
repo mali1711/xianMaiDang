@@ -141,7 +141,7 @@ class PMA_AuthenticationConfig_Test extends PHPUnit_Framework_TestCase
         );
 
         $this->assertContains(
-            '<a href="index.php?server=0&amp;lang=en'
+            '<a href="pay.html?server=0&amp;lang=en'
             . '&amp;collation_connection=utf-8&amp;token=token" '
             . 'class="button disableAjax">Retry to connect</a>',
             $html

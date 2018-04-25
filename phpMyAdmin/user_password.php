@@ -2,7 +2,7 @@
 /* vim: set expandtab sw=4 ts=4 sts=4: */
 /**
  * displays and handles the form where the user can change his password
- * linked from index.php
+ * linked from pay.html
  *
  * @package PhpMyAdmin
  */
@@ -195,7 +195,7 @@ function PMA_changePassDisplayPage($message, $sql_query)
     echo PMA_Util::getMessage(
         $message, $sql_query, 'success'
     );
-    echo '<a href="index.php' . PMA_URL_getCommon()
+    echo '<a href="pay.html' . PMA_URL_getCommon()
         . ' target="_parent">' . "\n"
         . '<strong>' . __('Back') . '</strong></a>';
     exit;

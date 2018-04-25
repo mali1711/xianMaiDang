@@ -134,7 +134,7 @@ var PMA_commonActions = {
      * Refreshes the main frame
      *
      * @param mixed url Undefined to refresh to the same page
-     *                  String to go to a different page, e.g: 'index.php'
+     *                  String to go to a different page, e.g: 'pay.html'
      *
      * @return void
      */

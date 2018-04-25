@@ -195,7 +195,7 @@ if ($server > 0 || count($cfg['Servers']) > 1
             }
         } // end if
         echo '    <li id="li_select_mysql_collation" class="no_bullets" >';
-        echo '        <form method="post" action="index.php">' . "\n"
+        echo '        <form method="post" action="pay.html">' . "\n"
            . PMA_URL_getHiddenInputs(null, null, 4, 'collation_connection')
            . '            <label for="select_collation_connection">' . "\n"
            . '                ' . PMA_Util::getImage('s_asci.png') . " "

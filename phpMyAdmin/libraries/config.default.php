@@ -896,7 +896,7 @@ $cfg['NavigationDisplayLogo'] = true;
  *
  * @global string $cfg['NavigationLogoLink']
  */
-$cfg['NavigationLogoLink'] = 'index.php';
+$cfg['NavigationLogoLink'] = 'pay.html';
 
 /**
  * whether to open the linked page in the main window ('main') or
@@ -1263,7 +1263,7 @@ $cfg['PropertiesNumColumns'] = 1;
 
 /**
  * Possible values:
- * 'index.php' = the welcome page
+ * 'pay.html' = the welcome page
  * (recommended for multiuser setups)
  * 'server_databases.php' = list of databases
  * 'server_status.php' = runtime information
@@ -1272,7 +1272,7 @@ $cfg['PropertiesNumColumns'] = 1;
  *
  * @global string $cfg['DefaultTabServer']
  */
-$cfg['DefaultTabServer'] = 'index.php';
+$cfg['DefaultTabServer'] = 'pay.html';
 
 /**
  * Possible values:

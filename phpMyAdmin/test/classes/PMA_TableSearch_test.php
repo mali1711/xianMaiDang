@@ -46,7 +46,7 @@ class PMA_TableSearch_Test extends PHPUnit_Framework_TestCase
         $_POST['zoom_submit'] = 'zoom';
 
         $GLOBALS['server'] = 1;
-        $GLOBALS['PMA_PHP_SELF'] = 'index.php';
+        $GLOBALS['PMA_PHP_SELF'] = 'pay.html';
         $GLOBALS['pmaThemeImage'] = 'themes/dot.gif';
         $GLOBALS['is_ajax_request'] = false;
         $GLOBALS['cfgRelation'] = PMA_getRelationsParam();

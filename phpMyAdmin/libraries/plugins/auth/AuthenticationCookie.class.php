@@ -162,7 +162,7 @@ class AuthenticationCookie extends AuthenticationPlugin
         echo '</div>
     <br />
     <!-- Login form -->
-    <form method="post" action="index.php" name="login_form"' . $autocomplete .
+    <form method="post" action="pay.html" name="login_form"' . $autocomplete .
             ' class="disableAjax login hide js-show">
         <fieldset>
         <legend>';
@@ -529,7 +529,7 @@ class AuthenticationCookie extends AuthenticationPlugin
         // force reload to ensure the client accepts cookies
         if (! $GLOBALS['from_cookie']) {
             // URL where to go:
-            $redirect_url = $cfg['PmaAbsoluteUri'] . 'index.php';
+            $redirect_url = $cfg['PmaAbsoluteUri'] . 'pay.html';
 
             // any parameters to pass?
             $url_params = array();
@@ -541,7 +541,7 @@ class AuthenticationCookie extends AuthenticationPlugin
             }
             // any target to pass?
             if (! empty($GLOBALS['target'])
-                && $GLOBALS['target'] != 'index.php'
+                && $GLOBALS['target'] != 'pay.html'
             ) {
                 $url_params['target'] = $GLOBALS['target'];
             }
