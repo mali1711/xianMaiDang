@@ -17,6 +17,20 @@ class Shopcart extends Controller
     //购物车id
     public $cart_id = '';
 
+
+    /**
+     * 查看购物车所有的商品
+     * @return mixed
+     * @get
+     */
+    public function getcheckGoods()
+    {
+        $cartItem = new Cart_item();
+        $list = $cartItem->all(['cart_id' => $this->cart_id]);
+        $num = $this->getitemCount();
+        return $this->fetch('index/wanagid_GouWuChe', ['list' => $list, 'num' => $num]);
+    }
+
     public function _initialize()
     {
         //购物车id
@@ -130,26 +144,8 @@ class Shopcart extends Controller
         return $cartItem->count('cart_id', $this->cart_id);
     }
 
-    /*
-     *根据购物车id，查找购物车商品
-     * */
-    public function getcheckGoods()
-    {
-        $cartItem = new Cart_item();
-        $list = $cartItem->all(['cart_id' => $this->cart_id]);
-        $num = $this->getitemCount();
-        return $this->fetch('index/wanagid_GouWuChe', ['list' => $list, 'num' => $num]);
-    }
 
-    /*
-     * 统计购物车数据，提交到订单中
-     * 根据购物车中商品项和商品总价生成订单初始数据
-     * */
-    public function getSettlement()
-    {
-        $data = $this->orderinfo();
-        return $this->fetch('index/wanagid_JieSuan', ['list' => $data['orderDetail'], 'order' => $data['orders']]);
-    }
+
 
     /*
      * 获取被选择的地址
@@ -164,6 +160,16 @@ class Shopcart extends Controller
 
     }
 
+
+    /*
+     * 统计购物车数据，提交到订单中
+     * 根据购物车中商品项和商品总价生成订单初始数据
+     * */
+    public function getSettlement()
+    {
+        $data = $this->orderinfo();
+        return $this->fetch('index/wanagid_JieSuan', ['list' => $data['orderDetail'], 'order' => $data['orders']]);
+    }
 
     /**
      * 初始化提交信息
@@ -181,7 +187,7 @@ class Shopcart extends Controller
             foreach ($value as $k => $v) {
                 $orderDetail[$key][$k] = $v;
             }
-            $orderDetail[$key]['goodspic'] = Products::get($value->product_id)->products_pic;
+            $orderDetail[$key]['goodspic'] = Products::get($value->product_id)['products_pic'];
         }
         $data['orderDetail'] = $orderDetail;
         $data['orders'] = $orders;
