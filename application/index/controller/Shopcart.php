@@ -27,6 +27,12 @@ class Shopcart extends Controller
     {
         $cartItem = new Cart_item();
         $list = $cartItem->all(['cart_id' => $this->cart_id]);
+        if($list==null){
+            $this->error('您的购物车是空的','/');
+        }
+        foreach ($list as $key=>$value){
+            $list[$key]->goodspic = Products::get($value->product_id)->products_pic;
+        }
         $num = $this->getitemCount();
         return $this->fetch('index/wanagid_GouWuChe', ['list' => $list, 'num' => $num]);
     }
@@ -168,6 +174,9 @@ class Shopcart extends Controller
     public function getSettlement()
     {
         $data = $this->orderinfo();
+        if($data==null){
+            $this->error('没有购物信息','/');
+        }
         return $this->fetch('index/wanagid_JieSuan', ['list' => $data['orderDetail'], 'order' => $data['orders']]);
     }
 
@@ -183,7 +192,7 @@ class Shopcart extends Controller
         $orders['total'] = '';//订单总金额
         $orders['address'] = $this->address();
         foreach ($list as $key => $value) {
-            $orders['total'] += $value->goods_price;
+            $orders['total'] += ($value->goods_price*$value->goods_number);
             foreach ($value as $k => $v) {
                 $orderDetail[$key][$k] = $v;
             }

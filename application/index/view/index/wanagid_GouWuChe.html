@@ -20,10 +20,10 @@
 <div class="toub_beij toub_beij_zy">
 	<div class="zhongj_k zhongj_k_z">
 		<div class="jiu_feo">
-			<div class="logo_k logo_k_fanh"><a href="#"><img class="fanh_ann" src="/static/index/images//web/fanh.png"></a></div>
+			<div class="logo_k logo_k_fanh"><a href="javascript:history.back(-1)"><img class="fanh_ann" src="/static/index/images//web/fanh.png"></a></div>
 			<div class="zhongjain_daoh">
 				<ul>
-					<li><a class="zyyge">购物车</a></li>  
+					<li><a class="zyyge">购物车</a></li>
 				</ul>
 			</div>
 		</div>
@@ -61,8 +61,8 @@
 		<li>
  		{volist name="list" id='vo'}
 			 <div class="diannao_shanp">
- 				<i class="i1"></i>
- 				<a href="XiangQ_Y.html"><h1><img src=""></h1></a>
+
+ 				<a href="XiangQ_Y.html"><h1><img src="\uploads\products\{$vo.goodspic}"></h1></a>
  				<div class="you">
  					<a href="XiangQ_Y.html"><p class="px24 bt">{$vo.product_name}</p></a>
  					<p class="xh">i3/4G内存/128固态/金色</p>
@@ -71,13 +71,13 @@
 							<p class="px26 jiaq">{$vo.goods_price}</p>
 							<div class="counter_box">
 								<i class="jian" val="{$vo.cart_item_id}" val="{$vo.cart_item_id}">-</i>
-								<input type="text" value="{$vo.goods_number}">
+								<input class="goodsnum" type="text" value="{$vo.goods_number}">
 								<i class="jia" val="{$vo.cart_item_id}">+</i>
 							</div>
 						</div>
  					</div>
 					<div class="bianj">
-						<a href="#"><p><i></i>移入收藏</p></a>
+						<!--<a href="#"><p><i></i>移入收藏</p></a>-->
 						<a href="javascript:;" class="ayou delOne" val="{$vo.cart_item_id}"><p><i class="sc"></i>删除</p></a>
 					</div>
  				</div>
@@ -85,6 +85,18 @@
 			{/volist}
  		</li>
  	</ul>
+	 <script>
+		 setInterval("sum()",200);
+			 sum();
+			 function sum(){
+				 var total = 0;
+				 $(".goum_sl").each(function(){
+					 total += $(this).find('.goodsnum').val()*$(this).find('.jiaq').html()
+				 });
+				 $('.totle').html(total);
+			 }
+
+	 </script>
  </div>
 <!--底部导航-->
 <script>
@@ -102,6 +114,11 @@
 				success:function (data) {
 					if(data==1){
 						obj.next().val(num-1);
+						var total = 0;
+						$(".goum_sl").each(function(){
+							total += $(this).find('.goodsnum').val()*$(this).find('.jiaq').html()
+						});
+						$('.totle').html(total);
 					}else if(data==2){
 						alert('商品已经剩一个了');
 					}else{
@@ -111,7 +128,6 @@
 				}
 
 			})
-
 		})
 
 		$('.jia').click(function () {
@@ -128,6 +144,11 @@
 					if(data==1){
 						num= parseInt(num);
 						obj.prev().val(num+1);
+						var total = 0;
+						$(".goum_sl").each(function(){
+							total += $(this).find('.goodsnum').val()*$(this).find('.jiaq').html()
+						});
+						$('.totle').html(total);
 					}else{
 						alert('商品添加失败');
 					}
@@ -149,6 +170,11 @@
 				success:function (data) {
 					if(data==1){
 						obj.parent().parent().parent().remove();
+						var total = 0;
+						$(".goum_sl").each(function(){
+							total += $(this).find('.goodsnum').val()*$(this).find('.jiaq').html()
+						});
+						$('.totle').html(total);
 					}else{
 						alert('删除失败');
 					}
@@ -161,7 +187,7 @@
 <!---->
 <div class="dib_daoh_b">
 	<div class="gouwuc_ gouwuc_yem">
-		<div class="zhong"><p>总计：<em>￥6588.00</em></p></div>
+		<div class="zhong"><p>总计：<em>￥<span class="totle">6588.00</span></em></p></div>
 		<div class="you">
 			<div class="goum">
 				<a href="Settlement ">去结算（<en class="goodsNum">{$num}</en>）</a>
@@ -170,7 +196,6 @@
 	</div>
 </div>
 </div>
-
 <!--大框div
 </div>-->
 <!--搜索页面--> 

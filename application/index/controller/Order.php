@@ -18,6 +18,13 @@ class Order extends Controller
 
     static $orders_id = '';
 
+    //获取登录者的用户id
+    protected $users_id;
+
+    public function _initialize()
+    {
+        $this->users_id = Session::get('islogin')->users_id;
+    }
     /*
      * 接受提交的订单
      * */
@@ -61,9 +68,16 @@ class Order extends Controller
     /*
      * 通过用户id和订单状态来查看订单列表
      * */
-    public function MyorderList()
+    public function getMyorderList()
     {
-
+        $where['users_id'] = $this->users_id;
+        $order = new Orders();
+        $orderDetail = new Orders_detail();
+        $list = $order->all($where);
+        foreach ($list as $key=>$value){
+            $list[$key]->orderDetail = $orderDetail->all(['orders_id'=>$value->orders_id]);
+        }
+        return $this->fetch('index/GeRenZhongXin_WoDeDingDan',['list'=>$list]);
     }
 
 
