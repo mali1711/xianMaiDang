@@ -17,6 +17,7 @@ Route::controller("/courier","admin/Courier"); //公司内部快递员
 Route::controller("/cates","admin/Cates"); //分类模块
 Route::controller("/login","admin/Login"); //登录
 Route::controller("/products","admin/Products"); //产品管理->产品列表
+Route::controller("/aorder","admin/Order"); //产品管理->产品列表
 Route::controller("/allow","admin/Allow"); //权限管理
 
 /* 快递员模块 */
