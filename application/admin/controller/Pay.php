@@ -37,7 +37,7 @@ class Pay extends Controller
     /**
      * 支付配置
      */
-    public function getPayment_Configure()
+    public function getpayment_Configure()
     {
         return $this->fetch('admin/payment_Configure');
     }
