@@ -30,4 +30,27 @@ class User extends Controller
         
     }
 
+    /**
+     * 会员列表
+     */
+    public function getuser_list()
+    {
+        return $this->fetch('admin/user_list');
+    }
+
+    /**
+     * 等级管理
+     */
+    public function getmember_Grading()
+    {
+        return $this->fetch('admin/member_Grading');
+    }
+
+    /**
+     * 会员记录管理
+     */
+    public function getintegration()
+    {
+        return $this->fetch('admin/integration');
+    }
 }
