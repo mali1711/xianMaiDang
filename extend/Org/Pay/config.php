@@ -10,7 +10,7 @@ $config = array (
 		'notify_url' => "http://mitsein.comalipay.trade.wap.pay-PHP-UTF-8/notify_url.php",
 		
 		//同步跳转
-		'return_url' => "http://mitsein.com/alipay.trade.wap.pay-PHP-UTF-8/return_url.php",
+		'return_url' => "http://xmd.sir6.cn/ipay/return_url",
 
 		//编码格式
 		'charset' => "UTF-8",

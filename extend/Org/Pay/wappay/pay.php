@@ -49,7 +49,7 @@ class pay{
             $payResponse = new AlipayTradeService($config);
             $result=$payResponse->wapPay($payRequestBuilder,$config['return_url'],$config['notify_url']);
 
-            return ;
+            return $result;
         }
     }
 }
