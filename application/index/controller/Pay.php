@@ -38,8 +38,9 @@ class Pay extends Controller
     /**
      * 同步跳转(支付成功跳转的地址)
      */
-    public function getreturn_url()
+    public function getreturn_url($res)
     {
+        dump($res);
         dump(Session::get('ipay'));
         echo 'return_url'.'支付成功跳转的地址';
     }

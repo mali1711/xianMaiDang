@@ -21,7 +21,6 @@ function alipay(){
     $config = config::get('alipay');//支付宝配置文件
     $pay = new \pay($config);
     $res = $pay->pay();
-    Session::set('ipay',$res);
 }
 
 /*
