@@ -14,27 +14,18 @@
  */
 
 require_once("alipay_core.function.php");
-require_once("alipay_md5.function.php");
+require_once("alipay_rsa.function.php");
 
 class AlipayNotify {
-    /**
-     * HTTPS形式消息验证地址
-     */
-	var $https_verify_url = 'https://mapi.alipay.com/gateway.do?service=notify_verify&';
-	/**
-     * HTTP形式消息验证地址
-     */
-	var $http_verify_url = 'http://notify.alipay.com/trade/notify_query.do?';
-	var $alipay_config;
 
-	function __construct($alipay_config){
-		$this->alipay_config = $alipay_config;
+	function __construct($config){
+		$this->config = $config;
 	}
-    function AlipayNotify($alipay_config) {
-    	$this->__construct($alipay_config);
+    function AlipayNotify($config) {
+    	$this->__construct($config);
     }
     /**
-     * 针对notify_url验证消息是否是支付宝发出的合法消息
+     * 
      * @return 验证结果
      */
 	function verifyNotify(){
@@ -44,25 +35,8 @@ class AlipayNotify {
 		else {
 			//生成签名结果
 			$isSign = $this->getSignVeryfy($_POST, $_POST["sign"]);
-			//获取支付宝远程服务器ATN结果（验证是否是支付宝发来的消息）
-			$responseTxt = 'false';
-			if (! empty($_POST["notify_id"])) {$responseTxt = $this->getResponse($_POST["notify_id"]);}
-			
-			//写日志记录
-			//if ($isSign) {
-			//	$isSignStr = 'true';
-			//}
-			//else {
-			//	$isSignStr = 'false';
-			//}
-			//$log_text = "responseTxt=".$responseTxt."\n notify_url_log:isSign=".$isSignStr.",";
-			//$log_text = $log_text.createLinkString($_POST);
-			//logResult($log_text);
-			
-			//验证
-			//$responsetTxt的结果不是true，与服务器设置问题、合作身份者ID、notify_id一分钟失效有关
 			//isSign的结果不是true，与安全校验码、请求时的参数格式（如：带自定义参数等）、编码格式有关
-			if (preg_match("/true$/i",$responseTxt) && $isSign) {
+			if ($isSign) {
 				return true;
 			} else {
 				return false;
@@ -125,8 +99,8 @@ class AlipayNotify {
 		
 		$isSgin = false;
 		switch (strtoupper(trim($this->alipay_config['sign_type']))) {
-			case "MD5" :
-				$isSgin = md5Verify($prestr, $sign, $this->alipay_config['key']);
+			case "RSA" :
+				$isSgin = rsaVerify($prestr, trim($this->alipay_config['alipay_public_key']), $sign);
 				break;
 			default :
 				$isSgin = false;

@@ -13,15 +13,17 @@ use think\Request;
 class Pay extends Controller
 {
     /**
-     * 支付
-     * @return bool
+     * 支付页面
      */
-    public function postdoPay($res = 1)
+    public function gettoPay()
     {
-        if($res){
-          return true;  
-        }else{
-            return false;
-        }
+        return $this->fetch('index/toPay');
+    }
+
+
+    public function posttoPay()
+    {
+        dump($_POST);
+        alipay();
     }
 }
