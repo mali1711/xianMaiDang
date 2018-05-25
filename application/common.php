@@ -12,7 +12,15 @@
 // 应用公共文件
 //导入Config
 use think\Config;
+use think\Loader;
 // 应用公共文件
+
+function alipay(){
+    Loader::import('Org.Pay.wappay.pay');
+    $config = config::get('alipay');//支付宝配置文件
+    $pay = new \pay($config);
+    $pay->pay();
+}
 
 /*
  * 短信息发送

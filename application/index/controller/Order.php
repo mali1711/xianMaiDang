@@ -188,16 +188,5 @@ class Order extends Controller
 
     }
 
-    public function getdemo()
-    {
-       return $this->fetch('index/index1');
-    }
-
-    public function postdemo1()
-    {
-        Loader::import('Org.Pay.alipayapi');
-        $pay = new \alipayapi($_POST);
-        var_dump($pay);
-    }
-
+    
 }
