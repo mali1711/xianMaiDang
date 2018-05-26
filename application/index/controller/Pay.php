@@ -22,7 +22,6 @@ class Pay extends Controller
     public function gettoPay($out_trade_no='2018052621201680902')
     {
         $data = $this->getOrderInfo($out_trade_no);
-        dump($data);
         return $this->fetch('index/toPay',['data'=>$data]);
     }
 
