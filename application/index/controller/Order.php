@@ -41,15 +41,17 @@ class Order extends Controller
         $data['users_name'] = request()->post('users_name');//收件人
         $data['address'] = request()->post('address');//收货地址
         $data['orders_addtime'] = time();//添加时间
+        $data['out_trade_no'] = date("YmdHis").mt_rand(10000,99999);//添加时间
         $orders = new Orders();
         $orders->allowField(true)->save($data);
         $id = $orders->orders_id;
         $res = $this->addordetail($orderdata['orderDetail'], $id);
         if ($res) {
             $shopCar->getcleartItem();//清空购物车
-            echo '去支付';
+            $pay = new Pay();
+            $pay->toPay($id);
 //            return $this->fetch('index/pay');todo
-        } else {
+        }else {
             return $this->error('订单提交失败');
         }
         //将订单中的商品详情放入订单详情中
@@ -60,7 +62,6 @@ class Order extends Controller
         foreach ($orderdata as $key => $value) {
             $orderdata[$key]['orders_id'] = $id;
         }
-
         $orderDeta = new Orders_detail();
         return $orderDeta->allowField(true)->saveAll($orderdata);
     }
@@ -93,9 +94,13 @@ class Order extends Controller
     /*
      * 修改订单状态
      * */
-    public function getStatus()
+    public function upStatus($data=null,$where=null)
     {
-
+        $orders = new Orders();
+        $orders->save(
+            $data,
+            $where
+        );
     }
 
 
@@ -187,6 +192,6 @@ class Order extends Controller
     {
 
     }
-
+    
     
 }

@@ -27,11 +27,15 @@ class Shopcart extends Controller
     {
         $cartItem = new Cart_item();
         $list = $cartItem->all(['cart_id' => $this->cart_id]);
+//        dump($list);
         if($list==null){
             $this->error('您的购物车是空的','/');
         }
         foreach ($list as $key=>$value){
-            $list[$key]->goodspic = Products::get($value->product_id)->products_pic;
+            if(Products::get($value->product_id)!=null){
+                $list[$key]->goodspic = Products::get($value->product_id)->products_pic;
+            }
+            echo '<br/>';
         }
         $num = $this->getitemCount();
         return $this->fetch('index/wanagid_GouWuChe', ['list' => $list, 'num' => $num]);

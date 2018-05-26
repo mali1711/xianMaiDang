@@ -148,24 +148,24 @@
                 <dt>商户订单号
                     ：</dt>
                 <dd>
-                    <input id="WIDout_trade_no" name="WIDout_trade_no" />
+                    <input id="WIDout_trade_no" value="{$data.WIDout_trade_no}" name="WIDout_trade_no" />
                 </dd>
                 <hr class="one_line">
                 <dt>订单名称
                     ：</dt>
                 <dd>
-                    <input id="WIDsubject" name="WIDsubject" />
+                    <input id="WIDsubject"  value="{$data.WIDsubject}" name="WIDsubject" />
                 </dd>
                 <hr class="one_line">
                 <dt>付款金额
                     ：</dt>
                 <dd>
-                    <input id="WIDtotal_amount" name="WIDtotal_amount" />
+                    <input id="WIDtotal_amount" value="{$data.WIDtotal_amount}" name="WIDtotal_amount" />
                 </dd>
                 <hr class="one_line">
                 <dt>商品描述：</dt>
                 <dd>
-                    <input id="WIDbody" name="WIDbody" />
+                    <input id="WIDbody" value="{$data.WIDbody}" name="WIDbody" />
                 </dd>
                 <hr class="one_line">
                 <dt></dt>
@@ -187,7 +187,7 @@
     </div>
 </div>
 </body>
-<script language="javascript">
+<!--<script language="javascript">
     function GetDateNow() {
         var vNow = new Date();
         var sNow = "";
@@ -204,5 +204,5 @@
         document.getElementById("WIDbody").value = "购买测试商品0.01元";
     }
     GetDateNow();
-</script>
+</script>-->
 </html>
