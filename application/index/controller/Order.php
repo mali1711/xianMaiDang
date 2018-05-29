@@ -45,19 +45,19 @@ class Order extends Controller
         $orders = new Orders();
         $orders->allowField(true)->save($data);
         $id = $orders->orders_id;
-        $res = $this->addordetail($orderdata['orderDetail'], $id);
+        $res = $this->addordetail($orderdata['orderDetail'],$id);
         if ($res) {
             $shopCar->getcleartItem();//清空购物车
             $pay = new Pay();
-            $pay->toPay($id);
-//            return $this->fetch('index/pay');todo
+            $data = $pay->getOrderInfo($data['out_trade_no']);
+            return $this->fetch('index/toPay',['data'=>$data]);
         }else {
             return $this->error('订单提交失败');
         }
         //将订单中的商品详情放入订单详情中
     }
 
-    public function addordetail($orderdata, $id)
+    public function addordetail($orderdata,$id)
     {
         foreach ($orderdata as $key => $value) {
             $orderdata[$key]['orders_id'] = $id;
@@ -192,6 +192,6 @@ class Order extends Controller
     {
 
     }
-    
+
     
 }

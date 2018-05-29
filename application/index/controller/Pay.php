@@ -19,17 +19,15 @@ class Pay extends Controller
     /**
      * 支付页面
      */
-    public function gettoPay($out_trade_no='2018052621201680902')
+    public function toPay($out_trade_no)
     {
-        $data = $this->getOrderInfo($out_trade_no);
-        return $this->fetch('index/toPay',['data'=>$data]);
+        
     }
 
 
     public function posttoPay()
     {
         $out_trade_no = request()->post('WIDout_trade_no');
-
         $data = $this->getOrderInfo($out_trade_no);
         $_POST = $data;
         alipay();
@@ -75,7 +73,6 @@ class Pay extends Controller
         $data['orders_status'] = 1;
         $orders = new Order();
         $orders->upStatus($data,$where);
-        return $this->fetch('/');
+        return '支付成功';
     }
-
 }
