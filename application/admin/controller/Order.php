@@ -39,15 +39,45 @@ class Order extends Controller
         //
     }
 
+    public function getupdate()
+    {
+
+
+    }
+    
     /**
      * 修改订单
      *
      * @param  \think\Request  $request
      * @return \think\Response
      */
-    public function postupdate(Request $request)
+    public function postupdate()
     {
-        //
+        $id = request()->POST('orders_id');
+        $order = new Orders();
+        $status = $order->get($id)->orders_status;
+        $array['orders_id'] = $id;
+        $array['users_name'] = 'zhangsan';
+        $array['address'] = 'lisi';
+        $array['iphone'] = '18396861513';
+        echo $status;
+        if($status==0){
+            $res =  $order->isUpdate(true)->save($array);
+            if($res){
+                $data['success'] = true;
+                $data['errorCode'] = 0;
+                $data['errorMsg'] = '订单修改成功';
+            }else{
+                $data['success'] = false;
+                $data['errorCode'] = 1;
+                $data['errorMsg'] = '订单修改失败';
+            }
+        }else{
+            $data['success'] = false;
+            $data['errorCode'] = 3;
+            $data['errorMsg'] = '订单已发货或者其他原因';
+        }
+        return json_decode($data);
     }
 
     /**

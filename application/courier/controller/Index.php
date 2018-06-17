@@ -151,18 +151,7 @@ class Index extends Allow{
             return 0;
         }
     }
-    
-    /**
-     * 查看快递详情信息
-     * @param int $id 订单id
-     * @return array
-     */
-    public function getshipcodedetail()
-    {
-        $id = request()->get('id');
-        return Courier::get($id);
-    }
-    
+     
     /**
      * 修改密码
      * @POST $password 新密码
