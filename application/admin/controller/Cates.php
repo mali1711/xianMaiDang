@@ -17,6 +17,10 @@ use think\session\driver\Memcache;
 
 class Cates extends controller
 {
+    /**
+     * @return mixed
+     * 分类首页
+     */
     public function getIndex()
     {
         $list = $this->catesList();

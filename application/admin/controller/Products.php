@@ -49,6 +49,7 @@ class Products extends controller
      * */
     public function postPicture_add()
     {
+
         $request =  Request::instance();
         $data = $request->post();
         $data['products_pic'] = $this->upload('products_pic','products');//文件上传

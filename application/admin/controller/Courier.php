@@ -30,6 +30,7 @@ class Courier extends Controller
         return $this->fetch('admin/courierlist');
     }
 
+    
     public function postadd()
     {
         $resquest = request();
@@ -37,6 +38,7 @@ class Courier extends Controller
         $data = $resquest->post();
         $data['courier_addtime '] = time();
         $data['password'] = md5($data['password']);
+        $this->addYanZheng($data);
         $courier->data($data);
         $res = $courier->allowField(true)->save();
         if($res){
@@ -46,6 +48,25 @@ class Courier extends Controller
         }
     }
 
+    /**
+     * 验证添加的数据是否合法
+     * */
+    public function addYanZheng($data)
+    {
+        $courier = new CourierModel();
+        $courier_email['courier_email'] = $data['courier_email'];
+        $courier_iphone['courier_iphone'] = $data['courier_iphone'];
+        $courier_name['courier_name'] = $data['courier_name'];
+        if($courier->where($courier_email)->find()){
+            $this->error('邮箱重复');
+        }elseif ($courier->where($courier_iphone)->find()){
+            $this->error('手机号重复');
+        }elseif ($courier->where($courier_name)->find()){
+            $this->error('姓名重复');
+        }else{
+            return true;
+        }
+    }
 
     /**
      * 修改管理员
