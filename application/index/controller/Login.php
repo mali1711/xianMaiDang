@@ -27,6 +27,25 @@ class Login extends Controller
 
     public function postloginIphone()
     {
+
+
+        $request = request();
+        $data = $request->post();
+        $code = session::get('code');
+        if ($data['code'] != $code) {
+            $this->error('手机验证码错误');
+        }else{
+            $users = new UsersModel();
+            $where['iphone'] = $data['iphone'];
+            $res = $users->get($where);
+            if ($res) {
+                session::set('islogin', $res);
+                $this->success('登录成功', '/');
+            } else {
+                $this->error('账号或者密码错误');
+            }
+        }
+        die;
         $request = request();
         $where = $request->post();
         $where['password'] = md5($where['password']);
@@ -38,6 +57,15 @@ class Login extends Controller
         } else {
             $this->error('账号或者密码错误');
         }
+
+    }
+
+    public function getmsgsend()
+    {
+        $code = '马黎的测试短信';
+        $request = request();
+        $iphone = '15166778842';
+        $res = sendsms($code, $iphone);
 
     }
 

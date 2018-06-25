@@ -1,92 +1,92 @@
 <!doctype html>
 <html>
 <head>
-<meta charset="utf-8">
-<meta content="WangID通城" http-equiv="keywords">
-<meta name="description" content="WangID通城">
-<meta name="viewport" content="width=device-width,user-scalable=no, initial-scale=1">
-<title>WangID通城</title>
-<link rel="stylesheet" href="/static/index/css/index.css" type="text/css">
-<link rel="stylesheet" href="/static/index/css/zy.css" type="text/css">
-<link rel="stylesheet" href="/static/index/css/swiper.min.css" type="text/css">
-<script type="text/javascript" href="/static/index/js/swiper.min.js"></script>
-<script type="text/javascript" href="/static/index/js/jquery-1.4.4.min.js"></script>
-</head>
-
+	<meta charset="utf-8">
+	<meta content="WangID通城" http-equiv="keywords">
+	<meta name="description" content="WangID通城">
+	<meta name="viewport" content="width=device-width,user-scalable=no, initial-scale=1">
+	<title>WangID通城</title>
+	<link rel="stylesheet" href="/static/index/css/index.css" type="text/css">
+	<link rel="stylesheet" href="/static/index/css/zy.css" type="text/css">
+	<link rel="stylesheet" href="/static/index/css/swiper.min.css" type="text/css">
+	<script type="text/javascript" href="/static/index/js/swiper.min.js"></script>
+	<script src="__ROOT__/static/admins/b/js/jquery-1.9.1.min.js"></script></head>
+<style type="text/css">
+	form{margin:200px auto;width:500px;margin-top: 10px;}
+	label{font-size:14px;color:#555;line-height:40px;margin-right:10px;}
+	input{width:212px;height:38px;border-style:none;padding:0 4px;border:1px solid #C8C8C8;margin-right:10px;outline:none;}
+	.msgs{display:inline-block;width:104px;color:#fff;font-size:12px;border:1px solid #0697DA;text-align:center;height:30px;line-height:30px;background:#0697DA;cursor:pointer;}
+	form .msgs1{background:#E6E6E6;color:#818080;border:1px solid #CCCCCC;}
+</style>
+<body>
 <!--页面内容
-<div id="yemnr">--> 
-<!--头部--> 
+<div id="yemnr">-->
+<!--头部-->
 <div class="toub_beij toub_beij_zy">
 	<div class="zhongj_k zhongj_k_z">
 		<div class="jiu_feo">
-			<div class="logo_k logo_k_fanh"><a href="javascript:;" onclick="javascript:history.back(-1);"><img class="fanh_ann" src="/static/index/images/web/fanh.png"></a></div>
+			<div class="logo_k logo_k_fanh"><a href="#"><img class="fanh_ann" src="/static/index/images/web/fanh.png"></a></div>
 			<div class="zhongjain_daoh">
-				<ul>
-					<li style="margin-top: -30px"><h1 class="dllogo"></h1><center><a class="denglxil">欢迎登录</a></center></li>
-				</ul>
+				登录
 			</div>
-		</div> 
+		</div>
 	</div>
 </div>
-<script type="text/javascript">
-	//滑动头部透明（针对首页头部用）
-	window.onscroll=function(){
-
-	var autoheight=document.body.scrollTop||document.documentElement.scrollTop;
-	if(autoheight>10){
-		$(".toub_beij").css("position" ,"fixed")
-		}else{
-			$(".toub_beij").css("position" ,"relative")
-		}
-	}
-</script>
 <!--内容-->
 <form action="/indexlogin/loginIphone" method="post">
-<div class="denglu_k">
-	<div class="denglk">
-		<div class="mz px24">账号：</div>
-		<input type="text" name="username" placeholder="用户名">
+	<div class="denglu_k">
+		<div class="denglk">
+			<input name="iphone" type="text" placeholder="手机号码">
+		</div>
+		<div class="guoqvyzm">
+			<div class="denglk">
+				<input name="code" type="text" placeholder="验证码">
+			</div>
+			<a style="position: absolute" class="msgs" href="javascript:">获取验证码</a>
+		</div>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<button class="dengl_anniu"></button>
+		<input style="background-color: red"  type="submit"  value="登录">
 	</div>
-	<div class="denglk">
-		<div class="mz px24">密码：</div>
-		<input type="password" name="password" placeholder="请输入密码">
-	</div>
-	<div class="dengl_anniu"><a href="#"><button type="submit" style="background-color:transparent;width:100%; height: 80px;color: white"><span style="position:relative;top: -18px;font-size: 14px;">登 录</span></button></a></div>
-	<div class="dengl_anniu"><a href="/indexlogin/register" class="zc">立即注册</a></div>
-	<div class="wangjimm">
-		<a href="#">名榜授权登录！</a>
-		<a href="#" class="you">忘记密码？</a>
-	</div>
-</div>
 </form>
+<script>
+	$(function () {
+		//获取短信验证码
+		var validCode=true;
+		$(".msgs").click (function  () {
+			var time=180;
+			var code=$(this);
+			if (validCode) {
+				var iphone = $("input[ name='iphone']").val();
+				$.post("/indexlogin/msgsend",{'iphone':iphone},function(data){
+					if(data==1){
+						validCode=false;
+						code.addClass("msgs1");
+					}else{
+						alert(data);
+					}
+				});
+				var t=setInterval(function  () {
+					time--;
+					code.html(time+"秒");
+					if (time==0) {
+						clearInterval(t);
+						code.html("重新获取");
+						validCode=true;
+						code.removeClass("msgs1");
+
+					}
+				},1000)
+			}
+		})
+	})
+</script>
 <!--大框div
 </div>-->
-<!--搜索页面--> 
+<!--搜索页面-->
 </body>
 </html>
-
-<!-- <script type="text/javascript">
-	window.onload=function(){ 
-		var TheMenu=document.getElementById('zhu_caid');
-		var LieBiao=document.getElementById('daoh_lb'); 
-		var Html=document.getElementsByTagName("html")[0];//0 第一个数组
-		TheMenu.onclick=function(event)
-		{
-			if (LieBiao.style.display=='block')
-			{
-				LieBiao.style.display='none';
-			}
-			else {
-				LieBiao.style.display='block';
-			}  
-			event.stopPropagation();//阻止冒泡事件
-		} 
-		Html.onclick=function(){
-			LieBiao.style.display='none';
-		}
-
-		// 
-		 
- };
- 
-</script> -->

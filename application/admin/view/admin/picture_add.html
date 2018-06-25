@@ -75,29 +75,24 @@
              <label class="form-label col-2">产品规格：</label>
 			 <div class="formControls col-2"><input type="text" class="input-text" value="" placeholder="" id="" name="products_weight" ></div>
 			</div>
-             <div class="Add_p_s">
-             <label class="form-label col-2">单位：</label>	
-			 <div class="formControls col-2"><span class="select-box">
-				<select class="select" name="products_unit">
-					<option>请选择</option>
-					<option selected value="1">件</option>
-					<option value="2">斤</option>
-					<option value="3">KG</option>
-					<option value="4">吨</option>
-					<option value="5">套</option>
-					<option value="6">箱</option>
-					<option value="6">升</option>
-				</select>
-				</span></div>
+            <div class="Add_p_s">
+                <label class="form-label col-2">单位：</label>
+                <div class="formControls col-2"><input type="text" class="input-text" value="" placeholder="" id="" name="products_unit" ></div>
+            </div>
+            <div class="Add_p_s">
+             <label class="form-label col-2">参考进价：</label>
+			 <div class="formControls col-2"><input type="text" class="input-text" value="0" placeholder="" id="" name="products_newprice" >元</div>
 			</div>
             <div class="Add_p_s">
-             <label class="form-label col-2">展示价格：</label>	
-			 <div class="formControls col-2"><input type="text" class="input-text" value="" placeholder="" id="" name="products_newprice" >元</div>
+             <label class="form-label col-2">零售价：</label>
+			 <div class="formControls col-2"><input type="text" class="input-text" value="0" placeholder="" id="" name="products_ordprice" >元</div>
 			</div>
             <div class="Add_p_s">
-             <label class="form-label col-2">市场价格：</label>	
-			 <div class="formControls col-2"><input type="text" class="input-text" value="" placeholder="" id="" name="products_ordprice" >元</div>
-			</div>
+                <label class="form-label col-2">毛利：</label>
+                <div class="formControls col-2"><input type="text" class="input-text" value="0" placeholder="" id="" name="maoli" ></div>
+            </div>
+            <script>
+            </script>
             <div class="Add_p_s">
                 <label class="form-label col-2">商品库存：</label>
                 <div class="formControls col-2"><input type="text" class="input-text" value="" placeholder="" id="" name="products_num" ></div>
@@ -170,6 +165,16 @@
 <script>
     $(function () {
 
+        $("input[name='products_ordprice']").blur(function () {
+            var products_newprice = parseFloat($("input[name='products_newprice']").val());
+            var products_ordprice =  parseFloat($("input[name='products_ordprice']").val());
+            $("input[name='maoli']").val(products_newprice-products_ordprice);
+        });
+        $("input[name='products_newprice']").blur(function () {
+            var products_newprice = parseFloat($("input[name='products_newprice']").val());
+            var products_ordprice =  parseFloat($("input[name='products_ordprice']").val());
+            $("input[name='maoli']").val(products_newprice-products_ordprice);
+        })
     })
 </script>
 <script>
