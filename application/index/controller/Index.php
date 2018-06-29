@@ -11,18 +11,26 @@ use \think\Request;
 
 class Index extends Controller
 {
+    /**
+     * @return mixed
+     * 网站首页
+     */
     public function index()
     {
 
-        $list = CatesModel::all(['cates_pid'=>24]);
-        foreach ($list as $k=>$v){
-            $pro = new Products();
-            $id = $v->cates_id;
-            $list[$k]['goods'] = $pro->where(['cates_id'=>$id])
-                ->limit(3)
-                ->order('products_id','desc')
-                ->select();
-        }
-        return $this->fetch("index/index",['list'=>$list]);
+//        return $this->fetch("index/index",['list'=>$list]); 一期项目首页
+
+        $list['products'] = $this->newgoods_6();
+        return $this->fetch("tow/shouye",['list'=>$list]);
+    }
+
+    /**
+     * 最新商品（前6个）
+     */
+    public function newgoods_6()
+    {
+        $products = new Products;
+        $data = $products->order('products_addtime desc')->limit('6')->select();
+        return $data;
     }
 }

@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta content="鲜麦当" http-equiv="keywords">
+<meta name="description" content="鲜麦当">
+<meta name="viewport" content="width=device-width,user-scalable=no, initial-scale=1">
+<title>鲜麦当</title>
+<link rel="stylesheet" href="css/index.css" type="text/css">
+<link rel="stylesheet" href="css/swiper.min.css" type="text/css">
+<link href="font/iconfont.css" rel="stylesheet">
+<script type="text/javascript" src="js/swiper.min.js"></script>
+<script type="text/javascript" src="js/jquery-1.4.4.min.js"></script>
+
+</head>
+<body> 
+<!--头部--> 
+<div class="toub_beij toub_beij_zy">
+	<div class="zhongj_k zhongj_k_z">
+		<div class="jiu_feo">
+			<div class="logo_k logo_k_fanh"><a href="#"><img class="fanh_ann" src="images/fanh.png"></a></div>
+			<div class="zhongjain_daoh">
+				<ul>
+					<li><a class="zyyge">个人中心</a></li>  
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+	//滑动头部透明（针对首页头部用）
+	window.onscroll=function(){
+
+	var autoheight=document.body.scrollTop||document.documentElement.scrollTop;
+	if(autoheight>10){
+		$(".toub_beij").css("position" ,"fixed")
+		}else{
+			$(".toub_beij").css("position" ,"relative")
+		}
+	}
+</script>
+
+    
+<!--内容--> 
+<div class="gerenzhonhx">
+	<div class="grzx_toux_fus">
+		<div class="of"><h2><img src="images/tou.jpg"></h2><p>陌上花开，可缓缓归矣</p></div>
+	</div>
+</div>
+<div class="grzx_kuaij_k">
+	<ul>
+		<li><a href=""><h1><img src="images/gr1.png"></h1><p>快速配送</p></a></li>
+		<li><a href=""><h1><img src="images/gr2.png"></h1><p>待自提</p></a></li>
+		<li><a href=""><h1><img src="images/gr3.png"></h1><p>待评价</p></a></li>
+		<li><a href=""><h1><img src="images/gr4.png"></h1><p>待付款</p></a></li>
+		<li><a href=""><h1><img src="images/gr5.png"></h1><p>全部订单</p></a></li>
+	</ul>
+</div>
+
+<div class="grzx_kuaij_kk">
+	<h3>我的钱包</h3>
+	<ul>
+		<li><a href=""><span>214.00</span><p>账户余额</p></a></li>
+        <li><a href=""><span>2</span><p>优惠券</p></a></li>
+        <li><a href=""><span>214</span><p>我的积分</p></a></li>
+        <li><a href=""><span>--</span><p>我的预约</p></a></li>
+	</ul>
+</div>
+
+<div class="gerzx_dibk">
+	<div class="l_an_n">
+		<a href="#">鲜麦当首页</a>
+		<a href="#">退出登录</a>
+	</div>
+	<h1><p><img src="images/logo.png"></p></h1>
+</div>
+
+
+</body>
+</html>
+
+ 
+</script>

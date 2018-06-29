@@ -1,0 +1,256 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta content="鲜麦当" http-equiv="keywords">
+<meta name="description" content="鲜麦当">
+<meta name="viewport" content="width=device-width,user-scalable=no, initial-scale=1">
+<title>鲜麦当</title>
+<link rel="stylesheet" href="/static/index/tow/css/index.css" type="text/css">
+<link rel="stylesheet" href="/static/index/tow/css/swiper.min.css" type="text/css">
+<link href="font/iconfont.css" rel="stylesheet">
+<script type="text/javascript" src="/static/index/tow/js/swiper.min.js"></script>
+<script type="text/javascript" src="/static/index/tow/js/jquery-1.4.4.min.js"></script>
+
+</head>
+<body> 
+<div class="da_xiao_xianz">
+<div id="yemnr">
+
+	<div class="toub_beij toub_beij_shouye">
+		<div class="zhongj_k">
+			<div class="logo_k"><a href="index.html"><img src="/static/index/tow/images/logo.jpg"></a></div>
+			<div class="shous_k"><span></span><input id="sos_tanc"  type="search" input_key="" placeholder="限时疯抢，好物低至1元" placeholder_str=""></div>
+			<div class="dengl">
+				<a href="#"><div class="caid_img" ><img src="/static/index/tow/images/cd.png"></div></a>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		//滑动头部透明（针对首页头部用）
+		window.onscroll=function(){
+
+		var autoheight=document.body.scrollTop||document.documentElement.scrollTop;
+		if(autoheight>10){
+			$(".toub_beij").css("position" ,"fixed")
+			}else{
+				$(".toub_beij").css("position" ,"relative")
+			}
+		}
+	</script>
+    
+	<!--banner-->
+	<div class="swiper_container_1 ">
+	    <div class="swiper-wrapper">
+	        <div class="swiper-slide"><a href="#"><img src="/static/index/tow/images/banner.jpg"></a></div>
+	        <div class="swiper-slide"><a href="#"><img src="/static/index/tow/images/banner.jpg"></a></div>
+	        <div class="swiper-slide"><a href="#"><img src="/static/index/tow/images/banner.jpg"></a></div> 
+	    </div>
+	    <!-- Add Pagination -->
+	    <div class="swiper_pagination_1"></div>
+	</div> 
+	<script>
+	var swiper = new Swiper('.swiper_container_1', {
+	    pagination: '.swiper_pagination_1',
+	    paginationClickable: true,
+	    autoplay : 2000,
+	});
+	</script>
+
+	<!--导航-->
+	<div class="neir_beij"> 
+		<ul>
+			<li><a href="/goods/goodslist?id=45"><div class="daohangk"><img src="/static/index/tow/images/icon1.png"></div><p>新鲜蔬果</p></a></li>
+            <li><a href=""><div class="daohangk"><img src="/static/index/tow/images/icon2.png"></div><p>鱼肉海鲜</p></a></li>
+            <li><a href="/goods/goodslist?id=30"><div class="daohangk"><img src="/static/index/tow/images/icon3.png"></div><p>酒水饮料</p></a></li>
+            <li><a href=""><div class="daohangk"><img src="/static/index/tow/images/icon4.png"></div><p>休闲零食</p></a></li>
+            <li><a href=""><div class="daohangk"><img src="/static/index/tow/images/icon5.png"></div><p>粮油调味</p></a></li>
+            <li><a href=""><div class="daohangk"><img src="/static/index/tow/images/icon6.png"></div><p>家居日化</p></a></li>
+            <li><a href=""><div class="daohangk"><img src="/static/index/tow/images/icon7.png"></div><p>日配冷藏</p></a></li>
+            <li><a href=""><div class="daohangk"><img src="/static/index/tow/images/icon8.png"></div><p>其他更多</p></a></li>
+		</ul>
+	</div>
+    
+    <!--促销-->
+    
+    <div class="yic_beij">
+		<div class="yic_sahng_b">
+			<div class="zuo">
+				 <div class="xin_jiajv">
+                 	<div class="xin_jiajv-wz">
+                    <img src="/static/index/tow/images/hot-1.png">
+                    <p>剩余时间：<span>23小时58分钟30秒</span></p>
+                    </div>
+				 	<div class="xin_jiajv-tp"><a href="#"><img src="/static/index/tow/images/tu01.png"></a></div>
+				 </div>
+			</div>
+			<div class="you">
+				<div class="you_shang">
+					<div class="xin_you_s">
+						<div class="xin_you_s-wz">
+                        <img src="/static/index/tow/images/hot-2.png">
+                        <p>全场五折大出血</p>
+                        </div>
+                        <div class="xin_you_s-tp"><a href="#"><img src="/static/index/tow/images/tu02.png"></a></div>
+					</div>
+				</div>
+                <div class="you_xia">
+					<div class="xin_you_s">
+						<div class="xin_you_s-wz">
+                        <img src="/static/index/tow/images/hot-3.png">
+                        <p>优惠清单都已整理</p>
+                        </div>
+                        <div class="xin_you_s-tp"><a href="#"><img src="/static/index/tow/images/tu03.png"></a></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+    
+    <!--第二层-->
+	<div class="louc_m">
+		<div class="mingc">
+			<p><img src="/static/index/tow/images/news-icon.jpg">每日新品</p>
+			<a href="#">more+</a>
+		</div>
+        
+        
+        <div class="lianc_beij">
+            <div class="lianc_shang">
+				{volist name="list.products" id="vo"}
+                <div class="zuo">
+                    <div class="xin_shouji_zuo">
+                        <a href="#"><img height="118" src="\uploads\products\{$vo.products_pic}"></a>
+                        <h3><a href="#">{$vo.products_pic_title}</a></h3>
+                        <p>￥{$vo.products_newprice}<span><img src="/static/index/tow/images/more.jpg"></span></p>
+                    </div>
+                </div>
+				{/volist}
+  <!--              <div class="zuo">
+                    <div class="xin_shouji_zuo">
+                        <a href="#"><img src="/static/index/tow/images/pic2.jpg"></a>
+                        <h3><a href="#">太太乐芝麻油太太乐芝麻油230ml</a></h3>
+                        <p>￥12.22<span><img src="/static/index/tow/images/more.jpg"></span></p>
+                    </div>
+                </div>
+                <div class="zuo">
+                    <div class="xin_shouji_zuo">
+                        <a href="#"><img src="/static/index/tow/images/pic3.jpg"></a>
+                        <h3><a href="#">太太乐芝麻油230ml</a></h3>
+                        <p>￥12.22<span><img src="/static/index/tow/images/more.jpg"></span></p>
+                    </div>
+                </div>
+                <div class="zuo">
+                    <div class="xin_shouji_zuo">
+                        <a href="#"><img src="/static/index/tow/images/pic1.jpg"></a>
+                        <h3><a href="#">太太乐芝麻油230ml</a></h3>
+                        <p>￥12.22<span><img src="/static/index/tow/images/more.jpg"></span></p>
+                    </div>
+                </div>
+                <div class="zuo">
+                    <div class="xin_shouji_zuo">
+                        <a href="#"><img src="/static/index/tow/images/pic2.jpg"></a>
+                        <h3><a href="#">太太乐芝麻油230ml</a></h3>
+                        <p>￥12.22<span><img src="/static/index/tow/images/more.jpg"></span></p>
+                    </div>
+                </div>
+                <div class="zuo">
+                    <div class="xin_shouji_zuo">
+                        <a href="#"><img src="/static/index/tow/images/pic3.jpg"></a>
+                        <h3><a href="#">太太乐芝麻油230ml</a></h3>
+                        <p>￥12.22<span><img src="/static/index/tow/images/more.jpg"></span></p>
+                    </div>
+                </div>-->
+            </div>
+        </div>
+	</div>
+	
+	<!--底部-->
+	<div class="dib_bj">
+		<div class="diyi">
+			<ul>
+				<li><a href="/indexlogin/loginIphone">登录</a></li>
+				<p>丨</p>
+				<li><a href="/indexlogin/register">注册</a></li>
+				<p>丨</p>
+				<li><a href="#">反馈</a></li>
+				<p>丨</p>
+				<li><a href="#">返回顶部</a></li>
+			</ul>
+		</div>
+		<div class="liange_bb">
+			<div class="bb">
+				<a href="#">
+					<div class="bb_img"><img src="/static/index/tow/images/chupb.png"></div>
+					<p>触屏版</p>
+				</a>
+			</div>
+			<div class="bb">
+				<a href="#">
+					<div class="bb_img"><img src="/static/index/tow/images/diannb.png"></div>
+					<p class="diann_color">电脑版</p>
+				</a>
+			</div>
+		</div> 
+		<div class="gs_beian">
+			<p>京公网安备：11010602030054号</p>
+			<p>京ICP备：14012449号 黔ICP证：B2-20140009号</p>
+		</div>
+	</div>
+
+	<!--底部导航-->
+	<div class="dib_daoh_b">
+		<ul>
+			<li><a href="index.html"><div class="fup"><img src="/static/index/tow/images/d2-2.png"></div><p class="dh_dq">首 页</p></a></li>
+			<li><a href="wangid_ShangP_FenL.html"><div class="fup"><img src="/static/index/tow/images/d1.png"></div><p>分 类</p></a></li>
+			<li><a href="wanagid_GouWuChe.html"><div class="fup"><img src="/static/index/tow/images/d3.png"></div><p>购物车</p></a></li>
+			<li><a href="GeRenZhongXin.html"><div class="fup"><img src="/static/index/tow/images/d4.png"></div><p>我</p></a></li>
+		</ul>
+	</div>
+</div>
+<!--大小限制--> 
+</div>
+</body>
+</html>
+
+<script type="text/javascript">
+	window.onload=function(){
+		onload2();/*
+		var TheMenu=document.getElementById('zhu_caid');
+		var LieBiao=document.getElementById('daoh_lb'); 
+		var Html=document.getElementsByTagName("html")[0];//0 第一个数组
+		TheMenu.onclick=function(event)
+		{
+			if (LieBiao.style.display=='block')
+			{
+				LieBiao.style.display='none';
+			}
+			else {
+				LieBiao.style.display='block';
+			}  
+			event.stopPropagation();//阻止冒泡事件
+		} 
+		Html.onclick=function(){
+			LieBiao.style.display='none';
+		}
+	};*/
+
+	function onload2()
+	{
+		var Sos=document.getElementById('sos_tanc');
+		var ShouYe=document.getElementById('yemnr');
+		var SosYe=document.getElementById('shous_yem');
+		var SosFanHui=document.getElementById('sous_fanh_sy');
+		Sos.onclick=function()
+		{
+			ShouYe.style.display=('none');
+			SosYe.style.display=('block');
+		}
+		SosFanHui.onclick=function()
+		{
+			ShouYe.style.display=('block');
+			SosYe.style.display=('none');
+		}
+	};
+	};
+</script>
