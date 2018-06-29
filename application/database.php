@@ -13,8 +13,8 @@ return [
     // 数据库类型
     'type'            => 'mysql',
     // 服务器地址
-    'hostname'        => 'www.sir6.cn',
-//    'hostname'        => 'localhost',
+//    'hostname'        => 'www.sir6.cn',
+    'hostname'        => 'localhost',
     // 数据库名
     'database'        => 'xianmaidang',
     // 用户名
