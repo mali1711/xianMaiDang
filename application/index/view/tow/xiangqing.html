@@ -6,11 +6,11 @@
 <meta name="description" content="鲜麦当">
 <meta name="viewport" content="width=device-width,user-scalable=no, initial-scale=1">
 <title>鲜麦当</title>
-<link rel="stylesheet" href="css/index.css" type="text/css">
-<link rel="stylesheet" href="css/swiper.min.css" type="text/css">
+<link rel="stylesheet" href="/static/index/tow/css/index.css" type="text/css">
+<link rel="stylesheet" href="/static/index/tow/css/swiper.min.css" type="text/css">
 <link href="font/iconfont.css" rel="stylesheet">
-<script type="text/javascript" src="js/swiper.min.js"></script>
-<script type="text/javascript" src="js/jquery-1.4.4.min.js"></script>
+<script type="text/javascript" src="/static/index/tow/js/swiper.min.js"></script>
+<script type="text/javascript" src="/static/index/tow/js/jquery-1.4.4.min.js"></script>
 
 </head>
 <body> 
@@ -18,7 +18,7 @@
 <div class="toub_beij toub_beij_zy">
 	<div class="zhongj_k zhongj_k_z">
 		<div class="jiu_feo">
-			<div class="logo_k logo_k_fanh"><a href="#"><img class="fanh_ann" src="images/fanh.png"></a></div>
+			<div class="logo_k logo_k_fanh"><a href="#"><img class="fanh_ann" src="/static/index/tow/images/fanh.png"></a></div>
 			<div class="zhongjain_daoh">
 				<ul>
 					<li class="xiangq"><a href="">商品</a></li>
@@ -47,11 +47,11 @@
 <!--banner-->
 <div class="swiper_container_suz1">
     <div class="swiper-wrapper">
-		<div class="swiper-slide"><img src="images/tp.jpg"> </div>
-        <div class="swiper-slide"><img src="images/tp.jpg"> </div>
-        <div class="swiper-slide"><img src="images/tp.jpg"> </div>
-		<div class="swiper-slide"><img src="images/tp.jpg"> </div>
-        <div class="swiper-slide"><img src="images/tp.jpg"> </div> 
+		<div class="swiper-slide"><img src="\uploads\products\{$data.products_pic}"> </div>
+<!--        <div class="swiper-slide"><img src="/static/index/tow/images/tp.jpg"> </div>
+        <div class="swiper-slide"><img src="/static/index/tow/images/tp.jpg"> </div>
+		<div class="swiper-slide"><img src="/static/index/tow/images/tp.jpg"> </div>
+        <div class="swiper-slide"><img src="/static/index/tow/images/tp.jpg"> </div> -->
     </div>
     <!-- Add Pagination -->
     <div class="swiper-pagination"></div>
@@ -71,7 +71,7 @@ var swiper = new Swiper('.swiper_container_suz1', {
 <!--商品名称-->
 <div class="xiangq_shangp_m">
 	<p class="px24">这里是描述</p>
-	<div class="xq_jiaq"><p>￥<em>5600</em>.00</p><span>原价：<i>￥6600.00</i></span></div>
+	<div class="xq_jiaq"><p>￥<em>{$data.products_newprice}</em>.00</p><span>原价：<i>￥{$data.products_ordprice}.00</i></span></div>
 </div>
 <div class="xiangq_shangp_mm">
 产地：见包装  规格：400g
@@ -82,7 +82,7 @@ var swiper = new Swiper('.swiper_container_suz1', {
 <!--评价--> 
 <div class="pj_k">
 	<div class="bt"><p>评价<em>（100+）</em></p><span>好评度  <em>95%</em></span></div>
-	<div class="toux_k"><h1><img src="images/tou.jpg"></h1>
+	<div class="toux_k"><h1><img src="/static/index/tow/images/tou.jpg"></h1>
 		<span>Aa***hg</span>
 		<div class="sd"><p></p><p></p><p></p><p></p></div>
 	</div>
@@ -93,51 +93,75 @@ var swiper = new Swiper('.swiper_container_suz1', {
 </div>
 
 <!--差你喜欢-->
-<div class="cainixhk">
+<!--<div class="cainixhk">
 	<div class="bt"><p>为您推荐</p></div>
 	<div class="cainixhk-tp">
         <div class="zuo">
             <div class="xin_shouji_zuo">
-                <a href="#"><img src="images/pic1.jpg"></a>
+                <a href="#"><img src="/static/index/tow/images/pic1.jpg"></a>
                 <h3><a href="#">太太乐芝麻油230ml</a></h3>
-                <p>￥12.22<span><img src="images/more.jpg"></span></p>
+                <p>￥12.22<span><img src="/static/index/tow/images/more.jpg"></span></p>
             </div>
         </div>
         <div class="zuo">
             <div class="xin_shouji_zuo">
-                <a href="#"><img src="images/pic2.jpg"></a>
+                <a href="#"><img src="/static/index/tow/images/pic2.jpg"></a>
                 <h3><a href="#">太太乐芝麻油太太乐芝麻油230ml</a></h3>
-                <p>￥12.22<span><img src="images/more.jpg"></span></p>
+                <p>￥12.22<span><img src="/static/index/tow/images/more.jpg"></span></p>
             </div>
         </div>
         <div class="zuo">
             <div class="xin_shouji_zuo">
-                <a href="#"><img src="images/pic3.jpg"></a>
+                <a href="#"><img src="/static/index/tow/images/pic3.jpg"></a>
                 <h3><a href="#">太太乐芝麻油230ml</a></h3>
-                <p>￥12.22<span><img src="images/more.jpg"></span></p>
+                <p>￥12.22<span><img src="/static/index/tow/images/more.jpg"></span></p>
             </div>
         </div>
 	</div>
-</div> 
+</div> -->
 <!--底部导航-->
 <!---->
 <div class="dib_daoh_b">
 	<div class="gouwuc_">
 		<div class="zuo">
-			<div class="mis"><a href="wanagid_GouWuChe.html"><h1><img src="images/ms02.png"></h1></a></div>
+			<div class="mis"><a href="wanagid_GouWuChe.html"><h1><img src="/static/index/tow/images/ms02.png"></h1></a></div>
 		</div>
 		<div class="you">
 			<div class="goum">
-				<a href="#">加入购物车</a>
-				<a class="houm" href="#">立即购买</a>
+				<a style="float: right" class="addCart" href="#">加入购物车</a>
 			</div>
 		</div>
 	</div>
 </div>
 </div>
 
- 
 
+<form id="test_form">
+	<input type="hidden" name="product_id" value="{$data.products_id}">
+	<input type="hidden" name="goods_price" value="{$data.products_newprice}">
+	<input type="hidden" name="goods_number" value="1">
+	<input type="hidden" name="product_name" value="{$data.products_pic_title}">
+</form>
+<script>
+	$(function(){
+		var serializeUrl = $("#test_form").serialize();
+		//获取商品信息
+		$('.addCart').click(function () {
+			$.ajax({
+				type: 'get',
+				url: '/cart/Additem',
+				data: $("#test_form").serialize(),
+				success: function(data) {
+					if(data==1){
+						alert('商品添加成功');
+					}else{
+						alert('商品添加失败');
+					}
+				}
+			});
+		})
+	})
+</script>
 </body>
 </html>
 

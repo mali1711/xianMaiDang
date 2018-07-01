@@ -41,8 +41,20 @@ class Goods extends Controller{
         return json_encode($list);
     }
 
+    /**
+     * 显示所有的商品列表
+     */
+    public function getAllGoodsList()
+    {
+        $request = request();
+        $id = $request->get('id');
+        $pro = new Products();
+        $list = $pro->select();
+        return $this->fetch('index/wangid_ShangP_LieB',['list'=>$list]);
+    }
+
     /*
-     * 商品列表
+     * 根据分类显示商品列表
      * */
     public function getgoodslist()
     {
@@ -53,6 +65,7 @@ class Goods extends Controller{
         return $this->fetch('index/wangid_ShangP_LieB',['list'=>$list]);
     }
 
+
     /*
      * 商品详情展示页
      * */
@@ -61,6 +74,7 @@ class Goods extends Controller{
         $request = request();
         $id = $request->get('id');
         $data = Products::get($id);
-        return $this->fetch('index/XiangQ_Y',['data'=>$data]);
+        return $this->fetch('tow/xiangqing',['data'=>$data]);
+//        return $this->fetch('index/XiangQ_Y',['data'=>$data]);
     }
 }
