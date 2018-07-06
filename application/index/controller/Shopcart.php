@@ -27,7 +27,7 @@ class Shopcart extends Controller
     {
         $cartItem = new Cart_item();
         $list = $cartItem->all(['cart_id' => $this->cart_id]);
-//        dump($list);
+
         if($list==null){
             $this->error('您的购物车是空的','/');
         }
@@ -77,7 +77,7 @@ class Shopcart extends Controller
      * 'product_id' => string '22' (length=2)
      * */
     public function getAdditem()
-    {
+    { 
         $request = request();
         $getdata = $request->get();
         //判断当前商品是否存在当前用户的购物车中，如果不存在就创建，存在就将数量加一

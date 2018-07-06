@@ -37,7 +37,7 @@ class Pay extends Controller
      * @param $id 订单id
      * @return array
      */
-    public function getOrderInfo($out_trade_no=0)
+    public function getOrderInfo($out_trade_no=null)
     {
         $order = new Orders();
         $orderinfo = $order->get(['out_trade_no'=>$out_trade_no]);
@@ -63,6 +63,7 @@ class Pay extends Controller
 
     /**
      * 同步跳转(支付成功跳转的地址)
+     * http://www.sir6xmd.com/ipay/return_url?total_amount=0.01&timestamp=2018-07-06+19%3A35%3A47&sign=BVmHELwP3cnuMnfIEoqSurAV6ZylxpSETyycudXuLEPnOzDZnFWpXhrRVUulZ2%2B76oTpSRVZAKV7A4Wi385JjgXyUVlyOCoFjaOStQUEPY381Tsm3qswbeaOYa7Ps%2FEOnAO7ZrDMfVmUzcWeh68sdkftMYeCanzG%2B5CawkPrQ7cygZl4sEvnQC%2FhW5bESAM2GKN%2FwQNIxUhIilTKdaHtHwGt0LPcraFFGdj%2FIGGt7TOia5XDih0Xko7LHHE4h1Pa88qAdTJCOvyWhg%2FgODCwrD3vBS%2FbjjuRc4ABeOMn13gyX7DPJu3D%2Byz6B69JZ%2BtSXxlG97efoqkCHBo1FxXk9g%3D%3D&trade_no=2018070621001004570597117405&sign_type=RSA2&auth_app_id=2018052460238314&charset=UTF-8&seller_id=2088131200737653&method=alipay.trade.wap.pay.return&app_id=2018052460238314&out_trade_no=2018070619350185316&version=1.0
      */
     public function getreturn_url()
     {
@@ -71,8 +72,8 @@ class Pay extends Controller
         $Order_alipay->allowField(true)->save();
         $where['out_trade_no'] = $alipayData['out_trade_no'];
         $data['orders_status'] = 1;
-        $orders = new Order();
-        $orders->upStatus($data,$where);
+        $orders = new Orders();
+        $orders->save($data,$where);
         return '支付成功';
     }
 }

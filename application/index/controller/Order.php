@@ -3,6 +3,7 @@
 namespace app\index\controller;
 
 use app\index\model\Address;
+use app\index\model\Order_alipays;
 use app\index\model\Orders;
 use app\index\model\Orders_detail;
 use think\Config;
@@ -41,15 +42,20 @@ class Order extends Controller
         $data['users_name'] = request()->post('users_name');//收件人
         $data['address'] = request()->post('address');//收货地址
         $data['orders_addtime'] = time();//添加时间
-        $data['out_trade_no'] = date("YmdHis").mt_rand(10000,99999);//添加时间
+        $data['out_trade_no'] = date("YmdHis").mt_rand(10000,99999);//系统生成订单号
         $orders = new Orders();
         $orders->allowField(true)->save($data);
         $id = $orders->orders_id;
         $res = $this->addordetail($orderdata['orderDetail'],$id);
         if ($res) {
-            $shopCar->getcleartItem();//清空购物车
+            $order_ali = new Order_alipays;
+            $where['out_trade_no'] = $data['out_trade_no'];
+            if($order_ali->get()){
+                $this->error('订单号重复');
+            }
             $pay = new Pay();
             $data = $pay->getOrderInfo($data['out_trade_no']);
+            $shopCar->getcleartItem();//清空购物车
             return $this->fetch('index/toPay',['data'=>$data]);
         }else {
             return $this->error('订单提交失败');
