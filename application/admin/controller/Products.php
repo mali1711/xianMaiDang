@@ -47,31 +47,34 @@ class Products extends controller
     /*
      * 执行产品添加动作
      * */
-    public function postPicture_add()
-    {
 
-        $request =  Request::instance();
-        $data = $request->post();
-        $data['products_pic'] = $this->upload('products_pic','products');//文件上传
-        $data['products_addtime'] = time();
-        //如果商品第一次添加，且没有关联任何商品
-        if($data['products_relevance']==''){
-            $data['products_relevance'] = time().mt_rand(100000,999999);
-        }
-        if($data['products_pic']==false){
-            $info['code'] = 0;
-            $info['info'] = '文件上传失败';
-        }else{
-            $products = new ProductsModel();
-            $res = $products->data($data)->save();
-            if($res){
-                $this->success('商品添加成功');
-            }else{
-                $this->error('商品添加失败，请核实信息');
+        public function postPicture_add()
+        {
+
+            $request =  Request::instance();
+            $data = $request->post();
+            $data['products_pic'] = $this->upload('products_pic','products');//文件上传
+            $data['products_addtime'] = time();
+            //如果商品第一次添加，且没有关联任何商品
+            if($data['products_relevance']==''){
+                $data['products_relevance'] = time().mt_rand(100000,999999);
             }
-        }
+            if($data['products_pic']==false){
+                $info['code'] = 0;
+                $info['info'] = '文件上传失败';
+            }else{
+                $products = new ProductsModel();
+                unset($data['products_pic']);
+                dump($data);
+                $res = $products->data($data)->save();
+                if($res){
+                    $this->success('商品添加成功');
+                }else{
+                    $this->error('商品添加失败，请核实信息');
+                }
+            }
 
-    }
+        }
 
     /*
      * 验证添加的字段是否合法
