@@ -59,13 +59,12 @@ class Products extends controller
             if($data['products_relevance']==''){
                 $data['products_relevance'] = time().mt_rand(100000,999999);
             }
-            if($data['products_pic']==false){
+            if($data['products_pic']==false or $data['products_pic']==null){
                 $info['code'] = 0;
-                $info['info'] = '文件上传失败';
+                $this->error('商品图片上传失败');
             }else{
                 $products = new ProductsModel();
                 unset($data['products_pic']);
-                dump($data);
                 $res = $products->data($data)->save();
                 if($res){
                     $this->success('商品添加成功');
