@@ -1,4 +1,4 @@
-/*重置*/
+﻿/*重置*/
 body,h1,h2,h3,h4,h5,dl,dd,dt,p,ul,li,ol{ margin:0; padding:0;}
 input,select,form,textarea,button{ border:none; margin:0;outline:none; padding:0;}
 h1,h2,h3,h4,h5{ font-weight:normal;}
@@ -63,9 +63,9 @@ body{background-color: #fff;min-height: 100%; }
 	height: 0.68rem;
 }
 
-.logo_k{width: 26%;float: left;height: 0.68rem;}
-.logo_k img{width: auto;height: 0.68rem;}
-.shous_k{width: 60%;float: left; background: #f1f1f1;border-radius:0.08rem;margin: 0.1rem 0; padding:0 0.1rem;height: 0.48rem;line-height: 0.48rem; }
+.logo_k{width: 32%;float: left;height: 0.68rem;}
+.logo_k img{width: 100%;height:auto;}
+.shous_k{width: 50%;float: left; background: #f1f1f1;border-radius:0.08rem;margin: 0.1rem 0 0 3%; padding:0 0.1rem;height: 0.48rem;line-height: 0.48rem; }
 .shous_k span{display:inline-block;width: 0.3rem;height: 100%;background: url(../images/sos.png) center;background-repeat: no-repeat;background-size: 100%; float: left; margin-right: 5px;}
 .shous_k input{background-color:inherit;font-size: 0.22rem; width: 85%;}
 .dengl{width: 10%;float: right; position: relative;height: 0.68rem;}
@@ -161,7 +161,7 @@ body{background-color: #fff;min-height: 100%; }
 .louc_m .mingc a{float: right; color:#444;font-size:0.22rem; margin-top:.3rem;}
 
 .lianc_shang{ width: 100%; height:auto; overflow:auto; border-bottom: solid 1px #dedede;}
-.lianc_shang .zuo{ width: 33%; border-bottom: solid 1px #dedede; border-right: solid 1px #dedede;height: 2.6rem; overflow:auto; padding:10px 0; position: relative; float: left; overflow: hidden;}
+.lianc_shang .zuo{ width: 33%; border-bottom: solid 1px #dedede; border-right: solid 1px #dedede;height: 3rem; overflow:auto; padding:10px 0; position: relative; float: left; overflow: hidden;}
 .lianc_shang .zuo_wu{border-right: none;}
 .xin_shouji_zuo{ width:90%; margin:0 auto;}
 .xin_shouji_zuo img{ max-width:90%; text-align:center;}
@@ -335,15 +335,15 @@ left: 0;}
 .cainixhk{ padding: 0.2rem; border-bottom: solid 1.1rem #e2e2e2;}
 .cainixhk .bt p{float: left;font-size: 0.22rem; border-left:3px solid #333; padding-left:10px;}
 .cainixhk-tp{ width: 100%; height:auto; overflow:auto; padding-top:10px;}
-.cainixhk-tp .zuo{ width: 33.33%; border-bottom: solid 1px #dedede; height: 2.6rem; overflow:auto; padding:10px 0; position: relative; float: left; overflow: hidden;}
+.cainixhk-tp .zuo{ width: 33.33%; border-bottom: solid 1px #dedede; height: 3rem; overflow:auto; padding:10px 0; position: relative; float: left; overflow: hidden;}
 .cainixhk-tp .zuo_wu{border-right: none;}
 .xin_shouji_zuo{ width:90%; margin:0 auto;}
-.xin_shouji_zuo img{ max-width:90%; text-align:center;}
+.xin_shouji_zuo img{ max-width:90%; height: 118px; text-align:center;}
 .xin_shouji_zuo h3{ width:100%; line-height:24px; font-size:0.22rem;}
 .xin_shouji_zuo h3 a{ color:#333;}
 .xin_shouji_zuo p{ font-size:0.3rem; color:#fd7622;}
 .xin_shouji_zuo p span{ float:right;}
-.xin_shouji_zuo p span img{ width:70%;}
+.xin_shouji_zuo p span img{ width:18px; height: 18px;}
 
 .gouwuc_{width: 100%;overflow: hidden;}
 .gouwuc_ .zuo{width: 50%;float:left;overflow: hidden; }

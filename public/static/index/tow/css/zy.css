@@ -174,7 +174,7 @@ line-height: 0.73rem;
 	font-size: 0.26rem;
 	color: #e10601
 }
-.shangp_lieb_k li .lieb_txt p.biao{height: 0.7rem;}
+.shangp_lieb_k li .lieb_txt p.biao{height: 0.7rem; overflow: hidden;}
 .shangp_lieb_k li .lieb_txt p.px26 span{
 	text-decoration: line-through;
 	color: #979797;
