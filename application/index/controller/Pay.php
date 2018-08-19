@@ -40,11 +40,11 @@ class Pay extends Controller
     public function getOrderInfo($out_trade_no=null)
     {
         $order = new Orders();
-        $orderinfo = $order->get(['out_trade_no'=>$out_trade_no]);
+/*        $orderinfo = $order->get(['out_trade_no'=>$out_trade_no]);
         if($out_trade_no=='' or $out_trade_no == null){
             $this->error('请选择有效的订单');
             return false;
-        }
+        }*/
         $data['WIDout_trade_no'] =   $out_trade_no;
         $data['WIDsubject']      =   "鲜卖当超市商品";//订单名称
         $data['WIDtotal_amount'] =   0.01;//付款金额

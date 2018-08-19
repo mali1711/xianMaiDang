@@ -168,12 +168,14 @@
         $("input[name='products_ordprice']").blur(function () {
             var products_newprice = parseFloat($("input[name='products_newprice']").val());
             var products_ordprice =  parseFloat($("input[name='products_ordprice']").val());
-            $("input[name='maoli']").val(products_newprice-products_ordprice);
+            var res = (products_newprice-products_ordprice).toFixed(2);
+            $("input[name='maoli']").val(res);
         });
         $("input[name='products_newprice']").blur(function () {
             var products_newprice = parseFloat($("input[name='products_newprice']").val());
             var products_ordprice =  parseFloat($("input[name='products_ordprice']").val());
-            $("input[name='maoli']").val(products_newprice-products_ordprice);
+            var res = (products_newprice-products_ordprice).toFixed(2);
+            $("input[name='maoli']").val(res);
         })
     })
 </script>

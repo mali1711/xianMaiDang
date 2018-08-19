@@ -32,7 +32,8 @@ Route::controller("/corder","courier/Order");       //快递员
 /* 商城前台路由 */
 Route::controller("/indexlogin","index/Login");     //前台登录注册
 Route::controller("/goods","index/goods");          //前台登录注册
+Route::controller("/iUsers","index/Users");         //个人信息模块
 Route::controller("/cart","index/Shopcart");        //购物车
 Route::controller("/order","index/Order");          //订单
-Route::controller("/ipay","index/Pay");          //支付
+Route::controller("/ipay","index/Pay");             //支付
 

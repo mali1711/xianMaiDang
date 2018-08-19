@@ -50,12 +50,13 @@ class Order extends Controller
         if ($res) {
             $order_ali = new Order_alipays;
             $where['out_trade_no'] = $data['out_trade_no'];
-            if($order_ali->get()){
+            if($order_ali->get($where)){
                 $this->error('订单号重复');
             }
             $pay = new Pay();
             $data = $pay->getOrderInfo($data['out_trade_no']);
-            $shopCar->getcleartItem();//清空购物车
+
+//            $shopCar->getcleartItem();//清空购物车
             return $this->fetch('index/toPay',['data'=>$data]);
         }else {
             return $this->error('订单提交失败');

@@ -64,7 +64,6 @@ class Products extends controller
                 $this->error('商品图片上传失败');
             }else{
                 $products = new ProductsModel();
-                unset($data['products_pic']);
                 $res = $products->data($data)->save();
                 if($res){
                     $this->success('商品添加成功');
