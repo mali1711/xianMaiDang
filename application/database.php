@@ -14,7 +14,8 @@ return [
     'type'            => 'mysql',
     // 服务器地址
 //    'hostname'        => 'www.sir6.cn',
-    'hostname'        => 'localhost',
+//    'hostname'        => 'localhost',
+    'hostname'        => '39.105.25.41',
     // 数据库名
     'database'        => 'xianmaidang',
     // 用户名
