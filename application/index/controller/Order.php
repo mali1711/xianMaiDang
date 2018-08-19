@@ -55,7 +55,6 @@ class Order extends Controller
             }
             $pay = new Pay();
             $data = $pay->getOrderInfo($data['out_trade_no']);
-
 //            $shopCar->getcleartItem();//清空购物车
             return $this->fetch('index/toPay',['data'=>$data]);
         }else {
